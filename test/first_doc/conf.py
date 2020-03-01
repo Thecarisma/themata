@@ -7,9 +7,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Sphinx-Themes template'
-copyright = '2018, sphinx-themes.org'
-author = 'sphinx-themes.org'
+project = 'First Doc'
+copyright = '2020, Adewale Azeez'
+author = 'Adewale Azeez'
 
 # The short X.Y version
 version = ''
@@ -74,7 +74,7 @@ pygments_style = 'sphinx'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -88,6 +88,13 @@ html_static_path = ['_static']
 import milkish
 import os
 
-html_theme_path = [os.path.dirname(milkish.__file__)]
+html_theme_options = {
+    'navbar_links': [
+        ("Docs", "/docs"),
+        ("Download", "https://pypi.python.org/pypi/milkish"),
+        ("Examples", "/examples"),
+        ("FAQ", "/faq")
+    ],
+}
 
 html_theme = 'milkish'

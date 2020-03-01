@@ -1,12 +1,32 @@
 {% extends "basic/layout.html" %}
-{% block relbar2 %}
-  {% if theme_github_fork %}
-    <a href="http://github.com/{{ theme_github_fork }}"><img style="position: fixed; top: 0; right: 0; border: 0;"
-    src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+{%- block extrahead %}
+  {{ super() }}
+  {% if theme_touch_icon %}
+    <link rel="apple-touch-icon" href="{{ pathto('_static/' ~ theme_touch_icon, 1) }}" />
   {% endif %}
+  {% if theme_canonical_url %}
+    <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
+  {% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 {% endblock %}
 
 {%- block document %}
+    <header>
+        <div class="topnavbar">
+            <!--<img class="icon" src="_static/images/white.jpg"></img> later-->
+            <a href="./" class="title">{{ project }}</a>
+            {% for navbar_link in theme_navbar_links %}
+                <a href="{{ navbar_link[1] }}">{{ navbar_link[0] }}</a> <!-- class="active" -->
+            {% endfor %}
+            <div class="search-container">
+                <form class="search" action="search.html" method="get">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="" name="q">
+                </form>
+            </div>
+        </div>
+    </header>
+
   <div class="documentwrapper">
     {# Only include the global TOC #}
     <div class="sphinxsidebar">
@@ -14,7 +34,7 @@
         <h2><a href="{{ pathto(master_doc) }}">{{ project }}</a></h2>
 {{ toctree() }}
         </nav>
-        {%- include "searchbox.html" %}
+        <!--{%- include "searchbox.html" %}-->
     </div>
     <div class="bodywrapper">
       <div class="body">
