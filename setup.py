@@ -13,7 +13,7 @@ setup(
     description="A milkish looking sphinx theme",
     long_description=long_description,
     license="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
-    packages=("milkish",),
+    packages=["milkish"],
     include_package_data=True,
     keywords="sphinx extension theme",
     url="https://github.com/Thecarisma/milkish/",
@@ -28,5 +28,10 @@ setup(
         'Programming Language :: Python :: 3',
         'Topic :: Documentation',
         'Topic :: Software Development :: Documentation',
-    ]
+    ],
+    entry_points = {
+        'sphinx.html_themes': [
+            'milkish = milkish',
+        ]
+    },
 )
