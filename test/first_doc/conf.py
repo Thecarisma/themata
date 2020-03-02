@@ -90,10 +90,10 @@ import os
 
 html_theme_options = {
     'navbar_links': [
-        ("Docs", "/docs"),
+        ("Docs", "./docs"),
         ("Download", "https://pypi.python.org/pypi/milkish"),
-        ("Examples", "/examples"),
-        ("FAQ", "/faq")
+        ("Examples", "./examples"),
+        ("FAQ", "./faq")
     ],
 }
 
