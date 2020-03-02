@@ -28,13 +28,13 @@
     </header>
     <div class="documentwrapper">
         <div class="sidebar-left">
-            {{ sidebar() }}
+            {{ toctree(maxdepth=1, titles_only=True) }}
         </div>
         <div class="bodywrapper">
                 {% block body %} {% endblock %}
         </div>
         <div class="sidebar-right">
-            <h2>In This Page</h2>
+            <h2>Page Contents</h2>
             {{ toc }}
             {% if prev %}
             <h2>Previous topic</h2>
@@ -45,7 +45,7 @@
             <a href="{{ next.link|e }}">{{ next.title }}</a>
             {% endif %}
             <h2>This Page</h2>
-            <a href="{{ theme_canonical_url }}{{ sourcename }}">Show source</a>
+            <a href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a>
         </div>
         <div style="clear:both"></div>
     </div> 
