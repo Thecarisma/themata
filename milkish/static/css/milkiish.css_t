@@ -10,7 +10,7 @@
 
 * {
     font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
-    color: black !important; /* set text color as text_color in html_theme_options*/
+    color: {{ theme_text_color }} !important; /* set text color as text_color in html_theme_options*/
 }
 
 body {
@@ -18,22 +18,22 @@ body {
     font-size: 100%;
     padding: 0;
     margin: 0;
-    background: {{ background_color }}; /* set background color as background_color in html_theme_options*/
+    background: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
 }
 
 a {
-    color: {{ text_color }} !important; /* set text color as text_color in html_theme_options*/
+    color: {{ theme_text_color }} !important; /* set text color as text_color in html_theme_options*/
 }
 
 a:hover {
-    color: {{ highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
     text-decoration: underline;
 }
 
 header {
     overflow: hidden;
-    background-color: {{ header_background }}; /* set header background as header_background in html_theme_options*/
-    box-shadow: 1px 2px 1px {{ highlight_color }}; /* set highlight color as highlight_color in html_theme_options*/
+    background-color: {{ theme_header_background_color }}; /* set header background as header_background_color in html_theme_options*/
+    box-shadow: 1px 2px 1px {{ theme_highlight_color }}; /* set highlight color as highlight_color in html_theme_options*/
     position: fixed;
     top: 0px;
     width: 100vw;
@@ -61,19 +61,19 @@ dd p {
 }
 
 table {
-    background-color: black;
+    background-color: gray;
     border-spacing: 1px;
     margin: 0 auto 0 auto;
 }
 
 table thead th, table thead td {
-    background-color: white;
+    background-color: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
     padding: 5px;
     margin: 1px;
 }
 
 table tbody th, table tbody td {
-    background-color: #fff;
+    background-color: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
     padding: 2px;
 }
 
@@ -109,7 +109,7 @@ pre{
 }
 
 .topnavbar a {
-    color: {{ menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
     text-align: center;
     text-decoration: none;
     font-size: 15px;
@@ -120,7 +120,7 @@ pre{
 }
 
 .topnavbar a:hover {
-    color: {{ highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
 }
 
 .topnavbar a.title {

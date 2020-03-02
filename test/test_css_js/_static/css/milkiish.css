@@ -32,7 +32,7 @@ a:hover {
 
 header {
     overflow: hidden;
-    background-color: #333; /* set header background as header_background in html_theme_options*/
+    background-color: #333; /* set header background as header_background_color in html_theme_options*/
     box-shadow: 1px 2px 1px #34aeeb; /* set highlight color as highlight_color in html_theme_options*/
     position: fixed;
     top: 0px;
@@ -61,19 +61,19 @@ dd p {
 }
 
 table {
-    background-color: black;
+    background-color: gray;
     border-spacing: 1px;
     margin: 0 auto 0 auto;
 }
 
 table thead th, table thead td {
-    background-color: white;
+    background-color: white; /* set background color as background_color in html_theme_options*/
     padding: 5px;
     margin: 1px;
 }
 
 table tbody th, table tbody td {
-    background-color: #fff;
+    background-color: white; /* set background color as background_color in html_theme_options*/
     padding: 2px;
 }
 
