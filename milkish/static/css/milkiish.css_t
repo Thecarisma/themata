@@ -86,7 +86,7 @@ pre {
 
 .highlight-default .highlight {
     background-color: {{ theme_background_color }};
-    filter: brightness(93%);
+    filter: brightness(90%);
     border: black 1px solid;
     border-radius: 5px;
     font-size: 0.8em;
