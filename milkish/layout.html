@@ -75,9 +75,9 @@
         <div class="footer-col1">
             {% for footer_menu in theme_footer_menus %}
                 <div class="footer-col2">
-                    <span class="footer-col2-title"><i class="fa fa-menu {{ footer_menu.title_icon }}"></i>{{ footer_menu.title }}</span>
+                    <span class="footer-col2-title"><i class="fa fa-menu {{ footer_menu.icon }}"></i>{{ footer_menu.title }}</span>
                     <ul>
-                        {% for footer_menu_item in footer_menu.footer_menu_items %}
+                        {% for footer_menu_item in footer_menu.menu_items %}
                             <li><a href="{{ footer_menu_item.link }}"><i class="fa fa-menu fa-chevron-right"></i>{{ footer_menu_item.title }}</a></li>
                         {% endfor %}
                     </ul>
@@ -85,9 +85,21 @@
             {% endfor %}
         </div>
         
+        
         <div class="doc-sphinx-info">
-            &#169; Copyright 2018, sphinx-themes.org.
-            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
+            {%- if show_copyright %}
+                {%- if hasdoc('copyright') %}
+                    {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+                {%- else %}
+                    {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+                {%- endif %}
+            {%- endif %}
+            {%- if last_updated %}
+                {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+            {%- endif %}
+            {%- if show_sphinx %}
+                {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+            {%- endif %}
         </div>
     </div>
 {% endblock %}
