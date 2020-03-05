@@ -10,7 +10,7 @@
 
 * {
     font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
-    color: black !important; /* set text color as text_color in html_theme_options*/
+    color: #727273 !important; /* set text color as text_color in html_theme_options*/
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 }
 
 a {
-    color: black !important; /* set text color as text_color in html_theme_options*/
+    color: #727273 !important; /* set link color as link_color in html_theme_options*/
 }
 
 a:hover {
@@ -77,10 +77,11 @@ table tbody th, table tbody td {
     padding: 2px;
 }
 
-pre{
+pre {
     padding: 5px;
     margin: 5px;
     overflow: auto;
+    line-height: 18px;
 }
 
 .highlight-default .highlight {
@@ -139,7 +140,7 @@ pre{
   font-size: 17px;
   border: none;
   background: gray;
-  color: white;
+  color: white !important;
   outline: none;
 }
 
@@ -152,11 +153,11 @@ pre{
   font-size: 17px;
   border: none;
   cursor: pointer;
-  color: white;
+  color: white !important;
 }
 
 .topnavbar .search-container button i {
-  color: white;
+  color: white !important;
 }
 
 .documentwrapper {
@@ -168,7 +169,7 @@ pre{
 .sidebar-left {
     float:left;
     width:14%;
-    font-size: 15px;
+    font-size: 13px;
     position: fixed;
     top: 70px;
     bottom:100px;
@@ -226,7 +227,6 @@ li {
 }
 
 .sidebar-left .caption {
-    font-size: 18px;
     font-weight: bold;
 }
 
@@ -282,11 +282,20 @@ a:hover {
 .bodywrapper h4,
 .bodywrapper h5,
 .bodywrapper h6 {
-    font-family: 'OpenSansLight',sans-serif;
+    font-size: 150%;
     font-weight: normal;
-    margin: 30px 0px 10px 0px;
-    padding: 5px 0 5px 0px;
+    margin: 15px 0px 5px 0px;
+    padding: 1px 0 0px 0px;
     text-shadow: 0px 1px 0 white
+}
+
+.bodywrapper a {
+    color: #34aeeb !important; /* body_link_color in html_theme_options*/
+}
+
+.bodywrapper a:hover {
+    color: #147eb3 !important; /* body_link_highlight_color in html_theme_options*/
+    text-decoration: underline;
 }
 
 

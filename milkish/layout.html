@@ -27,30 +27,35 @@
         </div>
     </header>
     <div class="documentwrapper">
-        <div class="sidebar-left">
-            {{ toctree(maxdepth=1, titles_only=True) }}
-        </div>
+        {% if theme_has_left_sidebar %}
+            <div class="sidebar-left">
+                Hello
+                {{ toctree(maxdepth=1, titles_only=True) }}
+            </div>
+        {% endif %}
         <div class="bodywrapper">
                 {% block body %} {% endblock %}
         </div>
-        <div class="sidebar-right">
-            <h2>Page Contents</h2>
-            {{ toc }}
-            {% if prev %}
-            <h2>Previous topic</h2>
-            <a href="{{ prev.link|e }}">{{ prev.title }}</a>
-            {% endif %}
-            {% if next %}
-            <h2>Next topic</h2>
-            <a href="{{ next.link|e }}">{{ next.title }}</a>
-            {% endif %}
-            <h2>This Page</h2>
-            <a href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a>
-        </div>
+        {% if theme_has_right_sidebar %}
+            <div class="sidebar-right">
+                <h2>Page Contents</h2>
+                {{ toc }}
+                {% if prev %}
+                <h2>Previous topic</h2>
+                <a href="{{ prev.link|e }}">{{ prev.title }}</a>
+                {% endif %}
+                {% if next %}
+                <h2>Next topic</h2>
+                <a href="{{ next.link|e }}">{{ next.title }}</a>
+                {% endif %}
+                <h2>This Page</h2>
+                <a href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a>
+            </div>
+        {% endif %}
         <div style="clear:both"></div>
     </div> 
 {%- endblock %}
 
 {# do not display relbars nor sidebars #}
-{% block relbar1 %}{% endblock %}
+{% block relbar1 %} relbar1() {% endblock %}
 {% block sidebar2 %}{% endblock %}

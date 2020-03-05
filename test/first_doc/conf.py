@@ -89,6 +89,8 @@ import milkish
 import os
 
 html_theme_options = {
+    'has_left_sidebar': False,
+    'has_right_sidebar': False,
     'navbar_links': [
         ("Docs", "./docs"),
         ("Download", "https://pypi.python.org/pypi/milkish"),

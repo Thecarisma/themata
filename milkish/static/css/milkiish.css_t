@@ -22,7 +22,7 @@ body {
 }
 
 a {
-    color: {{ theme_text_color }} !important; /* set text color as text_color in html_theme_options*/
+    color: {{ theme_link_color }} !important; /* set link color as link_color in html_theme_options*/
 }
 
 a:hover {
