@@ -412,6 +412,7 @@ div.viewcode-block:target {
 .footer-col2 {
     text-align: left;
     margin: 50px;
+    font-size: 95%;
 }
 
 .footer-col2 a {
@@ -429,8 +430,16 @@ div.viewcode-block:target {
 }
 
 .footer-col2-title {
-    
+    font-weight: bold;
+    color: white !important; /* set menu item color as menu_item_color in html_theme_options*/
 }
+
+.footer-col2-title i {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    color: white !important; /* set menu item color as menu_item_color in html_theme_options*/
+}
+
 
 
 

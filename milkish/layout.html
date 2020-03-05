@@ -69,9 +69,46 @@
     </div> 
 {%- endblock %}
 
+
+{% block footer %}
+    <div class="footer" role="contentinfo">
+        <div class="footer-col1">
+            <div class="footer-col2">
+                <span class="footer-col2-title"><i class="fa fa-menu fa-book"></i>One Title</span>
+                <ul>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>One</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Two Two</a></li>
+
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Three Three Three</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <span class="footer-col2-title"><i class="fa fa-menu fa-book"></i>Documenations</span>
+                <ul>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>One</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Two Two</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Three Three Three</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Four Four Four Four</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Five Five Five Five Five</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <span class="footer-col2-title"><i class="fa fa-menu fa-book"></i>Another header</span>
+                <ul>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Five Five Five Five Five</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="doc-sphinx-info">
+            &#169; Copyright 2018, sphinx-themes.org.
+            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
+        </div>
+    </div>
+{% endblock %}
+
 {# do not display relbars nor sidebars #}
 {% block relbar1 %}{% endblock %}
 {% block relbar2 %}{% endblock %}
 {% block sidebar1 %}{% endblock %}
 {% block sidebar2 %}{% endblock %}
-{% block footer %}{% endblock %}
