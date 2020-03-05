@@ -10,7 +10,7 @@
 
 * {
     font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
-    color: #727273 !important; /* set text color as text_color in html_theme_options*/
+    color: #727273 !important; /* text_color in html_theme_options*/
 }
 
 body {
@@ -296,6 +296,30 @@ a:hover {
 .bodywrapper a:hover {
     color: #147eb3 !important; /* body_link_highlight_color in html_theme_options*/
     text-decoration: underline;
+}
+
+.bodywrapper .navigator {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background: white; /* set background color as background_color in html_theme_options*/
+    filter: brightness(93%);
+    color: #727273 !important; /* text_color in html_theme_options*/
+}
+
+.bodywrapper .navigator:hover {
+    background-color: #333 !important; /* set header background as header_background_color in html_theme_options*/
+    color: white !important; /* set menu item color as menu_item_color in html_theme_options*/
+}
+
+.bodywrapper .navigator .fa {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bodywrapper .navigation a:hover {
+    text-decoration: none;
+    color: white !important; /* set menu item color as menu_item_color in html_theme_options*/
 }
 
 

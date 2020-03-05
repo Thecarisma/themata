@@ -9,8 +9,8 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 
 * {
-    font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
-    color: {{ theme_text_color }} !important; /* set text color as text_color in html_theme_options*/
+    font-family: "Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
+    color: {{ theme_text_color }} !important; /* text_color in html_theme_options*/
 }
 
 body {
@@ -77,10 +77,11 @@ table tbody th, table tbody td {
     padding: 2px;
 }
 
-pre{
+pre {
     padding: 5px;
     margin: 5px;
     overflow: auto;
+    line-height: 18px;
 }
 
 .highlight-default .highlight {
@@ -139,7 +140,7 @@ pre{
   font-size: 17px;
   border: none;
   background: gray;
-  color: white;
+  color: white !important;
   outline: none;
 }
 
@@ -152,11 +153,11 @@ pre{
   font-size: 17px;
   border: none;
   cursor: pointer;
-  color: white;
+  color: white !important;
 }
 
 .topnavbar .search-container button i {
-  color: white;
+  color: white !important;
 }
 
 .documentwrapper {
@@ -168,7 +169,7 @@ pre{
 .sidebar-left {
     float:left;
     width:14%;
-    font-size: 15px;
+    font-size: 13px;
     position: fixed;
     top: 70px;
     bottom:100px;
@@ -226,7 +227,6 @@ li {
 }
 
 .sidebar-left .caption {
-    font-size: 18px;
     font-weight: bold;
 }
 
@@ -282,11 +282,44 @@ a:hover {
 .bodywrapper h4,
 .bodywrapper h5,
 .bodywrapper h6 {
-    font-family: 'OpenSansLight',sans-serif;
+    font-size: 150%;
     font-weight: normal;
-    margin: 30px 0px 10px 0px;
-    padding: 5px 0 5px 0px;
+    margin: 15px 0px 5px 0px;
+    padding: 1px 0 0px 0px;
     text-shadow: 0px 1px 0 white
+}
+
+.bodywrapper a {
+    color: {{ theme_body_link_color }} !important; /* body_link_color in html_theme_options*/
+}
+
+.bodywrapper a:hover {
+    color: {{ theme_body_link_highlight_color }} !important; /* body_link_highlight_color in html_theme_options*/
+    text-decoration: underline;
+}
+
+.bodywrapper .navigator {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
+    filter: brightness(93%);
+    color: {{ theme_text_color }} !important; /* text_color in html_theme_options*/
+}
+
+.bodywrapper .navigator:hover {
+    background-color: {{ theme_header_background_color }} !important; /* set header background as header_background_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+}
+
+.bodywrapper .navigator .fa {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bodywrapper .navigation a:hover {
+    text-decoration: none;
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
 }
 
 

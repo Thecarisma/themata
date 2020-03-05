@@ -35,18 +35,31 @@
         {% endif %}
         <div class="bodywrapper">
                 {% block body %} {% endblock %}
+                
+                </br>
+                <div class="navigation">
+                    <div style="float:right">
+                        {% if prev %}
+                            <a class="reference navigator" href="{{ prev.link|e }}"><i class="fa fa-arrow-left"></i>{{ prev.title }}</a>
+                        {% endif %}
+                        {% if next %}
+                            <a class="reference navigator" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
+                        {% endif %}
+                    </div>
+                    <a class="reference navigator" style="float:left;" href="{{ pathto(master_doc) }}/genindex.html"><i class="fa fa-book"></i>Index</a>                   
+                </div>
         </div>
         {% if theme_has_right_sidebar %}
             <div class="sidebar-right">
                 <h2>Page Contents</h2>
                 {{ toc }}
                 {% if prev %}
-                <h2>Previous topic</h2>
-                <a href="{{ prev.link|e }}">{{ prev.title }}</a>
+                    <h2>Previous topic</h2>
+                    <a href="{{ prev.link|e }}">{{ prev.title }}</a>
                 {% endif %}
                 {% if next %}
-                <h2>Next topic</h2>
-                <a href="{{ next.link|e }}">{{ next.title }}</a>
+                    <h2>Next topic</h2>
+                    <a href="{{ next.link|e }}">{{ next.title }}</a>
                 {% endif %}
                 <h2>This Page</h2>
                 <a href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a>
@@ -57,5 +70,7 @@
 {%- endblock %}
 
 {# do not display relbars nor sidebars #}
-{% block relbar1 %} relbar1() {% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block sidebar1 %}{% endblock %}
 {% block sidebar2 %}{% endblock %}
