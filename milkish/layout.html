@@ -19,7 +19,7 @@
                 <a href="{{ navbar_link[1] }}">{{ navbar_link[0] }}</a> <!-- class="active" -->
             {% endfor %}
             <div class="search-container">
-                <form class="search" action="search.html" method="get">
+                <form class="search" action="{{ pathto('_static/../', 1) }}/search.html" method="get">
                     <button type="submit"><i class="fa fa-search"></i></button>
                     <input type="text" placeholder="" name="q">
                 </form>
