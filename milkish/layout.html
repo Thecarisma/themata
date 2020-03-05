@@ -73,31 +73,16 @@
 {% block footer %}
     <div class="footer" role="contentinfo">
         <div class="footer-col1">
-            <div class="footer-col2">
-                <span class="footer-col2-title"><i class="fa fa-menu fa-book"></i>One Title</span>
-                <ul>
-                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>One</a></li>
-                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Two Two</a></li>
-
-                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Three Three Three</a></li>
-                </ul>
-            </div>
-            <div class="footer-col2">
-                <span class="footer-col2-title"><i class="fa fa-menu fa-book"></i>Documenations</span>
-                <ul>
-                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>One</a></li>
-                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Two Two</a></li>
-                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Three Three Three</a></li>
-                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Four Four Four Four</a></li>
-                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Five Five Five Five Five</a></li>
-                </ul>
-            </div>
-            <div class="footer-col2">
-                <span class="footer-col2-title"><i class="fa fa-menu fa-book"></i>Another header</span>
-                <ul>
-                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Five Five Five Five Five</a></li>
-                </ul>
-            </div>
+            {% for footer_menu in theme_footer_menus %}
+                <div class="footer-col2">
+                    <span class="footer-col2-title"><i class="fa fa-menu {{ footer_menu.title_icon }}"></i>{{ footer_menu.title }}</span>
+                    <ul>
+                        {% for footer_menu_item in footer_menu.footer_menu_items %}
+                            <li><a href="{{ footer_menu_item.link }}"><i class="fa fa-menu fa-chevron-right"></i>{{ footer_menu_item.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
         </div>
         
         <div class="doc-sphinx-info">
