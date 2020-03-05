@@ -85,7 +85,8 @@ pre {
 }
 
 .highlight-default .highlight {
-    background-color: white;
+    background-color: white; /* set background color as background_color in html_theme_options*/
+    filter: brightness(93%);
     border: black 1px solid;
     border-radius: 5px;
     font-size: 0.8em;
