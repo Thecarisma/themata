@@ -10,7 +10,7 @@
 
 * {
     font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
-    color: {{ text_color }} !important; /* text_color in html_theme_options*/
+    color: {{ theme_text_color }} !important; /* text_color in html_theme_options*/
 }
 
 body {
@@ -18,22 +18,22 @@ body {
     font-size: 100%;
     padding: 0;
     margin: 0;
-    background: {{ background_color }}; /* set background color as background_color in html_theme_options*/
+    background: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
 }
 
 a {
-    color: {{ link_color }} !important; /* set link color as link_color in html_theme_options*/
+    color: {{ theme_link_color }} !important; /* set link color as link_color in html_theme_options*/
 }
 
 a:hover {
-    color: {{ highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
     text-decoration: underline;
 }
 
 header {
     overflow: hidden;
-    background-color: {{ header_background_color }}; /* set header background as header_background_color in html_theme_options*/
-    box-shadow: 1px 2px 1px {{ highlight_color }}; /* set highlight color as highlight_color in html_theme_options*/
+    background-color: {{ theme_header_background_color }}; /* set header background as header_background_color in html_theme_options*/
+    box-shadow: 1px 2px 1px {{ theme_highlight_color }}; /* set highlight color as highlight_color in html_theme_options*/
     position: fixed;
     top: 0px;
     width: 100vw;
@@ -67,13 +67,13 @@ table {
 }
 
 table thead th, table thead td {
-    background-color: {{ background_color }}; /* set background color as background_color in html_theme_options*/
+    background-color: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
     padding: 5px;
     margin: 1px;
 }
 
 table tbody th, table tbody td {
-    background-color: {{ background_color }}; /* set background color as background_color in html_theme_options*/
+    background-color: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
     padding: 2px;
 }
 
@@ -110,7 +110,7 @@ pre {
 }
 
 .topnavbar a {
-    color: {{ menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
     text-align: center;
     text-decoration: none;
     font-size: 15px;
@@ -121,7 +121,7 @@ pre {
 }
 
 .topnavbar a:hover {
-    color: {{ highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
 }
 
 .topnavbar a.title {
@@ -279,11 +279,11 @@ a:hover {
 }
 
 .bodywrapper a {
-    color: {{ body_link_color }} !important; /* body_link_color in html_theme_options*/
+    color: {{ theme_body_link_color }} !important; /* body_link_color in html_theme_options*/
 }
 
 .bodywrapper a:hover {
-    color: {{ body_link_highlight_color }} !important; /* body_link_highlight_color in html_theme_options*/
+    color: {{ theme_body_link_highlight_color }} !important; /* body_link_highlight_color in html_theme_options*/
     text-decoration: underline;
 }
 
@@ -291,14 +291,14 @@ a:hover {
     padding: 10px;
     margin-right: 10px;
     border-radius: 5px;
-    background: {{ background_color }}; /* set background color as background_color in html_theme_options*/
+    background: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
     filter: brightness(93%);
-    color: {{ text_color }} !important; /* text_color in html_theme_options*/
+    color: {{ theme_text_color }} !important; /* text_color in html_theme_options*/
 }
 
 .bodywrapper .navigator:hover {
-    background-color: {{ header_background_color }} !important; /* set header background as header_background_color in html_theme_options*/
-    color: {{ menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    background-color: {{ theme_header_background_color }} !important; /* set header background as header_background_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
 }
 
 .bodywrapper .navigator .fa {
@@ -308,7 +308,7 @@ a:hover {
 
 .bodywrapper .navigation a:hover {
     text-decoration: none;
-    color: {{ menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
 }
 
 
@@ -382,9 +382,9 @@ div.viewcode-block:target {
 /* -- footer styles ----------------------------------------------------------- */
 
 .footer {
-    background-color: {{ header_background_color }}; /* set header background as header_background_color in html_theme_options*/
-    box-shadow: 0px 0px 5px {{ highlight_color }} ; /* set highlight color as highlight_color in html_theme_options*/
-    color: {{ menu_item_color }}  !important; /* set menu item color as menu_item_color in html_theme_options*/
+    background-color: {{ theme_header_background_color }}; /* set header background as header_background_color in html_theme_options*/
+    box-shadow: 0px 0px 5px {{ theme_highlight_color }} ; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_menu_item_color }}  !important; /* set menu item color as menu_item_color in html_theme_options*/
     width: 100%;
     padding: 13px 0;
     text-align: center;
@@ -393,12 +393,12 @@ div.viewcode-block:target {
 }
 
 .footer a {
-    color: {{ highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
 }
 
 .doc-sphinx-info {
     font-size: 75%;
-    color: {{ menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
 }
 
 .footer-col1 {
@@ -416,7 +416,7 @@ div.viewcode-block:target {
 }
 
 .footer-col2 a {
-    color: {{ menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
 }
 
 .footer-col2 a:hover {
@@ -425,19 +425,19 @@ div.viewcode-block:target {
 }
 
 .footer-col2 ul > li > a > i {
-    color: {{ menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
     margin-right: 5px;
 }
 
 .footer-col2-title {
     font-weight: bold;
-    color: {{ menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
 }
 
 .footer-col2-title i {
     margin-bottom: 10px;
     margin-right: 10px;
-    color: {{ menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
 }
 
 
