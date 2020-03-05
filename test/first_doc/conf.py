@@ -97,6 +97,70 @@ html_theme_options = {
         ("Examples", "./examples"),
         ("FAQ", "./faq")
     ],
+    'footer_menus': [
+        {
+            'icon': 'fa-phone',
+            'title': 'Contact',
+            'menu_items': [
+                {
+                    'link': "#",
+                    'title': 'azeezadewale98@gmail.com'
+                },
+                {
+                    'link': "",
+                    'title': '12345678998'
+                }
+            ]
+        },
+        {
+            'icon': 'fa-book',
+            'title': 'Documentation',
+            'menu_items': [
+                {
+                    'link': "#",
+                    'title': 'Title One'
+                },
+                {
+                    'link': "#",
+                    'title': 'Two'
+                },
+                {
+                    'link': "#",
+                    'title': 'Three'
+                },
+                {
+                    'link': "#",
+                    'title': 'Title Four'
+                },
+                {
+                    'link': "#",
+                    'title': 'Item Five'
+                },
+            ]
+        },
+        {
+            'icon': 'fa-users',
+            'title': 'Community',
+            'menu_items': [
+                {
+                    'link': "#",
+                    'title': 'Stackoverflow'
+                },
+                {
+                    'link': "",
+                    'title': 'Slack'
+                },
+                {
+                    'link': "",
+                    'title': 'Forum'
+                },
+                {
+                    'link': "",
+                    'title': 'IRC'
+                }
+            ]
+        }
+    ],
 }
 
 html_theme = 'milkish'
