@@ -19,7 +19,7 @@
                 <a href="{{ navbar_link[1] }}">{{ navbar_link[0] }}</a> <!-- class="active" -->
             {% endfor %}
             <div class="search-container">
-                <form class="search" action="{{ pathto('_static/../', 1) }}/search.html" method="get">
+                <form class="search" action="{{ pathto('search', 1) }}.html" method="get">
                     <button type="submit"><i class="fa fa-search"></i></button>
                     <input type="text" placeholder="" name="q">
                 </form>
@@ -46,7 +46,7 @@
                             <a class="reference navigator" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
                         {% endif %}
                     </div>
-                    <a class="reference navigator" style="float:left;" href="{{ pathto(master_doc) }}/genindex.html"><i class="fa fa-book"></i>Index</a>                   
+                    <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>                   
                 </div>
         </div>
         {% if theme_has_right_sidebar %}

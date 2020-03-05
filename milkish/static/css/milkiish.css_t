@@ -169,7 +169,7 @@ pre {
 .sidebar-left {
     float:left;
     width:14%;
-    z-index: -1;
+    z-index: 1;
     font-size: 13px;
     position: fixed;
     top: 70px;
@@ -182,7 +182,7 @@ pre {
 .sidebar-right {
     float:right;
     width:20%;
-    z-index: -1;
+    z-index: 1;
     font-size: 12px;
     position: fixed;
     right: 0;
@@ -388,7 +388,8 @@ div.viewcode-block:target {
     width: 100%;
     padding: 13px 0;
     text-align: center;
-    z-index: 100000001;
+    z-index: 2;
+    position: absolute;
     margin-top:100px;
 }
 
