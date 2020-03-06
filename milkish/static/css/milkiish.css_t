@@ -9,8 +9,8 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 
 * {
-    font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
-    color: {{ theme_text_color }} !important; /* text_color in html_theme_options*/
+    font-family: "Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
+    color: {{ theme_text_color }} !important; /* theme_text_color */
 }
 
 body {
@@ -18,22 +18,23 @@ body {
     font-size: 100%;
     padding: 0;
     margin: 0;
-    background: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
+    background: {{ theme_background_color }}; /* theme_background_color */
 }
 
 a {
-    color: {{ theme_link_color }} !important; /* set link color as link_color in html_theme_options*/
+    color: {{ theme_link_color }} !important; /* theme_link_color */
+    text-decoration: none;
 }
 
 a:hover {
-    color: {{ theme_highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
     text-decoration: underline;
 }
 
 header {
     overflow: hidden;
-    background-color: {{ theme_header_background_color }}; /* set header background as header_background_color in html_theme_options*/
-    box-shadow: 1px 2px 1px {{ theme_highlight_color }}; /* set highlight color as highlight_color in html_theme_options*/
+    background-color: {{ theme_header_background_color }}; /* theme_header_background_color */
+    box-shadow: 1px 2px 1px {{ theme_highlight_color }}; /* theme_highlight_color */
     position: fixed;
     top: 0px;
     width: 100vw;
@@ -67,13 +68,13 @@ table {
 }
 
 table thead th, table thead td {
-    background-color: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
+    background-color: {{ theme_background_color }}; /* theme_background_color */
     padding: 5px;
     margin: 1px;
 }
 
 table tbody th, table tbody td {
-    background-color: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
+    background-color: {{ theme_background_color }}; /* theme_background_color */
     padding: 2px;
 }
 
@@ -85,9 +86,9 @@ pre {
 }
 
 .highlight-default .highlight {
-    background-color: {{ theme_pre_background_color }};
-    filter: brightness(90%);
-    border: {{ theme_pre_border_color }} 1px solid; /* pre_border_color */
+    background-color: {{ theme_pre_background_color }}; /* theme_pre_background_color */
+    filter: brightness(98%);
+    border: {{ theme_pre_border_color }} 1px solid; /* theme_pre_border_color */
     border-radius: 5px;
     font-size: 0.8em;
     margin: 5px;
@@ -111,7 +112,7 @@ pre {
 }
 
 .topnavbar a {
-    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
     text-align: center;
     text-decoration: none;
     font-size: 15px;
@@ -122,7 +123,7 @@ pre {
 }
 
 .topnavbar a:hover {
-    color: {{ theme_highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 .topnavbar a.title {
@@ -202,14 +203,6 @@ pre {
     line-height: 3vh;
 }
 
-div.body {
-    background-color: #fff;
-    color: #3E4349;
-    padding: 0 30px 30px 30px;
-    font-size: 0.9em;
-    border-left: 1px solid rgba(0,0,0,0.2);
-}
-
 ul {
     padding: 1px;
     list-style-type: none;
@@ -251,17 +244,6 @@ li {
 
 /* -- body styles ----------------------------------------------------------- */
 
-a {
-  color: #0095DD;
-  text-decoration: none;
-  line-height: 110%;
-}
-
-a:hover {
-    color: #00539F
-    text-decoration: underline;
-}
-
 .headerlink {
     display: none;
 }
@@ -276,15 +258,15 @@ a:hover {
     font-weight: normal;
     margin: 15px 0px 5px 0px;
     padding: 1px 0 0px 0px;
-    text-shadow: 0px 1px 0 white
+    text-shadow: 0px 1px 0 white;
 }
 
 .bodywrapper a {
-    color: {{ theme_body_link_color }} !important; /* body_link_color in html_theme_options*/
+    color: {{ theme_body_link_color }} !important; /* theme_body_link_color */
 }
 
 .bodywrapper a:hover {
-    color: {{ theme_body_link_highlight_color }} !important; /* body_link_highlight_color in html_theme_options*/
+    color: {{ theme_body_link_highlight_color }} !important; /* theme_body_link_highlight_color */
     text-decoration: underline;
 }
 
@@ -292,14 +274,14 @@ a:hover {
     padding: 10px;
     margin-right: 10px;
     border-radius: 5px;
-    background: {{ theme_background_color }}; /* set background color as background_color in html_theme_options*/
+    background: {{ theme_background_color }}; /* theme_background_color */
     filter: brightness(93%);
-    color: {{ theme_text_color }} !important; /* text_color in html_theme_options*/
+    color: {{ theme_text_color }} !important; /* theme_text_color */
 }
 
 .bodywrapper .navigator:hover {
-    background-color: {{ theme_header_background_color }} !important; /* set header background as header_background_color in html_theme_options*/
-    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    background-color: {{ theme_header_background_color }} !important; /* theme_header_background_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .bodywrapper .navigator .fa {
@@ -309,7 +291,7 @@ a:hover {
 
 .bodywrapper .navigation a:hover {
     text-decoration: none;
-    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 
@@ -383,9 +365,9 @@ div.viewcode-block:target {
 /* -- footer styles ----------------------------------------------------------- */
 
 .footer {
-    background-color: {{ theme_header_background_color }}; /* set header background as header_background_color in html_theme_options*/
-    box-shadow: 0px 0px 5px {{ theme_highlight_color }} ; /* set highlight color as highlight_color in html_theme_options*/
-    color: {{ theme_menu_item_color }}  !important; /* set menu item color as menu_item_color in html_theme_options*/
+    background-color: {{ theme_header_background_color }}; /* theme_header_background_color */
+    box-shadow: 0px 0px 5px {{ theme_highlight_color }}; /* theme_highlight_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
     width: 100%;
     padding: 13px 0;
     text-align: center;
@@ -395,12 +377,12 @@ div.viewcode-block:target {
 }
 
 .footer a {
-    color: {{ theme_highlight_color }} !important; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 .doc-sphinx-info {
     font-size: 75%;
-    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .footer-col1 {
@@ -418,30 +400,38 @@ div.viewcode-block:target {
 }
 
 .footer-col2 a {
-    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .footer-col2 a:hover {
-    color: #34aeeb !important; /* set highlight color as highlight_color in html_theme_options*/
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
     text-decoration: none;
 }
 
 .footer-col2 ul > li > a > i {
-    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
     margin-right: 5px;
 }
 
 .footer-col2-title {
     font-weight: bold;
-    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .footer-col2-title i {
     margin-bottom: 10px;
     margin-right: 10px;
-    color: {{ theme_menu_item_color }} !important; /* set menu item color as menu_item_color in html_theme_options*/
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
+.footer .social {
+    font-size: 200%;
+}
+
+.footer .social > a > i {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 
 
