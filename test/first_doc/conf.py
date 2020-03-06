@@ -97,6 +97,13 @@ html_theme_options = {
         ("Examples", "./examples"),
         ("FAQ", "./faq")
     ],
+    'social_icons': [
+        ("fab fa-twitter", "https://twitter.com/iamthecarisma"),
+        ("fab fa-twitch", "https://www.twitch.tv/amsiraceht"),
+        ("fab fa-github", "https://github.com/Thecarisma"),
+        ("fab fa-linkedin", "https://www.linkedin.com/in/azeez-adewale/"),
+        ("fab fa-stackoverflow", "https://stackoverflow.com/users/6626422/thecarisma")
+    ],
     'footer_menus': [
         {
             'icon': 'fa-phone',

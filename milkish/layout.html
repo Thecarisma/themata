@@ -72,6 +72,11 @@
 
 {% block footer %}
     <div class="footer" role="contentinfo">
+        <div class="social">
+            {% for social_icon in social_icons %}
+                <a href="{{ social_icon[1] }}"><i class="{{ social_icon[0] }}"></i></a>
+            {% endfor %}
+        </div>
         <div class="footer-col1">
             {% for footer_menu in theme_footer_menus %}
                 <div class="footer-col2">
