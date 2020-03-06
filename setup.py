@@ -6,14 +6,17 @@ with open('README.rst') as f:
 setup(
     zip_safe=False,
     install_requires=["sphinx>=1.1"],
-    name="milkish",
+    name="themata",
     version=1.0,
     author="Adewale Azeez",
     author_email="azeezadewale98@gmail.com",
     description="A milkish looking sphinx theme",
     long_description=long_description,
     license="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
-    packages=["milkish"],
+    packages=[
+        "themata",
+        "themata.milkish"
+    ],
     include_package_data=True,
     keywords="sphinx extension theme",
     url="https://github.com/Thecarisma/milkish/",

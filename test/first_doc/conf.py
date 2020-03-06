@@ -85,8 +85,10 @@ pygments_style = 'sphinx'
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
-import milkish
 import os
+import themata
+
+html_theme_path = [os.path.dirname(themata.__file__)]
 
 html_theme_options = {
     'has_left_sidebar': False,
