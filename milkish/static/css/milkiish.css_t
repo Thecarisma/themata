@@ -85,9 +85,9 @@ pre {
 }
 
 .highlight-default .highlight {
-    background-color: {{ theme_background_color }};
+    background-color: {{ theme_pre_background_color }};
     filter: brightness(90%);
-    border: black 1px solid;
+    border: {{ theme_pre_border_color }} 1px solid; /* pre_border_color */
     border-radius: 5px;
     font-size: 0.8em;
     margin: 5px;
