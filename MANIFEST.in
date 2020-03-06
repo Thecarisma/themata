@@ -1,1 +1,1 @@
-recursive-include milkish *.css_t *.html *.conf *.ttf *.png
+recursive-include themata/milkish *.css_t *.html *.conf *.ttf *.png
