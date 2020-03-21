@@ -28,10 +28,12 @@
     </header>
     <div class="documentwrapper">
         {% if theme_has_left_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.right')) %}
-            <div class="sidebar-left">
-                </br>
-                {{ toctree(maxdepth=1, titles_only=True) }}
-            </div>
+            {% if pagename == 'index' and not index_is_single %}
+                <div class="sidebar-left">
+                    </br>
+                    {{ toctree(maxdepth=1, titles_only=True) }}
+                </div>
+            {% endif %}
         {% endif %}
         <div class="bodywrapper">
                 {% block body %} {% endblock %}
@@ -50,20 +52,22 @@
                 </div>
         </div>
         {% if theme_has_right_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.left')) %}
-            <div class="sidebar-right">
-                <h2>Page Contents</h2>
-                {{ toc }}
-                {% if prev %}
-                    <h2>Previous topic</h2>
-                    <a href="{{ prev.link|e }}">{{ prev.title }}</a>
-                {% endif %}
-                {% if next %}
-                    <h2>Next topic</h2>
-                    <a href="{{ next.link|e }}">{{ next.title }}</a>
-                {% endif %}
-                <h2>This Page</h2>
-                <a href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a>
-            </div>
+            {% if pagename == 'index' and not index_is_single %}
+                <div class="sidebar-right">
+                    <h2>Page Contents</h2>
+                    {{ toc }}
+                    {% if prev %}
+                        <h2>Previous topic</h2>
+                        <a href="{{ prev.link|e }}">{{ prev.title }}</a>
+                    {% endif %}
+                    {% if next %}
+                        <h2>Next topic</h2>
+                        <a href="{{ next.link|e }}">{{ next.title }}</a>
+                    {% endif %}
+                    <h2>This Page</h2>
+                    <a href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a>
+                </div>
+            {% endif %}
         {% endif %}
         <div style="clear:both"></div>
     </div> 
