@@ -1,1 +1,2 @@
 recursive-include themata/milkish *.css_t *.html *.conf *.ttf *.png
+recursive-include themata/fluid *.css_t *.html *.conf *.ttf *.png

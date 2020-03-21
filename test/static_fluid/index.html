@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>simple.util.LookAhead &#8212; Sphinx-Themes template 1 documentation</title>
+    <link rel="stylesheet" href="_static/css/milkiish.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <header>
+        <div class="topnavbar">
+            <!--<img class="icon" src="_static/images/white.jpg"></img> later-->
+            <a href="./" class="title">Test CSS JS</a>
+            <a href="./documentation/" class="active">Docs</a>
+            <a href="https://pypi.python.org/pypi/milkish">Download</a>
+            <a href="./examples/">Examples</a>
+            <a href="./faq/">FAQ</a>
+            <div class="search-container">
+                <form class="search" action="search.html" method="get">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="" name="q">
+                </form>
+            </div>
+        </div>
+    </header>
+    
+    <div class="documentwrapper">
+        <div class="sidebar-left">
+            <p class="caption"><span class="caption-text">General</span></p>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="general/about/index.html">About</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="general/about/introduction.html">Introduction</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="general/about/faq.html">Frequently Asked Questions (FAQ)</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="general/simple_tour/index.html">A simple Tour</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="general/syntax/index.html">Keywords and Syntax</a></li>
+            </ul>
+            <p class="caption"><span class="caption-text">Standard Modules</span></p>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="modules/index.html">modules</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="modules/simple/index.html">simple</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="modules/simple/util/index.html">simple.util</a></li>
+            </ul>
+            <p class="caption"><span class="caption-text">Examples</span></p>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="examples/index.html">examples</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="examples/intermediate/index.html">intermediate</a></li>
+            </ul>
+            <p class="caption"><span class="caption-text">Examples</span></p>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="examples/index.html">examples</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="examples/intermediate/index.html">intermediate</a></li>
+            </ul>
+            <p class="caption"><span class="caption-text">Examples</span></p>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="examples/index.html">examples</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="examples/intermediate/index.html">intermediate</a></li>
+            </ul>
+            <p class="caption"><span class="caption-text">Examples</span></p>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="examples/index.html">examples</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="examples/intermediate/index.html">intermediate</a></li>
+            </ul>
+            <p class="caption"><span class="caption-text">Examples</span></p>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="examples/index.html">examples</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="examples/intermediate/index.html">intermediate</a></li>
+            </ul>
+            <p class="caption"><span class="caption-text">Examples</span></p>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="examples/index.html">examples</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="examples/intermediate/index.html">intermediate</a></li>
+            </ul>
+            <p class="caption"><span class="caption-text">Examples</span></p>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="examples/index.html">examples</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="examples/intermediate/index.html">intermediate</a></li>
+            </ul>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="examples/index.html">examples</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="examples/intermediate/index.html">intermediate</a></li>
+            </ul>
+            <ul>
+            <li class="toctree-l1"><a class="reference internal" href="examples/index.html">examples</a></li>
+            <li class="toctree-l1"><a class="reference internal" href="examples/intermediate/index.html">intermediate</a></li>
+            </ul>
+        </div>
+        <div class="bodywrapper">
+                <div class="section" id="simple-util-lookahead">
+                    <span id="index-0"></span><h1>simple.util.LookAhead<a class="headerlink" href="#simple-util-lookahead" title="Permalink to this headline">¶</a></h1>
+                    <p>The LookAhead module is ideal for walking through a text base source or string.
+                    Most of the module in the <a class="reference external" href="../../parser/index.html">parser</a> uses the LookAhead module to implement
+                    it objects such as the <a class="reference external" href="../../parser/json/JsonParser.html">parser.json.JsonParser</a>, <a class="reference external" href="../../parser/rst/rstParser.html">parser.rst.rstParser</a> VS Code excludes some folders by default to reduce the number of search results that you are not interested in (for example: node_modules). Open settings to change these rules under the files.exclude and search.exclude section.
+
+Also note the Use Exclude Settings and Ignore Files toggle button in the files to exclude box. The toggle determines whether to exclude files that are ignored by your .gitignore files and/or matched by your files.exclude and search.exclude settings.</p>
+                    <dl class="field-list simple">
+                    <dt class="field-odd">copyright</dt>
+                    <dd class="field-odd"><p>2018-2019, Azeez Adewale</p>
+                    </dd>
+                    <dt class="field-even">license</dt>
+                    <dd class="field-even"><p>MIT License Copyright (c) 2018 simple</p>
+                    </dd>
+                    <dt class="field-odd">author</dt>
+                    <dd class="field-odd"><p>Azeez Adewale &lt;<a class="reference external" href="mailto:azeezadewale98&#37;&#52;&#48;gmail&#46;com">azeezadewale98<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
+                    </dd>
+                    <dt class="field-even">date</dt>
+                    <dd class="field-even"><p>11 Febuary 2017</p>
+                    </dd>
+                    <dt class="field-even">filename</dt>
+                    <dd class="field-even"><p>LookAhead.sim</p>
+                    </dd>
+                    </dl>
+                    </div>
+                    <div class="section" id="table-of-content">
+                    <h1>Table Of Content<a class="headerlink" href="#table-of-content" title="Permalink to this headline">¶</a></h1>
+                    <table class="docutils align-default">
+                    <colgroup>
+                    <col style="width: 18%" />
+                    <col style="width: 82%" />
+                    </colgroup>
+                    <thead>
+                    <tr class="row-odd"><th class="head"><p>Fields/Blocks/Classes</p></th>
+                    <th class="head"><p>Summary</p></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row-even"><td><p><a class="reference internal" href="#class-lookahead-inherit-object">class LookAhead inherit Object</a></p></td>
+                    <td></td>
+                    </tr>
+                    <tr class="row-odd"><td><p><a class="reference internal" href="#int-position">int Position</a></p></td>
+                    <td><p>The current position in the object</p></td>
+                    </tr>
+                    <tr class="row-even"><td><p><a class="reference internal" href="#string-value">string Value</a></p></td>
+                    <td><p>The value of the object, string on ordinary instance, file descriptor pointer     on file instance</p></td>
+                    </tr>
+                    <tr class="row-odd"><td><p><a class="reference internal" href="#long-length">long Length</a></p></td>
+                    <td><p>The length of the string, the size of the file stream</p></td>
+                    </tr>
+                    <tr class="row-even"><td><p><a class="reference internal" href="#block-lookahead-string-value">block LookAhead(string value)</a></p></td>
+                    <td><p>The constructor accept</p></td>
+                    </tr>
+                    <tr class="row-odd"><td><p><a class="reference internal" href="#block-peek-number-params">block peek(number params…)</a></p></td>
+                    <td><p>Check the character at the current position in the stream, the peek also accept     an extra number parameter which will be added to the current position before</p></td>
+                    </tr>
+                    <tr class="row-even"><td><p><a class="reference internal" href="#block-pop">block pop()</a></p></td>
+                    <td><p>Check the character at the current position in the stream, the peek also accept     an extra number parameter which will be added to the current position before</p></td>
+                    </tr>
+                    <tr class="row-odd"><td><p><a class="reference internal" href="#block-position">block position()</a></p></td>
+                    <td><p>Get the current position of the look ahead object in a printable string</p></td>
+                    </tr>
+                    <tr class="row-even"><td><p><a class="reference internal" href="#block-skip-number-num">block skip(number num)</a></p></td>
+                    <td><p>Move the position <strong>X</strong> forward. The number sent as parameter is used to     advance the position forward. The method ensure that a valid number is</p></td>
+                    </tr>
+                    <tr class="row-odd"><td><p><a class="reference internal" href="#block-equals-object-obj">block equals(object obj)</a></p></td>
+                    <td><p>Check if the argument sent is the same as this object. It is false if the obj is     of different instance, if it the same instance as simple.util.LookAhead then the</p></td>
+                    </tr>
+                    <tr class="row-even"><td><p><a class="reference internal" href="#block-tostring">block toString()</a></p></td>
+                    <td><p>The current object in a printable string</p></td>
+                    </tr>
+                    <tr class="row-odd"><td><p><a class="reference internal" href="#private">private</a></p></td>
+                    <td><p>All private methods below</p></td>
+                    </tr>
+                    <tr class="row-even"><td><p><a class="reference internal" href="#line">Line</a></p></td>
+                    <td><p>The current line in the look ahead object</p></td>
+                    </tr>
+                    <tr class="row-odd"><td><p><a class="reference internal" href="#column">Column</a></p></td>
+                    <td><p>The current column in the look ahead object</p></td>
+                    </tr>
+                    <tr class="row-even"><td><p><a class="reference internal" href="#block-setline">block setLine()</a></p></td>
+                    <td><p>Private setter method for the <a class="reference internal" href="#line">Line</a> variable</p></td>
+                    </tr>
+                    <tr class="row-odd"><td><p><a class="reference internal" href="#block-setcolumn">block setColumn()</a></p></td>
+                    <td><p>Private setter method for the <a class="reference internal" href="#column">Column</a> variable</p></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                    <div class="section" id="class-lookahead-inherit-object">
+                    <span id="index-1"></span><h1>class LookAhead inherit Object<a class="headerlink" href="#class-lookahead-inherit-object" title="Permalink to this headline">¶</a></h1>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L22">class LookAhead inherit Object Source</a>.</p>
+                    <div class="section" id="int-position">
+                    <span id="index-2"></span><h2>int Position<a class="headerlink" href="#int-position" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L27">int Position Source</a>.</p>
+                    <blockquote>
+                    <div><p>During my preparation, I always knew that interviewing would be challenging. But I honestly had no idea how hard it would be until I was knee-deep into my first interview.
+
+In the lead-up to the interviews, I had used both paid and free services, which simulated coding and whiteboarding interviews over the phone with people who had industry experience interviewing candidates. Those practice interviews were essential for priming me for the pressure involved. But as I later realized, they only amounted to a fraction of what a real interview consists of.
+
+I’d advise against interviewing at your dream job without having a few mock or real interviews under your belt. The nervousness can be incredibly overwhelming, and it can only be dulled through practice.</p>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="string-value">
+                    <span id="index-3"></span><h2>string Value<a class="headerlink" href="#string-value" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L33">string Value Source</a>.</p>
+                    <blockquote>
+                    <div><p>The value of the object, string on ordinary instance, file descriptor pointer
+                    on file instance</p>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="long-length">
+                    <span id="index-4"></span><h2>long Length<a class="headerlink" href="#long-length" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L38">long Length Source</a>.</p>
+                    <blockquote>
+                    <div><p>The length of the string, the size of the file stream</p>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="block-lookahead-string-value">
+                    <span id="index-5"></span><h2>block LookAhead(string value)<a class="headerlink" href="#block-lookahead-string-value" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L43">block LookAhead(string value) Source</a>.</p>
+                    <blockquote>
+                    <div><p>The constructor accept</p>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="block-peek-number-params">
+                    <span id="index-6"></span><h2>block peek(number params…)<a class="headerlink" href="#block-peek-number-params" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L68">block peek(number params…) Source</a>.</p>
+                    <blockquote>
+                    <div><p>Check the character at the current position in the stream, the peek also accept
+                    an extra number parameter which will be added to the current position before
+                    peeking, the extra number does not change the current position.</p>
+                    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="n">new</span> <span class="n">LookAhead</span><span class="p">(</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+                    <span class="n">stdout</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">peek</span><span class="p">())</span> <span class="c1">#1</span>
+                    <span class="n">stdout</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">peek</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1">#3</span>
+                    </pre></div>
+                    </div>
+                    <dl class="simple">
+                    <dt><strong>Parameters</strong>:</dt><dd><dl class="simple">
+                    <dt>params<span class="classifier">Number</span></dt><dd><p>this method accept one optional parameter which is use to determining how
+                    many number forward to peek in the current stream</p>
+                    </dd>
+                    </dl>
+                    </dd>
+                    <dt><strong>Return</strong>:</dt><dd><p>the character at the current position or the optional param forward, return - 1
+                    if it the end of the stream</p>
+                    </dd>
+                    </dl>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="block-pop">
+                    <span id="index-7"></span><h2>block pop()<a class="headerlink" href="#block-pop" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L110">block pop() Source</a>.</p>
+                    <blockquote>
+                    <div><p>Check the character at the current position in the stream, the peek also accept
+                    an extra number parameter which will be added to the current position before
+                    peeking, the extra number does not change the current position.</p>
+                    <p>The character is returned and the position advances by 1</p>
+                    <p>For every pop the <a class="reference internal" href="#column">Column</a> increase by one except
+                    if the character is a new line which resets <a class="reference internal" href="#column">Column</a> to zero and increase the
+                    <a class="reference internal" href="#line">Line</a> by one.</p>
+                    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="n">new</span> <span class="n">LookAhead</span><span class="p">(</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+                    <span class="n">stdout</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c1">#1</span>
+                    <span class="n">stdout</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c1">#2</span>
+                    <span class="n">stdout</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c1">#3</span>
+                    <span class="n">stdout</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c1">#4</span>
+                    <span class="n">stdout</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c1">#5</span>
+                    </pre></div>
+                    </div>
+                    <dl class="simple">
+                    <dt><strong>Return</strong>:</dt><dd><p>the character at the current position or the optional param forward, return - 1
+                    if it the end of the stream</p>
+                    </dd>
+                    </dl>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="block-position">
+                    <span id="index-8"></span><h2>block position()<a class="headerlink" href="#block-position" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L130">block position() Source</a>.</p>
+                    <blockquote>
+                    <div><p>Get the current position of the look ahead object in a printable string</p>
+                    <dl class="simple">
+                    <dt><strong>Return</strong>:</dt><dd><p>the current current <a class="reference internal" href="#line">Line</a> and <a class="reference internal" href="#column">Column</a> in a printable string</p>
+                    </dd>
+                    </dl>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="block-skip-number-num">
+                    <span id="index-9"></span><h2>block skip(number num)<a class="headerlink" href="#block-skip-number-num" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L153">block skip(number num) Source</a>.</p>
+                    <blockquote>
+                    <div><p>Move the position <strong>X</strong> forward. The number sent as parameter is used to
+                    advance the position forward. The method ensure that a valid number is
+                    skipped by using the <strong>min</strong> function from the Math module to keep the
+                    number in range.</p>
+                    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">la</span> <span class="o">=</span> <span class="n">new</span> <span class="n">LookAhead</span><span class="p">(</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+                    <span class="n">stdout</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>  <span class="c1">#2</span>
+                    <span class="n">stdout</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">la</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="mi">60</span><span class="p">))</span> <span class="c1">#3 # min(60, Length:5 - Position:2 ) = 3</span>
+                    </pre></div>
+                    </div>
+                    <dl class="simple">
+                    <dt><strong>Parameters</strong>:</dt><dd><dl class="simple">
+                    <dt>num<span class="classifier">Number</span></dt><dd><p>the number to skip in the stream</p>
+                    </dd>
+                    </dl>
+                    </dd>
+                    <dt><strong>Return</strong>:</dt><dd><p>the number that is been skipped in the stream</p>
+                    </dd>
+                    </dl>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="block-equals-object-obj">
+                    <span id="index-10"></span><h2>block equals(object obj)<a class="headerlink" href="#block-equals-object-obj" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L171">block equals(object obj) Source</a>.</p>
+                    <blockquote>
+                    <div><p>Check if the argument sent is the same as this object. It is false if the obj is
+                    of different instance, if it the same instance as simple.util.LookAhead then the
+                    Key fields are compared to check it equality.</p>
+                    <dl class="simple">
+                    <dt><strong>Parameters</strong>:</dt><dd><dl class="simple">
+                    <dt>obj<span class="classifier">Object</span></dt><dd><p>the object to compare with the current object</p>
+                    </dd>
+                    </dl>
+                    </dd>
+                    <dt><strong>Return</strong>:</dt><dd><p>true if the argument object has the same attributes as this object</p>
+                    </dd>
+                    </dl>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="block-tostring">
+                    <span id="index-11"></span><h2>block toString()<a class="headerlink" href="#block-tostring" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L183">block toString() Source</a>.</p>
+                    <blockquote>
+                    <div><p>The current object in a printable string</p>
+                    <dl class="simple">
+                    <dt><strong>Return</strong>:</dt><dd><p>the object in a printable string</p>
+                    </dd>
+                    </dl>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="private">
+                    <span id="index-12"></span><h2>private<a class="headerlink" href="#private" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L189">private Source</a>.</p>
+                    <blockquote>
+                    <div><p>All private methods below</p>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="line">
+                    <span id="index-13"></span><h2>Line<a class="headerlink" href="#line" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L194">Line Source</a>.</p>
+                    <blockquote>
+                    <div><p>The current line in the look ahead object</p>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="column">
+                    <span id="index-14"></span><h2>Column<a class="headerlink" href="#column" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L199">Column Source</a>.</p>
+                    <blockquote>
+                    <div><p>The current column in the look ahead object</p>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="block-setline">
+                    <span id="index-15"></span><h2>block setLine()<a class="headerlink" href="#block-setline" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L204">block setLine() Source</a>.</p>
+                    <blockquote>
+                    <div><p>Private setter method for the <a class="reference internal" href="#line">Line</a> variable</p>
+                    </div></blockquote>
+                    </div>
+                    <div class="section" id="block-setcolumn">
+                    <span id="index-16"></span><h2>block setColumn()<a class="headerlink" href="#block-setcolumn" title="Permalink to this headline">¶</a></h2>
+                    <p><strong>Source</strong>: <a class="reference external" href="https://github.com/simple-lang/simple/tree/master/modules/simple/util/LookAhead.sim#L209">block setColumn() Source</a>.</p>
+                    <blockquote>
+                    <div><p>Private setter method for the <a class="reference internal" href="#column">Column</a> variable</p>
+                    </div></blockquote>
+                    <hr class="docutils" />
+                    <p>.</p>
+                    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">call</span> <span class="n">simple</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">Object</span>
+<span class="n">call</span> <span class="n">simple</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">Console</span>
+<span class="n">call</span> <span class="n">simple</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">LookAhead</span>
+
+<span class="n">forCode</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">la</span> <span class="o">=</span> <span class="n">new</span> <span class="n">LookAhead</span><span class="p">(</span><span class="s2">&quot;</span>
+ <span class="p">{</span>
+  <span class="k">for</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">100</span>
+   <span class="n">display</span> <span class="n">a</span>
+  <span class="n">end</span>
+ <span class="p">}</span>
+<span class="s2">&quot;)</span>
+
+<span class="k">while</span> <span class="n">la</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="p">{</span>
+
+ <span class="k">if</span> <span class="n">la</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;{&#39;</span> <span class="p">{</span>
+  <span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+  <span class="k">while</span> <span class="n">la</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span> <span class="o">!=</span> <span class="s1">&#39;}&#39;</span> <span class="p">{</span>
+   <span class="n">forCode</span> <span class="o">+=</span> <span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+  <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="n">la</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">stdout</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">forCode</span><span class="p">)</span>
+
+<span class="c1">#check all the character until it EOF</span>
+<span class="c1">#check if the current character is open brace</span>
+<span class="c1">#move ahead by 1 to pass curent &#39;{&#39;</span>
+<span class="c1">#append to the forCode variable until a closing brace is met</span>
+<span class="c1">#pop the current character so we can advance forward</span>
+                    </pre></div>
+                    </div>
+                    <p>.</p>
+                    </div>
+                    </div>
+                    
+                    </br>
+                    <div class="navigation">
+                        <div style="float:right">
+                            <a class="reference navigator" href="#"><i class="fa fa-arrow-left"></i>Prev</a>
+                            <a class="reference navigator" href="#">Next<i class="fa fa-arrow-right"></i></a> 
+                        </div>
+                        <a class="reference navigator" style="float:left;" href="#"><i class="fa fa-book"></i>Index</a>                   
+                    </div>
+        </div>
+        <div class="sidebar-right">
+            <h2>Table Of Content</h2>
+            <ul>
+            <li><a class="reference internal" href="#">simple.util.LookAhead</a></li>
+            <li><a class="reference internal" href="#table-of-content">Table Of Content</a></li>
+            <li><a class="reference internal" href="#class-lookahead-inherit-object">class LookAhead inherit Object</a><ul>
+            <li><a class="reference internal" href="#int-position">int Position</a></li>
+            <li><a class="reference internal" href="#string-value">string Value</a></li>
+            <li><a class="reference internal" href="#long-length">long Length</a></li>
+            <li><a class="reference internal" href="#block-lookahead-string-value">block LookAhead(string value)</a></li>
+            <li><a class="reference internal" href="#block-peek-number-params">block peek(number params…)</a></li>
+            <li><a class="reference internal" href="#block-pop">block pop()</a></li>
+            <li><a class="reference internal" href="#block-position">block position()</a></li>
+            <li><a class="reference internal" href="#block-skip-number-num">block skip(number num)</a></li>
+            <li><a class="reference internal" href="#block-equals-object-obj">block equals(object obj)</a></li>
+            <li><a class="reference internal" href="#block-tostring">block toString()</a></li>
+            <li><a class="reference internal" href="#private">private</a></li>
+            <li><a class="reference internal" href="#line">Line</a></li>
+            <li><a class="reference internal" href="#column">Column</a></li>
+            <li><a class="reference internal" href="#block-setline">block setLine()</a></li>
+            <li><a class="reference internal" href="#block-setcolumn">block setColumn()</a></li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        <div style="clear:both"></div>
+    </div> 
+    <div class="footer" role="contentinfo">
+        <div class="social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-slack"></i></a>
+            <a href="#"><i class="fab fa-stackoverflow"></i></a>
+        </div>
+        <div class="footer-col1">
+            <div class="footer-col2">
+                <span class="footer-col2-title"><i class="fa fa-menu fa-book"></i>One Title</span>
+                <ul>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>One</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Two Two</a></li>
+
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Three Three Three</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <span class="footer-col2-title"><i class="fa fa-menu fa-book"></i>Documenations</span>
+                <ul>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>One</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Two Two</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Three Three Three</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Four Four Four Four</a></li>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Five Five Five Five Five</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <span class="footer-col2-title"><i class="fa fa-menu fa-book"></i>Another header</span>
+                <ul>
+                    <li><a href="#"><i class="fa fa-menu fa-chevron-right"></i>Five Five Five Five Five</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="doc-sphinx-info">
+            &#169; Copyright 2020, Adewale Azeez..
+            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
+        </div>
+    </div>
+  </body>
+</html>

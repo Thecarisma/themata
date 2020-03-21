@@ -15,7 +15,8 @@ setup(
     license="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
     packages=[
         "themata",
-        "themata.milkish"
+        "themata.milkish",
+        "themata.fluid"
     ],
     include_package_data=True,
     keywords="sphinx extension theme",
