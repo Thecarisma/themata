@@ -91,8 +91,8 @@ import themata
 html_theme_path = [os.path.dirname(themata.__file__)]
 
 html_theme_options = {
-    'has_left_sidebar': False,
-    'has_right_sidebar': False,
+    'has_left_sidebar': True,
+    'has_right_sidebar': True,
     'navbar_links': [
         ("Docs", "./docs"),
         ("Download", "https://pypi.python.org/pypi/milkish"),
