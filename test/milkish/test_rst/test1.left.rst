@@ -1,24 +1,3 @@
-
-.. toctree::
-   :maxdepth: 1
-   :caption: General
-   :name: sec-general
-
-   general/index
-   general/introduction
-   general/faq
-   
-.. toctree::
-   :maxdepth: 1
-   :caption: Files
-   :name: sec-files
-
-   /test1
-   /test1.single
-   /test1.left
-   /test1.right
-
-
 Hello
 -----
 

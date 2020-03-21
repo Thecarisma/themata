@@ -27,7 +27,7 @@
         </div>
     </header>
     <div class="documentwrapper">
-        {% if theme_has_left_sidebar %}
+        {% if theme_has_left_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.right')) %}
             <div class="sidebar-left">
                 </br>
                 {{ toctree(maxdepth=1, titles_only=True) }}
@@ -49,7 +49,7 @@
                     <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>                   
                 </div>
         </div>
-        {% if theme_has_right_sidebar %}
+        {% if theme_has_right_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.left')) %}
             <div class="sidebar-right">
                 <h2>Page Contents</h2>
                 {{ toc }}
