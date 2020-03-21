@@ -1,5 +1,6 @@
 
 .. toctree::
+   :hidden:
    :maxdepth: 1
    :caption: General
    :name: sec-general
@@ -9,6 +10,7 @@
    general/faq
    
 .. toctree::
+   :hidden:
    :maxdepth: 1
    :caption: Files
    :name: sec-files
