@@ -91,7 +91,6 @@ import themata
 html_theme_path = [os.path.dirname(themata.__file__)]
 
 html_theme_options = {
-    'index_is_single': False,
     'has_left_sidebar': True,
     'has_right_sidebar': True,
     'navbar_links': [
