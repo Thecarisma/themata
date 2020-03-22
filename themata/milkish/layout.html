@@ -13,7 +13,9 @@
 {%- block document %}
     <header>
         <div class="topnavbar">
-            <!--<img class="icon" src="_static/images/white.jpg"></img> later-->
+            {% if theme_project_icon %}
+                <img class="icon" src="{{ theme_project_icon }}"></img>
+            {% endif %}
             <a href="{{ pathto(master_doc) }}" class="title">{{ project }}</a>
             {% for navbar_link in theme_navbar_links %}
                 <a href="{{ navbar_link[1] }}">{{ navbar_link[0] }}</a> <!-- class="active" -->

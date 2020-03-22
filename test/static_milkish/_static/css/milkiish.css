@@ -96,10 +96,12 @@ pre {
 
 .icon {
     max-height:30px;
+    max-width:200px;
     margin: auto;
     bottom: 0px;
     margin-bottom: 0px;
     padding-bottom: 0px;
+    vertical-align:middle;
 }
 
 .topnavbar {

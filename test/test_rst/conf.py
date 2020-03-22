@@ -172,4 +172,4 @@ html_theme_options = {
     ],
 }
 
-html_theme = 'fluid'
+html_theme = 'milkish'
