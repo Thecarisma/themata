@@ -96,13 +96,13 @@ html_theme_options = {
     'has_right_sidebar': True,
     'show_navigators': False,
     'left_sidebar_only': [
-        "leftpage*"
+        "leftpage"
     ],
     'right_sidebar_only': [
-        "*regex*"
+        "sampleregex1"
     ],
     'no_sidebar': [
-        "*single*"
+        "singlepage"
     ],
     'navbar_links': [
         ("Docs", "./docs"),

@@ -32,10 +32,12 @@
     <div class="documentwrapper">
         {% if theme_has_left_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.right')) %}
             {% if (pagename != 'index') or (pagename == 'index' and not theme_index_is_single) %}
+                {% if pagename not in theme_right_sidebar_only %}
                 <div class="sidebar-left">
                     </br>
                     {{ toctree(maxdepth=1, titles_only=True, includehidden=True) }}
                 </div>
+                {% endif %}
             {% endif %}
         {% endif %}
         <div class="bodywrapper">
