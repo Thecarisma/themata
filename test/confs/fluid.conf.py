@@ -101,15 +101,14 @@ html_theme_options = {
         ("FAQ", "./faq")
     ],
     'social_icons': [
-        ("fab fa-twitter", "https://twitter.com/iamthecarisma"),
-        ("fab fa-twitch", "https://www.twitch.tv/amsiraceht"),
-        ("fab fa-github", "https://github.com/Thecarisma"),
-        ("fab fa-linkedin", "https://www.linkedin.com/in/azeez-adewale/"),
-        ("fab fa-stackoverflow", "https://stackoverflow.com/users/6626422/thecarisma")
+        ("https://twitter.com/iamthecarisma"),
+        ("https://www.twitch.tv/amsiraceht"),
+        ("https://github.com/Thecarisma"),
+        ("https://www.linkedin.com/in/azeez-adewale/"),
+        ("https://stackoverflow.com/users/6626422/thecarisma")
     ],
     'footer_menus': [
         {
-            'icon': 'fa-phone',
             'title': 'Contact',
             'menu_items': [
                 {
@@ -123,7 +122,6 @@ html_theme_options = {
             ]
         },
         {
-            'icon': 'fa-book',
             'title': 'Documentation',
             'menu_items': [
                 {
@@ -149,7 +147,6 @@ html_theme_options = {
             ]
         },
         {
-            'icon': 'fa-users',
             'title': 'Community',
             'menu_items': [
                 {
