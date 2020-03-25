@@ -35,7 +35,7 @@ a:hover {
 header {
     overflow: hidden;
     background-color: white; /* theme_header_background_color */
-    box-shadow: 1px 5px 1px #f7f7f7; /* theme_highlight_color */
+    box-shadow: 1px 1px 1px #0d8aa1 !important; /* theme_highlight_color */
     position: fixed;
     top: 0px;
     width: 100vw;
@@ -163,13 +163,14 @@ pre {
 
 .sidebar-left {
     float:left;
-    width:25%;
+    width:20%;
     z-index: 1;
     font-size: 13px;
     top: 70px;
     background: #f0f4f5;  /* theme_left_sidebar_background */
     overflow-y:auto;
     padding-left: 3%;
+    border-right: 1px solid #0d8aa1 !important; /* theme_highlight_color */
 }
 
 .sidebar-right {
@@ -185,7 +186,7 @@ pre {
 
 .bodywrapper {
     float:left;
-    width:48%;
+    width:51%;
     margin-top: 1%;
     margin-left: 3%;
     margin-right: 10px;
@@ -291,6 +292,7 @@ li {
 
 .bodywrapper .navigator {
     padding: 10px;
+    margin-bottom: 50px;
     margin-right: 10px;
     border-radius: 5px;
     background: white; /* theme_background_color */
@@ -386,18 +388,17 @@ div.viewcode-block:target {
 
 .footer {
     background-color: #181d21; /* theme_footer_background_color */
-    box-shadow: 0px 0px 5px #34aeeb; /* theme_footer_highlight_color */
+    box-shadow: 0px 0px 5px #0d8aa1; /* theme_footer_highlight_color */
     color: white !important; /* theme_footer_item_color */
     width: 100%;
     padding: 13px 0;
     text-align: center;
     z-index: 2;
     position: absolute;
-    margin-top:100px;
 }
 
 .footer a {
-    color: #34aeeb !important; /* theme_footer_highlight_color */
+    color: #0d8aa1 !important; /* theme_footer_highlight_color */
 }
 
 .doc-sphinx-info {
@@ -454,6 +455,10 @@ div.viewcode-block:target {
     margin-left: 10px;
     margin-right: 10px;
     color: white !important; /* theme_footer_item_color */
+}
+
+.footer .social > a > i:hover {
+    color: #0d8aa1 !important; /* theme_footer_highlight_color */
 }
 
 

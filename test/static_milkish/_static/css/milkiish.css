@@ -433,8 +433,11 @@ div.viewcode-block:target {
 .footer .social > a > i {
     margin-left: 10px;
     margin-right: 10px;
+    color: white !important; /* theme_menu_item_color */
 }
 
-
+.footer .social > a > i:hover {
+    color: #727273 !important; /* theme_link_color */
+}
 
 

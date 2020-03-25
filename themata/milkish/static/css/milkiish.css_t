@@ -433,6 +433,11 @@ div.viewcode-block:target {
 .footer .social > a > i {
     margin-left: 10px;
     margin-right: 10px;
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
+}
+
+.footer .social > a > i:hover {
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 
