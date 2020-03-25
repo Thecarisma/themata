@@ -94,6 +94,16 @@ html_theme_options = {
     'project_icon': "https://media2.giphy.com/media/2vnId4IaAjIGZd2EWC/giphy.gif",
     'has_left_sidebar': True,
     'has_right_sidebar': True,
+    'show_navigators': True,
+    'left_sidebar_only': [
+        "leftpage"
+    ],
+    'right_sidebar_only': [
+        "sampleregex1"
+    ],
+    'no_sidebar': [
+        "singlepage"
+    ],
     'navbar_links': [
         ("Docs", "./docs"),
         ("Download", "https://pypi.python.org/pypi/milkish"),
@@ -101,11 +111,11 @@ html_theme_options = {
         ("FAQ", "./faq")
     ],
     'social_icons': [
-        ("https://twitter.com/iamthecarisma"),
-        ("https://www.twitch.tv/amsiraceht"),
-        ("https://github.com/Thecarisma"),
-        ("https://www.linkedin.com/in/azeez-adewale/"),
-        ("https://stackoverflow.com/users/6626422/thecarisma")
+        ("fab fa-twitter", "https://twitter.com/iamthecarisma"),
+        ("fab fa-twitch", "https://www.twitch.tv/amsiraceht"),
+        ("fab fa-github", "https://github.com/Thecarisma"),
+        ("fab fa-linkedin", "https://www.linkedin.com/in/azeez-adewale/"),
+        ("fab fa-stackoverflow", "https://stackoverflow.com/users/6626422/thecarisma")
     ],
     'footer_menus': [
         {
@@ -170,4 +180,4 @@ html_theme_options = {
     ],
 }
 
-html_theme = 'milkish'
+html_theme = 'fluid'

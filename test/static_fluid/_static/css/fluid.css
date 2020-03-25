@@ -159,6 +159,7 @@ pre {
     margin-top: 70px;
     max-height: 100%;
     display: flex;
+    justify-content: center;
 }  
 
 .sidebar-left {

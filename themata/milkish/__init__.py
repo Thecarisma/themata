@@ -18,6 +18,5 @@ def setup(app):
     if hasattr(app, "add_html_theme"):
         theme_path = os.path.abspath(os.path.dirname(__file__))
         app.add_html_theme("milkish", theme_path)
-        print("Booya ka sha")
     app.connect("html-page-context", update_context)
     return {"version": __version}
