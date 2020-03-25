@@ -453,6 +453,7 @@ div.viewcode-block:target {
 .footer .social > a > i {
     margin-left: 10px;
     margin-right: 10px;
+    color: white !important; /* theme_footer_item_color */
 }
 
 

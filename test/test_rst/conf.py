@@ -91,8 +91,10 @@ import themata
 html_theme_path = [os.path.dirname(themata.__file__)]
 
 html_theme_options = {
+    'project_icon': "https://media2.giphy.com/media/2vnId4IaAjIGZd2EWC/giphy.gif",
     'has_left_sidebar': True,
     'has_right_sidebar': True,
+    'show_navigators': False,
     'navbar_links': [
         ("Docs", "./docs"),
         ("Download", "https://pypi.python.org/pypi/milkish"),
