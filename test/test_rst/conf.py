@@ -95,6 +95,12 @@ html_theme_options = {
     'has_left_sidebar': True,
     'has_right_sidebar': True,
     'show_navigators': False,
+    'left_sidebar_only': [
+        "single*"
+    ]
+    'right_sidebar_only': [
+        "*regex*"
+    ],
     'navbar_links': [
         ("Docs", "./docs"),
         ("Download", "https://pypi.python.org/pypi/milkish"),
