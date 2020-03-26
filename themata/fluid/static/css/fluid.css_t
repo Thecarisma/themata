@@ -1,5 +1,5 @@
 /*
- * milkiish.css_t
+ * fluid.css_t
  * ~~~~~~~~~~~~~~
  *
  * :copyright: Copyright 2020 Adewale Azeez.
@@ -18,24 +18,24 @@ body {
     font-size: 100%;
     padding: 0;
     margin: 0;
-    background: white; /* theme_background_color */
+    background: {{ theme_background_color }}; /* theme_background_color */
     font-weight: 400;
 }
 
 a {
-    color: #0d8aa1 !important; /* theme_link_color */
+    color: {{ theme_link_color }} !important; /* theme_link_color */
     text-decoration: none;
 }
 
 a:hover {
-    color: #363638 !important; /* theme_highlight_color */
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
     text-decoration: none;
 }
 
 header {
     overflow: hidden;
-    background-color: white; /* theme_header_background_color */
-    box-shadow: 1px 1px 1px #0d8aa1 !important; /* theme_highlight_color */
+    background-color: {{ theme_header_background_color }}; /* theme_header_background_color */
+    box-shadow: 1px 1px 1px {{ theme_highlight_color }} !important; /* theme_highlight_color */
     position: fixed;
     top: 0px;
     width: 100vw;
@@ -69,13 +69,13 @@ table {
 }
 
 table thead th, table thead td {
-    background-color: white; /* theme_background_color */
+    background-color: {{ theme_background_color }}; /* theme_background_color */
     padding: 5px;
     margin: 1px;
 }
 
 table tbody th, table tbody td {
-    background-color: white; /* theme_background_color */
+    background-color: {{ theme_background_color }}; /* theme_background_color */
     padding: 2px;
 }
 
@@ -87,8 +87,8 @@ pre {
 }
 
 .highlight-default .highlight {
-    background-color: #dce2e6; /* theme_pre_background_color */
-    border: white 1px solid; /* theme_pre_border_color */
+    background-color: {{ theme_pre_background_color }}; /* theme_pre_background_color */
+    border: {{ theme_pre_border_color }} 1px solid; /* theme_pre_border_color */
     border-radius: 5px;
     font-size: 0.8em;
     margin: 5px;
@@ -114,7 +114,7 @@ pre {
 }
 
 .topnavbar a {
-    color: #363638 !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
     text-align: center;
     text-decoration: none;
     font-size: 15px;
@@ -127,7 +127,7 @@ pre {
 }
 
 .topnavbar a:hover {
-    color: #0d8aa1 !important; /* theme_highlight_color */
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 .topnavbar a.title {
@@ -141,13 +141,13 @@ pre {
     margin-left: 30px;
     margin-right: 30px;
     width: 40%;
-    background-color: #f7f7f7;  /* theme_search_input_background */
+    background-color: {{ theme_search_input_background }};  /* theme_search_input_background */
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
 
 .topnavbar input[type=text] {
-    background-color: #f7f7f7;  /* theme_search_input_background */
+    background-color: {{ theme_search_input_background }};  /* theme_search_input_background */
     font-size: 17px;
     border: none;
     width: 100%;
@@ -160,6 +160,7 @@ pre {
     max-height: 100%;
     display: flex;
     justify-content: center;
+    
 }  
 
 .sidebar-left {
@@ -168,10 +169,10 @@ pre {
     z-index: 1;
     font-size: 13px;
     top: 70px;
-    background: #f0f4f5;  /* theme_left_sidebar_background */
+    background: {{ theme_left_sidebar_background }};  /* theme_left_sidebar_background */
     overflow-y:auto;
     padding-left: 3%;
-    border-right: 1px solid #0d8aa1 !important; /* theme_highlight_color */
+    border-right: 1px solid {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 .sidebar-right {
@@ -211,16 +212,16 @@ li {
 }
 
 .sidebar-left ul * {
-    color: #363638 !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .sidebar-left ul *:hover {
-    color: #0d8aa1 !important; /* theme_highlight_color */
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 .sidebar-left ul li::before {
   content: "\2022"; 
-  color: #363638;  /* theme_text_color */
+  color: {{ theme_text_color }};  /* theme_text_color */
   font-weight: bold;
   display: inline-block; 
   width: 1em;
@@ -283,11 +284,11 @@ li {
 }
 
 .bodywrapper a {
-    color: #0d8aa1 !important; /* theme_body_link_color */
+    color: {{ theme_body_link_color }} !important; /* theme_body_link_color */
 }
 
 .bodywrapper a:hover {
-    color: #363638 !important; /* theme_body_link_highlight_color */
+    color: {{ theme_body_link_highlight_color }} !important; /* theme_body_link_highlight_color */
     text-decoration: none;
 }
 
@@ -296,14 +297,14 @@ li {
     margin-bottom: 50px;
     margin-right: 10px;
     border-radius: 5px;
-    background: white; /* theme_background_color */
+    background: {{ theme_background_color }}; /* theme_background_color */
     filter: brightness(93%);
-    color: #727273 !important; /* theme_text_color */
+    color: {{ theme_text_color }} !important; /* theme_text_color */
 }
 
 .bodywrapper .navigator:hover {
-    background-color: white !important; /* theme_header_background_color */
-    color: #363638 !important; /* theme_menu_item_color */
+    background-color: {{ theme_header_background_color }} !important; /* theme_header_background_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
     filter: brightness(80%);
 }
 
@@ -314,7 +315,7 @@ li {
 
 .bodywrapper .navigation a:hover {
     text-decoration: none;
-    color: #363638 !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 
@@ -388,9 +389,9 @@ div.viewcode-block:target {
 /* -- footer styles ----------------------------------------------------------- */
 
 .footer {
-    background-color: #181d21; /* theme_footer_background_color */
-    box-shadow: 0px 0px 5px #0d8aa1; /* theme_footer_highlight_color */
-    color: white !important; /* theme_footer_item_color */
+    background-color: {{ theme_footer_background_color }}; /* theme_footer_background_color */
+    box-shadow: 0px 0px 5px {{ theme_footer_highlight_color }}; /* theme_footer_highlight_color */
+    color: {{ theme_footer_item_color }} !important; /* theme_footer_item_color */
     width: 100%;
     padding: 13px 0;
     text-align: center;
@@ -399,12 +400,12 @@ div.viewcode-block:target {
 }
 
 .footer a {
-    color: #0d8aa1 !important; /* theme_footer_highlight_color */
+    color: {{ theme_footer_highlight_color }} !important; /* theme_footer_highlight_color */
 }
 
 .doc-sphinx-info {
     font-size: 75%;
-    color: white !important; /* theme_footer_item_color */
+    color: {{ theme_footer_item_color }} !important; /* theme_footer_item_color */
 }
 
 .footer-col1 {
@@ -422,29 +423,29 @@ div.viewcode-block:target {
 }
 
 .footer-col2 a {
-    color: white !important; /* theme_footer_item_color */
+    color: {{ theme_footer_item_color }} !important; /* theme_footer_item_color */
 }
 
 .footer-col2 a:hover {
-    color: #34aeeb !important; /* theme_footer_highlight_color */
+    color: {{ theme_footer_highlight_color }} !important; /* theme_footer_highlight_color */
     text-decoration: none;
 }
 
 .footer-col2 li {
-    color: white !important; /* theme_footer_item_color */
+    color: {{ theme_footer_item_color }} !important; /* theme_footer_item_color */
     margin-left: 0px;
     padding-left: 0px;
 }
 
 .footer-col2-title {
     font-weight: bold;
-    color: white !important; /* theme_footer_item_color */
+    color: {{ theme_footer_item_color }} !important; /* theme_footer_item_color */
 }
 
 .footer-col2-title i {
     margin-bottom: 10px;
     margin-right: 10px;
-    color: white !important; /* theme_footer_item_color */
+    color: {{ theme_footer_item_color }} !important; /* theme_footer_item_color */
 }
 
 .footer .social {
@@ -455,11 +456,11 @@ div.viewcode-block:target {
 .footer .social > a > i {
     margin-left: 10px;
     margin-right: 10px;
-    color: white !important; /* theme_footer_item_color */
+    color: {{ theme_footer_item_color }} !important; /* theme_footer_item_color */
 }
 
 .footer .social > a > i:hover {
-    color: #0d8aa1 !important; /* theme_footer_highlight_color */
+    color: {{ theme_footer_highlight_color }} !important; /* theme_footer_highlight_color */
 }
 
 

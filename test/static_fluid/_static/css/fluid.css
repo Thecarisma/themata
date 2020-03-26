@@ -1,5 +1,5 @@
 /*
- * milkiish.css_t
+ * fluid.css_t
  * ~~~~~~~~~~~~~~
  *
  * :copyright: Copyright 2020 Adewale Azeez.
@@ -160,6 +160,7 @@ pre {
     max-height: 100%;
     display: flex;
     justify-content: center;
+    
 }  
 
 .sidebar-left {
