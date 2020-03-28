@@ -95,8 +95,6 @@ html_theme_options = {
     'has_left_sidebar': True,
     'has_right_sidebar': True,
     'show_navigators': True,
-    'header_background_color': 'red',
-    'background_color': 'red',
     'show_navigators_in_index': False,
     'left_sidebar_only': [
         "leftpage"

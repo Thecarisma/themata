@@ -151,6 +151,7 @@ pre {
   border: none;
   margin-top: 15px;
   color: #727273 !important; /* theme_text_color */
+  background: white; /* theme_header_background_color */
   outline: none;
 }
 
@@ -162,7 +163,7 @@ pre {
   font-size: 17px;
   border: none;
   cursor: pointer;
-  background: white; /* theme_background_color */
+  background: white; /* theme_header_background_color */
 }
 
 .topnavbar .search-container button i {
