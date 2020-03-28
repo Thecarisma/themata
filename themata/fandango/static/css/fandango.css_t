@@ -10,7 +10,7 @@
 
 * {
     font-family:FreeMono, monospace;
-    color: #02516e !important; /* theme_text_color */
+    color: {{ theme_text_color }} !important; /* theme_text_color */
     overflow-x:hidden;
 }
 
@@ -18,17 +18,17 @@ body {
     font-size: 100%;
     padding: 0;
     margin: 0;
-    background: white; /* theme_background_color */
+    background: {{ theme_background_color }}; /* theme_background_color */
     font-weight: 400;
 }
 
 a {
-    color: #5682d1 !important; /* theme_link_color */
+    color: {{ theme_link_color }} !important; /* theme_link_color */
     text-decoration: none;
 }
 
 a:hover {
-    color: #6fcced !important; /* theme_highlight_color */
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
     text-decoration: none;
 }
 
@@ -65,13 +65,13 @@ table {
 }
 
 table thead th, table thead td {
-    background-color: white; /* theme_background_color */
+    background-color: {{ theme_background_color }}; /* theme_background_color */
     padding: 5px;
     margin: 1px;
 }
 
 table tbody th, table tbody td {
-    background-color: white; /* theme_background_color */
+    background-color: {{ theme_background_color }}; /* theme_background_color */
     padding: 2px;
 }
 
@@ -116,7 +116,7 @@ pre {
 }
 
 .topnavbar a {
-    color: white !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
     text-align: center;
     text-decoration: none;
     font-size: 12px;
@@ -128,7 +128,7 @@ pre {
 }
 
 .topnavbar a:hover {
-    color: #6fcced !important; /* theme_highlight_color */
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 .topnavbar a.title {
@@ -139,7 +139,7 @@ pre {
 
 .topnavbar-sec {
     margin-top: 70px;
-    background-color: #0490c2; /* theme_header_sec_background_color */
+    background-color: {{ theme_header_sec_background_color }}; /* theme_header_sec_background_color */
     padding: 10px;
     line-height: 50px;
     line-height: 50px;
@@ -155,7 +155,7 @@ pre {
 }
 
 .topnavbar-sec a {
-    color: white !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
     text-align: center;
     text-decoration: none;
     font-size: 15px;
@@ -166,7 +166,7 @@ pre {
 }
 
 .topnavbar-sec a:hover {
-    color: #6fcced !important; /* theme_highlight_color */
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 .topnavbar-sec .search-container {
@@ -204,7 +204,7 @@ pre {
     background: #f0f4f5;  /* theme_left_sidebar_background */
     overflow-y:auto;
     padding-left: 3%;
-    border-right: 1px solid #6fcced !important; /* theme_highlight_color */
+    border-right: 1px solid {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 .sidebar-left * {
@@ -254,11 +254,11 @@ li {
 }
 
 .sidebar-right a {
-    color: #02516e !important; /* theme_text_color */
+    color: {{ theme_text_color }} !important; /* theme_text_color */
 }
 
 .sidebar-right a:hover {
-    color: #6fcced !important; /* theme_highlight_color */
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 .sphinxsidebar {
@@ -299,7 +299,7 @@ li {
 }
 
 .bodywrapper .navigator {
-    color: #02516e !important; /* theme_text_color */
+    color: {{ theme_text_color }} !important; /* theme_text_color */
     font-weight: bold;
 }
 
@@ -310,7 +310,7 @@ li {
 
 .bodywrapper .navigation a:hover {
     text-decoration: none;
-    color: #6fcced !important; /* theme_highlight_color */
+    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
 
@@ -384,8 +384,8 @@ div.viewcode-block:target {
 /* -- footer styles ----------------------------------------------------------- */
 
 .footer {
-    background-color: #02516e; /* theme_footer_background_color */
-    box-shadow: 0px 0px 5px #6fcced; /* theme_highlight_color */
+    background: {{ theme_header_sec_background_color }}; /* theme_header_sec_background_color */
+    box-shadow: 0px 0px 5px {{ theme_highlight_color }}; /* theme_highlight_color */
     color: white !important; /* theme_footer_item_color */
     width: 100%;
     padding: 13px 0;
@@ -396,20 +396,19 @@ div.viewcode-block:target {
 }
 
 .footer a {
-    background-color: #02516e; /* theme_header_background_color */
-    color: white !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .doc-sphinx-info {
-    background: #0490c2; /* theme_header_sec_background_color */
+    background-color: #02516e; /* theme_header_background_color */
     font-size: 75%;
-    color: white !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
     padding: 20px;
 }
 
 .doc-sphinx-info a {
     background: none;
-    color: #02516e !important; /* theme_text_color */
+    color: {{ theme_header_sec_background_color }} !important; /* theme_header_sec_background_color */
 }
 
 .doc-sphinx-info a:hover {
@@ -431,44 +430,44 @@ div.viewcode-block:target {
 }
 
 .footer-col2 a {
-    color: white !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .footer-col2 a:hover {
-    color: #6fcced !important; /* theme_highlight_color */
+    color: #02516e !important; /* theme_header_background_color */
     text-decoration: none;
 }
 
 .footer-col2 li {
-    color: white !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
     margin-left: 0px;
     padding-left: 0px;
 }
 
 .footer-col2-title {
     font-weight: bold;
-    color: white !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .footer-col2-title i {
     margin-bottom: 10px;
     margin-right: 10px;
-    color: white !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .footer .social {
     font-size: 200%;
-    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .footer .social > a > i {
     margin-left: 10px;
     margin-right: 10px;
-    color: white !important; /* theme_menu_item_color */
+    color: {{ theme_menu_item_color }} !important; /* theme_menu_item_color */
 }
 
 .footer .social > a > i:hover {
-    color: #6fcced !important; /* theme_highlight_color */
+    color: #02516e !important; /* theme_header_background_color */
 }
 
 

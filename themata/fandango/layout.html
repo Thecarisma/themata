@@ -25,7 +25,7 @@
                 {% endfor %}
             </div>
         </div>
-        {% if theme_has_secondary_header %}
+        {% if theme_has_secondary_header and pagename not in theme_exclude_secondary_header_in %}
             <div class="topnavbar-sec">
                 {% if theme_secondary_header_link %}
                     <a class="title" href="{{ theme_secondary_header_link[1] }}">{{ theme_secondary_header_link[0] }}</a>
@@ -50,8 +50,12 @@
                     {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index) %}
                         <hr/>
                         <div class="navigation">
-                            <a class="reference navigator" style="float:left;" href="#"><i class="fa fa-less-than"></i>Prev</a>
-                            <a class="reference navigator" style="float:right;" href="#">Next<i class="fa fa-greater-than"></i></a>             
+                            {% if prev %}
+                                    <a class="reference navigator" style="float:left;" href="{{ prev.link|e }}"><i class="fa fa-less-than"></i>{{ prev.title }}</a>
+                            {% endif %}
+                            {% if next %}
+                                <a class="reference navigator" style="float:right;" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-greater-than"></i></a> 
+                            {% endif %}      
                         </div>
                         <hr/>
                         </br>
@@ -60,7 +64,7 @@
         </div>
         {% if theme_has_right_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.left')) %}
             {% if (pagename != 'index') or (pagename == 'index' and not theme_index_is_single) %}
-                {% if pagename not in theme_left_sidebar_only and pagename not in theme_no_sidebar %}
+                {% if pagename not in theme_no_sidebar %}
                 <div class="sidebar-right">
                     <h2>Page Contents</h2>
                     {{ toc }}
@@ -87,6 +91,13 @@
 
 {% block footer %}
     <div class="footer" role="contentinfo">
+        
+        <div class="social">
+            {% for social_icon in theme_social_icons %}
+                <a href="{{ social_icon[1] }}"><i class="{{ social_icon[0] }}"></i></a>
+            {% endfor %}
+        </div>
+        
         <div class="footer-col1">
             {% for footer_menu in theme_footer_menus %}
                 <div class="footer-col2">
@@ -97,12 +108,6 @@
                         {% endfor %}
                     </ul>
                 </div>
-            {% endfor %}
-        </div>
-        
-        <div class="social">
-            {% for social_icon in theme_social_icons %}
-                <a href="{{ social_icon[1] }}"><i class="{{ social_icon[0] }}"></i></a>
             {% endfor %}
         </div>
         

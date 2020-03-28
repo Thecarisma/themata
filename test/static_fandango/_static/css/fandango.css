@@ -384,7 +384,7 @@ div.viewcode-block:target {
 /* -- footer styles ----------------------------------------------------------- */
 
 .footer {
-    background-color: #02516e; /* theme_footer_background_color */
+    background: #0490c2; /* theme_header_sec_background_color */
     box-shadow: 0px 0px 5px #6fcced; /* theme_highlight_color */
     color: white !important; /* theme_footer_item_color */
     width: 100%;
@@ -396,12 +396,11 @@ div.viewcode-block:target {
 }
 
 .footer a {
-    background-color: #02516e; /* theme_header_background_color */
     color: white !important; /* theme_menu_item_color */
 }
 
 .doc-sphinx-info {
-    background: #0490c2; /* theme_header_sec_background_color */
+    background-color: #02516e; /* theme_header_background_color */
     font-size: 75%;
     color: white !important; /* theme_menu_item_color */
     padding: 20px;
@@ -409,7 +408,7 @@ div.viewcode-block:target {
 
 .doc-sphinx-info a {
     background: none;
-    color: #02516e !important; /* theme_text_color */
+    color: #0490c2 !important; /* theme_text_color */
 }
 
 .doc-sphinx-info a:hover {
@@ -435,7 +434,7 @@ div.viewcode-block:target {
 }
 
 .footer-col2 a:hover {
-    color: #6fcced !important; /* theme_highlight_color */
+    color: #02516e !important; /* theme_header_background_color */
     text-decoration: none;
 }
 
@@ -458,7 +457,7 @@ div.viewcode-block:target {
 
 .footer .social {
     font-size: 200%;
-    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .footer .social > a > i {
@@ -468,7 +467,7 @@ div.viewcode-block:target {
 }
 
 .footer .social > a > i:hover {
-    color: #6fcced !important; /* theme_highlight_color */
+    color: #02516e !important; /* theme_header_background_color */
 }
 
 

@@ -14,6 +14,10 @@ html_theme_options = {
     'secondary_header_link': ("Support Devcareer", "https://www.patreon.com/devcareer"),
     'show_navigators': True,
     'show_navigators_in_index': False,
+    'exclude_secondary_header_in': [
+        "index",
+        "sampleregex1"
+    ],
     'right_sidebar_only': [
         "sampleregex1"
     ],
