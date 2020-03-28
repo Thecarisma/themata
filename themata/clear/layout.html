@@ -13,17 +13,16 @@
 {%- block document %}
     <header>
         <div class="topnavbar">
-            {% if theme_project_icon %}
-                <img class="icon" src="{{ theme_project_icon }}"></img>
-            {% endif %}
-            <a href="{{ pathto(master_doc) }}" class="title">{{ project }}</a>
-            {% for navbar_link in theme_navbar_links %}
-                <a href="{{ navbar_link[1] }}">{{ navbar_link[0] }}</a> <!-- class="active" -->
-            {% endfor %}
+            <div class="main-title">
+                {% if theme_project_icon %}
+                    <img class="icon" src="{{ theme_project_icon }}"></img>
+                {% endif %}
+                <a href="{{ pathto(master_doc) }}" class="title">{{ project }}</a>
+            </div>
             <div class="search-container">
                 <form class="search" action="{{ pathto('search', 1) }}.html" method="get">
                     <button type="submit"><i class="fa fa-search"></i></button>
-                    <input type="text" placeholder="" name="q">
+                    <input type="text" placeholder="search..." name="q">
                 </form>
             </div>
         </div>
@@ -45,17 +44,16 @@
                 </br>
                 {% if theme_show_navigators %} 
                     <div class="navigation">
-                        <div style="float:right">
-                            {% if prev %}
-                                <a class="reference navigator" href="{{ prev.link|e }}"><i class="fa fa-arrow-left"></i>{{ prev.title }}</a>
-                            {% endif %}
-                            {% if next %}
-                                <a class="reference navigator" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
-                            {% endif %}
-                        </div>
-                        <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>                   
+                        {% if prev %}
+                            <a class="reference navigator" style="float:left" href="{{ prev.link|e }}"><i class="fa fa-arrow-left"></i>{{ prev.title }}</a>
+                        {% endif %}
+                        {% if next %}
+                            <a class="reference navigator" style="float:right;text-align:right;" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
+                        {% endif %}           
                     </div>
                 {% endif %}
+                <div style="clear:both"></div>
+                <br/> <hr/> <br/>
         </div>
         {% if theme_has_right_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.left')) %}
             {% if (pagename != 'index') or (pagename == 'index' and not theme_index_is_single) %}
