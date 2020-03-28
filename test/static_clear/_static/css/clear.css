@@ -279,18 +279,24 @@ li {
     text-decoration: underline;
 }
 
+.bodywrapper .navigation {
+    background: red;
+    width: 100%;
+}
+
 .bodywrapper .navigator {
+    border: 1px solid #727273; /* theme_text_color */
     padding: 10px;
     margin-right: 10px;
     border-radius: 5px;
     background: white; /* theme_background_color */
     filter: brightness(93%);
     color: #727273 !important; /* theme_text_color */
+    width: 40%;
 }
 
 .bodywrapper .navigator:hover {
-    background-color: #333 !important; /* theme_header_background_color */
-    color: white !important; /* theme_menu_item_color */
+    border: 1px solid #34aeeb; /* theme_body_link_color */
 }
 
 .bodywrapper .navigator .fa {
@@ -300,7 +306,29 @@ li {
 
 .bodywrapper .navigation a:hover {
     text-decoration: none;
-    color: white !important; /* theme_menu_item_color */
+}
+
+.bodywrapper .footer {
+    text-align: center;
+    z-index: 2;
+}
+
+.bodywrapper .footer .social {
+    font-size: 200%;
+}
+
+.bodywrapper .footer .social > a > i {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bodywrapper .footer .social > a > i:hover {
+    color: #147eb3 !important; /* theme_body_link_highlight_color */
+}
+
+.bodywrapper .footer .doc-sphinx-info {
+    margin-top: 10px;
+    font-size: 75%;
 }
 
 
@@ -371,29 +399,6 @@ div.viewcode-block:target {
     border-bottom: 1px solid #ac9;
 }
 
-/* -- footer styles ----------------------------------------------------------- */
-
-.footer {
-    background-color: #333; /* theme_header_background_color */
-    box-shadow: 0px 0px 5px #34aeeb; /* theme_highlight_color */
-    color: white !important; /* theme_menu_item_color */
-    width: 100%;
-    padding: 13px 0;
-    text-align: center;
-    z-index: 2;
-    position: absolute;
-    margin-top:100px;
-}
-
-.footer a {
-    color: #34aeeb !important; /* theme_highlight_color */
-}
-
-.doc-sphinx-info {
-    font-size: 75%;
-    color: white !important; /* theme_menu_item_color */
-}
-
 .footer-col1 {
     display: flex;
     flex-flow: row wrap;
@@ -433,18 +438,6 @@ div.viewcode-block:target {
     color: white !important; /* theme_menu_item_color */
 }
 
-.footer .social {
-    font-size: 200%;
-}
 
-.footer .social > a > i {
-    margin-left: 10px;
-    margin-right: 10px;
-    color: white !important; /* theme_menu_item_color */
-}
-
-.footer .social > a > i:hover {
-    color: #727273 !important; /* theme_link_color */
-}
 
 
