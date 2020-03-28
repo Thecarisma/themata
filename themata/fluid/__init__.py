@@ -1,6 +1,6 @@
 import os
 
-__version_trait = (0, 1, 1)
+__version_trait = (1, 0, 0)
 __version = ".".join(map(str, __version_trait))
 
 def get_path():
