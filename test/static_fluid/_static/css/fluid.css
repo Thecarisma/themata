@@ -297,6 +297,7 @@ li {
 }
 
 .bodywrapper .navigator {
+    border: 1px solid #e6e6e6; /* theme_navigator_border_color */
     padding: 10px;
     margin-bottom: 50px;
     margin-right: 10px;
@@ -310,6 +311,7 @@ li {
     background-color: white !important; /* theme_header_background_color */
     color: #363638 !important; /* theme_menu_item_color */
     filter: brightness(80%);
+    border: 1px solid #34aeeb; /* theme_body_link_color */
 }
 
 .bodywrapper .navigator .fa {
