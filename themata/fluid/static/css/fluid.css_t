@@ -195,7 +195,7 @@ pre {
     width:51%;
     margin-top: 1%;
     margin-left: 3%;
-    margin-right: 10px;
+    margin-right: 2%;
     line-height: 3vh;
 }
 
