@@ -44,17 +44,19 @@
                 
                 </br>
                 {% if theme_show_navigators %} 
-                    <div class="navigation">
-                        <div style="float:right">
-                            {% if prev %}
-                                <a class="reference navigator" href="{{ prev.link|e }}"><i class="fa fa-arrow-left"></i>{{ prev.title }}</a>
-                            {% endif %}
-                            {% if next %}
-                                <a class="reference navigator" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
-                            {% endif %}
+                    {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index) %}
+                        <div class="navigation">
+                            <div style="float:right">
+                                {% if prev %}
+                                    <a class="reference navigator" href="{{ prev.link|e }}"><i class="fa fa-arrow-left"></i>{{ prev.title }}</a>
+                                {% endif %}
+                                {% if next %}
+                                    <a class="reference navigator" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
+                                {% endif %}
+                            </div>
+                            <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>                   
                         </div>
-                        <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>                   
-                    </div>
+                    {% endif %}
                 {% endif %}
         </div>
         {% if theme_has_right_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.left')) %}
