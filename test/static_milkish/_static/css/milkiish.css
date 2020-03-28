@@ -273,17 +273,15 @@ li {
 }
 
 .bodywrapper .navigator {
+    border: 1px solid #e6e6e6; /* theme_navigator_border_color */
     padding: 10px;
     margin-right: 10px;
     border-radius: 5px;
-    background: white; /* theme_background_color */
-    filter: brightness(93%);
     color: #727273 !important; /* theme_text_color */
 }
 
 .bodywrapper .navigator:hover {
-    background-color: #333 !important; /* theme_header_background_color */
-    color: white !important; /* theme_menu_item_color */
+    border: 1px solid #34aeeb; /* theme_body_link_color */
 }
 
 .bodywrapper .navigator .fa {
@@ -293,7 +291,6 @@ li {
 
 .bodywrapper .navigation a:hover {
     text-decoration: none;
-    color: white !important; /* theme_menu_item_color */
 }
 
 
