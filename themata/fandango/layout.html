@@ -28,13 +28,13 @@
         {% if theme_has_secondary_header %}
             <div class="topnavbar-sec">
                 {% if theme_secondary_header_link %}
-                <a class="title" href="{{ theme_secondary_header_link[1] }}">{{ theme_secondary_header_link[0] }}</a>
-                <br/>
+                    <a class="title" href="{{ theme_secondary_header_link[1] }}">{{ theme_secondary_header_link[0] }}</a>
+                    <br/>
                 {% endif %}
                 <br/>
                 <div class="search-container">
                     <form class="search" action="{{ pathto('search', 1) }}.html" method="get">
-                        <input type="text" placeholder="" name="q">
+                        <input type="text" placeholder="Search..." name="q">
                     </form>
                 </div>
             </div>
@@ -43,39 +43,18 @@
         {% endif %}
     </header>
     <div class="documentwrapper" id="documentwrapper">
-        {% if theme_has_left_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.right')) %}
-            {% if (pagename != 'index') or (pagename == 'index' and not theme_index_is_single) %}
-                {% if pagename not in theme_right_sidebar_only and pagename not in theme_no_sidebar %}
-                {% set render_left_sidebar = True %}
-                <div class="sidebar-left">
-                    </br>
-                    {{ toctree(maxdepth=1, titles_only=True, includehidden=True) }}
-                </div>
-                {% endif %}
-            {% endif %}
-        {% endif %}
-        {% if render_left_sidebar %} 
-            <script>
-            document.getElementById("documentwrapper").style.justifyContent = "start";
-            </script>
-        {% endif %}
         <div class="bodywrapper">
                 {% block body %} {% endblock %}
-                
                 </br>
                 {% if theme_show_navigators %} 
                     {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index) %}
+                        <hr/>
                         <div class="navigation">
-                            <div style="float:right">
-                                {% if prev %}
-                                    <a class="reference navigator" href="{{ prev.link|e }}"><i class="fa fa-arrow-left"></i>{{ prev.title }}</a>
-                                {% endif %}
-                                {% if next %}
-                                    <a class="reference navigator" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
-                                {% endif %}
-                            </div>
-                            <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>                   
+                            <a class="reference navigator" style="float:left;" href="#"><i class="fa fa-less-than"></i>Prev</a>
+                            <a class="reference navigator" style="float:right;" href="#">Next<i class="fa fa-greater-than"></i></a>             
                         </div>
+                        <hr/>
+                        </br>
                     {% endif %}
                 {% endif %}
         </div>
@@ -85,6 +64,8 @@
                 <div class="sidebar-right">
                     <h2>Page Contents</h2>
                     {{ toc }}
+                    <h2>{{ theme_toc_title }}</h2>
+                    {{ toctree(maxdepth=1, titles_only=True, includehidden=True) }}
                     {% if prev %}
                         <h2>Previous topic</h2>
                         <a href="{{ prev.link|e }}">{{ prev.title }}</a>
