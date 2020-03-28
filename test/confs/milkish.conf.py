@@ -5,7 +5,7 @@ project = 'First Doc'
 copyright = '2020, Adewale Azeez'
 author = 'Adewale Azeez'
 
-html_theme_path = [os.path.dirname(themata.__file__)]
+html_theme_path = [themata.get_html_theme_path()]
 
 html_theme_options = {
     'project_icon': "https://media2.giphy.com/media/2vnId4IaAjIGZd2EWC/giphy.gif",
