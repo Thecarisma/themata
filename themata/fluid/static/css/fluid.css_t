@@ -175,6 +175,10 @@ pre {
     border-right: 1px solid {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
+.sidebar-left * {
+    font-family:cursive;
+}
+
 .sidebar-right {
     float:right;
     width:20%;

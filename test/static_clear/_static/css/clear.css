@@ -190,11 +190,6 @@ pre {
     border-right: 1px solid #34aeeb !important; /* theme_highlight_color */
 }
 
-.sidebar-left * {
-    font-family:cursive;
-    text-transform: uppercase;
-}
-
 .sidebar-right {
     float:right;
     width:20%;
