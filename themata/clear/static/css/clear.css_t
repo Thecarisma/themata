@@ -32,7 +32,7 @@ a:hover {
 
 header {
     overflow: hidden;
-    background-color: white; /* theme_header_background_color */
+    background-color: {{ theme_header_background_color }}; /* theme_header_background_color */
     box-shadow: 1px 0.5px 1px {{ theme_highlight_color }}; /* theme_highlight_color */
     position: fixed;
     top: 0px;
@@ -162,7 +162,7 @@ pre {
   font-size: 17px;
   border: none;
   cursor: pointer;
-  background: white; /* theme_background_color */
+  background: {{ theme_background_color }}; /* theme_background_color */
 }
 
 .topnavbar .search-container button i {
@@ -285,13 +285,13 @@ li {
 }
 
 .bodywrapper .navigator {
-    border: 1px solid #727273; /* theme_text_color */
+    border: 1px solid {{ theme_text_color }}; /* theme_text_color */
     padding: 10px;
     margin-right: 10px;
     border-radius: 5px;
-    background: white; /* theme_background_color */
+    background: {{ theme_background_color }}; /* theme_background_color */
     filter: brightness(93%);
-    color: #727273 !important; /* theme_text_color */
+    color: {{ theme_text_color }} !important; /* theme_text_color */
     width: 40%;
 }
 
