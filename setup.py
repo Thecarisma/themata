@@ -16,7 +16,8 @@ setup(
     packages=[
         "themata",
         "themata.milkish",
-        "themata.fluid"
+        "themata.fluid",
+        "themata.clear"
     ],
     include_package_data=True,
     keywords="sphinx extension theme",
