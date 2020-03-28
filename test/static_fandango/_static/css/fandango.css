@@ -195,22 +195,6 @@ pre {
     
 }  
 
-.sidebar-left {
-    float:left;
-    width:20%;
-    z-index: 1;
-    font-size: 13px;
-    top: 70px;
-    background: #f0f4f5;  /* theme_left_sidebar_background */
-    overflow-y:auto;
-    padding-left: 3%;
-    border-right: 1px solid #6fcced !important; /* theme_highlight_color */
-}
-
-.sidebar-left * {
-    font-family:cursive;
-}
-
 .sidebar-right {
     float:right;
     width:17%;
@@ -386,7 +370,7 @@ div.viewcode-block:target {
 .footer {
     background: #0490c2; /* theme_header_sec_background_color */
     box-shadow: 0px 0px 5px #6fcced; /* theme_highlight_color */
-    color: white !important; /* theme_footer_item_color */
+    color: white !important; /* theme_menu_item_color */
     width: 100%;
     padding: 13px 0;
     text-align: center;
