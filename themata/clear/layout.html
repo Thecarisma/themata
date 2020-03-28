@@ -42,7 +42,7 @@
                 {% block body %} {% endblock %}
                 
                 </br>
-                {% if theme_show_navigators %} 
+                {% if theme_show_navigators and (pagename != 'index' and not show_navigators_in_index) %} 
                     <div class="navigation">
                         {% if prev %}
                             <a class="reference navigator" style="float:left" href="{{ prev.link|e }}"><i class="fa fa-arrow-left"></i>{{ prev.title }}</a>
