@@ -57,7 +57,8 @@
         <div class="bodywrapper">
                 {% block body %} {% endblock %}
                 
-                </br>
+                
+                <hr/>
                 {% if theme_show_navigators %} 
                     {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index) %}
                         <div class="navigation">
@@ -68,6 +69,8 @@
                                     <a class="reference navigator" style="float:right;" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
                                 {% endif %}           
                         </div>
+                        <hr/>
+                        </br>
                     {% endif %}
                 {% endif %}
         </div>
