@@ -13,7 +13,7 @@ For example, to add a new link to the template area containing related links all
 =============
 final stdout
 =============
-**Source**: `final stdout Source`_.
+**Source**: final stdout Source.
     
     The standard output stream is the default destination of output for console programs. It is usually directed 
     by default to the text console (generally, on the screen) which can be the terminal. 
