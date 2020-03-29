@@ -61,15 +61,12 @@
                 {% if theme_show_navigators %} 
                     {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index) %}
                         <div class="navigation">
-                            <div style="float:right">
-                                {% if prev %}
-                                    <a class="reference navigator" href="{{ prev.link|e }}"><i class="fa fa-arrow-left"></i>{{ prev.title }}</a>
+                            {% if prev %}
+                                    <a class="reference navigator" style="float:left;" href="{{ prev.link|e }}"><i class="fa fa-arrow-left"></i>{{ prev.title }}</a>
                                 {% endif %}
                                 {% if next %}
-                                    <a class="reference navigator" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
-                                {% endif %}
-                            </div>
-                            <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>                   
+                                    <a class="reference navigator" style="float:right;" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-arrow-right"></i></a> 
+                                {% endif %}           
                         </div>
                     {% endif %}
                 {% endif %}
