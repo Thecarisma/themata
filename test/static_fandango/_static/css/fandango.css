@@ -324,20 +324,24 @@ div.admonition p.admonition-title + p {
 div.note {
     background-color: #eee;
     border: 1px solid #ccc;
+    padding: 10px;
 }
 
 div.seealso {
     background-color: #ffc;
     border: 1px solid #ff6;
+    padding: 10px;
 }
 
 div.topic {
     background-color: #eee;
+    padding: 10px;
 }
 
 div.warning {
     background-color: #ffe4e4;
     border: 1px solid #f66;
+    padding: 10px;
 }
 
 p.admonition-title {

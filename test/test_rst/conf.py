@@ -9,14 +9,12 @@ html_theme_path = [themata.get_html_theme_path()]
 
 html_theme_options = {
     'project_icon': "https://media2.giphy.com/media/2vnId4IaAjIGZd2EWC/giphy.gif",
+    'has_left_sidebar': True,
     'has_right_sidebar': True,
-    'has_secondary_header': True,
-    'secondary_header_link': ("Support Devcareer", "https://www.patreon.com/devcareer"),
     'show_navigators': True,
     'show_navigators_in_index': False,
-    'exclude_secondary_header_in': [
-        "index",
-        "sampleregex1"
+    'left_sidebar_only': [
+        "leftpage"
     ],
     'right_sidebar_only': [
         "sampleregex1"
@@ -39,6 +37,7 @@ html_theme_options = {
     ],
     'footer_menus': [
         {
+            'icon': 'fa-phone',
             'title': 'Contact',
             'menu_items': [
                 {
@@ -52,6 +51,7 @@ html_theme_options = {
             ]
         },
         {
+            'icon': 'fa-book',
             'title': 'Documentation',
             'menu_items': [
                 {
@@ -77,6 +77,7 @@ html_theme_options = {
             ]
         },
         {
+            'icon': 'fa-users',
             'title': 'Community',
             'menu_items': [
                 {
@@ -100,4 +101,4 @@ html_theme_options = {
     ],
 }
 
-html_theme = 'fandango'
+html_theme = 'milkish'

@@ -9,6 +9,41 @@ Sphinx’s basic theme provides base templates with a couple of blocks it will f
 
 For example, to add a new link to the template area containing related links all you have to do is to add a new template called layout.html with the following contents:
 
+
+=============
+final stdout
+=============
+**Source**: `final stdout Source`_.
+    
+    The standard output stream is the default destination of output for console programs. It is usually directed 
+    by default to the text console (generally, on the screen) which can be the terminal. 
+    
+    Although it is commonly  assumed that the default destination for stdout is going to be the screen, this may 
+    not be the case even in regular console systems, since stdout can generally be redirected on most operating 
+    systems at the time of invoking the application. For example, many systems, among them DOS/Windows and most 
+    UNIX shells, support the following command syntax :
+    
+    ::
+    
+      theprogram > output.txt
+    
+    to redirect the output of **theprogram** to the file **output.txt** instead of the console.
+    
+    .. note::
+      The stdout stream cannot be closed in order to prevent error while trying to write to it later, instead 
+      of closing the stream the stdout stream will be flushed instead
+
+    
+    .. warning::
+      The stdout stream cannot be closed in order to prevent error while trying to write to it later, instead 
+      of closing the stream the stdout stream will be flushed instead
+
+    
+    .. seealso::
+      The stdout stream cannot be closed in order to prevent error while trying to write to it later, instead 
+      of closing the stream the stdout stream will be flushed instead
+
+
 .. image:: https://media2.giphy.com/media/2vnId4IaAjIGZd2EWC/giphy.gif
     :alt: About to make the tackle, Yale Alumni Game 2017
     :align: center
