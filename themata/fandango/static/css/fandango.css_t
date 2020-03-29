@@ -214,13 +214,13 @@ pre {
     line-height: 3vh;
 }
 
-ul {
+.sidebar-right ul {
     padding: 1px;
     list-style-type: none;
     margin: 0px;
 }
 
-li {
+.sidebar-right li {
     padding-left: 10px;
     margin-top: 5px;
 }
