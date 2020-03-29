@@ -5,7 +5,7 @@
 Introduction
 =============
 
-.. code-block:: simple
+.. code-block::
 
 	display "Hello world!"
 	
