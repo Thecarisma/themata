@@ -9,11 +9,17 @@ html_theme_path = [themata.get_html_theme_path()]
 
 html_theme_options = {
     'project_icon': "https://media2.giphy.com/media/2vnId4IaAjIGZd2EWC/giphy.gif",
-    'has_left_sidebar': True,
+    'has_right_sidebar': True,
+    'has_secondary_header': True,
+    'secondary_header_link': ("Support Devcareer", "https://www.patreon.com/devcareer"),
     'show_navigators': True,
     'show_navigators_in_index': False,
-    'left_sidebar_only': [
-        "leftpage"
+    'exclude_secondary_header_in': [
+        "index",
+        "sampleregex1"
+    ],
+    'right_sidebar_only': [
+        "sampleregex1"
     ],
     'no_sidebar': [
         "singlepage"
@@ -94,4 +100,4 @@ html_theme_options = {
     ],
 }
 
-html_theme = 'hackish'
+html_theme = 'fandango'
