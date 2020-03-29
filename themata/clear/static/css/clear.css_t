@@ -213,13 +213,24 @@ pre {
     line-height: 3vh;
 }
 
-ul {
+.sidebar-left ul {
     padding: 1px;
     list-style-type: none;
     margin: 0px;
 }
 
-li {
+.sidebar-left li {
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.sidebar-right ul {
+    padding: 1px;
+    list-style-type: none;
+    margin: 0px;
+}
+
+.sidebar-right li {
     padding-left: 10px;
     margin-top: 5px;
 }
@@ -357,20 +368,24 @@ div.admonition p.admonition-title + p {
 div.note {
     background-color: #eee;
     border: 1px solid #ccc;
+    padding: 15px;
 }
 
 div.seealso {
     background-color: #ffc;
     border: 1px solid #ff6;
+    padding: 15px;
 }
 
 div.topic {
     background-color: #eee;
+    padding: 15px;
 }
 
 div.warning {
     background-color: #ffe4e4;
     border: 1px solid #f66;
+    padding: 15px;
 }
 
 p.admonition-title {
