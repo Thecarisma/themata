@@ -1,5 +1,5 @@
 /*
- * milkiish.css_t
+ * garri.css_t
  * ~~~~~~~~~~~~~~
  *
  * :copyright: Copyright 2020 Adewale Azeez.
@@ -7,7 +7,8 @@
  */
 
 body {
-    color: #000000;
+    color: #000000; /* theme_text_color */
+    background: white; /* theme_background_color */
 }
 
 .document {
@@ -79,7 +80,7 @@ table.hlist ul {
 }
 
 .navbar * {
-    color: #70705C;
+    color: #70705C; /* theme_navbar_color */
 }
 
 .navbar a {
@@ -109,7 +110,7 @@ table.hlist ul {
     border-style: solid;
     border-width: 1px;
 
-    border-color: #000000;
+    border-color: #000000; /* theme_text_color */
 
     width: 20%;
 }
@@ -143,8 +144,6 @@ table.hlist ul {
     font-weight: bold;
 }
 
-
-
 .genindextable td {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -163,24 +162,17 @@ table.hlist ul {
 
 /* Links */
 a {
-    color: #33658E;
+    color: #33658E; /** theme_link_color */
     text-decoration: none;
 }
 
 a.headerlink {
-    color: #AFAF92;
+    color: #AFAF92; /** theme_header_link_color */
     text-decoration: none;
     font-size: medium;
     font-weight: bold;
 
     padding: 0.2em;
-}
-
-a code.xref {
-    font-weight: bold;
-    color: #33658E;
-    background-color: #EFEFE1;
-    text-decoration: none;
 }
 
 a.footnote-reference {
@@ -195,7 +187,7 @@ code, pre {
 }
 
 code {
-    background-color: #EFEFE1;
+    background-color: #EFEFE1; /** theme_code_background_color **/
 }
 
 code.descname {
@@ -246,37 +238,6 @@ table.docutils.footnote td.label, table.docutils.citation td.label {
     padding-right: 2em;
 }
 
-
-.admonition-title, .sidebar-title, .topic-title {
-    font-weight: bold;
-}
-
-.sidebar-subtitle {
-    font-style: italic;
-}
-
-.admonition > .admonition-title {
-    color: #606060;
-}
-
-.admonition.warning > .admonition-title {
-    color: #C43838;
-}
-
-
-.admonition > *, .topic > *, .sidebar > * {
-    margin-left: 3em;
-    margin-right: 5em;
-}
-
-.admonition > .first, .topic > .first, .sidebar > .first {
-    margin-top: 3em;
-    margin-left: 0;
-    margin-right: 5em;
-}
-
-
-
 .rubric {
     font-weight: bold;
 }
@@ -290,7 +251,7 @@ table.docutils.footnote td.label, table.docutils.citation td.label {
 }
 
 .guilabel, .menuselection {
-    background-color: #EFEFE1;
+    background-color: #EFEFE1; /** theme_code_background_color **/
 }
 
 .accelerator {
@@ -306,21 +267,17 @@ div.line-block > div.line {
     margin-bottom: 0;
 }
 
-
-
-/* Some extra niceties for full browsers *
- * ------------------------------------------- */
 a:hover {
     text-decoration: underline;
 }
 
 a.headerlink:hover {
-    color: #33658E;
+    color: #33658E; /** theme_highlight_color **/
     text-decoration: none;
 }
 
 .navbar a:hover {
-    color: #33658E;
+    color: #33658E; /** theme_highlight_color **/
 }
 
 pre:only-child {
