@@ -22,7 +22,7 @@ To use one of the theme install the themata package from python index.
 
 or equivalent (add `themata` to any appropriate requirements files).
 
-The following themes are implemented in the project. Follow the link for detail documentation of \
+The following themes are implemented in the project. Follow the link for detail documentation for
 each of the themes.
 
 - `hackish <https://thecarisma.github.io/themata/hackish>`_
