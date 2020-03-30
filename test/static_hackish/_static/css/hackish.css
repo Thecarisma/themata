@@ -381,7 +381,7 @@ div.viewcode-block:target {
 }
 
 .footer-col2 a:hover {
-    color: rgb(36,233,10) !important; /* theme_header_background_color */
+    color: rgb(36,233,10) !important; /* theme_text_color */
     text-decoration: none;
 }
 
@@ -410,7 +410,7 @@ div.viewcode-block:target {
 }
 
 .footer .social > a > i:hover {
-    color: rgb(36,233,10) !important; /* theme_header_background_color */
+    color: rgb(36,233,10) !important; /* theme_text_color */
 }
 
 
