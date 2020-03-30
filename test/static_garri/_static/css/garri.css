@@ -8,10 +8,6 @@
 
 body {
     color: #000000;
-
-    
-
-    
 }
 
 .document {
@@ -55,7 +51,6 @@ blockquote {
     text-indent: 0px;
 }
 
-/* Definition lists */
 dt {
     font-weight: bold;
 }
@@ -68,7 +63,6 @@ li > dl > dd {
     margin-left: 0;
 }
 
-/* Compact list produced by hlist:: directive */
 table.hlist {
     margin-top: 1em;
 }
@@ -78,10 +72,6 @@ table.hlist ul {
     margin-bottom: 0;
 }
 
-
-
-/* Header/footer navigation bar *
- * ---------------------------- */
 .navbar {
     background-color: transparent;
 
@@ -111,9 +101,6 @@ table.hlist ul {
 }
 
 
-
-/* Nav sidebar *
- * ----------- */
 .nav-sidebar {
     margin: 2em;
     background-color: transparent;
@@ -158,9 +145,6 @@ table.hlist ul {
 
 
 
-
-/* Special index page markup *
- * ------------------------- */
 .genindextable td {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -170,10 +154,14 @@ table.hlist ul {
     margin: 0;
 }
 
+.documentwrapper {
+    width: 70%;
+    margin: 20px;
+}
 
 
-/* Links *
- * ----- */
+
+/* Links */
 a {
     color: #33658E;
     text-decoration: none;
@@ -188,7 +176,6 @@ a.headerlink {
     padding: 0.2em;
 }
 
-/* Object references */
 a code.xref {
     font-weight: bold;
     color: #33658E;
@@ -196,15 +183,11 @@ a code.xref {
     text-decoration: none;
 }
 
-/* Footnote references */
 a.footnote-reference {
     font-size: small;
 }
 
 
-
-/* Code listings *
- * ------------- */
 code, pre {
     
 
@@ -231,28 +214,7 @@ pre {
     
 }
 
-/* Extra rules for literal blocks wrapped by ``html_rewrite`` */
-.-x-quark-literal-block {
-    margin-top: 1em;
-    width: 100%;
-}
 
-.-x-quark-literal-block .-x-quark-literal-block-td {
-    /* Use td for padding on QTextBrowser... */
-    padding: 0.5em;
-}
-.-x-quark-literal-block .-x-quark-literal-block-td:only-child {
-    /* ...disable it again on full browsers... */
-    padding: 0;
-}
-.-x-quark-literal-block-td pre {
-    margin: 0;
-    /* ...and put the padding on the pre instead. */
-    padding: 0.5em;
-}
-
-
-/* Code blocks in headings and general links */
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
     background-color: transparent;
 }
@@ -262,9 +224,6 @@ a code {
 }
 
 
-
-/* Regular tables *
- * -------------- */
 table.docutils {
     margin-top: 2em;
 }
@@ -275,8 +234,6 @@ table.docutils td, table.docutils th {
 
 
 
-/* Footnotes and citations *
- * ----------------------- */
 table.docutils.footnote, table.docutils.citation {
     margin: 0;
 }
@@ -290,16 +247,6 @@ table.docutils.footnote td.label, table.docutils.citation td.label {
 }
 
 
-
-/* Boxes -- admonitions, sidebars, topics *
- * -------------------------------------- */
-
-/* This section has good styles for the improved boxes created by
- * ``html_rewrite`` (the 'boxes') feature and some fallback styles if those are
- * disabled.
- */
-
-/* Part 1 -- common styles */
 .admonition-title, .sidebar-title, .topic-title {
     font-weight: bold;
 }
@@ -317,7 +264,6 @@ table.docutils.footnote td.label, table.docutils.citation td.label {
 }
 
 
-/* Part 2 -- fallback-specific styles */
 .admonition > *, .topic > *, .sidebar > * {
     margin-left: 3em;
     margin-right: 5em;
@@ -330,66 +276,7 @@ table.docutils.footnote td.label, table.docutils.citation td.label {
 }
 
 
-/* Part 3 -- x-quark-box styles */
-.-x-quark-box .first {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-}
 
-.-x-quark-box .-x-quark-box-td > div > .last, .-x-quark-box .topic > :last-child {
-    margin-bottom: 0;
-}
-
-.-x-quark-box .-x-quark-box-td > div > * {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.-x-quark-box {
-    margin-top: 2em;
-}
-
-.-x-quark-box .-x-quark-box-td {
-    padding: 0.5em;
-}
-
-.-x-quark-topic, .-x-quark-sidebar {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #000000;
-}
-
-.-x-quark-topic {
-    width: 100%;
-}
-
-.-x-quark-sidebar {
-    margin-left: 1em;
-    float: right;
-
-    width: 35%;
-}
-
-.-x-quark-admonition {
-    background-color: #EEEEEE;
-
-    
-
-    border-color: #606060;
-
-    width: 100%;
-}
-
-.-x-quark-admonition.-x-quark-warning {
-    background-color: #FFCCCC;
-    border-color: #C43838;
-}
-
-
-
-/* Misc markup *
- * ----------- */
 .rubric {
     font-weight: bold;
 }

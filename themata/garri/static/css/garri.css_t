@@ -1,0 +1,336 @@
+/*
+ * milkiish.css_t
+ * ~~~~~~~~~~~~~~
+ *
+ * :copyright: Copyright 2020 Adewale Azeez.
+ * :license: CC0-1.0
+ */
+
+body {
+    color: #000000;
+}
+
+.document {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+li {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    text-indent: 0px;
+}
+
+li li {
+    text-indent: 0px;
+}
+li li li {
+    text-indent: 0px;
+}
+li li li li {
+    text-indent: 0px;
+}
+li li li li li {
+    text-indent: 0px;
+}
+li li li li li li {
+    text-indent: 0px;
+}
+li li li li li li li {
+    text-indent: 0px;
+}
+li li li li li li li li {
+    text-indent: 0px;
+}
+li li li li li li li li li {
+    text-indent: 0px;
+}
+
+
+blockquote {
+    text-indent: 0px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd > * {
+    margin-top: 0;
+}
+
+li > dl > dd {
+    margin-left: 0;
+}
+
+table.hlist {
+    margin-top: 1em;
+}
+
+table.hlist ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar {
+    background-color: transparent;
+
+    width: 100%;
+}
+
+.navbar * {
+    color: #70705C;
+}
+
+.navbar a {
+    text-decoration: underline;
+    
+}
+
+.navbar td {
+    padding: 0.2em;
+}
+
+.navbar-bottom {
+    margin-top: 2em;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+}
+
+
+.nav-sidebar {
+    margin: 2em;
+    background-color: transparent;
+    float: right;
+
+    border-style: solid;
+    border-width: 1px;
+
+    border-color: #000000;
+
+    width: 20%;
+}
+
+.nav-sidebar .nav-sidebar-td {
+    padding: 1em;
+}
+
+.sphinxsidebar h1 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h2 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h3 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h4 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h5 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h6 {
+    font-size: medium;
+    font-weight: bold;
+}
+
+
+
+.genindextable td {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.genindextable dl {
+    margin: 0;
+}
+
+.documentwrapper {
+    width: 70%;
+    margin: 20px;
+}
+
+
+
+/* Links */
+a {
+    color: #33658E;
+    text-decoration: none;
+}
+
+a.headerlink {
+    color: #AFAF92;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+
+    padding: 0.2em;
+}
+
+a code.xref {
+    font-weight: bold;
+    color: #33658E;
+    background-color: #EFEFE1;
+    text-decoration: none;
+}
+
+a.footnote-reference {
+    font-size: small;
+}
+
+
+code, pre {
+    
+
+    
+}
+
+code {
+    background-color: #EFEFE1;
+}
+
+code.descname {
+    font-weight: bold;
+    background-color: transparent;
+}
+
+code.descclassname {
+    background-color: transparent;
+}
+
+pre {
+    margin: 0.5em;
+    margin-top: 1.5em;
+
+    
+}
+
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+    background-color: transparent;
+}
+
+a code {
+    background-color: transparent;
+}
+
+
+table.docutils {
+    margin-top: 2em;
+}
+
+table.docutils td, table.docutils th {
+    padding: 0.3em;
+}
+
+
+
+table.docutils.footnote, table.docutils.citation {
+    margin: 0;
+}
+
+table.docutils.footnote td, table.docutils.citation td {
+    padding: 0;
+}
+
+table.docutils.footnote td.label, table.docutils.citation td.label {
+    padding-right: 2em;
+}
+
+
+.admonition-title, .sidebar-title, .topic-title {
+    font-weight: bold;
+}
+
+.sidebar-subtitle {
+    font-style: italic;
+}
+
+.admonition > .admonition-title {
+    color: #606060;
+}
+
+.admonition.warning > .admonition-title {
+    color: #C43838;
+}
+
+
+.admonition > *, .topic > *, .sidebar > * {
+    margin-left: 3em;
+    margin-right: 5em;
+}
+
+.admonition > .first, .topic > .first, .sidebar > .first {
+    margin-top: 3em;
+    margin-left: 0;
+    margin-right: 5em;
+}
+
+
+
+.rubric {
+    font-weight: bold;
+}
+
+.versionmodified {
+    font-style: italic;
+}
+
+.field-list {
+    margin-top: 0;
+}
+
+.guilabel, .menuselection {
+    background-color: #EFEFE1;
+}
+
+.accelerator {
+    text-decoration: underline;
+}
+
+.caption-text {
+    font-weight: bold;
+}
+
+div.line-block > div.line {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+/* Some extra niceties for full browsers *
+ * ------------------------------------------- */
+a:hover {
+    text-decoration: underline;
+}
+
+a.headerlink:hover {
+    color: #33658E;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #33658E;
+}
+
+pre:only-child {
+    /* This gets us nicer literal blocks even without html_rewrite */
+    margin: 0;
+    margin-top: 1em;
+    padding: 0.5em;
+}
+
+.footer {
+    text-align: center;
+}
+
