@@ -20,7 +20,10 @@ To use one of the theme install the themata package from python index.
 
     pip install themata
 
-The following themes are implemented in the project.
+or equivalent (add `themata` to any appropriate requirements files).
+
+The following themes are implemented in the project. Follow the link for detail documentation of \
+each of the themes.
 
 - `hackish <https://thecarisma.github.io/themata/hackish>`_
 - `milkish <https://thecarisma.github.io/themata/milkish>`_
