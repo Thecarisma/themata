@@ -9,7 +9,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
 
 * {
-    font-family:FreeMono, monospace;
+    font-family:Courier, monospace;
     color: {{ theme_text_color }} !important; /* theme_text_color */
     overflow-x:hidden;
 }
@@ -203,10 +203,6 @@ pre {
     padding-left: 1%;
 }
 
-.sidebar-left * {
-    font-family:cursive;
-}
-
 .bodywrapper {
     float:left;
     width:70%;
@@ -327,11 +323,6 @@ tt {
     background-color: #ecf0f3;
     color: #222;
     font-size: 1.1em;
-    font-family: monospace;
-}
-
-.viewcode-back {
-    font-family: 'OpenSans',sans-serif;
 }
 
 div.viewcode-block:target {
