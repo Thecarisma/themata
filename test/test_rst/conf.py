@@ -8,6 +8,7 @@ author = 'Adewale Azeez'
 html_theme_path = [themata.get_html_theme_path()]
 
 html_theme_options = {
+    'sidebar_position': 'right',
     'has_sidebar': True,
     'no_sidebar': [
         "singlepage"
