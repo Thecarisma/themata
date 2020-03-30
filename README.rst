@@ -54,9 +54,21 @@ To use the milkish theme, set the following option in your **conf.py** file.
     html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'milkish'
 
-
 Each of the themes has theme options to customize the look of the generated pages. The options for 
 each of the themes can be viewd on their documentation page (links above). 
+
+Documentation
+-------------
+
+The full documentation is at `https://thecarisma.github.io/themata <https://thecarisma.github.io/themata>`_.
+
+How it works
+-------------
+
+In each of the theme folder, the `theme.conf` is used to declare the the defult theme options, the 
+`layout.html` file is the template for all the generated pages in the theme. The `__init__.py` 
+file is where the theme and it version is added to sphinx. `static\*.css_t` is the cascaded style 
+sheet template for the theme.
 
 Contributing
 -------------
