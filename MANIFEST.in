@@ -3,3 +3,4 @@ recursive-include themata/fluid *.css_t *.html *.conf *.ttf *.png
 recursive-include themata/clear *.css_t *.html *.conf *.ttf *.png
 recursive-include themata/fandango *.css_t *.html *.conf *.ttf *.png
 recursive-include themata/hackish *.css_t *.html *.conf *.ttf *.png
+recursive-include themata/garri *.css_t *.html *.conf *.ttf *.png
