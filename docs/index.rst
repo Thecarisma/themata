@@ -1,11 +1,5 @@
 
-
-themata
-########
-
-.. class:: center
-
-    Set of Highly customizable sphinx themes.
+Set of Highly customizable sphinx themes.
 
 Overview
 ========
@@ -50,7 +44,6 @@ To use the milkish theme, set the following option in your **conf.py** file.
     project = 'First Doc'
     copyright = '2020, Adewale Azeez'
     author = 'Adewale Azeez'
-    html_favicon = 'favicon.png'
 
     html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'milkish'

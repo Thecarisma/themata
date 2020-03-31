@@ -1,4 +1,9 @@
 {% extends "basic/layout.html" %}
+
+{% if not theme_project_icon and favicon %}
+    {% set theme_project_icon = pathto('_static/' ~ theme_touch_icon, 1) + favicon %}
+{% endif %}
+
 {%- block extrahead %}
   {{ super() }}
   {% if theme_touch_icon %}
@@ -44,7 +49,7 @@
                 
                 </br>
                 {% if theme_show_navigators %} 
-                    {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index) %}
+                    {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index == True) %}
                         <div class="navigation">
                             <div style="float:right">
                                 {% if prev %}
