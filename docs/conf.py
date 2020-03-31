@@ -7,7 +7,10 @@ author = 'Adewale Azeez'
 
 html_theme_path = [themata.get_html_theme_path()]
 html_theme = 'milkish'
-html_favicon = 'images/thecarisma.jpg'
+html_favicon = 'images/themata.png'
+exclude_patterns = [
+    'clear/*'
+]
 
 html_theme_options = {
     'navbar_links': [
