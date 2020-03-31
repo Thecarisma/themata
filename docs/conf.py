@@ -11,6 +11,7 @@ html_favicon = 'images/themata.png'
 exclude_patterns = [
     'hackish/*',
     'milkish/*',
+    'fandango/*',
     'clear/*'
 ]
 
