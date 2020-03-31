@@ -227,6 +227,17 @@ pre {
     margin-top: 5px;
 }
 
+.footer ul {
+    padding: 1px;
+    list-style-type: none;
+    margin: 0px;
+}
+
+.footer li {
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
 .sidebar-left::-webkit-scrollbar {
     display: none;
 }
