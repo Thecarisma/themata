@@ -49,7 +49,7 @@
                 
                 </br>
                 {% if theme_show_navigators %} 
-                    {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index) %}
+                    {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index == True) %}
                         <div class="navigation">
                             <div style="float:right">
                                 {% if prev %}
