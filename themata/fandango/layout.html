@@ -30,7 +30,7 @@
                 {% endfor %}
             </div>
         </div>
-        {% if theme_has_secondary_header and pagename not in theme_exclude_secondary_header_in %}
+        {% if theme_has_secondary_header == True and pagename not in theme_exclude_secondary_header_in %}
             <div class="topnavbar-sec">
                 {% if theme_secondary_header_link %}
                     <a class="title" href="{{ theme_secondary_header_link[1] }}">{{ theme_secondary_header_link[0] }}</a>

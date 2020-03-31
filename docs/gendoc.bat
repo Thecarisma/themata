@@ -3,7 +3,7 @@
 cd ..\
 SET OUTPUT_FOLDER=%CD%\dist\
 cd docs/
-SET THEMES=hackish milkish fandando clear fluid garri water sugar
+SET THEMES=hackish milkish fandango clear fluid garri water sugar
 if exist "%OUTPUT_FOLDER%" (
     @RD /S /Q "%OUTPUT_FOLDER%"
 )
