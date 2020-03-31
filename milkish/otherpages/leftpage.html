@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Left Sidebar Only. Theme Option &#8212; Milkish  documentation</title>
+    <link rel="stylesheet" href="../_static/css/milkiish.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/themata.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Right Sidebar Only. Theme Option" href="rightpage.html" />
+    <link rel="prev" title="Right Sidebar Only. File Name" href="test.right.html" />
+   
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+    <div class="document">
+    <header>
+        <div class="topnavbar">
+            
+                <img class="icon" src="../_static/themata.png"></img>
+            
+            <a href="../index.html" class="title">Milkish</a>
+            
+                <a href="https://twitter.com/iamthecarisma">Twitter</a> <!-- class="active" -->
+            
+                <a href="https://github.com/Thecarisma/themata/">Github</a> <!-- class="active" -->
+            
+            <div class="search-container">
+                <form class="search" action="../search.html" method="get">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="" name="q">
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="documentwrapper">
+        
+            
+                
+                <div class="sidebar-left">
+                    </br>
+                    <p class="caption"><span class="caption-text">Main</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preview.html">Basic Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conf.html">Sample Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Files</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="singlepage.html">No Sidebar. Theme Option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.single.html">No Sidebar. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.left.html">Left Sidebar Only. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.right.html">Right Sidebar Only. File Name</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Left Sidebar Only. Theme Option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rightpage.html">Right Sidebar Only. Theme Option</a></li>
+</ul>
+
+                </div>
+                
+            
+        
+        <div class="bodywrapper">
+                
+  <div class="section" id="left-sidebar-only-theme-option">
+<h1>Left Sidebar Only. Theme Option<a class="headerlink" href="#left-sidebar-only-theme-option" title="Permalink to this headline">¶</a></h1>
+<p>Set this page to have only the left side bar by adding the page name to the theme option
+<strong>left_sidebar_only</strong>.</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">themata</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Clear Doc&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Adewale Azeez&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
+
+<span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;clear&#39;</span>
+
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;left_sidebar_only&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;otherpages/leftpage&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+                
+                </br>
+                 
+                    
+                        <div class="navigation">
+                            <div style="float:right">
+                                
+                                    <a class="reference navigator" href="test.right.html"><i class="fa fa-arrow-left"></i>Right Sidebar Only. File Name</a>
+                                
+                                
+                                    <a class="reference navigator" href="rightpage.html">Right Sidebar Only. Theme Option<i class="fa fa-arrow-right"></i></a> 
+                                
+                            </div>
+                            <a class="reference navigator" style="float:left;" href="../genindex.html"><i class="fa fa-book"></i>Index</a>                   
+                        </div>
+                    
+                
+        </div>
+        
+            
+                
+            
+        
+        <div style="clear:both"></div>
+    </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        <div class="social">
+            
+                <a href="https://twitter.com/iamthecarisma"><i class="fab fa-twitter"></i></a>
+            
+                <a href="https://github.com/Thecarisma/themata/"><i class="fab fa-github"></i></a>
+            
+        </div>
+        <div class="footer-col1">
+            
+                <div class="footer-col2">
+                    <span class="footer-col2-title"><i class="fa fa-menu "></i>Contact</span>
+                    <ul>
+                        
+                            <li><a href="azeezadewale98@gmail.com"><i class="fa fa-menu fa-chevron-right"></i>azeezadewale98@gmail.com</a></li>
+                        
+                            <li><a href="tel:911"><i class="fa fa-menu fa-chevron-right"></i>12345678998</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="footer-col2">
+                    <span class="footer-col2-title"><i class="fa fa-menu "></i>Custom Pages</span>
+                    <ul>
+                        
+                            <li><a href="leftpage.html"><i class="fa fa-menu fa-chevron-right"></i>Left Page</a></li>
+                        
+                            <li><a href="singletpage.html"><i class="fa fa-menu fa-chevron-right"></i>Single Page</a></li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+        
+        
+        <div class="doc-sphinx-info">
+                    &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
+                Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
+                with <a href="https://thecarisma.github.io/themata/milkish/index.html">milkish</a> theme.
+        </div>
+    </div>
+
+  </body>
+</html>
