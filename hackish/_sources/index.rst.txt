@@ -172,17 +172,13 @@ background color to gray:
 .. csv-table::
    :header: "Option", "Default", "Description"
 
-   "text_color", "#727273", "text color"
-   "link_color", "#727273", "link color"
-   "highlight_color", "#34aeeb", "link hover color"
-   "body_link_color", "#34aeeb", "link color in the article body"
-   "body_link_highlight_color", "#147eb3", "link hover color in the article body"
-   "header_background_color", "white", "header background color"
-   "menu_item_color", "#727273", "header link text color"
-   "background_color", "white", "theme background color"
-   "pre_background_color", "white", "pre block background color"
-   "pre_border_color", "black", "pre block border color"
-   "left_sidebar_background", "#dfe7ed", "left sidebars background color"
-   "navigator_border_color", "#e6e6e6", "navigation buttons border color"
+   "text_color", "rgb(36,233,10)", "text color"
+   "link_color", "rgb(146,250,131)", "link color"
+   "highlight_color", "rgb(36,233,10)", "link hover color"
+   "header_background_color", "black", "header background color"
+   "background_color", "black", "theme background color"
+   "pre_background_color", "rgba(255, 255, 255, 0.1)", "pre block background color"
+   "search_input_background", "#f7f7f7", "the search box background color"
+   "header_sec_background_color", "rgb(0,63,0)", "sec header background color"
 
 
