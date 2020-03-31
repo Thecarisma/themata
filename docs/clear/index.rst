@@ -6,6 +6,7 @@
    :name: main-nav
 
    preview
+   conf
 
 
 .. toctree::
@@ -15,11 +16,11 @@
    :name: sec-files
 
    /otherpages/singlepage
-   /otherpages/test1
-   /otherpages/test1.single
-   /otherpages/test1.left
-   /otherpages/test1.right
+   /otherpages/test.single
+   /otherpages/test.left
+   /otherpages/test.right
    /otherpages/leftpage
+   /otherpages/rightpage
    
 
 Clear

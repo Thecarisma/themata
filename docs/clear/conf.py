@@ -10,5 +10,14 @@ html_theme = 'clear'
 html_favicon = '../images/thecarisma.jpg'
 
 html_theme_options = {
-    'index_is_single': False
+    'index_is_single': False,
+    'left_sidebar_only': [
+        'otherpages/leftpage'
+    ],
+    'no_sidebar': [
+        'otherpages/singlepage'
+    ],
+    'right_sidebar_only': [
+        'otherpages/rightpage'
+    ]
 }

@@ -1,45 +1,104 @@
+Basic Specification
+=================================
 
-Clear
-========
+Paragraphs contain text and may contain inline markup: *emphasis*, **strong emphasis**, `interpreted text`, ``inline literals``, standalone hyperlinks (http://www.python.org), external hyperlinks (Python_), internal cross-references (example_), footnote references ([1]_), citation references ([CIT2002]_), substitution references (|example|), and _`inline internal targets`.
 
-Setting up and using the clear theme.
 
-Install the themata package from python index.
+List
+-------
 
-.. code:: bash
+Bullet lists:
+```````````````
 
-    pip install themata
+- This is a bullet list.
 
-or equivalent (add `themata` to any appropriate requirements files).
+- Bullets can be "*", "+", or "-".
 
-Example
----------
 
-Below is a minimal sample **conf.py** file to use the clear theme.
+Enumerated lists:
+``````````````````
 
-.. code:: python
+1. This is an enumerated list.
 
-    import os
-    import themata
+2. Enumerators may be arabic numbers, letters, or roman
+   numerals.
 
-    project = 'Clear Doc'
-    copyright = '2020, Adewale Azeez'
-    author = 'Adewale Azeez'
+Definition lists:
+``````````````````
 
-    html_favicon = 'favicon.png'
-    html_theme_path = [themata.get_html_theme_path()]
-    html_theme = 'clear'
+what
+    Definition lists associate a term with a definition.
 
-    html_theme_options = {
-        'project_icon': 'favicon.png'
-    }
+how
+    The term is a one-line phrase, and the definition is one
+    or more paragraphs or body elements, indented relative to
+    the term.
 
-Theme Options
---------------
+Field lists:
+``````````````````
 
-The following theme option are accepted in the theme.
+:what: Field lists map field names to field bodies, like
+       database records.  They are often part of an extension
+       syntax.
 
-* project_icon <string>:
-    The abolute or relative (to _static folder) path to the image to use as the theme icon. 
-    This is not the same as favicon. If the favicon is set using the variable `html_favicon` 
-    and the project_icon is not set. The project_icon value will be the value of the favicon.
+:how: The field marker is a colon, the field name, and a
+      colon.
+
+      The field body may contain one or more body elements,
+      indented relative to the field marker.
+
+Option lists, for listing command-line options:
+``````````````````````````````````````````````````````````
+
+-a            command-line option "a"
+-b file       options can have arguments
+              and long descriptions
+--long        options can be long also
+--input=file  long options can also have
+              arguments
+/V            DOS/VMS-style options too
+
+
+Literal blocks:
+-------------------
+
+    if literal_block:
+        text = 'is left as-is'
+        spaces_and_linebreaks = 'are preserved'
+        markup_processing = None
+
+
+Block quotes:
+----------------
+
+    This theory, that is mine, is mine.
+
+    -- Anne Elk (Miss)
+
+
+Simple Table
+-----------------
+
+====================  ==========  ==========
+Header row, column 1  Header 2    Header 3
+====================  ==========  ==========
+body row 1, column 1  column 2    column 3
+body row 2            Cells may span columns
+====================  ======================
+
+Citation
+------------
+
+.. [1] A footnote contains body elements, consistently
+   indented by at least 3 spaces.
+
+.. [CIT2002] Just like a footnote, except the label is
+   textual.
+
+.. _Python: http://www.python.org
+
+.. |example| function:: module=xml.xslt class=Processor
+
+.. _example:
+
+The "_example" target above points to this paragraph.
