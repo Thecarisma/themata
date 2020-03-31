@@ -6,7 +6,7 @@ copyright = '2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
 author = 'Adewale Azeez'
 
 html_theme_path = [themata.get_html_theme_path()]
-html_theme = 'fandango'
+html_theme = 'hackish'
 html_favicon = 'images/thecarisma.jpg'
 
 html_theme_options = {
