@@ -87,7 +87,7 @@ pre {
 }
 
 .highlight {
-    background-color: #dce2e6; /* theme_pre_background_color */
+    background-color: #dce2e6!important; /* theme_pre_background_color */
     border: white 1px solid; /* theme_pre_border_color */
     border-radius: 5px;
     font-size: 0.8em;

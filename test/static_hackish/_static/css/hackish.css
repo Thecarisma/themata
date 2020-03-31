@@ -87,7 +87,7 @@ pre {
 }
 
 .highlight {
-    background-color: rgba(36,233,10,0.1); /* theme_pre_background_color */
+    background-color: rgba(36,233,10,0.1)!important; /* theme_pre_background_color */
     border-radius: 5px;
     font-size: 0.8em;
     margin-top: 20px;

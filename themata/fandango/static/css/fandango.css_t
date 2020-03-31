@@ -83,7 +83,7 @@ pre {
 }
 
 .highlight {
-    background-color: {{ theme_pre_background_color }}; /* theme_pre_background_color */
+    background-color: {{ theme_pre_background_color }}!important; /* theme_pre_background_color */
     border: {{ theme_pre_border_color }} 1px solid; /* theme_pre_border_color */
     border-radius: 5px;
     font-size: 0.8em;

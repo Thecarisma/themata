@@ -85,7 +85,7 @@ pre {
 }
 
 .highlight {
-    background-color: white; /* theme_pre_background_color */
+    background-color: white!important; /* theme_pre_background_color */
     filter: brightness(98%);
     border: black 1px solid; /* theme_pre_border_color */
     border-radius: 5px;
