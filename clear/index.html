@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Clear &#8212; Clear  documentation</title>
+    <link rel="stylesheet" href="_static/css/clear.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/themata.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic Specification" href="preview.html" />
+   
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+    <div class="document">
+    <header>
+        <div class="topnavbar">
+            <div class="main-title">
+                
+                    <img class="icon" src="_static/themata.png"></img>
+                
+                <a href="#" class="title">Clear</a>
+            </div>
+            <div class="search-container">
+                <form class="search" action="search.html" method="get">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="search..." name="q">
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="documentwrapper">
+        
+            
+                
+                <div class="sidebar-left">
+                    </br>
+                    <p class="caption"><span class="caption-text">Main</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preview.html">Basic Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conf.html">Sample Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/singlepage.html">No Sidebar. Theme Option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/test.single.html">No Sidebar. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/test.left.html">Left Sidebar Only. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/test.right.html">Right Sidebar Only. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/leftpage.html">Left Sidebar Only. Theme Option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/rightpage.html">Right Sidebar Only. Theme Option</a></li>
+</ul>
+
+                </div>
+                
+            
+        
+        <div class="bodywrapper">
+                
+  <div class="toctree-wrapper compound" id="main-nav">
+</div>
+<div class="toctree-wrapper compound" id="sec-files">
+</div>
+<div class="section" id="clear">
+<h1>Clear<a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h1>
+<p>Setting up and using the clear theme.</p>
+<p>Install the themata package from python index.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install themata
+</pre></div>
+</div>
+<p>or equivalent (add <cite>themata</cite> to any appropriate requirements files).</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Below is a minimal sample <strong>conf.py</strong> file to use the clear theme.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">themata</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Clear Doc&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Adewale Azeez&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
+
+<span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;clear&#39;</span>
+
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;project_icon&#39;</span><span class="p">:</span> <span class="s1">&#39;favicon.png&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="theme-options">
+<h2>Theme Options<a class="headerlink" href="#theme-options" title="Permalink to this headline">¶</a></h2>
+<p>The following theme option are accepted in the theme.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>project_icon &lt;string&gt;:</dt><dd><p>The abolute or relative (to _static folder) path to the image to use as the theme icon.
+This is not the same as favicon. If the favicon is set using the variable <cite>html_favicon</cite>
+and the project_icon is not set. The project_icon value will be the value of the favicon.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+                
+                </br>
+                 
+                    
+                
+                <div style="clear:both"></div>
+                <br/> <hr/> <br/>
+                
+                <div class="footer">
+                    <div class="social">
+                        
+                    </div>
+                    <div class="doc-sphinx-info">
+                                &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
+                            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
+                            with <a href="https://thecarisma.github.io/themata/clear/index.html">clear</a> theme.
+                    </div>
+                </div>
+                
+                <br/><br/>
+        </div>
+        
+            
+                
+                <div class="sidebar-right">
+                    <h2>Page Contents</h2>
+                    <ul>
+<li><a class="reference internal" href="#">Clear</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+<li><a class="reference internal" href="#theme-options">Theme Options</a></li>
+</ul>
+</li>
+</ul>
+
+                    
+                    
+                        <h2>Next topic</h2>
+                        <a href="preview.html">Basic Specification</a>
+                    
+                    <h2>This Page</h2>
+                    <a href="_sources/index.rst.txt">Show source</a>
+                </div>
+                
+            
+        
+        <div style="clear:both"></div>
+    </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>
