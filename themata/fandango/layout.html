@@ -1,4 +1,9 @@
 {% extends "basic/layout.html" %}
+
+{% if not theme_project_icon and favicon %}
+    {% set theme_project_icon = '_static/' + favicon %}
+{% endif %}
+
 {%- block extrahead %}
   {{ super() }}
   {% if theme_touch_icon %}
@@ -48,7 +53,7 @@
                 </br>
                 {% if theme_show_navigators %} 
                     {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index) %}
-                        <hr/>
+                        <hr/>{{ theme_show_navigators_in_index }}
                         <div class="navigation">
                             {% if prev %}
                                     <a class="reference navigator" style="float:left;" href="{{ prev.link|e }}"><i class="fa fa-less-than"></i>{{ prev.title }}</a>
