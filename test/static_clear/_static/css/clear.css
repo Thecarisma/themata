@@ -84,7 +84,7 @@ pre {
     line-height: 18px;
 }
 
-.highlight-default .highlight {
+.highlight {
     background-color: white; /* theme_pre_background_color */
     filter: brightness(98%);
     border: black 1px solid; /* theme_pre_border_color */
