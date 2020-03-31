@@ -10,7 +10,6 @@ html_theme = 'fandango'
 html_favicon = 'images/thecarisma.jpg'
 
 html_theme_options = {
-    'show_navigators_in_index': False,
     'navbar_links': [
         ("Download", "https://pypi.org/project/themata/"),
         ("Github", "https://github.com/Thecarisma/themata"),
