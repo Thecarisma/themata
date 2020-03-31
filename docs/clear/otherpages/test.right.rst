@@ -6,4 +6,4 @@ Set this page to have only the right side bar by adding the extension `.right` t
 Example
 ''''''''
 
-* test1.right.rst
+* test.right.rst

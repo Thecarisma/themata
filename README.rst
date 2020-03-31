@@ -56,12 +56,14 @@ To use the milkish theme, set the following option in your **conf.py** file.
     html_theme = 'milkish'
 
 Each of the themes has theme options to customize the look of the generated pages. The options for 
-each of the themes can be viewd on their documentation page (links above). 
+each of the themes can be view on their documentation page (links above). 
 
 Documentation
 -------------
 
 The full documentation is at `https://thecarisma.github.io/themata <https://thecarisma.github.io/themata>`_.
+To read the documentation offline run the `gendoc.bat` command in the docs/ folder to generate a 
+**dist** folder.
 
 How it works
 -------------

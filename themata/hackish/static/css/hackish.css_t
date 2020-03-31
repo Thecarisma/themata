@@ -86,8 +86,8 @@ pre {
     line-height: 18px;
 }
 
-.highlight-default .highlight {
-    background-color: {{ theme_pre_background_color }}; /* theme_pre_background_color */
+.highlight {
+    background-color: {{ theme_pre_background_color }}!important; /* theme_pre_background_color */
     border-radius: 5px;
     font-size: 0.8em;
     margin-top: 20px;

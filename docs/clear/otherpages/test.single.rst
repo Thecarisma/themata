@@ -6,4 +6,4 @@ Set this page to have no side bar by adding the extension `.single` to it file n
 Example
 ''''''''
 
-* test1.single.rst
+* test.single.rst
