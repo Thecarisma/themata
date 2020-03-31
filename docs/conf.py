@@ -9,6 +9,7 @@ html_theme_path = [themata.get_html_theme_path()]
 html_theme = 'milkish'
 html_favicon = 'images/themata.png'
 exclude_patterns = [
+    'hackish/*',
     'clear/*'
 ]
 
