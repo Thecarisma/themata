@@ -10,7 +10,7 @@
 
 * {
     font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
-    color: {{ theme_text_color }} !important; /* theme_text_color */
+    color: {{ theme_text_color }} ; /* theme_text_color */
 }
 
 body {

@@ -10,7 +10,7 @@
 
 * {
     font-family:FreeMono, monospace;
-    color: #02516e !important; /* theme_text_color */
+    color: #02516e ; /* theme_text_color */
     overflow-x:hidden;
 }
 

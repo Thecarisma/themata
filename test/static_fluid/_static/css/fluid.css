@@ -10,7 +10,7 @@
 
 * {
     font-family:Andale Mono, monospace;
-    color: #363638 !important; /* theme_text_color */
+    color: #363638 ; /* theme_text_color */
 }
 
 body {

@@ -10,7 +10,7 @@
 
 * {
     font-family:Courier, monospace;
-    color: rgb(36,233,10) !important; /* theme_text_color */
+    color: rgb(36,233,10) ; /* theme_text_color */
     overflow-x:hidden;
 }
 
