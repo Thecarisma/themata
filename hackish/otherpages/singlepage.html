@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>No Sidebar. Theme Option &#8212; Hackish  documentation</title>
+    <link rel="stylesheet" href="../_static/css/hackish.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/themata.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="No Sidebar. File Name" href="test.single.html" />
+    <link rel="prev" title="Sample Configuration" href="../conf.html" />
+   
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+    <div class="document">
+    <header>
+        <div class="topnavbar">
+            <div style="float:left;">
+                
+                    <img class="icon" src="../_static/themata.png"></img>
+                
+                <a href="../index.html" class="title">Hackish</a>
+            </div>
+             <div class="search-container">
+                <form class="search" action="../search.html" method="get">
+                    <input type="text" placeholder="Search..." name="q">
+                </form>
+            </div>
+        </div>
+        <div class="topnavbar-sec">
+            
+                <a href="https://twitter.com/iamthecarisma">Twitter</a> <!-- class="active" -->
+            
+                <a href="https://github.com/Thecarisma/themata/">Github</a> <!-- class="active" -->
+            
+        </div>
+    </header>
+    <div class="documentwrapper" id="documentwrapper">
+        
+            
+                
+            
+        
+        <div class="bodywrapper">
+                
+  <div class="section" id="no-sidebar-theme-option">
+<h1>No Sidebar. Theme Option<a class="headerlink" href="#no-sidebar-theme-option" title="Permalink to this headline">¶</a></h1>
+<p>Set this page to have no side bar by adding the page name to the theme option
+<strong>no_sidebar</strong>.</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">themata</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Clear Doc&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Adewale Azeez&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
+
+<span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;clear&#39;</span>
+
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;no_sidebar&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;otherpages/singlepage&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+                </br>
+                 
+                    
+                        <hr/>
+                        <div class="navigation">
+                            
+                                    <a class="reference navigator" style="float:left;" href="../conf.html"><i class="fa fa-arrow-left"></i>Sample Configuration</a>
+                                
+                                
+                                    <a class="reference navigator" style="float:right;" href="test.single.html">No Sidebar. File Name<i class="fa fa-arrow-right"></i></a> 
+                                           
+                        </div>
+                        <hr/>
+                        </br>
+                    
+                
+        </div>
+        <div style="clear:both"></div>
+    </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        
+        <div class="social">
+            
+                <a href="https://twitter.com/iamthecarisma"><i class="fab fa-twitter"></i></a>
+            
+                <a href="https://github.com/Thecarisma/themata/"><i class="fab fa-github"></i></a>
+            
+        </div>
+        <div class="footer-col1">
+            
+                <div class="footer-col2">
+                    <span class="footer-col2-title">Contact</span>
+                    <ul>
+                        
+                            <li><a href="azeezadewale98@gmail.com">azeezadewale98@gmail.com</a></li>
+                        
+                            <li><a href="tel:911">12345678998</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="footer-col2">
+                    <span class="footer-col2-title">Custom Pages</span>
+                    <ul>
+                        
+                            <li><a href="leftpage.html">Left Page</a></li>
+                        
+                            <li><a href="singletpage.html">Single Page</a></li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+        
+        <div class="doc-sphinx-info">
+                    &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
+                Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
+                with <a href="https://thecarisma.github.io/themata/fluid/index.html">fluid</a> theme.
+        </div>
+    </div>
+
+  </body>
+</html>

@@ -84,10 +84,10 @@ pre {
     line-height: 18px;
 }
 
-.highlight-default .highlight {
-    background-color: white; /* theme_pre_background_color */
+.highlight {
+    background-color: white !important; /* theme_pre_background_color */
     filter: brightness(98%);
-    border: black 1px solid; /* theme_pre_border_color */
+    border: black 1px solid !important; /* theme_pre_border_color */
     border-radius: 5px;
     font-size: 0.8em;
     margin: 5px;
