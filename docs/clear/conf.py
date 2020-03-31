@@ -7,7 +7,7 @@ author = 'Adewale Azeez'
 
 html_theme_path = [themata.get_html_theme_path()]
 html_theme = 'clear'
-html_favicon = '../images/thecarisma.jpg'
+html_favicon = '../images/themata.png'
 
 html_theme_options = {
     'index_is_single': False,
