@@ -66,7 +66,7 @@ The following theme option are accepted in the theme.
 Variable Options
 '''''''''''''''''
 
-.. csv-table::
+.. csv-table:: .
     :header: "Option <Datatype>", "Description"
 
     "project_icon <string>", "The abolute or relative (to _static folder) path to the image to use as the theme icon. This is not the same as favicon. If the favicon is set using the variable `html_favicon` and the project_icon is not set. The project_icon value will be the value of the favicon."
