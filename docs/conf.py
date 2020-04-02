@@ -13,7 +13,8 @@ exclude_patterns = [
     'milkish/*',
     'fandango/*',
     'clear/*',
-    'fluid/*'
+    'fluid/*',
+    'garri/*'
 ]
 
 html_theme_options = {
