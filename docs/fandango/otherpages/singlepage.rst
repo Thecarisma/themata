@@ -12,13 +12,13 @@ Example
     import os
     import themata
 
-    project = 'Clear Doc'
+    project = 'Fandango Doc'
     copyright = '2020, Adewale Azeez'
     author = 'Adewale Azeez'
 
     html_favicon = 'favicon.png'
     html_theme_path = [themata.get_html_theme_path()]
-    html_theme = 'clear'
+    html_theme = 'fandango'
 
     html_theme_options = {
         'no_sidebar': [

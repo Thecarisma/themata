@@ -12,7 +12,8 @@ exclude_patterns = [
     'hackish/*',
     'milkish/*',
     'fandango/*',
-    'clear/*'
+    'clear/*',
+    'fluid/*'
 ]
 
 html_theme_options = {
