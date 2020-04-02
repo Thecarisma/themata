@@ -14,6 +14,7 @@ exclude_patterns = [
     'fandango/*',
     'clear/*',
     'fluid/*'
+    'garri/*'
 ]
 
 html_theme_options = {
