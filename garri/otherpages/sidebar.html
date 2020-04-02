@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Show Sidebar. Theme Option &#8212; Garri  documentation</title>
+    <link rel="stylesheet" href="../_static/css/garri.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/themata.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="No Sidebar. Theme Option" href="singlepage.html" />
+   
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+
+    <div class="document">
+        <table class="navbar navbar-top">
+            
+          <tr>
+            <td width="50%">
+              <a class="nav-item nav-item-0" href="../index.html">Garri</a>
+            </td>
+
+            <td align="right" width="50%">
+                
+                    <a class="rel-item rel-item-1" href="singlepage.html" accesskey="P">previous</a>
+                 | 
+                
+                
+              
+                <a class="rel-item rel-item-3" accesskey="I" href="../genindex.html">index</a>
+            </td>
+
+          </tr>
+
+          </table>
+        
+            
+             
+                <table class="nav-sidebar" style="float:right;">
+                      <tr>
+                        <td width="20%" class="nav-sidebar-td">
+                          
+                      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+                        <div class="sphinxsidebarwrapper">
+                  
+                      <h3><a href="index.html">Table Of Contents</a></h3>
+                      <ul>
+<li><a class="reference internal" href="#">Show Sidebar. Theme Option</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+
+                  
+                  <h2>Other Topics</h2>
+                  <p class="caption"><span class="caption-text">Main</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preview.html">Basic Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conf.html">Sample Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Files</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="singlepage.html">No Sidebar. Theme Option</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Show Sidebar. Theme Option</a></li>
+</ul>
+
+
+                    
+                        <h4>Previous topic</h4>
+                        <p class="topless"><a href="singlepage.html" title="previous chapter">No Sidebar. Theme Option</a></p>
+                    
+                    
+                    
+                      
+                      
+                    
+                      <div role="note" aria-label="source link">
+                        <h3>This Page</h3>
+                        <ul class="this-page-menu">
+                          <li><a rel="nofollow" href="../_sources/otherpages/sidebar.rst.txt">Show source</a></li>
+                        </ul>
+                       </div>
+                    
+                    <div id="searchbox" style="display: none" role="search">
+                      <h3>Quick search</h3>
+                        <form class="search" action="../search.html" method="get">
+                          <div><input type="text" name="q" /></div>
+                          <div><input type="submit" value="Search" /></div>
+                          <input type="hidden" name="check_keywords" value="yes" />
+                          <input type="hidden" name="area" value="default" />
+                        </form>
+                    </div>
+                    <script type="text/javascript">$('#searchbox').show(0);</script>
+                    </div>
+                  </div>
+                    </td>
+                  </tr>
+                </table>
+            
+            
+        
+    
+    <div class="documentwrapper">
+        
+  <div class="section" id="show-sidebar-theme-option">
+<h1>Show Sidebar. Theme Option<a class="headerlink" href="#show-sidebar-theme-option" title="Permalink to this headline">¶</a></h1>
+<p>Set the project to show the sidebar and position the sidebar to the right side of the page.
+<strong>has_sidebar</strong> to show sidebar and <strong>sidebar_position</strong> to pisition the sidebar left or right.</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">themata</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Fandango Doc&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Adewale Azeez&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
+
+<span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;fadango&#39;</span>
+
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;sidebar_position&#39;</span><span class="p">:</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;has_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+                &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
+            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
+            with <a href="https://thecarisma.github.io/themata/garri/index.html">garri</a> theme.
+    </div>
+
+  </body>
+</html>
