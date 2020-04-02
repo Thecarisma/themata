@@ -13,7 +13,7 @@ exclude_patterns = [
     'milkish/*',
     'fandango/*',
     'clear/*',
-    'fluid/*'
+    'fluid/*',
     'garri/*'
 ]
 
