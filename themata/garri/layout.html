@@ -48,8 +48,10 @@
                           
                       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
                         <div class="sphinxsidebarwrapper">
-                  <h3><a href="index.html">Table Of Contents</a></h3>
-                  {{ toc }}
+                  {% if pagename != 'genindex' %}
+                      <h3><a href="index.html">Table Of Contents</a></h3>
+                      {{ toc }}
+                  {% endif %}
                   <h2>{{ theme_toc_title }}</h2>
                   {{ toctree(maxdepth=1, titles_only=True, includehidden=True) }}
 
@@ -64,13 +66,14 @@
                     {% endif %}
                       
                       
-                      
+                    {% if pagename != 'genindex' %}
                       <div role="note" aria-label="source link">
                         <h3>This Page</h3>
                         <ul class="this-page-menu">
                           <li><a rel="nofollow" href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a></li>
                         </ul>
                        </div>
+                    {% endif %}
                     <div id="searchbox" style="display: none" role="search">
                       <h3>Quick search</h3>
                         <form class="search" action="{{ pathto('search', 1) }}.html" method="get">
