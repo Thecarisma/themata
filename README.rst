@@ -27,7 +27,7 @@ each of the themes.
 
 - `hackish <https://thecarisma.github.io/themata/hackish>`_
 - `milkish <https://thecarisma.github.io/themata/milkish>`_
-- `fandando <https://thecarisma.github.io/themata/fandando>`_
+- `fandango <https://thecarisma.github.io/themata/fandango>`_
 - `clear <https://thecarisma.github.io/themata/clear>`_
 - `fluid <https://thecarisma.github.io/themata/fluid>`_
 - `garri <https://thecarisma.github.io/themata/garri>`_
