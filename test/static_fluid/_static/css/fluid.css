@@ -318,6 +318,11 @@ pre {
     color: #727273 !important; /* theme_text_color */
 }
 
+.bodywrapper .navigator-none {
+    padding: 10px;
+    margin-right: 10px;
+}
+
 .bodywrapper .navigator:hover {
     background-color: white !important; /* theme_header_background_color */
     color: #363638 !important; /* theme_menu_item_color */
