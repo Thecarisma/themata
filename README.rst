@@ -1,5 +1,5 @@
 
-.. image:: https://github.com/Thecarisma/themata/raw/master/docs/images/themata.png
+.. image:: https://github.com/Thecarisma/themata/raw/master/docs/images/themata.small.png
     :alt: Thecarisma.themata
     :width: 90
     :height: 140
