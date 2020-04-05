@@ -44,7 +44,7 @@ final stdout
       of closing the stream the stdout stream will be flushed instead
 
 
-.. image:: https://media2.giphy.com/media/2vnId4IaAjIGZd2EWC/giphy.gif
+.. image:: https://github.com/Thecarisma/themata/raw/master/docs/images/themata.png
     :alt: About to make the tackle, Yale Alumni Game 2017
     :align: center
 
