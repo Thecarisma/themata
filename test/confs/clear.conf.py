@@ -11,6 +11,8 @@ html_theme_options = {
     'project_icon': "https://github.com/Thecarisma/themata/raw/master/docs/images/themata.png",
     'has_left_sidebar': True,
     'has_right_sidebar': True,
+    'collapsible_sidebar': True,
+    'collapsible_sidebar_display': 'block',
     'show_navigators': True,
     'show_navigators_in_index': False,
     'left_sidebar_only': [
