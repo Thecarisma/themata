@@ -1,4 +1,8 @@
 
+.. image:: https://github.com/Thecarisma/themata/raw/master/docs/images/themata.png
+    :alt: Thecarisma.themata
+    :width: 90
+    :height: 140
 
 themata
 ########
