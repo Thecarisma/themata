@@ -305,6 +305,11 @@ pre {
     color: {{ theme_text_color }} !important; /* theme_text_color */
 }
 
+.bodywrapper .navigator-none {
+    padding: 10px;
+    margin-right: 10px;
+}
+
 .bodywrapper .navigator:hover {
     border: 1px solid {{ theme_body_link_color }}; /* theme_body_link_color */
 }

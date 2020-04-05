@@ -37,6 +37,7 @@ html_theme_options = {
     ],
     'footer_menus': [
         {
+            'icon': 'fa-phone',
             'title': 'Contact',
             'menu_items': [
                 {
@@ -50,6 +51,7 @@ html_theme_options = {
             ]
         },
         {
+            'icon': 'fa-book',
             'title': 'Documentation',
             'menu_items': [
                 {
@@ -75,6 +77,7 @@ html_theme_options = {
             ]
         },
         {
+            'icon': 'fa-users',
             'title': 'Community',
             'menu_items': [
                 {
@@ -98,4 +101,4 @@ html_theme_options = {
     ],
 }
 
-html_theme = 'fluid'
+html_theme = 'milkish'
