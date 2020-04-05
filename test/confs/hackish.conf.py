@@ -37,7 +37,7 @@ html_theme_options = {
             'menu_items': [
                 {
                     'link': "#",
-                    'title': 'azeezadewale98@gmail.com'
+                    'title': 'https://thecarisma.github.io/'
                 },
                 {
                     'link': "",

@@ -93,8 +93,8 @@ Variable Options
                     'title': 'Contact',
                     'menu_items': [
                         {
-                            'link': 'azeezadewale98@gmail.com',
-                            'title': 'azeezadewale98@gmail.com'
+                            'link': 'https://thecarisma.github.io/',
+                            'title': 'https://thecarisma.github.io/'
                         },
                         {
                             'link': 'tel:911',
