@@ -106,11 +106,13 @@ pre {
 
 .topnavbar {
     float: none;
-    text-align:center;
+    text-align:left;
     display:block;
-    margin: 10px;
+    padding: 10px;
     height: 40px;
     line-height: 40px;
+    max-width: 58%;
+    margin: auto;
 }
 
 .topnavbar a {
@@ -137,6 +139,7 @@ pre {
 .topnavbar .search-container {
     display: inline-block;
     margin-left: 100px;
+    float: right;
 }
 
 .topnavbar input[type=text] {
@@ -300,6 +303,11 @@ pre {
     margin-right: 10px;
     border-radius: 5px;
     color: #727273 !important; /* theme_text_color */
+}
+
+.bodywrapper .navigator-none {
+    padding: 10px;
+    margin-right: 10px;
 }
 
 .bodywrapper .navigator:hover {
