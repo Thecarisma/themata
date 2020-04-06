@@ -12,8 +12,6 @@ html_theme_options = {
     'has_left_sidebar': True,
     'has_right_sidebar': True,
     'show_navigators': True,
-    'collapsible_sidebar': True,
-    'collapsible_sidebar_display': 'block',
     'show_navigators_in_index': False,
     'left_sidebar_only': [
         "leftpage"

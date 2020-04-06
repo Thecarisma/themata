@@ -12,6 +12,8 @@ html_favicon = '../images/themata.png'
 html_theme_options = {
     'index_is_single': False,
     'show_navigators_in_index': False,
+    'collapsible_sidebar': True,
+    'collapsible_sidebar_display': 'block',
     'navbar_links': [
         ('Twitter', 'https://twitter.com/iamthecarisma'),
         ('Github', 'https://github.com/Thecarisma/themata/')
