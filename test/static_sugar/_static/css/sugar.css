@@ -11,6 +11,7 @@
 * {
     font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
     color: #727273; /* theme_text_color */
+    overflow-x: hidden;
 }
 
 body {
