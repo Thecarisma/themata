@@ -12,7 +12,6 @@ html_theme_options = {
     'has_left_sidebar': True,
     'has_right_sidebar': True,
     'show_navigators': True,
-    'collapsible_sidebar': True,
     'show_navigators_in_index': False,
     'left_sidebar_only': [
         "leftpage"
@@ -38,6 +37,7 @@ html_theme_options = {
     ],
     'footer_menus': [
         {
+            'icon': 'fa-phone',
             'title': 'Contact',
             'menu_items': [
                 {
@@ -51,6 +51,7 @@ html_theme_options = {
             ]
         },
         {
+            'icon': 'fa-book',
             'title': 'Documentation',
             'menu_items': [
                 {
@@ -76,6 +77,7 @@ html_theme_options = {
             ]
         },
         {
+            'icon': 'fa-users',
             'title': 'Community',
             'menu_items': [
                 {
@@ -99,4 +101,4 @@ html_theme_options = {
     ],
 }
 
-html_theme = 'fluid'
+html_theme = 'milkish'
