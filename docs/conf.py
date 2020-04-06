@@ -6,7 +6,7 @@ copyright = '2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
 author = 'Adewale Azeez'
 
 html_theme_path = [themata.get_html_theme_path()]
-html_theme = 'milkish'
+html_theme = 'sugar'
 html_favicon = 'images/themata.png'
 exclude_patterns = [
     'hackish/*',
@@ -24,5 +24,15 @@ html_theme_options = {
         ("Download", "https://pypi.org/project/themata/"),
         ("Github", "https://github.com/Thecarisma/themata"),
         ("Follow me on twitter", "https://twitter.com/iamthecarisma")
+    ],
+    'navbar_sec_links': [
+        ("hackish", "https://thecarisma.github.io/themata/hackish"),
+        ("milkish", "https://thecarisma.github.io/themata/milkish"),
+        ("fandango", "https://thecarisma.github.io/themata/fandango"),
+        ("clear", "https://thecarisma.github.io/themata/clear"),
+        ("fluid", "https://thecarisma.github.io/themata/fluid"),
+        ("garri", "https://thecarisma.github.io/themata/garri"),
+        ("water", "https://thecarisma.github.io/themata/water"),
+        ("sugar", "https://thecarisma.github.io/themata/sugar")
     ]
 }
