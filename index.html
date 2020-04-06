@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Overview &#8212; themata  documentation</title>
-    <link rel="stylesheet" href="_static/css/milkiish.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/sugar.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -23,23 +23,44 @@
   </head><body>
 
     <div class="document">
-    <header>
+    <header>        
         <div class="topnavbar">
             
                 <img class="icon" src="_static/themata.png"></img>
             
             <a href="#" class="title">themata</a>
+            <div style="float:right;">
+                
+                    <a href="https://pypi.org/project/themata/">Download</a> <!-- class="active" -->
+                
+                    <a href="https://github.com/Thecarisma/themata">Github</a> <!-- class="active" -->
+                
+                    <a href="https://twitter.com/iamthecarisma">Follow me on twitter</a> <!-- class="active" -->
+                
+            </div>
+        </div>
+        <div class="topnavbar-sec">
             
-                <a href="https://pypi.org/project/themata/">Download</a> <!-- class="active" -->
+                <a href="https://thecarisma.github.io/themata/hackish">hackish</a> <!-- class="active" -->
             
-                <a href="https://github.com/Thecarisma/themata">Github</a> <!-- class="active" -->
+                <a href="https://thecarisma.github.io/themata/milkish">milkish</a> <!-- class="active" -->
             
-                <a href="https://twitter.com/iamthecarisma">Follow me on twitter</a> <!-- class="active" -->
+                <a href="https://thecarisma.github.io/themata/fandango">fandango</a> <!-- class="active" -->
+            
+                <a href="https://thecarisma.github.io/themata/clear">clear</a> <!-- class="active" -->
+            
+                <a href="https://thecarisma.github.io/themata/fluid">fluid</a> <!-- class="active" -->
+            
+                <a href="https://thecarisma.github.io/themata/garri">garri</a> <!-- class="active" -->
+            
+                <a href="https://thecarisma.github.io/themata/water">water</a> <!-- class="active" -->
+            
+                <a href="https://thecarisma.github.io/themata/sugar">sugar</a> <!-- class="active" -->
             
             <div class="search-container">
                 <form class="search" action="search.html" method="get">
-                    <button type="submit"><i class="fa fa-search"></i></button>
                     <input type="text" placeholder="" name="q">
+                    <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
         </div>
@@ -158,6 +179,23 @@ into the main project.</p>
                 with <a href="https://thecarisma.github.io/themata/milkish/index.html">milkish</a> theme.
         </div>
     </div>
+    
+        <script>
+            var coll = document.getElementsByClassName("caption");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
     
 
   </body>

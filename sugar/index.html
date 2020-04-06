@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Water &#8212; Water  documentation</title>
-    <link rel="stylesheet" href="_static/css/water.css" type="text/css" />
+    <title>Sugar &#8212; Sugar  documentation</title>
+    <link rel="stylesheet" href="_static/css/sugar.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -24,31 +24,39 @@
   </head><body>
 
     <div class="document">
-    <header>
+    <header>        
         <div class="topnavbar">
             
                 <img class="icon" src="_static/themata.png"></img>
             
-            <a href="#" class="title">Water</a>
+            <a href="#" class="title">Sugar</a>
+            <div style="float:right;">
+                
+                    <a href="https://twitter.com/iamthecarisma">Twitter</a> <!-- class="active" -->
+                
+                    <a href="https://github.com/Thecarisma/themata/">Github</a> <!-- class="active" -->
+                
+            </div>
+        </div>
+        <div class="topnavbar-sec">
             
                 <a href="https://twitter.com/iamthecarisma">Twitter</a> <!-- class="active" -->
             
                 <a href="https://github.com/Thecarisma/themata/">Github</a> <!-- class="active" -->
             
+            <div class="search-container">
+                <form class="search" action="search.html" method="get">
+                    <input type="text" placeholder="" name="q">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
         </div>
     </header>
-    
     <div class="documentwrapper">
         
             
                 
-                
                 <div class="sidebar-left">
-                    <div class="search-container">
-                        <form class="search" action="search.html" method="get">
-                            <input type="text" placeholder="Search..." name="q">
-                        </form>
-                    </div>
                     </br>
                     <p class="caption"><span class="caption-text">Main</span></p>
 <ul>
@@ -60,22 +68,24 @@
 <li class="toctree-l1"><a class="reference internal" href="otherpages/singlepage.html">No Sidebar. Theme Option</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otherpages/test.single.html">No Sidebar. File Name</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otherpages/test.left.html">Left Sidebar Only. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/test.right.html">Right Sidebar Only. File Name</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otherpages/leftpage.html">Left Sidebar Only. Theme Option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/rightpage.html">Right Sidebar Only. Theme Option</a></li>
 </ul>
 
                 </div>
                 
             
         
-        <div class="bodywrapper" style="">
+        <div class="bodywrapper">
                 
   <div class="toctree-wrapper compound" id="main-nav">
 </div>
 <div class="toctree-wrapper compound" id="sec-files">
 </div>
-<div class="section" id="water">
-<h1>Water<a class="headerlink" href="#water" title="Permalink to this headline">¶</a></h1>
-<p>Setting up and using the water theme.</p>
+<div class="section" id="sugar">
+<h1>Sugar<a class="headerlink" href="#sugar" title="Permalink to this headline">¶</a></h1>
+<p>Setting up and using the sugar theme.</p>
 <p>Install the themata package from python index.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install themata
 </pre></div>
@@ -83,17 +93,17 @@
 <p>or equivalent (add <cite>themata</cite> to any appropriate requirements files).</p>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>Below is a minimal sample <strong>conf.py</strong> file to use the water theme.</p>
+<p>Below is a minimal sample <strong>conf.py</strong> file to use the sugar theme.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">themata</span>
 
-<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Water Doc&#39;</span>
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Sugar Doc&#39;</span>
 <span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Adewale Azeez&#39;</span>
 <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
 
 <span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
 <span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
-<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;water&#39;</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sugar&#39;</span>
 
 <span class="n">html_theme_optionss</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;project_icon&#39;</span><span class="p">:</span> <span class="s1">&#39;favicon.png&#39;</span>
@@ -138,8 +148,23 @@
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>has_left_sidebar &lt;boolean&gt;</p></td>
+<tr class="row-even"><td><p>navbar_sec_links &lt;list of tupples&gt;</p></td>
+<td><p>The secondary navbar menus to show below the main header of the page, each of the entry should be a tupple of the name and the link e.g for a menu that link to twitter and github.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;navbar_sec_links&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Twitter&#39;</span><span class="p">,</span> <span class="s1">&#39;https://twitter.com/iamthecarisma&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Github&#39;</span><span class="p">,</span> <span class="s1">&#39;https://github.com/Thecarisma/themata/&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>has_left_sidebar &lt;boolean&gt;</p></td>
 <td><p>By default this theme renders the left sidebar. The left sidebar shows the documentation toc tree. To not shouw the left sidebar in all the pages set the value to False in the <cite>html_theme_options</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p>has_right_sidebar &lt;boolean&gt;</p></td>
+<td><p>By default this theme renders the right sidebar. The left sidebar shows the table of content for the active page, the previous and next topic and the link to the page source. To not shouw the right sidebar in all the pages set the value to False in the <cite>html_theme_options</cite>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>footer_menus &lt;list of objects&gt;</p></td>
 <td><p>The footer menu to show at the bottom of the page, each of the footer should contain the ‘title’ and the array of the ‘menu_items’.</p>
@@ -192,7 +217,19 @@
 <tr class="row-odd"><td><p>show_navigators &lt;boolean&gt;</p></td>
 <td><p>Theme option to decide whether to show the bottom navigation buttons (index, previous and next) at the bottom of each of the generated pages. The default is True which means the navigators is shown. To hide the navigation set the value of show_navigators to False in <cite>html_theme_options</cite>.</p></td>
 </tr>
-<tr class="row-even"><td><p>left_sidebar_only &lt;list&gt;</p></td>
+<tr class="row-even"><td><p>right_sidebar_only &lt;list&gt;</p></td>
+<td><p>An array list of pages name to have only the right sidebar. Any pagename added to this array will have ONLY the right sidebar regardless of other sidebar options. E.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;right_sidebar_only&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;otherpages/rightpage&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The name of the page must be relative to the index project root folder. Another way to make a page have only the right sidebar is to add the extension <strong>.right</strong> to it file name e.g. <strong>test.right.rst</strong></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>left_sidebar_only &lt;list&gt;</p></td>
 <td><p>An array list of pages name to have only the left sidebar. Any pagename added to this array will have ONLY the left sidebar regardless of other sidebar options. E.g.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;left_sidebar_only&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -204,7 +241,7 @@
 <p>The name of the page must be relative to the index project root folder. Another way to make a page have only the left sidebar is to add the extension <strong>.left</strong> to it file name e.g. <strong>test.left.rst</strong></p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>no_sidebar &lt;list&gt;</p></td>
+<tr class="row-even"><td><p>no_sidebar &lt;list&gt;</p></td>
 <td><p>An array list of pages name to have no sidebar. Any pagename added to this array will have no sidebar regardless of other sidebar options. E.g.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;no_sidebar&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -215,6 +252,12 @@
 </div>
 <p>The name of the page must be relative to the index project root folder. Another way to make a page have no sidebar is to add the extension <strong>.single</strong> to it file name e.g. <strong>test.single.rst</strong></p>
 </td>
+</tr>
+<tr class="row-odd"><td><p>collapsible_sidebar &lt;boolean&gt;</p></td>
+<td><p>A boolean value to determine whether the left sidebar should be collapsible or not.</p></td>
+</tr>
+<tr class="row-even"><td><p>collapsible_sidebar_display &lt;string&gt;</p></td>
+<td><p>The left sidebar unordered list display css value. Set to ‘none’ if the list should be hidden by default when collapsible_sidebar is set to True, if collapsible_sidebar is set to False rember to remove this option or set it to ‘block’.</p></td>
 </tr>
 </tbody>
 </table>
@@ -250,11 +293,11 @@ background color to gray:</p>
 <td><p>link color</p></td>
 </tr>
 <tr class="row-even"><td><p>highlight_color</p></td>
-<td><p>#70999c</p></td>
+<td><p>#34aeeb</p></td>
 <td><p>link hover color</p></td>
 </tr>
 <tr class="row-odd"><td><p>body_link_color</p></td>
-<td><p>#70999c</p></td>
+<td><p>#34aeeb</p></td>
 <td><p>link color in the article body</p></td>
 </tr>
 <tr class="row-even"><td><p>body_link_highlight_color</p></td>
@@ -262,12 +305,20 @@ background color to gray:</p>
 <td><p>link hover color in the article body</p></td>
 </tr>
 <tr class="row-odd"><td><p>header_background_color</p></td>
-<td><p>#ccdee3</p></td>
+<td><p>#333</p></td>
 <td><p>header background color</p></td>
 </tr>
 <tr class="row-even"><td><p>menu_item_color</p></td>
-<td><p>gray</p></td>
+<td><p>white</p></td>
 <td><p>header link text color</p></td>
+</tr>
+<tr class="row-odd"><td><p>header_sec_background_color</p></td>
+<td><p>#454547</p></td>
+<td><p>secondary header background color</p></td>
+</tr>
+<tr class="row-even"><td><p>menu_sec_item_color</p></td>
+<td><p>white</p></td>
+<td><p>secondary header link text color</p></td>
 </tr>
 <tr class="row-odd"><td><p>background_color</p></td>
 <td><p>white</p></td>
@@ -298,6 +349,36 @@ background color to gray:</p>
                     
                 
         </div>
+        
+            
+                
+                <div class="sidebar-right">
+                    
+                        <h2>Page Contents</h2>
+                        <ul>
+<li><a class="reference internal" href="#">Sugar</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+<li><a class="reference internal" href="#theme-options">Theme Options</a><ul>
+<li><a class="reference internal" href="#variable-options">Variable Options</a></li>
+<li><a class="reference internal" href="#css-options">CSS Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        
+                        
+                            <h2>Next topic</h2>
+                            <a href="preview.html">Basic Specification</a>
+                        
+                        <h2>This Page</h2>
+                        <a href="_sources/index.rst.txt">Show source</a>
+                    
+                </div>
+                
+            
+        
         <div style="clear:both"></div>
     </div>
       <div class="clearer"></div>
@@ -313,23 +394,23 @@ background color to gray:</p>
         <div class="footer-col1">
             
                 <div class="footer-col2">
-                    <span class="footer-col2-title">Contact</span>
+                    <span class="footer-col2-title"><i class="fa fa-menu "></i>Contact</span>
                     <ul>
                         
-                            <li><a href="https://thecarisma.github.io/">https://thecarisma.github.io/</a></li>
+                            <li><a href="https://thecarisma.github.io/"><i class="fa fa-menu fa-chevron-right"></i>https://thecarisma.github.io/</a></li>
                         
-                            <li><a href="tel:911">12345678998</a></li>
+                            <li><a href="tel:911"><i class="fa fa-menu fa-chevron-right"></i>12345678998</a></li>
                         
                     </ul>
                 </div>
             
                 <div class="footer-col2">
-                    <span class="footer-col2-title">Custom Pages</span>
+                    <span class="footer-col2-title"><i class="fa fa-menu "></i>Custom Pages</span>
                     <ul>
                         
-                            <li><a href="leftpage.html">Left Page</a></li>
+                            <li><a href="leftpage.html"><i class="fa fa-menu fa-chevron-right"></i>Left Page</a></li>
                         
-                            <li><a href="singletpage.html">Single Page</a></li>
+                            <li><a href="singletpage.html"><i class="fa fa-menu fa-chevron-right"></i>Single Page</a></li>
                         
                     </ul>
                 </div>
@@ -340,25 +421,27 @@ background color to gray:</p>
         <div class="doc-sphinx-info">
                     &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
                 Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
-                with <a href="https://thecarisma.github.io/themata/water/index.html">water</a> theme.
+                with <a href="https://thecarisma.github.io/themata/milkish/index.html">milkish</a> theme.
         </div>
     </div>
-    <script>
-        var coll = document.getElementsByClassName("caption");
-        var i;
+    
+        <script>
+            var coll = document.getElementsByClassName("caption");
+            var i;
 
-        for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
             }
-          });
-        }
-        </script>
+            </script>
+    
 
   </body>
 </html>
