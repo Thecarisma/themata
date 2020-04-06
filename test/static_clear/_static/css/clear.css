@@ -217,6 +217,7 @@ pre {
     padding: 1px;
     list-style-type: none;
     margin: 0px;
+    display: block; /* theme_collapsible_sidebar_display */
 }
 
 .sidebar-left li {

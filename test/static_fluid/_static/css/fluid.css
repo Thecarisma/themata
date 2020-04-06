@@ -203,12 +203,57 @@ pre {
     padding: 1px;
     list-style-type: none;
     margin: 0px;
+    display: block; /* theme_collapsible_sidebar_display */
 }
 
 .sidebar-left li {
     padding-left: 10px;
     margin-top: 5px;
 }
+
+{% if theme_collapsible_sidebar == True %}
+   
+.sidebar-left .caption {
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 1px;
+    padding-bottom: 5px;
+    width: 90%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #0d8aa1; /* theme_highlight_color */
+    text-align: left;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.sidebar-left .caption-text:after {
+    content: "\2BC6"; 
+    font-family: FontAwesome;
+    float: right;
+    top:0;
+    color: #0d8aa1; /* theme_highlight_color */
+ }
+
+.sidebar-left .caption-text {
+    color: #0d8aa1 !important; /* theme_highlight_color */
+    font-size: 17px;
+    font-weight: bold; 
+}
+
+{% else %}
+
+.sidebar-left .caption {
+    font-weight: bold;
+    font-size: 140%;
+}
+
+{% endif %}
 
 .sidebar-right ul {
     padding: 1px;
@@ -219,11 +264,6 @@ pre {
 .sidebar-right li {
     padding-left: 10px;
     margin-top: 5px;
-}
-
-.sidebar-left ul {
-    padding: 1px;
-    margin: 20px;
 }
 
 .sidebar-left ul * {
@@ -256,11 +296,6 @@ pre {
 
 .sidebar-left {
     -ms-overflow-style: none;
-}
-
-.sidebar-left .caption {
-    font-weight: bold;
-    font-size: 140%;
 }
 
 .sidebar-right::-webkit-scrollbar {
