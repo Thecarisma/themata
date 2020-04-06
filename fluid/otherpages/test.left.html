@@ -118,7 +118,7 @@
                     <span class="footer-col2-title">Contact</span>
                     <ul>
                         
-                            <li><a href="azeezadewale98@gmail.com">azeezadewale98@gmail.com</a></li>
+                            <li><a href="https://thecarisma.github.io/">https://thecarisma.github.io/</a></li>
                         
                             <li><a href="tel:911">12345678998</a></li>
                         
@@ -152,6 +152,24 @@
                 with <a href="https://thecarisma.github.io/themata/fluid/index.html">fluid</a> theme.
         </div>
     </div>
+    
+        <script>
+            var coll = document.getElementsByClassName("caption");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
+    
 
   </body>
 </html>

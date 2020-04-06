@@ -20,6 +20,8 @@ The **conf.py** file that generates this documentation.
     html_theme_options = {
         'index_is_single': False,
         'show_navigators_in_index': False,
+        'collapsible_sidebar': True,
+        'collapsible_sidebar_display': 'block',
         'navbar_links': [
             ('Twitter', 'https://twitter.com/iamthecarisma'),
             ('Github', 'https://github.com/Thecarisma/themata/')
@@ -32,8 +34,8 @@ The **conf.py** file that generates this documentation.
                 'title': 'Contact',
                 'menu_items': [
                     {
-                        'link': 'azeezadewale98@gmail.com',
-                        'title': 'azeezadewale98@gmail.com'
+                        'link': 'https://thecarisma.github.io/',
+                        'title': 'https://thecarisma.github.io/'
                     },
                     {
                         'link': 'tel:911',

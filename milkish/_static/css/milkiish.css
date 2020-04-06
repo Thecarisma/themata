@@ -212,7 +212,45 @@ pre {
     padding: 1px;
     list-style-type: none;
     margin: 0px;
+    display: block;
 }
+
+
+   
+.sidebar-left .caption {
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 1px;
+    padding-bottom: 5px;
+    width: 90%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #727273; /* theme_text_color */
+    text-align: left;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.sidebar-left .caption-text:after {
+    content: "\2BC6"; 
+    font-family: FontAwesome;
+    float: right;
+    top:0;
+    color: #727273; /* theme_text_color */
+ }
+
+.sidebar-left .caption-text {
+    color: #727273 !important; /* theme_text_color */
+    font-size: 17px;
+    font-weight: bold; 
+}
+
+
 
 .sidebar-left li {
     padding-left: 10px;
@@ -247,10 +285,6 @@ pre {
 
 .sidebar-left {
     -ms-overflow-style: none;
-}
-
-.sidebar-left .caption {
-    font-weight: bold;
 }
 
 .sidebar-right::-webkit-scrollbar {

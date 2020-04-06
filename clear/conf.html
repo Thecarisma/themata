@@ -87,6 +87,8 @@
     <span class="s1">&#39;show_navigators_in_index&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="s1">&#39;has_left_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="s1">&#39;has_right_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;collapsible_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;collapsible_sidebar_display&#39;</span><span class="p">:</span> <span class="s1">&#39;block&#39;</span><span class="p">,</span>
     <span class="s1">&#39;show_navigators&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="s1">&#39;social_icons&#39;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">(</span><span class="s1">&#39;fab fa-twitter&#39;</span><span class="p">,</span> <span class="s1">&#39;https://twitter.com/iamthecarisma&#39;</span><span class="p">),</span>
@@ -167,7 +169,25 @@
             
         
         <div style="clear:both"></div>
-    </div>
+    </div> 
+    
+        <script>
+            var coll = document.getElementsByClassName("caption");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
+    
       <div class="clearer"></div>
     </div>
   </body>

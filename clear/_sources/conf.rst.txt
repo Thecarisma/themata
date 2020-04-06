@@ -22,6 +22,8 @@ The **conf.py** file that generates this documentation.
         'show_navigators_in_index': False,
         'has_left_sidebar': True,
         'has_right_sidebar': True,
+        'collapsible_sidebar': True,
+        'collapsible_sidebar_display': 'block',
         'show_navigators': True,
         'social_icons': [
             ('fab fa-twitter', 'https://twitter.com/iamthecarisma'),

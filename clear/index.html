@@ -181,6 +181,12 @@
 <p>The name of the page must be relative to the index project root folder. Another way to make a page have no sidebar is to add the extension <strong>.single</strong> to it file name e.g. <strong>test.single.rst</strong></p>
 </td>
 </tr>
+<tr class="row-even"><td><p>collapsible_sidebar &lt;boolean&gt;</p></td>
+<td><p>A boolean value to determine whether the left sidebar should be collapsible or not.</p></td>
+</tr>
+<tr class="row-odd"><td><p>collapsible_sidebar_display &lt;string&gt;</p></td>
+<td><p>The left sidebar unordered list display css value. Set to ‘none’ if the list should be hidden by default when collapsible_sidebar is set to True, if collapsible_sidebar is set to False rember to remove this option or set it to ‘block’.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -317,7 +323,25 @@ background color to gray:</p>
             
         
         <div style="clear:both"></div>
-    </div>
+    </div> 
+    
+        <script>
+            var coll = document.getElementsByClassName("caption");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
+    
       <div class="clearer"></div>
     </div>
   </body>
