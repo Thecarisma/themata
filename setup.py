@@ -9,19 +9,24 @@ setup(
     name="themata",
     version=1.0,
     author="Adewale Azeez",
-    author_email="https://thecarisma.github.io/",
-    description="A milkish looking sphinx theme",
+    author_email="azeezadewale98@gmail.com",
+    description="Set of Highly customizable sphinx themes. hackish, milkish, fandango, clear, fluid, garri, water and sugar.",
     long_description=long_description,
     license="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
     packages=[
         "themata",
+        "themata.hackish",
         "themata.milkish",
+        "themata.fandango",
+        "themata.clear",
         "themata.fluid",
-        "themata.clear"
+        "themata.garri",
+        "themata.water",
+        "themata.sugar"
     ],
     include_package_data=True,
-    keywords="sphinx extension theme",
-    url="https://github.com/Thecarisma/milkish/",
+    keywords="sphinx extension theme thecarisma hackish milkish fandango clear fluid garri water sugar",
+    url="https://github.com/Thecarisma/themata/",
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
@@ -36,7 +41,7 @@ setup(
     ],
     entry_points = {
         'sphinx.html_themes': [
-            'milkish = milkish',
+            'themata = themata',
         ]
     },
 )
