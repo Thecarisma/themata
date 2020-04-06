@@ -212,6 +212,7 @@ pre {
     padding: 1px;
     list-style-type: none;
     margin: 0px;
+    display: {{ theme_collapsible_sidebar_display }};
 }
 
 {% if theme_collapsible_sidebar == True %}
@@ -224,7 +225,7 @@ pre {
     width: 90%;
     border: none;
     outline: none;
-    border-bottom: 1px solid {{ theme_highlight_color }}; /* theme_highlight_color */
+    border-bottom: 1px solid {{ theme_text_color }}; /* theme_text_color */
     text-align: left;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -240,11 +241,11 @@ pre {
     font-family: FontAwesome;
     float: right;
     top:0;
-    color: {{ theme_highlight_color }}; /* theme_highlight_color */
+    color: {{ theme_text_color }}; /* theme_text_color */
  }
 
 .sidebar-left .caption-text {
-    color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
+    color: {{ theme_text_color }} !important; /* theme_text_color */
     font-size: 17px;
     font-weight: bold; 
 }
