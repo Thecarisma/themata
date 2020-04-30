@@ -25,7 +25,7 @@ setup(
         "themata.sugar"
     ],
     include_package_data=True,
-    keywords="sphinx extension theme thecarisma hackish milkish fandango clear fluid garri water sugar",
+    keywords="sphinx, extension, theme, thecarisma, hackish, milkish, fandango, clear, fluid, garri, water, sugar",
     url="https://github.com/Thecarisma/themata/",
     classifiers=[
         'Development Status :: 5 - Production/Stable',
