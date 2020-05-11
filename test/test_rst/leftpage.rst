@@ -1,5 +1,7 @@
-Hello
------
+
+.. index::
+	single: leftpage
+
 
 Sphinx will look for templates in the folders of templates_path first, and if it can’t find the template it’s looking for there, it falls back to the selected theme’s templates.
 
@@ -13,8 +15,6 @@ For example, to add a new link to the template area containing related links all
     :alt: About to make the tackle, Yale Alumni Game 2017
     :align: center
 
-Templating
-----------
 
 Sphinx uses the Jinja templating engine for its HTML templates. Jinja is a text-based engine, and inspired by Django templates, so anyone having used Django will already be familiar with it. It also has excellent documentation for those who need to make themselves familiar with it.
 
