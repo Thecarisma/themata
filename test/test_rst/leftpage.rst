@@ -2,6 +2,8 @@
 .. index::
 	single: leftpage
 
+Left Sidebar Only
+--------------------
 
 Sphinx will look for templates in the folders of templates_path first, and if it can’t find the template it’s looking for there, it falls back to the selected theme’s templates.
 

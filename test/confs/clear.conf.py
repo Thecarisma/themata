@@ -31,6 +31,7 @@ html_theme_options = {
         ("fab fa-linkedin", "https://www.linkedin.com/in/azeez-adewale/"),
         ("fab fa-stackoverflow", "https://stackoverflow.com/users/6626422/thecarisma")
     ],
+    "source_root": "https://github.com/Thecarisma/themata/tree/test/test/test_rst",
 }
 
 html_theme = 'clear'

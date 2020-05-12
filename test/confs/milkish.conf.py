@@ -99,6 +99,7 @@ html_theme_options = {
             ]
         }
     ],
+    "source_root": "https://github.com/Thecarisma/themata/tree/test/test/test_rst",
 }
 
 html_theme = 'milkish'

@@ -13,7 +13,8 @@ html_theme_options = {
     'no_sidebar': [
         "singlepage"
     ],
-    'toc_title': 'Main Links'
+    'toc_title': 'Main Links',
+    "source_root": "https://github.com/Thecarisma/themata/tree/test/test/test_rst",
 }
 
 html_theme = 'garri'
