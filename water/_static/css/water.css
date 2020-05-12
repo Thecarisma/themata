@@ -138,6 +138,7 @@ pre {
     margin-top: 70px;
     max-width: 58%;
     margin: auto;
+    font-size: 16px; /* theme_document_font_size */
 }  
 
 .sidebar-left {

@@ -171,6 +171,7 @@ pre {
     margin: 5%;
     margin-top: 70px;
     max-height: 100%;
+    font-size: 16px; /* theme_document_font_size */
 }  
 
 .sidebar-left {
