@@ -1,6 +1,6 @@
 
 cd ../
-OUTPUT_FOLDER=$PWD/dist/gh-pages/
+OUTPUT_FOLDER=$PWD/dist/gendoc/
 cd docs/
 declare -a THEMES=("hackish" "milkish" "fandango" "clear" "fluid" "garri" "water" "sugar")
 if [[ -d $OUTPUT_FOLDER ]]; then 
