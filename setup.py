@@ -7,7 +7,7 @@ setup(
     zip_safe=False,
     install_requires=["sphinx>=1.1"],
     name="themata",
-    version=1.0,
+    version=1.1,
     author="Adewale Azeez",
     author_email="azeezadewale98@gmail.com",
     description="Set of Highly customizable sphinx themes. hackish, milkish, fandango, clear, fluid, garri, water and sugar.",
