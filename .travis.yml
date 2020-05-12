@@ -14,15 +14,7 @@ before_install:
 
 script:
   - cd ./docs/ 
-  - sphinx-build -b html -d build/doctrees ./ build/html
-  - cd ./clear/; sphinx-build -b html -d build/doctrees ./ build/html
-  - cd ../fandango/; sphinx-build -b html -d build/doctrees ./ build/html
-  - cd ../fluid/; sphinx-build -b html -d build/doctrees ./ build/html
-  - cd ../garri/; sphinx-build -b html -d build/doctrees ./ build/html
-  - cd ../hackish/; sphinx-build -b html -d build/doctrees ./ build/html
-  - cd ../milkish/; sphinx-build -b html -d build/doctrees ./ build/html
-  - cd ../sugar/; sphinx-build -b html -d build/doctrees ./ build/html
-  - cd ../water/; sphinx-build -b html -d build/doctrees ./ build/html
+  - bash ./gendoc.sh
   - cd ../../
   - ls
   
