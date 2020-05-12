@@ -172,6 +172,7 @@ background color to gray:
 .. csv-table::
    :header: "Option", "Default", "Description"
 
+   "document_font_size", "16px", "the document font size"
    "text_color", "rgb(36,233,10)", "text color"
    "link_color", "rgb(146,250,131)", "link color"
    "highlight_color", "rgb(36,233,10)", "link hover color"

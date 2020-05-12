@@ -100,3 +100,13 @@ License
 --------
 
 Creative Commons Zero v1.0 Universal License. Copyright (c) 2020 Adewale Azeez
+
+Change Log 
+-----------
+
+1.1
+'''''''''
+
+- Remove <no title> from pages with no title. If no title set title to page or project name `731e51d <https://github.com/Thecarisma/themata/commit/731e51dc3999f3fd00594837268e9e98aae27924>`_
+- Add theme option to set the document font-size `aefa7ac <https://github.com/Thecarisma/themata/commit/aefa7acbe45d7269773e6bc6c2145a44808a25b2>`_
+- Support a placeholder '__change__title__' to tell themata to change title `731e51d <https://github.com/Thecarisma/themata/commit/731e51dc3999f3fd00594837268e9e98aae27924>`_
