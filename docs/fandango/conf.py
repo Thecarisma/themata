@@ -62,5 +62,7 @@ html_theme_options = {
     'exclude_secondary_header_in': [
         'index',
         'singlepage'
-    ]
+    ],
+    'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/fandango/',
+    'source_root_edit_text': 'Edit on Github'
 }

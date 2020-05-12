@@ -63,5 +63,7 @@ The **conf.py** file that generates this documentation.
         ],
         'no_sidebar': [
             'otherpages/singlepage'
-        ]
+        ],
+        'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/water/',
+        'source_root_edit_text': 'Edit on Github'
     }

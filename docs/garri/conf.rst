@@ -24,5 +24,7 @@ The **conf.py** file that generates this documentation.
         'no_sidebar': [
             "singlepage"
         ],
-        'toc_title': 'Other Topics'
+        'toc_title': 'Other Topics',
+        'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/garri/',
+        'source_root_edit_text': 'Edit on Github'
     }

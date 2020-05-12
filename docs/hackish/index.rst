@@ -159,6 +159,8 @@ Variable Options
     
    The name of the page must be relative to the index project root folder. Another way to make a page have no sidebar is to add the extension **.single** to it file name e.g. **test.single.rst**"
    "toc_title <string>", "The title of the main toc of the documentation the default is 'Browse'"
+   "source_root <string>", "The full link to the web root folder where the source of the documentation source is e.g. the documentation github repo"
+   "source_root_edit_text <string>", "The text to show on the button that link to the page source in a repository. The default is '**Edit this page**'"
 
 
 CSS Options

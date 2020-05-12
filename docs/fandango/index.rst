@@ -181,7 +181,8 @@ Variable Options
         }
 
    "
-
+   "source_root <string>", "The full link to the web root folder where the source of the documentation source is e.g. the documentation github repo"
+   "source_root_edit_text <string>", "The text to show on the button that link to the page source in a repository. The default is '**Edit this page**'"
 
 CSS Options
 '''''''''''''''''
