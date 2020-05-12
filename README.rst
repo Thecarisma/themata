@@ -109,4 +109,7 @@ Change Log
 
 - Remove <no title> from pages with no title. If no title set title to page or project name `731e51d <https://github.com/Thecarisma/themata/commit/731e51dc3999f3fd00594837268e9e98aae27924>`_
 - Add theme option to set the document font-size `aefa7ac <https://github.com/Thecarisma/themata/commit/aefa7acbe45d7269773e6bc6c2145a44808a25b2>`_
-- Support a placeholder '__change__title__' to tell themata to change title `731e51d <https://github.com/Thecarisma/themata/commit/731e51dc3999f3fd00594837268e9e98aae27924>`_
+- Add theme option document font-size to each theme documentation `a474591 <https://github.com/Thecarisma/themata/commit/a4745913506918aaf2eb4bda4ffa7ed12cd62f44>`_
+- Put note on top of each theme page that link back to themata `8b3bc8d <https://github.com/Thecarisma/themata/commit/8b3bc8d4ab5f95a05e7566463da6ef4c1d13852d>`_
+- Add `edit on 'website'` to webpages e.g. edit on github ` <https://github.com/Thecarisma/themata/commit/>`_
+- Add raw_source_root option for the edit on link and edit_on_text for the text to display to theme option` <https://github.com/Thecarisma/themata/commit/>`_
