@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>Garri &#8212; Garri  documentation</title>
@@ -124,6 +124,10 @@
 </div>
 <div class="section" id="garri">
 <h1>Garri<a class="headerlink" href="#garri" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This theme is part of the <a class="reference external" href="https://thecarisma.github.io/themata/">themata</a> collection.</p>
+</div>
 <p>Setting up and using the garri theme.</p>
 <p>Install the themata package from python index.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install themata
@@ -193,6 +197,12 @@
 <p>The name of the page must be relative to the index project root folder. Another way to make a page have no sidebar is to add the extension <strong>.single</strong> to it file name e.g. <strong>test.single.rst</strong></p>
 </td>
 </tr>
+<tr class="row-even"><td><p>source_root &lt;string&gt;</p></td>
+<td><p>The full link to the web root folder where the source of the documentation source is e.g. the documentation github repo</p></td>
+</tr>
+<tr class="row-odd"><td><p>source_root_edit_text &lt;string&gt;</p></td>
+<td><p>The text to show on the button that link to the page source in a repository. The default is ‘<strong>Edit this page</strong>’</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -218,31 +228,35 @@ background color to gray:</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>text_color</p></td>
+<tr class="row-even"><td><p>document_font_size</p></td>
+<td><p>16px</p></td>
+<td><p>the document font size</p></td>
+</tr>
+<tr class="row-odd"><td><p>text_color</p></td>
 <td><p>#000000</p></td>
 <td><p>text color</p></td>
 </tr>
-<tr class="row-odd"><td><p>link_color</p></td>
+<tr class="row-even"><td><p>link_color</p></td>
 <td><p>#33658E</p></td>
 <td><p>link color</p></td>
 </tr>
-<tr class="row-even"><td><p>highlight_color</p></td>
+<tr class="row-odd"><td><p>highlight_color</p></td>
 <td><p>#33658E</p></td>
 <td><p>link hover color</p></td>
 </tr>
-<tr class="row-odd"><td><p>background_color</p></td>
+<tr class="row-even"><td><p>background_color</p></td>
 <td><p>white</p></td>
 <td><p>theme background color</p></td>
 </tr>
-<tr class="row-even"><td><p>navbar_color</p></td>
+<tr class="row-odd"><td><p>navbar_color</p></td>
 <td><p>#70705C</p></td>
 <td><p>navbar background color. Not sure this is used.</p></td>
 </tr>
-<tr class="row-odd"><td><p>header_link_color</p></td>
+<tr class="row-even"><td><p>header_link_color</p></td>
 <td><p>#AFAF92</p></td>
 <td><p>navbar text color. Not sure this is used.</p></td>
 </tr>
-<tr class="row-even"><td><p>code_background_color</p></td>
+<tr class="row-odd"><td><p>code_background_color</p></td>
 <td><p>#EFEFE1</p></td>
 <td><p>source code background color</p></td>
 </tr>
@@ -258,7 +272,7 @@ background color to gray:</p>
     </div>
     <div class="footer" role="contentinfo">
                 &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
-            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
+            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.0.3
             with <a href="https://thecarisma.github.io/themata/garri/index.html">garri</a> theme.
     </div>
 

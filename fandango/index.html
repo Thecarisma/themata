@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>Fandango &#8212; Fandango  documentation</title>
@@ -53,6 +53,10 @@
 </div>
 <div class="section" id="fandango">
 <h1>Fandango<a class="headerlink" href="#fandango" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This theme is part of the <a class="reference external" href="https://thecarisma.github.io/themata/">themata</a> collection.</p>
+</div>
 <p>Setting up and using the fandango theme.</p>
 <p>Install the themata package from python index.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install themata
@@ -221,6 +225,12 @@
 </div>
 </td>
 </tr>
+<tr class="row-even"><td><p>source_root &lt;string&gt;</p></td>
+<td><p>The full link to the web root folder where the source of the documentation source is e.g. the documentation github repo</p></td>
+</tr>
+<tr class="row-odd"><td><p>source_root_edit_text &lt;string&gt;</p></td>
+<td><p>The text to show on the button that link to the page source in a repository. The default is ‘<strong>Edit this page</strong>’</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -246,71 +256,75 @@ background color to gray:</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>text_color</p></td>
+<tr class="row-even"><td><p>document_font_size</p></td>
+<td><p>16px</p></td>
+<td><p>the document font size</p></td>
+</tr>
+<tr class="row-odd"><td><p>text_color</p></td>
 <td><p>#02516e</p></td>
 <td><p>text color</p></td>
 </tr>
-<tr class="row-odd"><td><p>link_color</p></td>
+<tr class="row-even"><td><p>link_color</p></td>
 <td><p>#5682d1</p></td>
 <td><p>link color</p></td>
 </tr>
-<tr class="row-even"><td><p>highlight_color</p></td>
+<tr class="row-odd"><td><p>highlight_color</p></td>
 <td><p>#6fcced</p></td>
 <td><p>link hover color</p></td>
 </tr>
-<tr class="row-odd"><td><p>body_link_color</p></td>
+<tr class="row-even"><td><p>body_link_color</p></td>
 <td><p>#5682d1</p></td>
 <td><p>link color in the article body</p></td>
 </tr>
-<tr class="row-even"><td><p>body_link_highlight_color</p></td>
+<tr class="row-odd"><td><p>body_link_highlight_color</p></td>
 <td><p>#363638</p></td>
 <td><p>link hover color in the article body</p></td>
 </tr>
-<tr class="row-odd"><td><p>header_background_color</p></td>
+<tr class="row-even"><td><p>header_background_color</p></td>
 <td><p>#02516e</p></td>
 <td><p>header background color</p></td>
 </tr>
-<tr class="row-even"><td><p>menu_item_color</p></td>
+<tr class="row-odd"><td><p>menu_item_color</p></td>
 <td><p>white</p></td>
 <td><p>header link text color</p></td>
 </tr>
-<tr class="row-odd"><td><p>background_color</p></td>
+<tr class="row-even"><td><p>background_color</p></td>
 <td><p>white</p></td>
 <td><p>theme background color</p></td>
 </tr>
-<tr class="row-even"><td><p>pre_background_color</p></td>
+<tr class="row-odd"><td><p>pre_background_color</p></td>
 <td><p>#dce2e6</p></td>
 <td><p>pre block background color</p></td>
 </tr>
-<tr class="row-odd"><td><p>pre_border_color</p></td>
+<tr class="row-even"><td><p>pre_border_color</p></td>
 <td><p>black</p></td>
 <td><p>pre block border color</p></td>
 </tr>
-<tr class="row-even"><td><p>search_input_background</p></td>
+<tr class="row-odd"><td><p>search_input_background</p></td>
 <td><p>#f7f7f7</p></td>
 <td><p>search box background color</p></td>
 </tr>
-<tr class="row-odd"><td><p>footer_background_color</p></td>
+<tr class="row-even"><td><p>footer_background_color</p></td>
 <td><p>#181d21</p></td>
 <td><p>footer background color</p></td>
 </tr>
-<tr class="row-even"><td><p>footer_highlight_color</p></td>
+<tr class="row-odd"><td><p>footer_highlight_color</p></td>
 <td><p>#0d8aa1</p></td>
 <td><p>footer highlight color</p></td>
 </tr>
-<tr class="row-odd"><td><p>footer_item_color</p></td>
+<tr class="row-even"><td><p>footer_item_color</p></td>
 <td><p>white</p></td>
 <td><p>footer text color</p></td>
 </tr>
-<tr class="row-even"><td><p>navigator_border_color</p></td>
+<tr class="row-odd"><td><p>navigator_border_color</p></td>
 <td><p>#e6e6e6</p></td>
 <td><p>navigation buttons border color</p></td>
 </tr>
-<tr class="row-odd"><td><p>header_sec_background_color</p></td>
+<tr class="row-even"><td><p>header_sec_background_color</p></td>
 <td><p>#0490c2</p></td>
 <td><p>secondary header background color</p></td>
 </tr>
-<tr class="row-even"><td><p>header_sec_title_color</p></td>
+<tr class="row-odd"><td><p>header_sec_title_color</p></td>
 <td><p>white</p></td>
 <td><p>secondary header title color</p></td>
 </tr>
@@ -414,7 +428,7 @@ background color to gray:</p>
         
         <div class="doc-sphinx-info">
                     &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
-                Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.4.3
+                Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.0.3
                 with <a href="https://thecarisma.github.io/themata/fandango/index.html">fandango</a> theme.
         </div>
     </div>

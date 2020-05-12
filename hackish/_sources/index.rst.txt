@@ -24,6 +24,10 @@
 Hackish
 ========
 
+.. note:: 
+
+    This theme is part of the `themata <https://thecarisma.github.io/themata/>`_ collection.
+
 Setting up and using the hackish theme.
 
 Install the themata package from python index.
@@ -155,6 +159,8 @@ Variable Options
     
    The name of the page must be relative to the index project root folder. Another way to make a page have no sidebar is to add the extension **.single** to it file name e.g. **test.single.rst**"
    "toc_title <string>", "The title of the main toc of the documentation the default is 'Browse'"
+   "source_root <string>", "The full link to the web root folder where the source of the documentation source is e.g. the documentation github repo"
+   "source_root_edit_text <string>", "The text to show on the button that link to the page source in a repository. The default is '**Edit this page**'"
 
 
 CSS Options
@@ -172,6 +178,7 @@ background color to gray:
 .. csv-table::
    :header: "Option", "Default", "Description"
 
+   "document_font_size", "16px", "the document font size"
    "text_color", "rgb(36,233,10)", "text color"
    "link_color", "rgb(146,250,131)", "link color"
    "highlight_color", "rgb(36,233,10)", "link hover color"
