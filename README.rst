@@ -114,5 +114,5 @@ Change Log
 - Make the document occupy 100% in sugar theme if left and right sidebar is disabled `439fd97 <https://github.com/Thecarisma/themata/commit/439fd9702058d0633114d613079effcdd1376227>`_
 - Add optional 'edit this page' button to webpages e.g. edit on github `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
 - Add source_root option for the edit on link and source_root_edit_text for the text to display to theme option `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
-- Document the source_root and source_root_edit_text theme options `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
+- Document the source_root and source_root_edit_text theme options `e9ea268 <https://github.com/Thecarisma/themata/commit/e9ea268929293f4eb2b620f0d2e9cd25c4c28476>`_
 

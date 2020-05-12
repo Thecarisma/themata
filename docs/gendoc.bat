@@ -1,7 +1,7 @@
 @echo off
 
 cd ..\
-SET OUTPUT_FOLDER=%CD%\dist\
+SET OUTPUT_FOLDER=%CD%\dist\gh-pages\
 cd docs/
 SET THEMES=hackish milkish fandango clear fluid garri water sugar
 if exist "%OUTPUT_FOLDER%" (
