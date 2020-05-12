@@ -156,6 +156,7 @@ table.hlist ul {
 .documentwrapper {
     width: 70%;
     margin: 20px;
+    font-size: {{ theme_document_font_size }}; /* theme_document_font_size */
 }
 
 

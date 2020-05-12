@@ -190,6 +190,7 @@ pre {
     max-height: 100%;
     display: flex;
     justify-content: center;
+    font-size: {{ theme_document_font_size }}; /* theme_document_font_size */
     
 }  
 
