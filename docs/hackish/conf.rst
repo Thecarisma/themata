@@ -64,5 +64,7 @@ The **conf.py** file that generates this documentation.
         'no_sidebar': [
             'otherpages/singlepage'
         ],
-        'toc_title': 'Other Topics'
+        'toc_title': 'Other Topics',
+        'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/hackish/',
+        'source_root_edit_text': 'Edit on Github'
     }

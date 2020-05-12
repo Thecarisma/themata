@@ -112,5 +112,7 @@ Change Log
 - Add theme option document font-size to each theme documentation `a474591 <https://github.com/Thecarisma/themata/commit/a4745913506918aaf2eb4bda4ffa7ed12cd62f44>`_
 - Put note on top of each theme page that link back to themata `8b3bc8d <https://github.com/Thecarisma/themata/commit/8b3bc8d4ab5f95a05e7566463da6ef4c1d13852d>`_
 - Make the document occupy 100% in sugar theme if left and right sidebar is disabled `439fd97 <https://github.com/Thecarisma/themata/commit/439fd9702058d0633114d613079effcdd1376227>`_
-- Add `edit on 'website'` to webpages e.g. edit on github ` <https://github.com/Thecarisma/themata/commit/>`_
-- Add raw_source_root option for the edit on link and raw_source_edit_text for the text to display to theme option` <https://github.com/Thecarisma/themata/commit/>`_
+- Add optional 'edit this page' button to webpages e.g. edit on github `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
+- Add source_root option for the edit on link and source_root_edit_text for the text to display to theme option `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
+- Document the source_root and source_root_edit_text theme options `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
+

@@ -55,5 +55,7 @@ html_theme_options = {
     ],
     'no_sidebar': [
         'otherpages/singlepage'
-    ]
+    ],
+    'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/water/',
+    'source_root_edit_text': 'Edit on Github'
 }

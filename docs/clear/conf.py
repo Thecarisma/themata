@@ -29,5 +29,7 @@ html_theme_options = {
     ],
     'right_sidebar_only': [
         'otherpages/rightpage'
-    ]
+    ],
+    'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/clear/',
+    'source_root_edit_text': 'Edit on Github'
 }
