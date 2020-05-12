@@ -15,8 +15,7 @@ before_install:
 script:
   - cd ./docs/ 
   - bash ./gendoc.sh
-  - cd ../../
-  - ls
+  - cd ../
   
 deploy:
   - provider: script
