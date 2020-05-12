@@ -23,6 +23,8 @@ script:
   - cd ../milkish/; sphinx-build -b html -d build/doctrees ./ build/html
   - cd ../sugar/; sphinx-build -b html -d build/doctrees ./ build/html
   - cd ../water/; sphinx-build -b html -d build/doctrees ./ build/html
+  - cd ../../
+  - ls
   
 deploy:
   - provider: script
