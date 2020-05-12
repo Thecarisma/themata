@@ -26,6 +26,10 @@
 Clear
 ========
 
+.. note:: 
+
+    This theme is part of the `themata <https://thecarisma.github.io/themata/>`_ collection.
+
 Setting up and using the clear theme.
 
 Install the themata package from python index.
