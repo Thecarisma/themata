@@ -19,13 +19,13 @@ git clone -b master https://github.com/Thecarisma/themata.git
 cd themata/
 mkdir -p ./docs/
 mkdir -p ./themata/
-cp -r ../../../docs/* ./docs/
-cp -r ../../../themata/* ./docs/
-cp -r ../../../.gitattributes ./
-cp -r ../../../MANIFEST.in ./
-cp -r ../../../README.rst ./
-cp -r ../../../setup.cfg ./
-cp -r ../../../setup.py ./
+cp -r ../../docs/* ./docs/
+cp -r ../../themata/* ./docs/
+cp -r ../../.gitattributes ./
+cp -r ../../MANIFEST.in ./
+cp -r ../../README.rst ./
+cp -r ../../setup.cfg ./
+cp -r ../../setup.py ./
 git config --local user.email "azeezadewale98@gmail.com"
 git config --local user.name "travis-ci.org"
 git add .; git commit -m "Travis build=${TRAVIS_BUILD_NUMBER}. Update the master branch"
