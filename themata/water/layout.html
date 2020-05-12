@@ -4,6 +4,14 @@
     {% set theme_project_icon = pathto('_static/' ~ theme_touch_icon, 1) + favicon %}
 {% endif %}
 
+{% if not title or "no title" in title %}
+    {% if pagename == "index" %}
+        {% set title = project %}
+    {% else %}
+        {% set title = pagename %}
+    {% endif %}
+{% endif %}
+
 {%- block extrahead %}
   {{ super() }}
   {% if theme_touch_icon %}
