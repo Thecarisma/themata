@@ -7,6 +7,9 @@
 themata
 ########
 
+.. image:: https://img.shields.io/pypi/dw/themata?style=for-the-badge   :alt: PyPI - Downloads
+.. image:: https://img.shields.io/travis/thecarisma/themata?style=for-the-badge   :alt: Travis (.org) branch
+
 .. class:: center
 
     Set of Highly customizable sphinx themes.
