@@ -12,9 +12,9 @@ git push -f https://Thecarisma:${GITHUB_TOKEN}@github.com/Thecarisma/themata.git
 cd ../../../
 
 
-mkdir -p dist/master/
-cd dist/master/
-git clone -b master https://github.com/Thecarisma/themata.git
+mkdir -p dist/main/
+cd dist/main/
+git clone -b main https://github.com/Thecarisma/themata.git
 cd themata/
 mkdir -p ./docs/
 mkdir -p ./themata/
@@ -27,6 +27,6 @@ cp -r ../../../setup.cfg ./
 cp -r ../../../setup.py ./
 git config --local user.email "azeezadewale98@gmail.com"
 git config --local user.name "travis-ci.org"
-git add .; git commit -m "Travis build=${TRAVIS_BUILD_NUMBER}. Update the master branch"
-git push -f https://Thecarisma:${GITHUB_TOKEN}@github.com/Thecarisma/themata.git HEAD:master;
+git add .; git commit -m "Travis build=${TRAVIS_BUILD_NUMBER}. Update the main branch"
+git push -f https://Thecarisma:${GITHUB_TOKEN}@github.com/Thecarisma/themata.git HEAD:main;
 cd ../../
