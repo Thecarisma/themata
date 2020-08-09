@@ -79,19 +79,16 @@ table tbody th, table tbody td {
     padding: 2px;
 }
 
-pre {
-    padding: 15px;
-    margin: 5px;
-    overflow: auto;
-    line-height: 18px;
+code,
+.highlight {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1) !important; /* theme_code_background_color */
+    border-radius: 6px;
+    padding:2px 10px 4px 10px;
 }
 
-.highlight {
-    background-color: rgba(255, 255, 255, 0.1)!important; /* theme_pre_background_color */
-    border-radius: 5px;
-    font-size: 0.8em;
-    margin-top: 20px;
-    margin-bottom: 20px;
+pre {
+    padding: 16px;
 }
 
 .icon {
