@@ -4,6 +4,28 @@ Basic Specification
 Paragraphs contain text and may contain inline markup: *emphasis*, **strong emphasis**, `interpreted text`, ``inline literals``, standalone hyperlinks (http://www.python.org), external hyperlinks (Python_), internal cross-references (example_), footnote references ([1]_), citation references ([CIT2002]_), substitution references (|example|), and _`inline internal targets`.
 
 
+Code blocks
+=============
+
+Hello world thgis ``is also inline code``
+
+.. code:: c
+
+    #define CESTER_NO_MAIN
+    #include <exotic/cester.h>
+
+    CESTER_TEST(test1, test_instance,
+        cester_assert_equal(NULL, NULL);
+    )
+
+    CESTER_BODY(
+    int main(int argc, char** argv) {
+        CESTER_REGISTER_TEST(test1);
+        return CESTER_RUN_ALL_TESTS(argc, argv);
+    }
+    )
+
+
 List
 -------
 

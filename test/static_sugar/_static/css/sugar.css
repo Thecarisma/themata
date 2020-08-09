@@ -77,20 +77,16 @@ table tbody th, table tbody td {
     padding: 2px;
 }
 
-pre {
-    padding: 5px;
-    margin: 5px;
-    overflow: auto;
-    line-height: 18px;
+code,
+.highlight {
+    border: none;
+    background-color: rgb(246, 248, 250) !important; /* theme_code_background_color */
+    border-radius: 6px;
+    padding:2px 10px 4px 10px;
 }
 
-.highlight {
-    background-color: white!important; /* theme_pre_background_color */
-    filter: brightness(98%);
-    border: black 1px solid; /* theme_pre_border_color */
-    border-radius: 5px;
-    font-size: 0.8em;
-    margin: 5px;
+pre {
+    padding: 16px;
 }
 
 .icon {

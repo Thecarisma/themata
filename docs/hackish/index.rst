@@ -184,7 +184,7 @@ background color to gray:
    "highlight_color", "rgb(36,233,10)", "link hover color"
    "header_background_color", "black", "header background color"
    "background_color", "black", "theme background color"
-   "pre_background_color", "rgba(255, 255, 255, 0.1)", "pre block background color"
+   "code_background_color", "rgba(255, 255, 255, 0.1)", "pre block background color"
    "search_input_background", "#f7f7f7", "the search box background color"
    "header_sec_background_color", "rgb(0,63,0)", "sec header background color"
 

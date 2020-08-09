@@ -8,7 +8,7 @@ author = 'Adewale Azeez'
 html_theme_path = [themata.get_html_theme_path()]
 
 html_theme_options = {
-    'project_icon': "https://github.com/Thecarisma/themata/raw/master/docs/images/themata.png",
+    'project_icon': "https://github.com/Thecarisma/themata/raw/main/docs/images/themata.png",
     'has_left_sidebar': True,
     'show_navigators': True,
     'show_navigators_in_index': False,
