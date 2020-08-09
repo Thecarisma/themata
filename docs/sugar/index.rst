@@ -216,7 +216,7 @@ background color to gray:
    "header_sec_background_color", "#454547", "secondary header background color"
    "menu_sec_item_color", "white", "secondary header link text color"
    "background_color", "white", "theme background color"
-   "pre_background_color", "white", "pre block background color"
+   "code_background_color", "white", "pre block background color"
    "pre_border_color", "black", "pre block border color"
    "navigator_border_color", "#e6e6e6", "navigation buttons border color"
 

@@ -154,7 +154,7 @@ background color to gray:
    "header_background_color", "white", "header background color"
    "menu_item_color", "#727273", "header link text color"
    "background_color", "white", "theme background color"
-   "pre_background_color", "white", "pre block background color"
+   "code_background_color", "white", "pre block background color"
    "pre_border_color", "black", "pre block border color"
    "left_sidebar_background", "#dfe7ed", "left sidebars background color"
    "navigator_border_color", "#e6e6e6", "navigation buttons border color"
