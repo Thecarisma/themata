@@ -61,20 +61,21 @@ dd p {
 }
 
 table {
-    background-color: gray;
+    background-color: rgb(223, 226, 229); /* theme_table_background_color */
     border-spacing: 1px;
-    margin: 0 auto 0 auto;
 }
 
-table thead th, table thead td {
-    background-color: white; /* theme_background_color */
+table * {
     padding: 5px;
-    margin: 1px;
+    padding-left: 10px;
 }
 
-table tbody th, table tbody td {
-    background-color: white; /* theme_background_color */
-    padding: 2px;
+table tr:nth-child(odd) {
+    background-color: white; /* theme_table_tr_odd_background_color */
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(246, 248, 250); /* theme_table_tr_even_background_color */
 }
 
 pre {
