@@ -63,7 +63,7 @@ Theme Options
 The following theme options are accepted in the theme.
 
 Variable Options
-'''''''''''''''''
+-----------------
 
 .. csv-table::
    :header: "Option <Datatype>", "Description"

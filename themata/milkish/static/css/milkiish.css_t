@@ -64,6 +64,8 @@ dd p {
 table {
     background-color: {{ theme_table_background_color }}; /* theme_table_background_color */
     border-spacing: 1px;
+    table-layout: fixed; 
+    width: 100%;
 }
 
 table * {
@@ -212,7 +214,6 @@ pre {
     margin-left: 18%;
     margin-right: 10px;
     line-height: 3vh;
-    overflow-y:hidden;
 }
 
 .sidebar-left ul {
