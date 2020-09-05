@@ -212,6 +212,7 @@ pre {
     margin-left: 18%;
     margin-right: 10px;
     line-height: 3vh;
+    overflow-y:hidden;
 }
 
 .sidebar-left ul {
