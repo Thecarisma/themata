@@ -63,6 +63,8 @@ dd p {
 table {
     background-color: {{ theme_table_background_color }}; /* theme_table_background_color */
     border-spacing: 1px;
+    table-layout: fixed; 
+    width: 100%;
 }
 
 table * {
