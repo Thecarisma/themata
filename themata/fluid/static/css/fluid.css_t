@@ -85,7 +85,15 @@ code,
     border: none;
     background-color: {{ theme_code_background_color }} !important; /* theme_code_background_color */
     border-radius: 6px;
-    padding:2px 10px 4px 10px;
+    padding: 0px 0px 0px 0px;
+    line-height: 1.7;
+    overflow-y:hidden;
+}
+
+code {
+    padding: 2px 10px 4px 10px;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 pre {
@@ -326,7 +334,7 @@ pre {
 .bodywrapper h5,
 .bodywrapper h6 {
     font-size: 200%;
-    font-weight: 600;
+    font-weight: 500;
     margin: 15px 0px 15px 0px;
     padding: 1px 0 0px 0px;
     text-shadow: 0px 1px 0 white
