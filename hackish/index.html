@@ -20,7 +20,29 @@
    
   
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
+    
+    <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.">
+    <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes">
+    <meta name="author" content="Adewale Azeez">
+    <meta property="og:url" content="https://thecarisma.github.io/themata/hackish/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hackish - Set of Highly customizable sphinx themes." />
+    <meta property="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+    
+  
+  
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@iamthecarisma" />
+    <meta name="twitter:creator" content="@iamthecarisma" />
+    <meta name="twitter:title" content="Hackish - Set of Highly customizable sphinx themes." />
+    <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+    
+  
 
   </head><body>
 
@@ -258,6 +280,63 @@
 </tr>
 <tr class="row-even"><td><p>source_root_edit_text &lt;string&gt;</p></td>
 <td><p>The text to show on the button that link to the page source in a repository. The default is ‘<strong>Edit this page</strong>’</p></td>
+</tr>
+<tr class="row-odd"><td><p>metadata &lt;object&gt;</p></td>
+<td><p>Set the metadata values of the generated website. The object should contain any, more or all of the keys, enable, url, type, title, description, image, keywords, author. E.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;enable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://thecarisma.github.io/themata&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;website&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Set of Highly customizable sphinx themes.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;keywords&#39;</span><span class="p">:</span> <span class="s1">&#39;python, sphinx, thecarisma, themata, documentation, markdown, rst, themes&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;author&#39;</span><span class="p">:</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The result of the theme option above is</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;meta name=&#39;description&#39; content=&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39;&gt;
+&lt;meta name=&#39;keywords&#39; content=&#39;python, sphinx, thecarisma, themata, documentation, markdown, rst, themes&#39;&gt;
+&lt;meta name=&#39;author&#39; content=&#39;Adewale Azeez&#39;&gt;
+&lt;meta property=&#39;og:url&#39; content=&#39;https://thecarisma.github.io/themata/&#39; /&gt;
+&lt;meta property=&#39;og:type&#39; content=&#39;website&#39; /&gt;
+&lt;meta property=&#39;og:title&#39; content=&#39;Set of Highly customizable sphinx themes.&#39; /&gt;
+&lt;meta property=&#39;og:description&#39; content=&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39; /&gt;
+&lt;meta property=&#39;og:image&#39; content=&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39; /&gt;
+</pre></div>
+</div>
+<p>If the value of enable is False or not specified the metadata will not be generated.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>twitter_metadata &lt;object&gt;</p></td>
+<td><p>Set the twitter metadata values of the generated website. The object should contain any, more or all of the keys, enable, card, site, creator, title, description, image. E.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;twitter_metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;enable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;card&#39;</span><span class="p">:</span> <span class="s1">&#39;summary&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;site&#39;</span><span class="p">:</span> <span class="s1">&#39;@iamthecarisma&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;creator&#39;</span><span class="p">:</span> <span class="s1">&#39;@iamthecarisma&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Set of Highly customizable sphinx themes.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The result of the theme option above is</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;meta name=&#39;twitter:card&#39; content=&#39;summary&#39; /&gt;
+&lt;meta name=&#39;twitter:site&#39; content=&#39;@iamthecarisma&#39; /&gt;
+&lt;meta name=&#39;twitter:creator&#39; content=&#39;@iamthecarisma&#39; /&gt;
+&lt;meta name=&#39;twitter:title&#39; content=&#39;Set of Highly customizable sphinx themes.&#39; /&gt;
+&lt;meta name=&#39;twitter:description&#39; content=&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39; /&gt;
+&lt;meta name=&#39;twitter:image&#39; content=&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39; /&gt;
+</pre></div>
+</div>
+<p>If the value of enable is False or not specified the metadata will not be generated.</p>
+</td>
 </tr>
 </tbody>
 </table>
