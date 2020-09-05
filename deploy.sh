@@ -27,6 +27,6 @@ cp -r ../../../setup.cfg ./
 cp -r ../../../setup.py ./
 git config --local user.email "azeezadewale98@gmail.com"
 git config --local user.name "travis-ci.org"
-git add .; git commit -m "Travis build=${TRAVIS_BUILD_NUMBER}. Update the main branch"
+git add .; git commit -m "Automated Push. Travis build=${TRAVIS_BUILD_NUMBER}. Update the main branch"
 git push -f https://Thecarisma:${GITHUB_TOKEN}@github.com/Thecarisma/themata.git HEAD:main;
 cd ../../

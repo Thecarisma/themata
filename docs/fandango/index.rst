@@ -183,6 +183,66 @@ Variable Options
    "
    "source_root <string>", "The full link to the web root folder where the source of the documentation source is e.g. the documentation github repo"
    "source_root_edit_text <string>", "The text to show on the button that link to the page source in a repository. The default is '**Edit this page**'"
+   "metadata <object>", "Set the metadata values of the generated website. The object should contain any, more or all of the keys, enable, url, type, title, description, image, keywords, author. E.g. 
+   
+   .. code:: python 
+      
+        html_theme_options = {
+            'metadata': {
+                'enable': True,
+                'url': 'https://thecarisma.github.io/themata',
+                'type': 'website',
+                'title': 'Set of Highly customizable sphinx themes.',
+                'description': 'Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.',
+                'image': 'https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png',
+                'keywords': 'python, sphinx, thecarisma, themata, documentation, markdown, rst, themes',
+                'author': 'Adewale Azeez'
+            }
+        }
+        
+   The result of the theme option above is 
+
+   .. code:: text
+
+      <meta name='description' content='Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.'>
+      <meta name='keywords' content='python, sphinx, thecarisma, themata, documentation, markdown, rst, themes'>
+      <meta name='author' content='Adewale Azeez'>
+      <meta property='og:url' content='https://thecarisma.github.io/themata/' />
+      <meta property='og:type' content='website' />
+      <meta property='og:title' content='Set of Highly customizable sphinx themes.' />
+      <meta property='og:description' content='Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.' />
+      <meta property='og:image' content='https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png' />
+
+   If the value of enable is False or not specified the metadata will not be generated."
+   "twitter_metadata <object>", "Set the twitter metadata values of the generated website. The object should contain any, more or all of the keys, enable, card, site, creator, title, description, image. E.g. 
+   
+   .. code:: python 
+      
+        html_theme_options = {
+            'twitter_metadata': {
+                'enable': True,
+                'card': 'summary',
+                'site': '@iamthecarisma',
+                'creator': '@iamthecarisma',
+                'title': 'Set of Highly customizable sphinx themes.',
+                'description': 'Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.',
+                'image': 'https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png',
+            }
+        }
+        
+   The result of the theme option above is 
+
+   .. code:: text
+
+      <meta name='twitter:card' content='summary' />
+      <meta name='twitter:site' content='@iamthecarisma' />
+      <meta name='twitter:creator' content='@iamthecarisma' />
+      <meta name='twitter:title' content='Set of Highly customizable sphinx themes.' />
+      <meta name='twitter:description' content='Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.' />
+      <meta name='twitter:image' content='https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png' />
+
+   If the value of enable is False or not specified the metadata will not be generated."
+
 
 CSS Options
 '''''''''''''''''

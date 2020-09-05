@@ -181,12 +181,14 @@ a.footnote-reference {
 }
 
 
-code, pre {
-    
+.highlight {
+    overflow-y:hidden;
 }
 
 code {
     background-color: {{ theme_code_background_color }}; /** theme_code_background_color **/
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 code.descname {
