@@ -3,6 +3,7 @@ Basic Specification
 
 Paragraphs contain text and may contain inline markup: *emphasis*, **strong emphasis**, `interpreted text`, ``inline literals``, standalone hyperlinks (http://www.python.org), external hyperlinks (Python_), internal cross-references (example_), footnote references ([1]_), citation references ([CIT2002]_), substitution references (|example|), and _`inline internal targets`.
 
+``https://verylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtextverylongtext.com``
 
 Code blocks
 =============
@@ -15,7 +16,7 @@ Hello world thgis ``is also inline code``
     #include <exotic/cester.h>
 
     CESTER_TEST(test1, test_instance,
-        cester_assert_equal(NULL, NULL);
+        cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);cester_assert_equal(NULL, NULL);
     )
 
     CESTER_BODY(
@@ -124,3 +125,20 @@ Citation
 .. _example:
 
 The "_example" target above points to this paragraph.
+
+.. warning::
+
+	If the output of the tests is directed to a file on a unix, linux variant OS the color 
+	bytes will be written into the file along with the test outputs. Use the flag 
+	**--cester-nocolor** to disable colored output. Colored output can also be disabled from 
+	within the source using the macro **CESTER_NOCOLOR()**.
+
+.. note::
+
+	If the output of the tests is directed to a file on a unix, linux variant OS the color 
+	bytes will be written into the file along with the test outputs. Use the flag 
+	**--cester-nocolor** to disable colored output. Colored output can also be disabled from 
+	within the source using the macro **CESTER_NOCOLOR()**.
+
+
+
