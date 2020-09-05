@@ -23,7 +23,7 @@ html_theme_options = {
         "enable": True,
         "url": "https://thecarisma.github.io/themata/garri/",
         "type": "website",
-        "title": "Garri - Set of Highly customizable sphinx themes.",
+        "title": "Garri Theme - Set of Highly customizable sphinx themes.",
         "description": "Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.",
         "image": "https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png",
         "keywords": "python, sphinx, thecarisma, themata, documentation, markdown, rst, themes",
@@ -34,7 +34,7 @@ html_theme_options = {
         "card": "summary",
         "site": "@iamthecarisma",
         "creator": "@iamthecarisma",
-        "title": "Garri - Set of Highly customizable sphinx themes.",
+        "title": "Garri Theme - Set of Highly customizable sphinx themes.",
         "description": "Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.",
         "image": "https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png",
     }
