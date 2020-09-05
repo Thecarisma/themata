@@ -57,5 +57,24 @@ html_theme_options = {
         'otherpages/singlepage'
     ],
     'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/water/',
-    'source_root_edit_text': 'Edit on Github'
+    'source_root_edit_text': 'Edit on Github',
+    'metadata': {
+        "enable": True,
+        "url": "https://thecarisma.github.io/themata/water/",
+        "type": "website",
+        "title": "Water - Set of Highly customizable sphinx themes.",
+        "description": "Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.",
+        "image": "https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png",
+        "keywords": "python, sphinx, thecarisma, themata, documentation, markdown, rst, themes",
+        "author": "Adewale Azeez"
+    },
+    'twitter_metadata': {
+        "enable": True,
+        "card": "summary",
+        "site": "@iamthecarisma",
+        "creator": "@iamthecarisma",
+        "title": "Water - Set of Highly customizable sphinx themes.",
+        "description": "Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.",
+        "image": "https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png",
+    }
 }

@@ -7,8 +7,8 @@
 themata
 ########
 
-.. image:: https://img.shields.io/pypi/dw/themata?style=for-the-badge   :alt: PyPI - Downloads
-.. image:: https://img.shields.io/travis/thecarisma/themata?style=for-the-badge   :alt: Travis (.org) branch
+.. image:: https://img.shields.io/pypi/dw/themata?style=for-the-badge   :alt: PyPI - Downloads   :target: https://pypi.org/project/themata/
+.. image:: https://img.shields.io/travis/thecarisma/themata?style=for-the-badge   :alt: Travis (.org) branch   :target: https://travis-ci.org/github/Thecarisma/themata
 
 .. class:: center
 

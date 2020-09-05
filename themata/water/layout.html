@@ -20,7 +20,29 @@
   {% if theme_canonical_url %}
     <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
   {% endif %}
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  {% if theme_metadata %}
+    {% if theme_metadata.enable %}
+    <meta name="description" content="{{ theme_metadata.description }}">
+    <meta name="keywords" content="{{ theme_metadata.keywords }}">
+    <meta name="author" content="{{ theme_metadata.author }}">
+    <meta property="og:url" content="{{ theme_metadata.url }}" />
+    <meta property="og:type" content="{{ theme_metadata.type }}" />
+    <meta property="og:title" content="{{ theme_metadata.title }}" />
+    <meta property="og:description" content="{{ theme_metadata.description }}" />
+    <meta property="og:image" content="{{ theme_metadata.image }}" />
+    {% endif %}
+  {% endif %}
+  {% if theme_twitter_metadata %}
+    {% if theme_twitter_metadata.enable %}
+    <meta name="twitter:card" content="{{ theme_twitter_metadata.card }}" />
+    <meta name="twitter:site" content="{{ theme_twitter_metadata.site }}" />
+    <meta name="twitter:creator" content="{{ theme_twitter_metadata.creator }}" />
+    <meta name="twitter:title" content="{{ theme_twitter_metadata.title }}" />
+    <meta name="twitter:description" content="{{ theme_twitter_metadata.description }}" />
+    <meta name="twitter:image" content="{{ theme_twitter_metadata.image }}" />
+    {% endif %}
+  {% endif %}
 {% endblock %}
 
 {%- block document %}
