@@ -64,6 +64,11 @@ li > dl > dd {
     margin-left: 0;
 }
 
+table {
+    table-layout: fixed; 
+    width: 100%;
+}
+
 table.hlist {
     margin-top: 1em;
 }
