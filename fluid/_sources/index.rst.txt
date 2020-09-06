@@ -269,5 +269,8 @@ background color to gray:
    "footer_highlight_color", "#0d8aa1", "footer link hover color"
    "footer_item_color", "white", "footer text color"
    "navigator_border_color", "#e6e6e6", "navigation buttons border color"
+   "table_background_color", "rgb(223, 226, 229)", "table background color"
+   "table_tr_odd_background_color", "white", "odd row background color"
+   "table_tr_even_background_color", "rgb(236, 240, 244)", "even row background color"
 
 
