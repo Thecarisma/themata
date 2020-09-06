@@ -314,5 +314,19 @@ The "_example" target above points to this paragraph.
 	**--cester-nocolor** to disable colored output. Colored output can also be disabled from 
 	within the source using the macro **CESTER_NOCOLOR()**.
 
+.. seealso::
+
+	If the output of the tests is directed to a file on a unix, linux variant OS the color 
+	bytes will be written into the file along with the test outputs. Use the flag 
+	**--cester-nocolor** to disable colored output. Colored output can also be disabled from 
+	within the source using the macro **CESTER_NOCOLOR()**.
+
+.. topic:: themata
+
+	If the output of the tests is directed to a file on a unix, linux variant OS the color 
+	bytes will be written into the file along with the test outputs. Use the flag 
+	**--cester-nocolor** to disable colored output. Colored output can also be disabled from 
+	within the source using the macro **CESTER_NOCOLOR()**.
+
 
 

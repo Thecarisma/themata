@@ -61,6 +61,8 @@ dd p {
 table {
     background-color: rgb(223, 226, 229); /* theme_table_background_color */
     border-spacing: 1px;
+    table-layout: fixed; 
+    width: 100%;
 }
 
 table * {
@@ -279,7 +281,7 @@ pre {
 .bodywrapper h5,
 .bodywrapper h6 {
     font-size: 170%;
-    font-weight: 600;
+    font-weight: 500;
     text-shadow: 0px 1px 0 white;
     padding-bottom: 1px;
 }
@@ -339,25 +341,25 @@ div.admonition p.admonition-title + p {
 }
 
 div.note {
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: #eee; /* theme_note_background_color */
+    border: 1px solid #ccc; /* theme_note_border_color */
     padding: 15px;
 }
 
 div.seealso {
-    background-color: #ffc;
-    border: 1px solid #ff6;
+    background-color: #ffc; /* theme_seealso_background_color */
+    border: 1px solid #ff6; /* theme_seealso_border_color */
     padding: 15px;
 }
 
 div.topic {
-    background-color: #eee;
+    background-color: #eee; /* theme_topic_background_color */
     padding: 15px;
 }
 
 div.warning {
-    background-color: #ffe4e4;
-    border: 1px solid #f66;
+    background-color: #ffe4e4; /* theme_warning_background_color */
+    border: 1px solid #f66; /* theme_warning_border_color */
     padding: 15px;
 }
 
