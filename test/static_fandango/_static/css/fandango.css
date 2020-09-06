@@ -85,6 +85,7 @@ code,
     border-radius: 6px;
     padding: 0px 0px 0px 0px;
     line-height: 1.7;
+    margin: 30px 0px 30px 0px;
 }
 
 code {
@@ -95,6 +96,7 @@ code {
 
 pre {
     padding: 16px;
+    margin: 0px;
 }
 
 .icon {

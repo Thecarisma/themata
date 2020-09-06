@@ -26,7 +26,7 @@
     <meta name="description" content="{{ theme_metadata.description }}">
     <meta name="keywords" content="{{ theme_metadata.keywords }}">
     <meta name="author" content="{{ theme_metadata.author }}">
-    <meta property="og:url" content="{{ theme_metadata.url }}" />
+    <meta property="og:url" content="{{ theme_metadata.url }}{{ '' if theme_metadata.url.endswith('/') else '/' }}{{ pagename }}.html" />
     <meta property="og:type" content="{{ theme_metadata.type }}" />
     <meta property="og:title" content="{{ theme_metadata.title }}" />
     <meta property="og:description" content="{{ theme_metadata.description }}" />

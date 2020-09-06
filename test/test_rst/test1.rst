@@ -275,6 +275,12 @@ Block quotes:
 
 Simple Table
 -----------------
+    
+.. code:: python
+
+    html_theme_options = {
+        'background_color': 'gray'
+    }
 
 ====================  ==========  ==========
 Header row, column 1  Header 2    Header 3
