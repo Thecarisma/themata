@@ -119,3 +119,18 @@ Change Log
 - Add source_root option for the edit on link and source_root_edit_text for the text to display to theme option `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
 - Document the source_root and source_root_edit_text theme options `e9ea268 <https://github.com/Thecarisma/themata/commit/e9ea268929293f4eb2b620f0d2e9cd25c4c28476>`_
 
+1.11
+'''''''''
+
+- reduce margin and spacing the code block `d942fdb <https://github.com/Thecarisma/themata/commit/d942fdb>`_
+- add theme options to customize note, warning, seealso and topic background and border https://github.com/Thecarisma/themata/issues/6 `befd80a <https://github.com/Thecarisma/themata/commit/befd80a>`_
+- add the documentation for theme option cutomize the table row background `ba46635 <https://github.com/Thecarisma/themata/commit/ba46635>`_
+- fix table overflow, table customization should be done by user with custom css https://github.com/Thecarisma/themata/issues/8 `a02e558 <https://github.com/Thecarisma/themata/commit/a02e558>`_
+- add support for metadata and twitter_metadata https://github.com/Thecarisma/themata/issues/9 `79d50a9 <https://github.com/Thecarisma/themata/commit/79d50a9>`_
+- add support for metadata and twitter_metadata https://github.com/Thecarisma/themata/issues/9 `21393b4 <https://github.com/Thecarisma/themata/commit/21393b4>`_
+- add support for metadata and twitter_metadata https://github.com/Thecarisma/themata/issues/9 `b59ae69 <https://github.com/Thecarisma/themata/commit/b59ae69>`_
+- make the title bold and reduce the monstrous padding in code block. https://github.com/Thecarisma/themata/issues/12 `23e5336 <https://github.com/Thecarisma/themata/commit/23e5336>`_
+- make the title bold and reduce the monstrous padding in code block `ac160e9 <https://github.com/Thecarisma/themata/commit/ac160e9>`_
+- modify the table css to make it look more clean and stylish `36a71d4 <https://github.com/Thecarisma/themata/commit/36a71d4>`_
+- change the style of the code rendering `e78e1c7 <https://github.com/Thecarisma/themata/commit/e78e1c7>`_
+
