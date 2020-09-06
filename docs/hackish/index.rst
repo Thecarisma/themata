@@ -246,5 +246,8 @@ background color to gray:
    "code_background_color", "rgba(255, 255, 255, 0.1)", "pre block background color"
    "search_input_background", "#f7f7f7", "the search box background color"
    "header_sec_background_color", "rgb(0,63,0)", "sec header background color"
+   "table_background_color", "rgba(36,233,10,0.1)", "table background color"
+   "table_tr_odd_background_color", "black", "odd row background color"
+   "table_tr_even_background_color", "rgba(36,233,10,0.1)", "even row background color"
 
 

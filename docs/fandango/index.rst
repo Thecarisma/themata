@@ -277,5 +277,8 @@ background color to gray:
    "navigator_border_color", "#e6e6e6", "navigation buttons border color"
    "header_sec_background_color", "#0490c2", "secondary header background color"
    "header_sec_title_color", "white", "secondary header title color"
+   "table_background_color", "rgb(223, 226, 229)", "table background color"
+   "table_tr_odd_background_color", "white", "odd row background color"
+   "table_tr_even_background_color", "#dce2e6", "even row background color"
 
 

@@ -217,5 +217,8 @@ background color to gray:
    "pre_border_color", "black", "pre block border color"
    "left_sidebar_background", "#dfe7ed", "left sidebars background color"
    "navigator_border_color", "#e6e6e6", "navigation buttons border color"
+   "table_background_color", "rgb(223, 226, 229)", "table background color"
+   "table_tr_odd_background_color", "white", "odd row background color"
+   "table_tr_even_background_color", "rgb(236, 240, 244)", "even row background color"
 
 
