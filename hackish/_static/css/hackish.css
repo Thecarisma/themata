@@ -298,25 +298,25 @@ div.admonition p.admonition-title + p {
 }
 
 div.note {
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: black; /* theme_note_background_color */
+    border: 1px solid #ccc; /* theme_note_border_color */
     padding: 15px;
 }
 
 div.seealso {
-    background-color: #ffc;
-    border: 1px solid #ff6;
+    background-color: black; /* theme_seealso_background_color */
+    border: 1px solid #ff6; /* theme_seealso_border_color */
     padding: 15px;
 }
 
 div.topic {
-    background-color: #eee;
+    background-color: black; /* theme_topic_background_color */
     padding: 15px;
 }
 
 div.warning {
-    background-color: #ffe4e4;
-    border: 1px solid #f66;
+    background-color: black; /* theme_warning_background_color */
+    border: 1px solid #f66; /* theme_warning_border_color */
     padding: 15px;
 }
 
