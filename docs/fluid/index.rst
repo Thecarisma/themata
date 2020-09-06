@@ -272,5 +272,12 @@ background color to gray:
    "table_background_color", "rgb(223, 226, 229)", "table background color"
    "table_tr_odd_background_color", "white", "odd row background color"
    "table_tr_even_background_color", "rgb(236, 240, 244)", "even row background color"
+   "note_background_color", "#eee", "the note div background color"
+   "note_border_color", "#ccc", "the note div border color"
+   "seealso_background_color", "#ffc", "the seealso div background color"
+   "seealso_border_color", "#ff6", "the seealso div border colorr"
+   "topic_background_color", "rgb(187, 221, 255)", "the topic div background color"
+   "warning_background_color", "#ffe4e4", "the warning div background color"
+   "warning_border_color", "#f66", "the warning div border color"
 
 
