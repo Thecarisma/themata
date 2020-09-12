@@ -51,9 +51,13 @@
             {% if theme_project_icon %}
                 <img class="icon" src="{{ theme_project_icon }}"></img>
             {% endif %}
-            <a href="{{ pathto(master_doc) }}" class="title">{{ project }}</a>
+            <a href="{{ pathto(master_doc) }}" class="title">{{ project }}</a> <!-- class="active" -->
             {% for navbar_link in theme_navbar_links %}
-                <a href="{{ navbar_link[1] }}">{{ navbar_link[0] }}</a> <!-- class="active" -->
+                {% if ("://" in navbar_link[1] or "www." in navbar_link[1]) %}
+                    <a href="{{ navbar_link[1] }}">{{ navbar_link[0] }}</a> 
+                {% else %}
+                    <a href="{{ pathto(navbar_link[1] + ('' if navbar_link[1].endswith(file_suffix) else file_suffix), 1) }}">{{ navbar_link[0] }}</a>
+                {% endif %}
             {% endfor %}
             <div class="search-container">
                 <form class="search" action="{{ pathto('search', 1) }}.html" method="get">

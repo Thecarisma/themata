@@ -53,7 +53,11 @@
             {% endif %}
             <a href="{{ pathto(master_doc) }}" class="title">{{ project }}</a>
             {% for navbar_link in theme_navbar_links %}
-                <a href="{{ navbar_link[1] }}">{{ navbar_link[0] }}</a> <!-- class="active" -->
+                {% if ("://" in navbar_link[1] or "www." in navbar_link[1]) %}
+                    <a href="{{ navbar_link[1] }}">{{ navbar_link[0] }}</a> 
+                {% else %}
+                    <a href="{{ pathto(navbar_link[1] + ('' if navbar_link[1].endswith(file_suffix) else file_suffix), 1) }}">{{ navbar_link[0] }}</a>
+                {% endif %}
             {% endfor %}
         </div>
     </header>
