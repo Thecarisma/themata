@@ -98,7 +98,7 @@
                     {% if (pagename != 'index') or (pagename == 'index' and theme_show_navigators_in_index == True) %}
                         <div class="navigation">
                             {% if theme_source_root != '' %}
-                                <a class="reference navigator" style="float:left;" href="{{ theme_source_root }}/{{ pagename }}.rst"><i class="fa fa-pen"></i>{{ theme_source_root_edit_text }}</a>    
+                                <a class="reference navigator" style="float:left;" href="{{ theme_source_root }}/{{ pagename }}{{ page_source_suffix }}"><i class="fa fa-pen"></i>{{ theme_source_root_edit_text }}</a>    
                             {% endif %}
                             <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>
                             
@@ -130,7 +130,7 @@
                         <h2>This Page</h2>
                         <a href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a>
                         {% if theme_source_root != '' %}
-                            <br/><a style="line-height: 25px;" href="{{ theme_source_root }}/{{ pagename }}.rst">{{ theme_source_root_edit_text }}</a>
+                            <br/><a style="line-height: 25px;" href="{{ theme_source_root }}/{{ pagename }}{{ page_source_suffix }}">{{ theme_source_root_edit_text }}</a>
                         {% endif %}
                     {% endif %}
                 </div>
