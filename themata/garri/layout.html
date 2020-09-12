@@ -102,7 +102,7 @@
                         <ul class="this-page-menu">
                           <li><a rel="nofollow" href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a></li>
                             {% if theme_source_root != '' %}
-                                <li><a style="line-height: 25px;" href="{{ theme_source_root }}/{{ pagename }}.rst">{{ theme_source_root_edit_text }}</a></li>
+                                <li><a style="line-height: 25px;" href="{{ theme_source_root }}/{{ pagename }}{{ page_source_suffix }}">{{ theme_source_root_edit_text }}</a></li>
                             {% endif %}
                         </ul>
                        </div>

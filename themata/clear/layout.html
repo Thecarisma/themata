@@ -136,7 +136,7 @@
                         <h2>This Page</h2>
                         <a href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a>
                         {% if theme_source_root != '' %}
-                            <br/><a style="line-height: 25px;" href="{{ theme_source_root }}/{{ pagename }}.rst">{{ theme_source_root_edit_text }}</a>
+                            <br/><a style="line-height: 25px;" href="{{ theme_source_root }}/{{ pagename }}{{ page_source_suffix }}">{{ theme_source_root_edit_text }}</a>
                         {% endif %}
                     {% endif %}
                 </div>

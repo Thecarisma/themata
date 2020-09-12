@@ -22,6 +22,7 @@
    /test1.left
    /test1.right
    /leftpage
+   /testmarkdown
 
 
 
