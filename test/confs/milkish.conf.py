@@ -30,10 +30,10 @@ html_theme_options = {
         "singlepage"
     ],
     'navbar_links': [
-        ("Docs", "./docs"),
-        ("Download", "https://pypi.python.org/pypi/milkish"),
-        ("Examples", "./examples"),
-        ("FAQ", "./faq")
+        ("General", "general/index"),
+        ("Download", "https://pypi.python.org/pypi/themata"),
+        ("Introduction", "general/introduction"),
+        ("FAQ", "general/faq")
     ],
     'social_icons': [
         ("fab fa-twitter", "https://twitter.com/iamthecarisma"),

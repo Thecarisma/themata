@@ -34,7 +34,7 @@ Sphinx’s basic theme provides base templates with a couple of blocks it will f
 
 For example, to add a new link to the template area containing related links all you have to do is to add a new template called layout.html with the following contents:
 
-.. image:: https://github.com/Thecarisma/themata/raw/master/docs/images/themata.png
+.. image:: https://github.com/Thecarisma/themata/raw/main/docs/images/themata.png
     :alt: About to make the tackle, Yale Alumni Game 2017
     :align: center
 
