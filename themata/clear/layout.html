@@ -68,7 +68,7 @@
                 {% if pagename not in theme_right_sidebar_only and pagename not in theme_no_sidebar %}
                 <div class="sidebar-left">
                     </br>
-                    {{ toctree(maxdepth=1, titles_only=True, includehidden=True) }}
+                    {{ toctree(titles_only=True, includehidden=True) }}
                 </div>
                 {% endif %}
             {% endif %}
