@@ -80,7 +80,7 @@
                         {{ toc }}
                     {% endif %}
                     <h2>{{ theme_toc_title }}</h2>
-                    {{ toctree(maxdepth=1, titles_only=True, includehidden=True) }}
+                    {{ toctree(titles_only=True, includehidden=True) }}
                     {% if pagename != 'genindex' %}
                         {% if prev %}
                             <h2>Previous topic</h2>
