@@ -107,17 +107,14 @@ Creative Commons Zero v1.0 Universal License. Copyright (c) 2020 Adewale Azeez
 Change Log 
 -----------
 
-1.1
+
+1.12
 '''''''''
 
-- Remove <no title> from pages with no title. If no title set title to page or project name `731e51d <https://github.com/Thecarisma/themata/commit/731e51dc3999f3fd00594837268e9e98aae27924>`_
-- Add theme option to set the document font-size `aefa7ac <https://github.com/Thecarisma/themata/commit/aefa7acbe45d7269773e6bc6c2145a44808a25b2>`_
-- Add theme option document font-size to each theme documentation `a474591 <https://github.com/Thecarisma/themata/commit/a4745913506918aaf2eb4bda4ffa7ed12cd62f44>`_
-- Put note on top of each theme page that link back to themata `8b3bc8d <https://github.com/Thecarisma/themata/commit/8b3bc8d4ab5f95a05e7566463da6ef4c1d13852d>`_
-- Make the document occupy 100% in sugar theme if left and right sidebar is disabled `439fd97 <https://github.com/Thecarisma/themata/commit/439fd9702058d0633114d613079effcdd1376227>`_
-- Add optional 'edit this page' button to webpages e.g. edit on github `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
-- Add source_root option for the edit on link and source_root_edit_text for the text to display to theme option `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
-- Document the source_root and source_root_edit_text theme options `e9ea268 <https://github.com/Thecarisma/themata/commit/e9ea268929293f4eb2b620f0d2e9cd25c4c28476>`_
+- makes left sidebar and header of water theme fixed https://github.com/Thecarisma/themata/issues/11 `8346703 <https://github.com/Thecarisma/themata/commit/8346703>`_
+- addd colapsible sidebar theme option to water theme `cb95e5f <https://github.com/Thecarisma/themata/commit/cb95e5f>`_
+- navbar links now accept relative and absolute links instead of absolute only https://github.com/Thecarisma/themata/issues/15 `f1acf57 <https://github.com/Thecarisma/themata/commit/f1acf57>`_
+- update the layout.html to add proper source suffix for edit page `0cd48d6 <https://github.com/Thecarisma/themata/commit/0cd48d6>`_
 
 1.11
 '''''''''
@@ -134,3 +131,15 @@ Change Log
 - modify the table css to make it look more clean and stylish `36a71d4 <https://github.com/Thecarisma/themata/commit/36a71d4>`_
 - change the style of the code rendering `e78e1c7 <https://github.com/Thecarisma/themata/commit/e78e1c7>`_
 
+
+1.1
+'''''''''
+
+- Remove <no title> from pages with no title. If no title set title to page or project name `731e51d <https://github.com/Thecarisma/themata/commit/731e51dc3999f3fd00594837268e9e98aae27924>`_
+- Add theme option to set the document font-size `aefa7ac <https://github.com/Thecarisma/themata/commit/aefa7acbe45d7269773e6bc6c2145a44808a25b2>`_
+- Add theme option document font-size to each theme documentation `a474591 <https://github.com/Thecarisma/themata/commit/a4745913506918aaf2eb4bda4ffa7ed12cd62f44>`_
+- Put note on top of each theme page that link back to themata `8b3bc8d <https://github.com/Thecarisma/themata/commit/8b3bc8d4ab5f95a05e7566463da6ef4c1d13852d>`_
+- Make the document occupy 100% in sugar theme if left and right sidebar is disabled `439fd97 <https://github.com/Thecarisma/themata/commit/439fd9702058d0633114d613079effcdd1376227>`_
+- Add optional 'edit this page' button to webpages e.g. edit on github `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
+- Add source_root option for the edit on link and source_root_edit_text for the text to display to theme option `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
+- Document the source_root and source_root_edit_text theme options `e9ea268 <https://github.com/Thecarisma/themata/commit/e9ea268929293f4eb2b620f0d2e9cd25c4c28476>`_

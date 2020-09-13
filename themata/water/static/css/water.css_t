@@ -170,7 +170,7 @@ pre {
     padding: 1px;
     list-style-type: none;
     margin: 0px;
-    display: {{ theme_collapsible_sidebar_display }};
+    display: {{ theme_collapsible_sidebar_display }}; /* theme_header_background_color */
 }
 
 .sidebar-left li {
