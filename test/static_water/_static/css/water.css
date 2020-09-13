@@ -38,6 +38,7 @@ header {
     top: 0px;
     width: 100vw;
     z-index: 100000000;
+    position: fixed;
 }
 
 dl {
@@ -142,8 +143,7 @@ pre {
 }
 
 .documentwrapper {
-    margin: 5%;
-    margin-top: 70px;
+    margin-top: 70px !important;
     max-width: 58%;
     margin: auto;
     font-size: 16px; /* theme_document_font_size */
@@ -151,19 +151,17 @@ pre {
 
 .sidebar-left {
     float:left;
-    width:20%;
+    width:13%;
     z-index: 1;
     font-size: 13px;
-    top: 70px;
-    bottom:100px;
-    overflow-y:auto;
-    margin-right: -0px;
-    padding-right: 0px;
+    overflow: scroll;
+    position: fixed;
+    max-height: 80%;
 }
 
 .bodywrapper {
     float:right;
-    width:75%;
+    width:73%;
     line-height: 3vh;
 }
 
@@ -171,7 +169,7 @@ pre {
     padding: 1px;
     list-style-type: none;
     margin: 0px;
-    display: none;
+    display: none; /* theme_header_background_color */
 }
 
 .sidebar-left li {
@@ -186,10 +184,11 @@ pre {
 }
 
 .sidebar-left input[type=text] {
-  padding: 6px;
-  font-size: 17px;
-  border: none;
-  outline: none;
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    width: 90%;
 }
 
 .footer ul {
@@ -216,7 +215,6 @@ pre {
     padding: 10px;
     padding-left: 1px;
     padding-bottom: 5px;
-    width: 100%;
     border: none;
     outline: none;
     border-bottom: 1px solid #ccdee3; /* theme_header_background_color */

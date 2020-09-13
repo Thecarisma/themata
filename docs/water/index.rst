@@ -158,6 +158,8 @@ Variable Options
         }
     
    The name of the page must be relative to the index project root folder. Another way to make a page have no sidebar is to add the extension **.single** to it file name e.g. **test.single.rst**"
+   "collapsible_sidebar <boolean>", "A boolean value to determine whether the left sidebar should be collapsible or not."
+   "collapsible_sidebar_display <string>", "The left sidebar unordered list display css value. Set to 'none' if the list should be hidden by default when collapsible_sidebar is set to True, if collapsible_sidebar is set to False rember to remove this option or set it to 'block'."
    "source_root <string>", "The full link to the web root folder where the source of the documentation source is e.g. the documentation github repo"
    "source_root_edit_text <string>", "The text to show on the button that link to the page source in a repository. The default is '**Edit this page**'"
    "metadata <object>", "Set the metadata values of the generated website. The object should contain any, more or all of the keys, enable, url, type, title, description, image, keywords, author. E.g. 
