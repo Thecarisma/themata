@@ -26,14 +26,14 @@ html_theme_options = {
         ("Follow me on twitter", "https://twitter.com/iamthecarisma")
     ],
     'navbar_sec_links': [
-        ("hackish", "https://thecarisma.github.io/themata/hackish"),
-        ("milkish", "https://thecarisma.github.io/themata/milkish"),
-        ("fandango", "https://thecarisma.github.io/themata/fandango"),
-        ("clear", "https://thecarisma.github.io/themata/clear"),
-        ("fluid", "https://thecarisma.github.io/themata/fluid"),
-        ("garri", "https://thecarisma.github.io/themata/garri"),
-        ("water", "https://thecarisma.github.io/themata/water"),
-        ("sugar", "https://thecarisma.github.io/themata/sugar")
+        ("hackish", "hackish/index"),
+        ("milkish", "milkish/index"),
+        ("fandango", "fandango/index"),
+        ("clear", "clear/index"),
+        ("fluid", "fluid/index"),
+        ("garri", "garri/index"),
+        ("water", "water/index"),
+        ("sugar", "sugar/index")
     ],
     'metadata': {
         "enable": True,
