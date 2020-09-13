@@ -170,7 +170,7 @@ pre {
     padding: 1px;
     list-style-type: none;
     margin: 0px;
-    display: block;
+    display: block; /* theme_header_background_color */
 }
 
 .sidebar-left li {
