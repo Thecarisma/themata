@@ -415,6 +415,10 @@ div.viewcode-block:target {
     color: {{ theme_text_color }} !important; /* theme_text_color */
 }
 
+.highlighted {
+	background-color: dimgrey;
+}
+
 
 
 

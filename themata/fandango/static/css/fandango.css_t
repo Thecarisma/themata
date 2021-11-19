@@ -469,6 +469,10 @@ div.viewcode-block:target {
     color: {{ theme_header_background_color }} !important; /* theme_header_background_color */
 }
 
+.highlighted {
+	background-color: yellow;
+}
+
 
 
 

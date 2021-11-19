@@ -90,10 +90,10 @@
                         <hr/>
                         <div class="navigation">
                             {% if prev %}
-                                    <a class="reference navigator" style="float:left;" href="{{ prev.link|e }}"><i class="fa fa-less-than"></i>{{ prev.title }}</a>
+                                    <a class="reference navigator" style="float:left;" href="{{ prev.link|e }}"><i class="fa fa-less-than"></i>{{ prev.title | replace("&lt;no title&gt;", "Previous Page") }}</a>
                             {% endif %}
                             {% if next %}
-                                <a class="reference navigator" style="float:right;" href="{{ next.link|e }}">{{ next.title }}<i class="fa fa-greater-than"></i></a> 
+                                <a class="reference navigator" style="float:right;" href="{{ next.link|e }}">{{ next.title | replace("&lt;no title&gt;", "Next Page") }}<i class="fa fa-greater-than"></i></a> 
                             {% endif %}      
                         </div>
                         <hr/>
@@ -114,11 +114,11 @@
                     {% if pagename != 'genindex' %}
                         {% if prev %}
                             <h2>Previous topic</h2>
-                            <a href="{{ prev.link|e }}">{{ prev.title }}</a>
+                            <a href="{{ prev.link|e }}">{{ prev.title | replace("&lt;no title&gt;", "Previous Page") }}</a>
                         {% endif %}
                         {% if next %}
                             <h2>Next topic</h2>
-                            <a href="{{ next.link|e }}">{{ next.title }}</a>
+                            <a href="{{ next.link|e }}">{{ next.title | replace("&lt;no title&gt;", "Next Page") }}</a>
                         {% endif %}
                         <h2>This Page</h2>
                         <a href="{{ pathto('_sources/', 1) }}{{ sourcename }}">Show source</a>

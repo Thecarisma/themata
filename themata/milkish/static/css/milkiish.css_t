@@ -521,6 +521,9 @@ div.viewcode-block:target {
     color: {{ theme_highlight_color }} !important; /* theme_highlight_color */
 }
 
+.highlighted {
+	background-color: yellow;
+}
 
 
 
