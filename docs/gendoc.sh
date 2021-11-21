@@ -10,6 +10,7 @@ mkdir -p $OUTPUT_FOLDER
 
 sphinx-build -b html -d build/doctrees ./ build/html
 mv build/html/* $OUTPUT_FOLDER
+touch $OUTPUT_FOLDER/.nojekyll
 
 for i in "${THEMES[@]}"
 do
