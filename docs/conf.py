@@ -8,6 +8,7 @@ author = 'Adewale Azeez'
 html_theme_path = [themata.get_html_theme_path()]
 html_theme = 'sugar'
 html_favicon = 'images/themata.png'
+master_doc = 'index'
 exclude_patterns = [
     'hackish/*',
     'milkish/*',
