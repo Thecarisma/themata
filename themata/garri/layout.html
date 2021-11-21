@@ -87,12 +87,12 @@
 
                     {% if prev %}
                         <h4>Previous topic</h4>
-                        <p class="topless"><a href="{{ prev.link|e }}" title="previous chapter">{{ prev.title }}</a></p>
+                        <p class="topless"><a href="{{ prev.link|e }}" title="previous chapter">{{ prev.title | replace("&lt;no title&gt;", "Previous Page") }}</a></p>
                     {% endif %}
                     
                     {% if next %}
                         <h4>Next topic</h4>
-                        <p class="topless"><a href="{{ next.link|e }}" title="next chapter">{{ next.title }}</a></p>
+                        <p class="topless"><a href="{{ next.link|e }}" title="next chapter">{{ next.title | replace("&lt;no title&gt;", "Next Page") }}</a></p>
                     {% endif %}
                       
                       

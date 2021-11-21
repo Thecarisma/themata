@@ -1,7 +1,7 @@
 @echo off
 
 cd ..\
-SET OUTPUT_FOLDER=%CD%\dist\
+SET OUTPUT_FOLDER=%CD%\dist\gendoc\
 cd docs/
 SET THEMES=hackish milkish fandango clear fluid garri water sugar
 if exist "%OUTPUT_FOLDER%" (
@@ -12,6 +12,7 @@ md %OUTPUT_FOLDER%
 cmd.exe /c make.bat html
 move "build\html\*" "%OUTPUT_FOLDER%\"
 for /d %%a in ("build\html\*") do move "%%~fa" "%OUTPUT_FOLDER%\"
+type NUL > "%OUTPUT_FOLDER%\.nojekyll"
 
 (for %%a in (%THEMES%) do (
     echo.

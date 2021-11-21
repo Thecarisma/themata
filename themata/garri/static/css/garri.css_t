@@ -296,3 +296,7 @@ pre:only-child {
     text-align: center;
 }
 
+.highlighted {
+	background-color: yellow;
+}
+

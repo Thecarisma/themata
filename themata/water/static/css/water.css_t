@@ -455,4 +455,8 @@ div.viewcode-block:target {
     color: {{ theme_link_color }} !important; /* theme_link_color */
 }
 
+.highlighted {
+	background-color: yellow;
+}
+
 

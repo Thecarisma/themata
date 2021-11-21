@@ -535,6 +535,10 @@ div.viewcode-block:target {
     color: {{ theme_footer_highlight_color }} !important; /* theme_footer_highlight_color */
 }
 
+.highlighted {
+	background-color: yellow;
+}
+
 
 
 
