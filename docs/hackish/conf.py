@@ -8,6 +8,7 @@ author = 'Adewale Azeez'
 html_theme_path = [themata.get_html_theme_path()]
 html_theme = 'hackish'
 html_favicon = '../images/themata.png'
+master_doc = 'index'
 
 html_theme_options = {
     'index_is_single': False,
