@@ -1,0 +1,242 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sample Configuration &#8212; Clear  documentation</title>
+    <link rel="stylesheet" href="_static/css/clear.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/themata.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="No Sidebar. Theme Option" href="otherpages/singlepage.html" />
+    <link rel="prev" title="Basic Specification" href="preview.html" />
+   
+  
+  
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
+    
+    <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.">
+    <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes">
+    <meta name="author" content="Adewale Azeez">
+    <meta property="og:url" content="https://thecarisma.github.io/themata/clear/conf.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Clear Theme - Set of Highly customizable sphinx themes." />
+    <meta property="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+    
+  
+  
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@iamthecarisma" />
+    <meta name="twitter:creator" content="@iamthecarisma" />
+    <meta name="twitter:title" content="Clear Theme - Set of Highly customizable sphinx themes." />
+    <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+    
+  
+
+  </head><body>
+
+    <div class="document">
+    <header>
+        <div class="topnavbar">
+            <div class="main-title">
+                
+                    <img class="icon" src="_static/themata.png"></img>
+                
+                <a href="index.html" class="title">Clear</a>
+            </div>
+            <div class="search-container">
+                <form class="search" action="search.html" method="get">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="search..." name="q">
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="documentwrapper">
+        
+            
+                
+                <div class="sidebar-left">
+                    </br>
+                    <p class="caption"><span class="caption-text">Main</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preview.html">Basic Specification</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sample Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/singlepage.html">No Sidebar. Theme Option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/test.single.html">No Sidebar. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/test.left.html">Left Sidebar Only. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/test.right.html">Right Sidebar Only. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/leftpage.html">Left Sidebar Only. Theme Option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/rightpage.html">Right Sidebar Only. Theme Option</a></li>
+</ul>
+
+                </div>
+                
+            
+        
+        <div class="bodywrapper">
+                
+  <div class="section" id="sample-configuration">
+<h1>Sample Configuration<a class="headerlink" href="#sample-configuration" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>conf.py</strong> file that generates this documentation.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">themata</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Clear&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
+
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;clear&#39;</span>
+<span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;../images/themata.png&#39;</span>
+
+<span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;index_is_single&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;show_navigators_in_index&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;has_left_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;has_right_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;collapsible_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;collapsible_sidebar_display&#39;</span><span class="p">:</span> <span class="s1">&#39;block&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;show_navigators&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;social_icons&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;fab fa-twitter&#39;</span><span class="p">,</span> <span class="s1">&#39;https://twitter.com/iamthecarisma&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;fab fa-github&#39;</span><span class="p">,</span> <span class="s1">&#39;https://github.com/Thecarisma/themata/&#39;</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;left_sidebar_only&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;otherpages/leftpage&#39;</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;no_sidebar&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;otherpages/singlepage&#39;</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;right_sidebar_only&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;otherpages/rightpage&#39;</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;source_root&#39;</span><span class="p">:</span> <span class="s1">&#39;https://github.com/Thecarisma/themata/edit/test/docs/clear/&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;source_root_edit_text&#39;</span><span class="p">:</span> <span class="s1">&#39;Edit on Github&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://thecarisma.github.io/themata&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;website&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Set of Highly customizable sphinx themes.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="s2">&quot;python, sphinx, thecarisma, themata, documentation, markdown, rst, themes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Adewale Azeez&quot;</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;twitter_metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;card&quot;</span><span class="p">:</span> <span class="s2">&quot;summary&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;site&quot;</span><span class="p">:</span> <span class="s2">&quot;@iamthecarisma&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;creator&quot;</span><span class="p">:</span> <span class="s2">&quot;@iamthecarisma&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Set of Highly customizable sphinx themes.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+                
+                </br>
+                 
+                    
+                        <div class="navigation">
+                            
+                                <a class="reference navigator" style="float:left" href="preview.html"><i class="fa fa-arrow-left"></i>Basic Specification</a>
+                            
+                            
+                                <a class="reference navigator" style="float:right;text-align:right;" href="otherpages/singlepage.html">No Sidebar. Theme Option<i class="fa fa-arrow-right"></i></a> 
+                                       
+                        </div>
+                    
+                
+                <div style="clear:both"></div>
+                <br/> <hr/> <br/>
+                
+                <div class="footer">
+                    <div class="social">
+                        
+                            <a href="https://twitter.com/iamthecarisma"><i class="fab fa-twitter"></i></a>
+                        
+                            <a href="https://github.com/Thecarisma/themata/"><i class="fab fa-github"></i></a>
+                        
+                    </div>
+                    <div class="doc-sphinx-info">
+                                &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
+                            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5
+                            with <a href="https://thecarisma.github.io/themata/clear/index.html">clear</a> theme.
+                    </div>
+                </div>
+                
+                <br/><br/>
+        </div>
+        
+            
+                
+                <div class="sidebar-right">
+                    
+                        <h2>Page Contents</h2>
+                        <ul>
+<li><a class="reference internal" href="#">Sample Configuration</a></li>
+</ul>
+
+                        
+                            <h2>Previous topic</h2>
+                            <a href="preview.html">Basic Specification</a>
+                        
+                        
+                            <h2>Next topic</h2>
+                            <a href="otherpages/singlepage.html">No Sidebar. Theme Option</a>
+                        
+                        <h2>This Page</h2>
+                        <a href="_sources/conf.rst.txt">Show source</a>
+                        
+                            <br/><a style="line-height: 25px;" href="https://github.com/Thecarisma/themata/edit/test/docs/clear//conf.rst">Edit on Github</a>
+                        
+                    
+                </div>
+                
+            
+        
+        <div style="clear:both"></div>
+    </div> 
+    
+        <script>
+            var coll = document.getElementsByClassName("caption");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
+    
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>

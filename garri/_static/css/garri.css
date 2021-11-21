@@ -1,0 +1,301 @@
+/*
+ * garri.css_t
+ * ~~~~~~~~~~~~~~
+ *
+ * :copyright: Copyright 2020 Adewale Azeez.
+ * :license: CC0-1.0
+ */
+
+body {
+    color: #000000; /* theme_text_color */
+    background: white; /* theme_background_color */
+}
+
+.document {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+li {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    text-indent: 0px;
+}
+
+li li {
+    text-indent: 0px;
+}
+li li li {
+    text-indent: 0px;
+}
+li li li li {
+    text-indent: 0px;
+}
+li li li li li {
+    text-indent: 0px;
+}
+li li li li li li {
+    text-indent: 0px;
+}
+li li li li li li li {
+    text-indent: 0px;
+}
+li li li li li li li li {
+    text-indent: 0px;
+}
+li li li li li li li li li {
+    text-indent: 0px;
+}
+
+
+blockquote {
+    text-indent: 0px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd > * {
+    margin-top: 0;
+}
+
+li > dl > dd {
+    margin-left: 0;
+}
+
+table {
+    table-layout: fixed; 
+    width: 100%;
+}
+
+table.hlist {
+    margin-top: 1em;
+}
+
+table.hlist ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar {
+    background-color: transparent;
+
+    width: 100%;
+}
+
+.navbar * {
+    color: #70705C; /* theme_navbar_color */
+}
+
+.navbar a {
+    text-decoration: underline;
+    
+}
+
+.navbar td {
+    padding: 0.2em;
+}
+
+.navbar-bottom {
+    margin-top: 2em;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+}
+
+
+.nav-sidebar {
+    margin: 2em;
+    background-color: transparent;
+    float: right;
+
+    border-style: solid;
+    border-width: 1px;
+
+    border-color: #000000; /* theme_text_color */
+
+    width: 20%;
+}
+
+.nav-sidebar .nav-sidebar-td {
+    padding: 1em;
+}
+
+.sphinxsidebar h1 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h2 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h3 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h4 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h5 {
+    font-size: medium;
+    font-weight: bold;
+}
+.sphinxsidebar h6 {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.genindextable td {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.genindextable dl {
+    margin: 0;
+}
+
+.documentwrapper {
+    width: 70%;
+    margin: 20px;
+    font-size: 16px; /* theme_document_font_size */
+}
+
+
+
+/* Links */
+a {
+    color: #33658E; /** theme_link_color */
+    text-decoration: none;
+}
+
+a.headerlink {
+    color: #AFAF92; /** theme_header_link_color */
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+
+    padding: 0.2em;
+}
+
+a.footnote-reference {
+    font-size: small;
+}
+
+
+.highlight {
+    overflow-y:hidden;
+    margin: 30px 0px 30px 0px;
+}
+
+code {
+    background-color: #EFEFE1; /** theme_code_background_color **/
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+code.descname {
+    font-weight: bold;
+    background-color: transparent;
+}
+
+code.descclassname {
+    background-color: transparent;
+}
+
+pre {
+    margin: 0.5em;
+    margin: 0px;
+    margin-top: 1.5em;
+
+    
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+    background-color: transparent;
+}
+
+a code {
+    background-color: transparent;
+}
+
+
+table.docutils {
+    margin-top: 2em;
+}
+
+table.docutils td, table.docutils th {
+    padding: 0.3em;
+}
+
+table.docutils.footnote, table.docutils.citation {
+    margin: 0;
+}
+
+table.docutils.footnote td, table.docutils.citation td {
+    padding: 0;
+}
+
+table.docutils.footnote td.label, table.docutils.citation td.label {
+    padding-right: 2em;
+}
+
+.rubric {
+    font-weight: bold;
+}
+
+.versionmodified {
+    font-style: italic;
+}
+
+.field-list {
+    margin-top: 0;
+}
+
+.guilabel, .menuselection {
+    background-color: #EFEFE1; /** theme_code_background_color **/
+}
+
+.accelerator {
+    text-decoration: underline;
+}
+
+.caption-text {
+    font-weight: bold;
+}
+
+div.line-block > div.line {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.headerlink:hover {
+    color: #33658E; /** theme_highlight_color **/
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #33658E; /** theme_highlight_color **/
+}
+
+pre:only-child {
+    /* This gets us nicer literal blocks even without html_rewrite */
+    margin: 0;
+    margin-top: 1em;
+    padding: 0.5em;
+}
+
+.footer {
+    text-align: center;
+}
+
+.highlighted {
+	background-color: yellow;
+}

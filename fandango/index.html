@@ -1,0 +1,565 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Fandango &#8212; Fandango  documentation</title>
+    <link rel="stylesheet" href="_static/css/fandango.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/themata.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic Specification" href="preview.html" />
+   
+  
+  
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  
+    
+    <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.">
+    <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes">
+    <meta name="author" content="Adewale Azeez">
+    <meta property="og:url" content="https://thecarisma.github.io/themata/fandango/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fandango Theme - Set of Highly customizable sphinx themes." />
+    <meta property="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+    
+  
+  
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@iamthecarisma" />
+    <meta name="twitter:creator" content="@iamthecarisma" />
+    <meta name="twitter:title" content="Fandango Theme - Set of Highly customizable sphinx themes." />
+    <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+    
+  
+
+  </head><body>
+
+    <div class="document">
+    <header>
+        <div class="topnavbar">
+            <div style="float:left;">
+                
+                    <img class="icon" src="_static/themata.png"></img>
+                
+                <a href="#" class="title">Fandango</a>
+            </div>
+            <div>
+                
+                    
+                        <a href="https://twitter.com/iamthecarisma">Twitter</a> 
+                    
+                
+                    
+                        <a href="https://github.com/Thecarisma/themata/">Github</a> 
+                    
+                
+            </div>
+        </div>
+        
+            <div class="topnavbar-sec" style="padding:0;"></div>
+        
+    </header>
+    <div class="documentwrapper" id="documentwrapper">
+        <div class="bodywrapper">
+                
+  <div class="toctree-wrapper compound" id="main-nav">
+</div>
+<div class="toctree-wrapper compound" id="sec-files">
+</div>
+<div class="section" id="fandango">
+<h1>Fandango<a class="headerlink" href="#fandango" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This theme is part of the <a class="reference external" href="https://thecarisma.github.io/themata/">themata</a> collection.</p>
+</div>
+<p>Setting up and using the fandango theme.</p>
+<p>Install the themata package from python index.</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">themata</span>
+</pre></div>
+</div>
+<p>or equivalent (add <cite>themata</cite> to any appropriate requirements files).</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Below is a minimal sample <strong>conf.py</strong> file to use the fandango theme.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">themata</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;Fandango Doc&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Adewale Azeez&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
+
+<span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;fandango&#39;</span>
+
+<span class="n">html_theme_optionss</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;project_icon&#39;</span><span class="p">:</span> <span class="s1">&#39;favicon.png&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="theme-options">
+<h2>Theme Options<a class="headerlink" href="#theme-options" title="Permalink to this headline">¶</a></h2>
+<p>The following theme options are accepted in the theme.</p>
+<div class="section" id="variable-options">
+<h3>Variable Options<a class="headerlink" href="#variable-options" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option &lt;Datatype&gt;</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>project_icon &lt;string&gt;</td>
+<td>The abolute or relative (to _static folder) path to the image to use as the theme icon. This is not the same as favicon. If the favicon is set using the variable <cite>html_favicon</cite> and the project_icon is not set. The project_icon value will be the value of the favicon.</td>
+</tr>
+<tr class="row-odd"><td>index_is_single &lt;boolean&gt;</td>
+<td>This option is to indicate if any <strong>index</strong> page does not have sidebars. It is True by default which means any index page will not have any sidebar. To add sidebars to index pages set the value to False in <cite>html_theme_optionss</cite>.</td>
+</tr>
+<tr class="row-even"><td>show_navigators_in_index &lt;boolean&gt;</td>
+<td>The theme option to decide whether to show the bottom navigation buttons (index, next, previous) in any <strong>index</strong> page. By default it is False. To show the navigation buttons in index pages set the value to True in the <cite>html_theme_optionss</cite>.</td>
+</tr>
+<tr class="row-odd"><td>has_secondary_header &lt;boolean&gt;</td>
+<td>The theme option to decide whether to show the secondary header. By default it is False. To show the secondary header set the value to True in the <cite>html_theme_optionss</cite>.</td>
+</tr>
+<tr class="row-even"><td>navbar_links &lt;list of tupples&gt;</td>
+<td><p class="first">The navbar menus to show at the header of the page, each of the entry should be a tupple of the name and the link e.g for a menu that link to twitter and github.</p>
+<div class="code python last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;navbar_links&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Twitter&#39;</span><span class="p">,</span> <span class="s1">&#39;https://twitter.com/iamthecarisma&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Github&#39;</span><span class="p">,</span> <span class="s1">&#39;https://github.com/Thecarisma/themata/&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>has_right_sidebar &lt;boolean&gt;</td>
+<td>By default this theme renders the right sidebar. The left sidebar shows the table of content for the active page, the previous and next topic and the link to the page source. To not shouw the right sidebar in all the pages set the value to False in the <cite>html_theme_options</cite>.</td>
+</tr>
+<tr class="row-even"><td>footer_menus &lt;list of objects&gt;</td>
+<td><p class="first">The footer menu to show at the bottom of the page, each of the footer should contain the ‘title’ and the array of the ‘menu_items’.</p>
+<div class="code python last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;footer_menus&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Contact&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;menu_items&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s1">&#39;link&#39;</span><span class="p">:</span> <span class="s1">&#39;https://thecarisma.github.io/&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;https://thecarisma.github.io/&#39;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s1">&#39;link&#39;</span><span class="p">:</span> <span class="s1">&#39;tel:911&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;12345678998&#39;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Custom Pages&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;menu_items&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s1">&#39;link&#39;</span><span class="p">:</span> <span class="s1">&#39;leftpage.html&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Left Page&#39;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s1">&#39;link&#39;</span><span class="p">:</span> <span class="s1">&#39;singletpage.html&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Single Page&#39;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>social_icons &lt;list of tupples&gt;</td>
+<td><p class="first">The social icons to show at the foot of the page, each of the social link should be a tupple of the favicon icon and the link e.g for a social icon of twitter and github.</p>
+<div class="code python last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;social_icons&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;fab fa-twitter&#39;</span><span class="p">,</span> <span class="s1">&#39;https://twitter.com/iamthecarisma&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;fab fa-github&#39;</span><span class="p">,</span> <span class="s1">&#39;https://github.com/Thecarisma/themata/&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>show_navigators &lt;boolean&gt;</td>
+<td>Theme option to decide whether to show the bottom navigation buttons (index, previous and next) at the bottom of each of the generated pages. The default is True which means the navigators is shown. To hide the navigation set the value of show_navigators to False in <cite>html_theme_options</cite>.</td>
+</tr>
+<tr class="row-odd"><td>right_sidebar_only &lt;list&gt;</td>
+<td><p class="first">An array list of pages name to have only the right sidebar. Any pagename added to this array will have ONLY the right sidebar regardless of other sidebar options. E.g.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;right_sidebar_only&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;otherpages/rightpage&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="last">The name of the page must be relative to the index project root folder. Another way to make a page have only the right sidebar is to add the extension <strong>.right</strong> to it file name e.g. <strong>test.right.rst</strong></p>
+</td>
+</tr>
+<tr class="row-even"><td>no_sidebar &lt;list&gt;</td>
+<td><p class="first">An array list of pages name to have no sidebar. Any pagename added to this array will have no sidebar regardless of other sidebar options. E.g.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;no_sidebar&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;otherpages/singlepage&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="last">The name of the page must be relative to the index project root folder. Another way to make a page have no sidebar is to add the extension <strong>.single</strong> to it file name e.g. <strong>test.single.rst</strong></p>
+</td>
+</tr>
+<tr class="row-odd"><td>secondary_header_link &lt;tupple&gt;</td>
+<td><p class="first">A tupple with the text at index 0 and the link at index 1. The text is shown in the secondary header above the searhc box. e.g.</p>
+<div class="code python last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;secondary_header_link&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Support Devcareer&#39;</span><span class="p">,</span> <span class="s1">&#39;https://www.patreon.com/devcareer&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>toc_title &lt;string&gt;</td>
+<td>The title of the main toc of the documentation the default is ‘Browse’</td>
+</tr>
+<tr class="row-odd"><td>exclude_secondary_header_in &lt;list&gt;</td>
+<td><p class="first">The list of pages to not show the secondary header</p>
+<div class="code python last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;exclude_secondary_header_in&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;index&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;singlepage&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>source_root &lt;string&gt;</td>
+<td>The full link to the web root folder where the source of the documentation source is e.g. the documentation github repo</td>
+</tr>
+<tr class="row-odd"><td>source_root_edit_text &lt;string&gt;</td>
+<td>The text to show on the button that link to the page source in a repository. The default is ‘<strong>Edit this page</strong>’</td>
+</tr>
+<tr class="row-even"><td>metadata &lt;object&gt;</td>
+<td><p class="first">Set the metadata values of the generated website. The object should contain any, more or all of the keys, enable, url, type, title, description, image, keywords, author. E.g.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;enable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://thecarisma.github.io/themata&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;website&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Set of Highly customizable sphinx themes.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;keywords&#39;</span><span class="p">:</span> <span class="s1">&#39;python, sphinx, thecarisma, themata, documentation, markdown, rst, themes&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;author&#39;</span><span class="p">:</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The result of the theme option above is</p>
+<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;description&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;keywords&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;python, sphinx, thecarisma, themata, documentation, markdown, rst, themes&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;author&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Adewale Azeez&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s1">&#39;og:url&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;https://thecarisma.github.io/themata/&#39;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s1">&#39;og:type&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;website&#39;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s1">&#39;og:title&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Set of Highly customizable sphinx themes.&#39;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s1">&#39;og:description&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s1">&#39;og:image&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p class="last">If the value of enable is False or not specified the metadata will not be generated.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>twitter_metadata &lt;object&gt;</td>
+<td><p class="first">Set the twitter metadata values of the generated website. The object should contain any, more or all of the keys, enable, card, site, creator, title, description, image. E.g.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;twitter_metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;enable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;card&#39;</span><span class="p">:</span> <span class="s1">&#39;summary&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;site&#39;</span><span class="p">:</span> <span class="s1">&#39;@iamthecarisma&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;creator&#39;</span><span class="p">:</span> <span class="s1">&#39;@iamthecarisma&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Set of Highly customizable sphinx themes.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The result of the theme option above is</p>
+<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;twitter:card&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;summary&#39;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;twitter:site&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;@iamthecarisma&#39;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;twitter:creator&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;@iamthecarisma&#39;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;twitter:title&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Set of Highly customizable sphinx themes.&#39;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;twitter:description&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.&#39;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;twitter:image&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span> <span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p class="last">If the value of enable is False or not specified the metadata will not be generated.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="css-options">
+<h3>CSS Options<a class="headerlink" href="#css-options" title="Permalink to this headline">¶</a></h3>
+<p>The following theme options are used to style the look of the theme. For example to change the
+background color to gray:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;background_color&#39;</span><span class="p">:</span> <span class="s1">&#39;gray&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Default</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>document_font_size</td>
+<td>16px</td>
+<td>the document font size</td>
+</tr>
+<tr class="row-odd"><td>text_color</td>
+<td>#02516e</td>
+<td>text color</td>
+</tr>
+<tr class="row-even"><td>link_color</td>
+<td>#5682d1</td>
+<td>link color</td>
+</tr>
+<tr class="row-odd"><td>highlight_color</td>
+<td>#6fcced</td>
+<td>link hover color</td>
+</tr>
+<tr class="row-even"><td>body_link_color</td>
+<td>#5682d1</td>
+<td>link color in the article body</td>
+</tr>
+<tr class="row-odd"><td>body_link_highlight_color</td>
+<td>#363638</td>
+<td>link hover color in the article body</td>
+</tr>
+<tr class="row-even"><td>header_background_color</td>
+<td>#02516e</td>
+<td>header background color</td>
+</tr>
+<tr class="row-odd"><td>menu_item_color</td>
+<td>white</td>
+<td>header link text color</td>
+</tr>
+<tr class="row-even"><td>background_color</td>
+<td>white</td>
+<td>theme background color</td>
+</tr>
+<tr class="row-odd"><td>code_background_color</td>
+<td>#dce2e6</td>
+<td>pre block background color</td>
+</tr>
+<tr class="row-even"><td>pre_border_color</td>
+<td>black</td>
+<td>pre block border color</td>
+</tr>
+<tr class="row-odd"><td>search_input_background</td>
+<td>#f7f7f7</td>
+<td>search box background color</td>
+</tr>
+<tr class="row-even"><td>footer_background_color</td>
+<td>#181d21</td>
+<td>footer background color</td>
+</tr>
+<tr class="row-odd"><td>footer_highlight_color</td>
+<td>#0d8aa1</td>
+<td>footer highlight color</td>
+</tr>
+<tr class="row-even"><td>footer_item_color</td>
+<td>white</td>
+<td>footer text color</td>
+</tr>
+<tr class="row-odd"><td>navigator_border_color</td>
+<td>#e6e6e6</td>
+<td>navigation buttons border color</td>
+</tr>
+<tr class="row-even"><td>header_sec_background_color</td>
+<td>#0490c2</td>
+<td>secondary header background color</td>
+</tr>
+<tr class="row-odd"><td>header_sec_title_color</td>
+<td>white</td>
+<td>secondary header title color</td>
+</tr>
+<tr class="row-even"><td>table_background_color</td>
+<td>rgb(223, 226, 229)</td>
+<td>table background color</td>
+</tr>
+<tr class="row-odd"><td>table_tr_odd_background_color</td>
+<td>white</td>
+<td>odd row background color</td>
+</tr>
+<tr class="row-even"><td>table_tr_even_background_color</td>
+<td>#dce2e6</td>
+<td>even row background color</td>
+</tr>
+<tr class="row-odd"><td>note_background_color</td>
+<td>#eee</td>
+<td>the note div background color</td>
+</tr>
+<tr class="row-even"><td>note_border_color</td>
+<td>#ccc</td>
+<td>the note div border color</td>
+</tr>
+<tr class="row-odd"><td>seealso_background_color</td>
+<td>#ffc</td>
+<td>the seealso div background color</td>
+</tr>
+<tr class="row-even"><td>seealso_border_color</td>
+<td>#ff6</td>
+<td>the seealso div border colorr</td>
+</tr>
+<tr class="row-odd"><td>topic_background_color</td>
+<td>rgb(187, 221, 255)</td>
+<td>the topic div background color</td>
+</tr>
+<tr class="row-even"><td>warning_background_color</td>
+<td>#ffe4e4</td>
+<td>the warning div background color</td>
+</tr>
+<tr class="row-odd"><td>warning_border_color</td>
+<td>#f66</td>
+<td>the warning div border color</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+                </br>
+                 
+                    
+                
+        </div>
+        
+            
+                
+                <div class="sidebar-right">
+                    
+                        <h2>Page Contents</h2>
+                        <ul>
+<li><a class="reference internal" href="#">Fandango</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+<li><a class="reference internal" href="#theme-options">Theme Options</a><ul>
+<li><a class="reference internal" href="#variable-options">Variable Options</a></li>
+<li><a class="reference internal" href="#css-options">CSS Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                    
+                    <h2>Other Topics</h2>
+                    <p class="caption"><span class="caption-text">Main</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="preview.html">Basic Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conf.html">Sample Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Custom Files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/singlepage.html">No Sidebar. Theme Option</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/test.single.html">No Sidebar. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/test.right.html">Right Sidebar Only. File Name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherpages/rightpage.html">Right Sidebar Only. Theme Option</a></li>
+</ul>
+
+                    
+                        
+                        
+                            <h2>Next topic</h2>
+                            <a href="preview.html">Basic Specification</a>
+                        
+                        <h2>This Page</h2>
+                        <a href="_sources/index.rst.txt">Show source</a>
+                        
+                            <br/><a style="line-height: 25px;" href="https://github.com/Thecarisma/themata/edit/test/docs/fandango//index.rst">Edit on Github</a>
+                        
+                    
+                </div>
+                
+            
+        
+        <div style="clear:both"></div>
+    </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        
+        <div class="social">
+            
+                <a href="https://twitter.com/iamthecarisma"><i class="fab fa-twitter"></i></a>
+            
+                <a href="https://github.com/Thecarisma/themata/"><i class="fab fa-github"></i></a>
+            
+        </div>
+        
+        <div class="footer-col1">
+            
+                <div class="footer-col2">
+                    <span class="footer-col2-title">Contact</span>
+                    <ul>
+                        
+                            <li><a href="https://thecarisma.github.io/">https://thecarisma.github.io/</a></li>
+                        
+                            <li><a href="tel:911">12345678998</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="footer-col2">
+                    <span class="footer-col2-title">Custom Pages</span>
+                    <ul>
+                        
+                            <li><a href="leftpage.html">Left Page</a></li>
+                        
+                            <li><a href="singletpage.html">Single Page</a></li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+        
+        <div class="doc-sphinx-info">
+                    &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
+                Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5
+                with <a href="https://thecarisma.github.io/themata/fandango/index.html">fandango</a> theme.
+        </div>
+    </div>
+
+  </body>
+</html>
