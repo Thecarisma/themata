@@ -108,7 +108,7 @@ Change Log
 -----------
 
 
-1.12
+1.13
 '''''''''
 
 - makes left sidebar and header of water theme fixed https://github.com/Thecarisma/themata/issues/11 `8346703 <https://github.com/Thecarisma/themata/commit/8346703>`_
