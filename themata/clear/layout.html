@@ -23,26 +23,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
     {{ themata_fetch_syntax_highlighter_css(pathto('_static/' ~ theme_touch_icon, 1), theme_syntax_highlighter, theme_syntax_highlighter_theme, theme_syntax_highlighter_iframe_embed) }}
   {% if theme_metadata %}
-    {% if theme_metadata.enable %}
-    <meta name="description" content="{{ theme_metadata.description }}">
-    <meta name="keywords" content="{{ theme_metadata.keywords }}">
-    <meta name="author" content="{{ theme_metadata.author }}">
-    <meta property="og:url" content="{{ theme_metadata.url }}{{ '' if theme_metadata.url.endswith('/') else '/' }}{{ pagename }}.html" />
-    <meta property="og:type" content="{{ theme_metadata.type }}" />
-    <meta property="og:title" content="{{ theme_metadata.title }}" />
-    <meta property="og:description" content="{{ theme_metadata.description }}" />
-    <meta property="og:image" content="{{ theme_metadata.image }}" />
+        <meta property="og:url" content="{{ theme_metadata.url }}{{ '' if theme_metadata.url.endswith('/') else '/' }}{{ pagename }}.html" />
+    {% if theme_metadata.dynamic %}
+        <meta name="description" content="{{ themata_extract_metadata(body, 'description', theme_metadata.description) }}" />
+        <meta name="keywords" content="{{ themata_extract_metadata(body, 'keywords', theme_metadata.keywords) }}" />
+        <meta name="author" content="{{ themata_extract_metadata(project, 'author', theme_metadata.author) }}" />
+        <meta name="og:type" content="{{ themata_extract_metadata('website', 'type', theme_metadata.website) }}" />
+        <meta name="og:title" content="{{ themata_extract_metadata(title + ' - ' + project + ' documentation', 'title', theme_metadata.title) }}" />
+        <meta name="og:description" content="{{ themata_extract_metadata(body, 'description', theme_metadata.description) }}" />
+        <meta name="og:image" content="{{ themata_extract_metadata(body, 'image', theme_metadata.image) }}" />
+    {% else %}
+        <meta name="description" content="{{ theme_metadata.description }}">
+        <meta name="keywords" content="{{ theme_metadata.keywords }}">
+        <meta name="author" content="{{ theme_metadata.author }}">
+        <meta property="og:type" content="{{ theme_metadata.type }}" />
+        <meta property="og:title" content="{{ theme_metadata.title }}" />
+        <meta property="og:description" content="{{ theme_metadata.description }}" />
+        <meta property="og:image" content="{{ theme_metadata.image }}" />
     {% endif %}
   {% endif %}
   {% if theme_twitter_metadata %}
-    {% if theme_twitter_metadata.enable %}
-    <meta name="twitter:card" content="{{ theme_twitter_metadata.card }}" />
-    <meta name="twitter:site" content="{{ theme_twitter_metadata.site }}" />
-    <meta name="twitter:creator" content="{{ theme_twitter_metadata.creator }}" />
-    <meta name="twitter:title" content="{{ theme_twitter_metadata.title }}" />
-    <meta name="twitter:description" content="{{ theme_twitter_metadata.description }}" />
-    <meta name="twitter:image" content="{{ theme_twitter_metadata.image }}" />
+        <meta name="twitter:card" content="{{ theme_twitter_metadata.card if theme_twitter_metadata.card else 'summary' }}" />
+    {% if theme_metadata.dynamic %}
+        <meta name="twitter:site" content="{{ themata_extract_metadata('@'+project, 'site', theme_twitter_metadata.site) }}" />
+        <meta name="twitter:creator" content="{{ themata_extract_metadata('@'+project, 'site', theme_twitter_metadata.creator) }}" />
+        <meta name="twitter:title" content="{{ themata_extract_metadata(title + ' - ' + project + ' documentation', 'title', theme_twitter_metadata.title) }}" />
+        <meta name="twitter:description" content="{{ themata_extract_metadata(body, 'description', theme_twitter_metadata.description) }}" />
+        <meta name="twitter:image" content="{{ themata_extract_metadata(body, 'image', theme_twitter_metadata.image) }}" />
+    {% else %}
+        <meta name="twitter:site" content="{{ theme_twitter_metadata.site }}" />
+        <meta name="twitter:creator" content="{{ theme_twitter_metadata.creator }}" />
+        <meta name="twitter:title" content="{{ theme_twitter_metadata.title }}" />
+        <meta name="twitter:description" content="{{ theme_twitter_metadata.description }}" />
+        <meta name="twitter:image" content="{{ theme_twitter_metadata.image }}" />
     {% endif %}
+  {% endif %}
+  {% if theme_google_analytics_tracking_id %}
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ theme_google_analytics_tracking_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ theme_google_analytics_tracking_id }}');
+    </script>
   {% endif %}
   <script>
       const __themataOnloadCallbacks = [];

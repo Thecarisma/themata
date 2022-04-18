@@ -177,7 +177,7 @@ Variable Options
       
         html_theme_options = {
             'metadata': {
-                'enable': True,
+                'dynamic': True,
                 'url': 'https://thecarisma.github.io/themata',
                 'type': 'website',
                 'title': 'Set of Highly customizable sphinx themes.',
@@ -201,14 +201,15 @@ Variable Options
       <meta property='og:description' content='Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.' />
       <meta property='og:image' content='https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png' />
 
-   If the value of enable is False or not specified the metadata will not be generated."
+   If the value of **dynamic** is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values 
+   example for author, and keywords meta values."
    "twitter_metadata <object>", "Set the twitter metadata values of the generated website. The object should contain any, more or all of the keys, enable, card, site, creator, title, description, image. E.g. 
    
    .. code:: python 
       
         html_theme_options = {
             'twitter_metadata': {
-                'enable': True,
+                'dynamic': True,
                 'card': 'summary',
                 'site': '@iamthecarisma',
                 'creator': '@iamthecarisma',
@@ -229,7 +230,8 @@ Variable Options
       <meta name='twitter:description' content='Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.' />
       <meta name='twitter:image' content='https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png' />
 
-   If the value of enable is False or not specified the metadata will not be generated."
+   If the value of **dynamic** is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values 
+   example for author, and keywords meta values."
 
 Field lists:
 ``````````````````

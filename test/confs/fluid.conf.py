@@ -104,7 +104,7 @@ html_theme_options = {
     ],
     "source_root": "https://github.com/Thecarisma/themata/tree/test/test/test_rst",
     "metadata": {
-        "enable": True,
+        "dynamic": True,
         "url": "https://thecarisma.github.io/themata",
         "type": "website",
         "title": "Set of Highly customizable sphinx themes.",
@@ -114,7 +114,7 @@ html_theme_options = {
         "author": "Adewale Azeez"
     },
     "twitter_metadata": {
-        "enable": True,
+        "dynamic": True,
         "card": "summary",
         "site": "@iamthecarisma",
         "creator": "@iamthecarisma",

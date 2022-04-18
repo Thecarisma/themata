@@ -73,7 +73,7 @@ html_theme_options = {
     'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/sugar/',
     'source_root_edit_text': 'Edit on Github',
     'metadata': {
-        "enable": True,
+        "dynamic": True,
         "url": "https://thecarisma.github.io/themata/sugar/",
         "type": "website",
         "title": "Sugar Theme - Set of Highly customizable sphinx themes.",
@@ -83,7 +83,7 @@ html_theme_options = {
         "author": "Adewale Azeez"
     },
     'twitter_metadata': {
-        "enable": True,
+        "dynamic": True,
         "card": "summary",
         "site": "@iamthecarisma",
         "creator": "@iamthecarisma",

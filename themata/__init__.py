@@ -1,19 +1,10 @@
 import os
+import re
 from sphinx.util.fileutil import copy_asset_file
 
 __version_trait = (1, 0, 0)
 __version = ".".join(map(str, __version_trait))
-__syntax_higlight_laanguages_rainbow = [
-        "c", "coffeescript", "csharp", "css", "d", "generic",
-        "go", "haskell", "html", "java", "javascript", "lua",
-        "php", "python", "r", "ruby", "scheme", "shell", "smalltalk"
-    ]
-__syntax_higlight_laanguages_syntaxhighlighterjs = [
-        "AS3", "AppleScript", "Bash", "CSharp", "ColdFusion",
-        "Cpp", "Css", "Delphi", "Diff", "Erlang", "Groovy", "JScript",
-        "Java", "JavaFX", "Perl", "Php", "Plain", "PowerShell", 
-        "Python", "Ruby", "Sass", "Scala", "Sql", "Vb", "Xml"
-    ]
+__clean_html_re = re.compile('<.*?>')
 
 def get_html_theme_path():
     return os.path.dirname(__file__)
@@ -36,7 +27,31 @@ def update_context(app, pagename, templatename, context, doctree):
     def themata_fetch_syntax_highlighter_css(static_dir, highlighter, highlighter_theme, iframe_embed):
         return ""
 
+    def themata_extract_metadata(body, type, fallback):
+        if fallback and type != "image":
+            return fallback
+        if type == "image":
+            if "img" not in body:
+                if fallback:
+                    return fallback
+                return "https://github.com/Thecarisma/themata/raw/main/docs/images/themata.small.png"
+            img_src_index = body.index("img")
+            body = body[img_src_index:-1]
+            img_src_index = body.index("src=\"")+5
+            body = body[img_src_index:-1]
+            img_src_index = body.index("\"")
+            return body[0:img_src_index]
+        elif type == "author":
+            return body
+        cleantext = re.sub(__clean_html_re, '', str(body))
+        cleantext = ' '.join(cleantext.splitlines())[0:200].replace('¶', ' ').strip()
+        cleantext = ' '.join(cleantext.split())
+        if type == "keywords":
+            return ','.join(cleantext.split(' '))
+        return cleantext
+
     context["clear_version"] = __version
+    context["themata_extract_metadata"] = themata_extract_metadata
     context["themata_fetch_syntax_highlighter_js"] = themata_fetch_syntax_highlighter_js
     context["themata_fetch_syntax_highlighter_css"] = themata_fetch_syntax_highlighter_css
 

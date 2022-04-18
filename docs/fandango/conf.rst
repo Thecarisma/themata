@@ -83,7 +83,7 @@ The **conf.py** file that generates this documentation.
         'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/fandango/',
         'source_root_edit_text': 'Edit on Github',
         'metadata': {
-            "enable": True,
+            "dynamic": True,
             "url": "https://thecarisma.github.io/themata",
             "type": "website",
             "title": "Set of Highly customizable sphinx themes.",
@@ -93,7 +93,7 @@ The **conf.py** file that generates this documentation.
             "author": "Adewale Azeez"
         },
         'twitter_metadata': {
-            "enable": True,
+            "dynamic": True,
             "card": "summary",
             "site": "@iamthecarisma",
             "creator": "@iamthecarisma",

@@ -3,7 +3,7 @@ import themata
 
 project = 'Clear'
 copyright = '2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
-author = 'Adewale Azeez'
+author = 'Adewale Azeeze'
 
 html_theme = 'clear'
 html_favicon = '../images/themata.png'
@@ -34,10 +34,11 @@ html_theme_options = {
     'right_sidebar_only': [
         'otherpages/rightpage'
     ],
+    'google_analytics_tracking_id': "UA-0000000-00",
     'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/clear/',
     'source_root_edit_text': 'Edit on Github',
     'metadata': {
-        "enable": True,
+        "dynamic": True,
         "url": "https://thecarisma.github.io/themata/clear/",
         "type": "website",
         "title": "Clear Theme - Set of Highly customizable sphinx themes.",
@@ -47,7 +48,7 @@ html_theme_options = {
         "author": "Adewale Azeez"
     },
     'twitter_metadata': {
-        "enable": True,
+        "dynamic": True,
         "card": "summary",
         "site": "@iamthecarisma",
         "creator": "@iamthecarisma",
