@@ -5,7 +5,6 @@ project = 'Clear'
 copyright = '2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
 author = 'Adewale Azeez'
 
-html_theme_path = [themata.get_html_theme_path()]
 html_theme = 'clear'
 html_favicon = '../images/themata.png'
 master_doc = 'index'
@@ -18,6 +17,10 @@ html_theme_options = {
     'collapsible_sidebar': True,
     'collapsible_sidebar_display': 'block',
     'show_navigators': True,
+    'syntax_highlighter': 'syntaxy',
+    'code_block_editable': False,
+    'syntax_highlighter_theme': 'light',
+    'syntax_highlighter_iframe_embed': False,
     'social_icons': [
         ('fab fa-twitter', 'https://twitter.com/iamthecarisma'),
         ('fab fa-github', 'https://github.com/Thecarisma/themata/')

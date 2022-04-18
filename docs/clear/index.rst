@@ -55,7 +55,6 @@ Below is a minimal sample **conf.py** file to use the clear theme.
     author = 'Adewale Azeez'
 
     html_favicon = 'favicon.png'
-    html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'clear'
 
     html_theme_optionss = {
@@ -66,6 +65,10 @@ Theme Options
 --------------
 
 The following theme options are accepted in the theme.
+
+.. raw:: html
+
+    <div style="font-size: 30px;">Yahoo</div>
 
 Variable Options
 '''''''''''''''''
@@ -187,6 +190,16 @@ Variable Options
       <meta name='twitter:image' content='https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png' />
 
    If the value of enable is False or not specified the metadata will not be generated."
+   "syntax_highlighter <string>", "The syntax higlighting provider to use for the generated documentation, the following syntax highlighters are supported `ace <https://thecarisma.github.io/themata/syntax_highlighter/ace.html>`_
+   `highlightjs <https://thecarisma.github.io/themata/syntax_highlighter/highlightjs.html>`_ `rainbow <https://thecarisma.github.io/themata/syntax_highlighter/rainbow.html>`_
+   `prism <https://thecarisma.github.io/themata/syntax_highlighter/prism.html>`_ `Google Prettify <https://thecarisma.github.io/themata/syntax_highlighter/google_prettify.html>`_
+   `syntaxhighlighterjs <https://thecarisma.github.io/themata/syntax_highlighter/syntaxhighlighterjs.html>`_ `microlight <https://thecarisma.github.io/themata/syntax_highlighter/microlight.html>`_
+   `syntaxyjs <https://thecarisma.github.io/themata/syntax_highlighter/syntaxyjs.html>`_. If syntax_highlighter is not specified the default sphinx highlighter is used."
+   "code_block_editable <boolean>", "Specify whether the code block is editable. This only apply to syntax highlighter that support editing the source code e.g. ace. Default is false."
+   "syntax_highlighter_theme <string>", "Set the theme your selected syntax highlighter should use. Default value depends on the specified value of syntax_highlighter.
+   The value can be absolute http url to the highlighter theme css e.g. **syntax_highlighter_theme: 'https://atelierbram.github.io/syntax-highlighting/prism/demo/assets/css/prism-base16-3024.dark.css'**. 
+   Visit each of the `syntax highlighter <https://thecarisma.github.io/themata/syntax_highlighter/index.html>`_ page to see their themes"
+   "syntax_highlighter_iframe_embed <boolean>", "Specify whether the code block should be render in an iframe element. This is most useful to enforce cutom theme for highlighers that use the last loaded stylesheet e.g. highligherjs. Default is false."
 
 
 CSS Options

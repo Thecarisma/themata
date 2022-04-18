@@ -5,7 +5,6 @@ project = 'Fluid'
 copyright = '2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
 author = 'Adewale Azeez'
 
-html_theme_path = [themata.get_html_theme_path()]
 html_theme = 'fluid'
 html_favicon = '../images/themata.png'
 master_doc = 'index'
@@ -15,6 +14,10 @@ html_theme_options = {
     'show_navigators_in_index': False,
     'collapsible_sidebar': True,
     'collapsible_sidebar_display': 'block',
+    'syntax_highlighter': 'prism',
+    'code_block_editable': False,
+    'syntax_highlighter_theme': 'solarizedlight',
+    'syntax_highlighter_iframe_embed': False,
     'navbar_links': [
         ('Twitter', 'https://twitter.com/iamthecarisma'),
         ('Github', 'https://github.com/Thecarisma/themata/')

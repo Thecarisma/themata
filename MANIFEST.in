@@ -1,9 +1,9 @@
-recursive-include themata/milkish *.css_t *.html *.conf *.ttf *.png
-recursive-include themata/fluid *.css_t *.html *.conf *.ttf *.png
-recursive-include themata/clear *.css_t *.html *.conf *.ttf *.png
-recursive-include themata/fandango *.css_t *.html *.conf *.ttf *.png
-recursive-include themata/hackish *.css_t *.html *.conf *.ttf *.png
-recursive-include themata/garri *.css_t *.html *.conf *.ttf *.png
-recursive-include themata/water *.css_t *.html *.conf *.ttf *.png
-recursive-include themata/sugar *.css_t *.html *.conf *.ttf *.png
-recursive-include themata *.css *.html *.conf *.ttf *.png
+recursive-include themata/milkish *.css_t *.html *.conf *.ttf *.png *.js_t *.js
+recursive-include themata/fluid *.css_t *.html *.conf *.ttf *.png *.js_t *.js
+recursive-include themata/clear *.css_t *.html *.conf *.ttf *.png *.js_t *.js
+recursive-include themata/fandango *.css_t *.html *.conf *.ttf *.png *.js_t *.js
+recursive-include themata/hackish *.css_t *.html *.conf *.ttf *.png *.js_t *.js
+recursive-include themata/garri *.css_t *.html *.conf *.ttf *.png *.js_t *.js
+recursive-include themata/water *.css_t *.html *.conf *.ttf *.png *.js_t *.js
+recursive-include themata/sugar *.css_t *.html *.conf *.ttf *.png *.js_t *.js
+recursive-include themata *.css *.html *.conf *.ttf *.png *.js_t *.js

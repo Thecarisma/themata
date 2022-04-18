@@ -81,7 +81,9 @@ table tr:nth-child(even) {
 code,
 .highlight {
     border: none;
-    background-color: {{ theme_code_background_color }} !important; /* theme_code_background_color */
+    {% if theme_syntax_highlighter == "default" or theme_syntax_highlighter == "microlight" %}
+        background-color: {{ theme_code_background_color }} !important; /* theme_code_background_color */
+    {% endif %}
     border-radius: 6px;
     padding: 0px 0px 0px 0px;
     line-height: 1.7;
@@ -96,6 +98,9 @@ code {
 }
 
 pre {
+    {% if theme_syntax_highlighter == "default" or theme_syntax_highlighter == "microlight" %}
+        background-color: {{ theme_code_background_color }} !important; /* theme_code_background_color */
+    {% endif %}
     padding: 16px;
     margin: 0px;
 }

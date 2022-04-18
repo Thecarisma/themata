@@ -5,8 +5,6 @@ project = 'First Doc'
 copyright = '2020, Adewale Azeez'
 author = 'Adewale Azeez'
 
-html_theme_path = [themata.get_html_theme_path()]
-
 extensions = ['recommonmark']
 source_suffix = {
     '.rst': 'restructuredtext',

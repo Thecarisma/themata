@@ -2,10 +2,9 @@ import os
 import themata
 
 project = 'themata'
-copyright = '2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
+copyright = '2022, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
 author = 'Adewale Azeez'
 
-html_theme_path = [themata.get_html_theme_path()]
 html_theme = 'sugar'
 html_favicon = 'images/themata.png'
 master_doc = 'index'
@@ -27,15 +26,20 @@ html_theme_options = {
         ("Follow me on twitter", "https://twitter.com/iamthecarisma")
     ],
     'navbar_sec_links': [
-        ("hackish", "hackish/index"),
-        ("milkish", "milkish/index"),
-        ("fandango", "fandango/index"),
-        ("clear", "clear/index"),
-        ("fluid", "fluid/index"),
-        ("garri", "garri/index"),
-        ("water", "water/index"),
-        ("sugar", "sugar/index")
+        #("hackish", "hackish/index"),
+        #("milkish", "milkish/index"),
+        #("fandango", "fandango/index"),
+        #("clear", "clear/index"),
+        #("fluid", "fluid/index"),
+        #("garri", "garri/index"),
+        #("water", "water/index"),
+        #("sugar", "sugar/index"),
+        ("Syntax Highlighters", "syntax_highlighter/index"),
     ],
+    'syntax_highlighter': 'syntaxy',
+    'code_block_editable': False,
+    'syntax_highlighter_theme': 'dark',
+    'collapsible_sidebar_display': 'block',
     'metadata': {
         "enable": True,
         "url": "https://thecarisma.github.io/themata",

@@ -5,7 +5,6 @@ project = 'Sugar'
 copyright = '2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
 author = 'Adewale Azeez'
 
-html_theme_path = [themata.get_html_theme_path()]
 html_theme = 'sugar'
 html_favicon = '../images/themata.png'
 master_doc = 'index'
@@ -26,6 +25,10 @@ html_theme_options = {
     'has_left_sidebar': True,
     'has_right_sidebar': True,
     'show_navigators': True,
+    'syntax_highlighter': 'prism',
+    'code_block_editable': False,
+    'syntax_highlighter_theme': 'coy',
+    'syntax_highlighter_iframe_embed': False,
     'footer_menus': [
         {
             'title': 'Contact',

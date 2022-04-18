@@ -13,7 +13,6 @@ The **conf.py** file that generates this documentation.
     copyright = '2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
     author = 'Adewale Azeez'
 
-    html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'fandango'
     html_favicon = '../images/themata.png'
 
@@ -21,6 +20,10 @@ The **conf.py** file that generates this documentation.
         'index_is_single': False,
         'show_navigators_in_index': False,
         'has_secondary_header': True,
+        'syntax_highlighter': 'rainbow',
+        'code_block_editable': False,
+        'syntax_highlighter_theme': 'github',
+        'syntax_highlighter_iframe_embed': False,
         'navbar_links': [
             ('Twitter', 'https://twitter.com/iamthecarisma'),
             ('Github', 'https://github.com/Thecarisma/themata/')

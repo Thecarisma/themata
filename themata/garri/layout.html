@@ -21,6 +21,7 @@
     <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
   {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    {{ themata_fetch_syntax_highlighter_css(pathto('_static/' ~ theme_touch_icon, 1), theme_syntax_highlighter, theme_syntax_highlighter_theme, theme_syntax_highlighter_iframe_embed) }}
   {% if theme_metadata %}
     {% if theme_metadata.enable %}
     <meta name="description" content="{{ theme_metadata.description }}">
@@ -43,6 +44,16 @@
     <meta name="twitter:image" content="{{ theme_twitter_metadata.image }}" />
     {% endif %}
   {% endif %}
+  <script>
+      const __themataOnloadCallbacks = [];
+      const __themataJsLoadedCallbacks = [];
+      function themataRegisterOnloadCallback(cb) {
+        __themataJsLoadedCallbacks.push(cb);
+      }
+      function themataRegisterJsLoadedCallback(cb) {
+        __themataOnloadCallbacks.push(cb);
+      }
+  </script>
 {% endblock %}
 
 {%- block document %}
@@ -168,6 +179,8 @@
             with <a href="https://thecarisma.github.io/themata/garri/index.html">garri</a> theme.{% endtrans %}
         {%- endif %}
     </div>
+    {{ themata_fetch_syntax_highlighter_js(pathto('_static/' ~ theme_touch_icon, 1), theme_syntax_highlighter, theme_code_block_editable, theme_syntax_highlighter_theme, theme_syntax_highlighter_iframe_embed) }}
+    <script src="{{ pathto('_static/' ~ theme_touch_icon, 1) }}themata.js"></script>
 {% endblock %}
 
 {# do not display relbars nor sidebars #}

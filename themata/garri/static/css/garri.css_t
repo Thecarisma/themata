@@ -192,7 +192,9 @@ a.footnote-reference {
 }
 
 code {
-    background-color: {{ theme_code_background_color }}; /** theme_code_background_color **/
+    {% if theme_syntax_highlighter == "default" or theme_syntax_highlighter == "microlight" %}
+        background-color: {{ theme_code_background_color }}; /* theme_code_background_color */
+    {% endif %}
     white-space: pre-wrap;
     word-break: break-word;
 }
@@ -207,6 +209,9 @@ code.descclassname {
 }
 
 pre {
+    {% if theme_syntax_highlighter == "default" or theme_syntax_highlighter == "microlight" %}
+        background-color: {{ theme_code_background_color }}; /* theme_code_background_color */
+    {% endif %}
     margin: 0.5em;
     margin: 0px;
     margin-top: 1.5em;

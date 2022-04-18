@@ -59,7 +59,6 @@ To use the milkish theme, set the following option in your **conf.py** file.
     author = 'Adewale Azeez'
     html_favicon = 'favicon.png'
 
-    html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'milkish'
 
 Each of the themes has theme options to customize the look of the generated pages. The options for 
