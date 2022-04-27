@@ -277,7 +277,6 @@ background color to gray:
    "search_input_background", "#f7f7f7", "serch box background color"
    "left_sidebar_background", "#f0f4f5", "left sidebar background color"
    "footer_background_color", "#181d21", "footer background color"
-   "footer_highlight_color", "#0d8aa1", "footer link hover color"
    "footer_item_color", "white", "footer text color"
    "navigator_border_color", "#e6e6e6", "navigation buttons border color"
    "table_background_color", "rgb(223, 226, 229)", "table background color"
@@ -290,5 +289,7 @@ background color to gray:
    "topic_background_color", "rgb(187, 221, 255)", "the topic div background color"
    "warning_background_color", "#ffe4e4", "the warning div background color"
    "warning_border_color", "#f66", "the warning div border color"
+   "footer_link_color", "default", "the footer link color"
+   "footer_highlight_color", "#0d8aa1", "the footer link highlight color"
 
 

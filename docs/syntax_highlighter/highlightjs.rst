@@ -71,13 +71,7 @@ The following are the supported themes:
                 <div id="editorx-${theme}"><pre><code>html_theme_options = {
         'syntax_highlighter': 'highlightjs',
         'code_block_editable': False,
-        'syntax_highlighter_theme': '${theme}',
-        'syntax_highlighter': 'highlightjs',
-        'code_block_editable': False,
-        'syntax_highlighter_theme': '${theme}',
-        'syntax_highlighter': 'highlightjs',
-        'code_block_editable': False,
-        'syntax_highlighter_theme': '${theme}',
+        'syntax_highlighter_theme': '${theme}'
     }
     </pre></code>
                 </div><div>`;

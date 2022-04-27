@@ -139,6 +139,69 @@
                         </br>
                     {% endif %}
                 {% endif %}
+                {% if ((theme_enable_page_social_share == True) or (theme_page_rating_options != '') or theme_enable_github_page_feedback) == True %}
+                    <div class="navigator" style="display: flex; flex-direction: column; padding: 15px; margin-bottom: 30px;">
+                        <div style="display: flex; flex-direction: row;">
+                            {% if theme_enable_page_social_share == True %}
+                                <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                                    <span>{{ theme_social_share_label }}:</span>
+                                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=__themata_page_url__" target="_blank">
+                                            <i class="fab fa-facebook" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://twitter.com/intent/tweet?text=Check this page {{ shorttitle }}: __themata_page_url__" target="_blank">
+                                            <i class="fab fa-twitter" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://api.whatsapp.com//send?text=Check this page {{ shorttitle }}: __themata_page_url__" target="_blank">
+                                            <i class="fab fa-whatsapp" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=__themata_page_url__" target="_blank">
+                                            <i class="fab fa-linkedin" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <!--<a href="#" target="_blank">
+                                            <i class="fab fa-discord" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>-->
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if theme_page_rating_options != '' %}
+                                <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-{{ 'end' if theme_enable_page_social_share == True else 'start' }};">
+                                    <span>{{ theme_page_rating_options.title if theme_page_rating_options.title else "Did you find this page helpful?" }}</span> <!-- theme_option=page_rating_options.title -->
+                                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                        <div style="overflow: hidden; border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer; width: 75px; height: 45px;" onclick='{{ theme_page_rating_options.positive_event }}'>
+                                            {% if theme_page_rating_options.positive_icon %}
+                                                {{ theme_page_rating_options.positive_icon }}
+                                            {% else %}
+                                                <i class="fa fa-smile" style="font-size: 40px; color: #FFCC4D;"></i>
+                                            {% endif %}
+                                        </div>
+                                        <div style="overflow: hidden; border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer; width: 75px; height: 45px;" onclick='{{ theme_page_rating_options.negative_event }}'>
+                                            {% if theme_page_rating_options.negative_icon %}
+                                                {{ theme_page_rating_options.negative_icon }}
+                                            {% else %}
+                                                <i class="fa fa-frown" style="font-size: 40px; color: #FFCC4D;"></i>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <!-- TOE -->
+                        </div>
+                        {% if theme_enable_github_page_feedback == True and theme_github_repo != '' %}
+                            <div style="flex: 1; display: flex; flex-direction: column; {{ 'border-top: 1px solid rgb(36,233,10); margin-top: 20px; padding-top: 20px;' if ((theme_enable_page_social_share == True) or (theme_page_rating_options != '')) else '' }}">
+                                <span>{{ theme_github_page_feedback_title }}</span> <!-- theme_option=page_github_feedback -->
+                                <div style="margin-top: 20px; display: flex; justify-content: space-between;">
+                                    <div>
+                                        <a class="reference navigator" href="{{ theme_github_repo }}/issues/new?title=&body={{ theme_github_new_product_issue_template }}" target="_blank"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Project</a>
+                                        <a class="reference navigator" href="{{ theme_github_repo }}/issues/new?title=&body={{ theme_github_new_page_issue_template }}" target="_blank"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Page</a>
+                                    </div>
+                                    <a href='{{ theme_github_repo }}/issues?q="{{ title }}"&in=body' target="_blank">{{ theme_github_page_view_feedbacks_label }}</a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <hr/>
+                {% endif %}
         </div>
         <div style="clear:both"></div>
     </div> 

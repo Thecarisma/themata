@@ -35,8 +35,22 @@ html_theme_options = {
         'otherpages/rightpage'
     ],
     'google_analytics_tracking_id': "UA-0000000-00",
+    'github_repo': 'https://github.com/Thecarisma/themata',
+    'github_new_product_issue_template': "Yahoo",
+    'social_share_label': "Throw this page at people faces",
+    'github_page_feedback_title': "Throw tantrum about this page to the developers",
+    'github_page_view_feedbacks_label': "Look at your like tantrums on github",
     'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/clear/',
     'source_root_edit_text': 'Edit on Github',
+    'enable_page_social_share': True,
+    'page_rating_options': {
+        'title': 'Did you find this documentation helpful?',
+        "positive_icon": '<img style="height: 100%; width: 100%; object-fit: contain" src="https://avatars.githubusercontent.com/u/14879387?v=4"/>',
+        "negative_icon": '<img style="height: 100%; width: 100%; object-fit: contain" src="https://avatars.githubusercontent.com/u/14879387?v=4"/>',
+        "positive_event": 'alert("Positive")',
+        "negative_event": 'alert("Negative")',
+    },
+    "enable_github_page_feedback": True,
     'metadata': {
         "dynamic": True,
         "url": "https://thecarisma.github.io/themata/clear/",

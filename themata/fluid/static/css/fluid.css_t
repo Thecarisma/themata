@@ -342,8 +342,6 @@ pre {
 .bodywrapper h4,
 .bodywrapper h5,
 .bodywrapper h6 {
-    font-size: 200%;
-    font-weight: 500;
     margin: 15px 0px 15px 0px;
     padding: 1px 0 0px 0px;
     text-shadow: 0px 1px 0 white
@@ -483,6 +481,18 @@ div.viewcode-block:target {
 .doc-sphinx-info {
     font-size: 75%;
     color: {{ theme_footer_item_color }} !important; /* theme_footer_item_color */
+}
+
+.doc-sphinx-info > a {
+    {% if theme_footer_link_color %}
+        color: {{ theme_footer_link_color }} !important; /* theme_footer_link_color */
+    {% endif %}
+}
+
+.doc-sphinx-info > a:hover {
+    {% if theme_footer_highlight_color %}
+        color: {{ theme_footer_highlight_color }} !important; /* theme_footer_highlight_color */
+    {% endif %}
 }
 
 .footer-col1 {

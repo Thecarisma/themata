@@ -267,5 +267,7 @@ background color to gray:
    "topic_background_color", "rgb(187, 221, 255)", "the topic div background color"
    "warning_background_color", "#ffe4e4", "the warning div background color"
    "warning_border_color", "#f66", "the warning div border color"
+   "footer_link_color", "default", "the footer link color"
+   "footer_highlight_color", "default", "the footer link highlight color"
 
 

@@ -3,16 +3,19 @@ const themataCodeEditors = [];
 const loadedDynamicAssets = [];
 let selfSyntaxHighlightBlocks = [];
 const __syntaxHiglightLanguagesRainbow = [
-        "c", "coffeescript", "csharp", "css", "d", "generic",
-        "go", "haskell", "html", "java", "javascript", "lua",
-        "php", "python", "r", "ruby", "scheme", "shell", "smalltalk"
-    ]
+    "c", "coffeescript", "csharp", "css", "d", "generic",
+    "go", "haskell", "html", "java", "javascript", "lua",
+    "php", "python", "r", "ruby", "scheme", "shell", "smalltalk"
+]
 const __syntaxHiglightLanguagesSyntaxhighlighterjs = [
-        "AS3", "AppleScript", "Bash", "CSharp", "ColdFusion",
-        "Cpp", "Css", "Delphi", "Diff", "Erlang", "Groovy", "JScript",
-        "Java", "JavaFX", "Perl", "Php", "Plain", "PowerShell", 
-        "Python", "Ruby", "Sass", "Scala", "Sql", "Vb", "Xml"
-    ]
+    "AS3", "AppleScript", "Bash", "CSharp", "ColdFusion",
+    "Cpp", "Css", "Delphi", "Diff", "Erlang", "Groovy", "JScript",
+    "Java", "JavaFX", "Perl", "Php", "Plain", "PowerShell", 
+    "Python", "Ruby", "Sass", "Scala", "Sql", "Vb", "Xml"
+]
+const themataSiteVariables = [ 
+    "__themata_base_url__", "__themata_page_url__"
+];
 
 try {
     definedThen(typeof themataSyntaxHighlighter !== "undefined", () => {
@@ -48,6 +51,16 @@ try {
 
 window.onload = function() {
     definedThen(typeof __themataOnloadCallbacks !== "undefined", () => __themataOnloadCallbacks.forEach(cb => cb()));
+    let highlighted = themataFindGetParameter("highlight");
+    if (highlighted && highlighted != "") {
+        highlighted = highlighted.replace(/\W+/g, '-').toLowerCase();
+        let highlightedSection = document.getElementById(highlighted);
+        if (highlightedSection) {
+            console.log(highlighted, highlightedSection);
+            highlightedSection.scrollIntoView();
+        }
+    };
+    resolveSiteVariables();
 };
 
 function resolveSyntaxHighlightBlocks() {
@@ -361,6 +374,13 @@ function __themata__internal__resolveCodeBlockSyntaxHighlighterNonEmbeded(elandi
     
 }
 
+function resolveSiteVariables() {
+    themataSiteVariables.forEach(themataSiteVariable => {
+        let nodes = qs(`[href*='${themataSiteVariable}']`);
+        nodes.forEach(node => node.href = node.href.replace(themataSiteVariable, window.location.origin));
+    });
+}
+
 function getThemataCodeEditors() {
     return themataCodeEditors;
 }
@@ -465,5 +485,18 @@ function appendScript(headd, content) {
     var script = document.createElement('script');
     script.innerHTML = content;
     head.appendChild(script);
+}
+
+function themataFindGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
 }
 
