@@ -8,6 +8,7 @@ author = 'Adewale Azeeze'
 html_theme = 'clear'
 html_favicon = '../images/themata.png'
 master_doc = 'index'
+smartquotes = False
 
 html_theme_options = {
     'index_is_single': False,
@@ -36,13 +37,19 @@ html_theme_options = {
     ],
     'google_analytics_tracking_id': "UA-0000000-00",
     'github_repo': 'https://github.com/Thecarisma/themata',
-    'github_new_product_issue_template': "Yahoo",
     'social_share_label': "Throw this page at people faces",
     'github_page_feedback_title': "Throw tantrum about this page to the developers",
     'github_page_view_feedbacks_label': "Look at your like tantrums on github",
     'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/clear/',
     'source_root_edit_text': 'Edit on Github',
     'enable_page_social_share': True,
+    'github_feedback_project_template': """
+---
+
+Project: **__themata_project__**
+Project Location: [__themata_project__](__themata_project_github_location__)
+Username: Thecarisma
+    """,
     'page_rating_options': {
         'title': 'Did you find this documentation helpful?',
         "positive_icon": '<img style="height: 100%; width: 100%; object-fit: contain" src="https://avatars.githubusercontent.com/u/14879387?v=4"/>',

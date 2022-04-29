@@ -54,15 +54,22 @@
         gtag('config', '{{ theme_google_analytics_tracking_id }}');
     </script>
   {% endif %}
-  <script>
-      const __themataOnloadCallbacks = [];
-      const __themataJsLoadedCallbacks = [];
-      function themataRegisterOnloadCallback(cb) {
-        __themataJsLoadedCallbacks.push(cb);
-      }
-      function themataRegisterJsLoadedCallback(cb) {
-        __themataOnloadCallbacks.push(cb);
-      }
+    <script>
+        const __themataOnloadCallbacks = [];
+        const __themataJsLoadedCallbacks = [];
+        const themataCurrentPageTitle = "{{ title }}";
+        const themataCurrentProject = "{{ project }}";
+        const themataCurrentProjectGithubLocation = "{{ theme_github_repo }}";
+        const themataCurrentPagePath = "{{ pagename }}{{ page_source_suffix }}";
+        const themataCurrentPageLocation = "{{ theme_source_root }}/{{ pagename }}{{ page_source_suffix }}".replace("/edit/", "/blob/");
+        const themataGithubFeedbackProjectTemplate = `{{ theme_github_feedback_project_template }}`;
+        const themataGithubFeedbackPageTemplate = `{{ theme_github_feedback_page_template }}`;
+        function themataRegisterOnloadCallback(cb) {
+            __themataJsLoadedCallbacks.push(cb);
+        }
+        function themataRegisterJsLoadedCallback(cb) {
+            __themataOnloadCallbacks.push(cb);
+        }
   </script>
 {% endblock %}
 
@@ -188,14 +195,20 @@
                             <!-- TOE -->
                         </div>
                         {% if theme_enable_github_page_feedback == True and theme_github_repo != '' %}
-                            <div style="flex: 1; display: flex; flex-direction: column; {{ 'border-top: 1px solid rgb(36,233,10); margin-top: 20px; padding-top: 20px;' if ((theme_enable_page_social_share == True) or (theme_page_rating_options != '')) else '' }}">
-                                <span>{{ theme_github_page_feedback_title }}</span> <!-- theme_option=page_github_feedback -->
-                                <div style="margin-top: 20px; display: flex; justify-content: space-between;">
-                                    <div>
-                                        <a class="reference navigator" href="{{ theme_github_repo }}/issues/new?title=&body={{ theme_github_new_product_issue_template }}" target="_blank"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Project</a>
-                                        <a class="reference navigator" href="{{ theme_github_repo }}/issues/new?title=&body={{ theme_github_new_page_issue_template }}" target="_blank"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Page</a>
+                            <div style="flex: 1; display: flex; flex-direction: column; {{ 'border-top: 1px solid #e6e6e6; margin-top: 20px; padding-top: 20px;' if ((theme_enable_page_social_share == True) or (theme_page_rating_options != '')) else '' }}">
+                                <span id="__themata__feedback_label">{{ theme_github_page_feedback_title }}</span> <!-- theme_option=page_github_feedback -->
+                                <div style="margin-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div id="__themata__feedback_buttons_panel" style="display: flex; justify-content: space-between;">
+                                        <div>
+                                            <span id="__themata__feedback_this_product" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Project</span>
+                                            <span id="__themata__feedback_this_page" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Page</span>
+                                        </div>
+                                        <a href='{{ theme_github_repo }}/issues?q="{{ title }}"&in=body' target="_blank">{{ theme_github_page_view_feedbacks_label }}</a>
                                     </div>
-                                    <a href='{{ theme_github_repo }}/issues?q="{{ title }}"&in=body' target="_blank">{{ theme_github_page_view_feedbacks_label }}</a>
+                                    <div id="__themata__feedback_input_panel" style="display: none; flex-direction: column; align-items: flex-end; padding-left: 7px;">
+                                        <textarea id="__themata__feedback_textarea" style="border: 1px solid #e6e6e6; height: 120px; width: 100%;"></textarea>
+                                        <span class="navigator" style="margin-top: 15px; max-width: 100px; margin-right: 0px; text-align: center; cursor: pointer;" onclick="themataSubmitGithubFeedback()">Submit</span>
+                                    </div>
                                 </div>
                             </div>
                         {% endif %}

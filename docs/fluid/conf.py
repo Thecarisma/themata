@@ -26,7 +26,6 @@ html_theme_options = {
     'has_right_sidebar': True,
     'show_navigators': True,
     'github_repo': 'https://github.com/Thecarisma/themata',
-    'github_new_product_issue_template': "Yahoo",
     'social_share_label': "Throw this page at people faces",
     'github_page_feedback_title': "Throw tantrum about this page to the developers",
     'github_page_view_feedbacks_label': "Look at your like tantrums on github",

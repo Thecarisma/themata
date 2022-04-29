@@ -201,7 +201,41 @@ Variable Options
    "syntax_highlighter_theme <string>", "Set the theme your selected syntax highlighter should use. Default value depends on the specified value of syntax_highlighter.
    The value can be absolute http url to the highlighter theme css e.g. **syntax_highlighter_theme: 'https://atelierbram.github.io/syntax-highlighting/prism/demo/assets/css/prism-base16-3024.dark.css'**. 
    Visit each of the `syntax highlighter <https://thecarisma.github.io/themata/syntax_highlighter/index.html>`_ page to see their themes"
-   "syntax_highlighter_iframe_embed <boolean>", "Specify whether the code block should be render in an iframe element. This is most useful to enforce cutom theme for highlighers that use the last loaded stylesheet e.g. highligherjs. Default is false."
+   "syntax_highlighter_iframe_embed <boolean>", "Specify whether the code block should be render in an iframe element. This is most useful to enforce custom theme for highlighers that use the last loaded stylesheet e.g. highligherjs. Default is false."
+   "google_analytics_tracking_id <string>", "Google analytics tracking id. If set in the config the tracking script will be added to the webpage."
+   "github_repo <string>", "The project github repository if it hosted on github, used for feedback and like."
+   "social_share_label <string>", "Title for the social icon share button section. Default is 'Share on'"
+   "github_page_feedback_title <string>", "Title for github project and page feedback submission section. Default is 'Submit and view feedback for'"
+   "github_page_view_feedbacks_label <string>", "Link text to view all issues related to a webpage on github. Default is 'View all page feedback'"
+   "source_root <string>", "Github link to the source folder of the documentation, used to build page source preview and edit links."
+   "source_root_edit_text <string>", "Label for the button that link to the page to edit the page source on Github. Default is 'Edit this page'"
+   "enable_page_social_share <boolean>", "If set to true the social network share buttons will be added to the webpage. Default is False."
+   "enable_github_page_feedback <boolean>", "If set to true the github page and project issue feedback will be generated for the webpages. Default is False."
+   "github_feedback_project_template <string>", "The template footer for Github feedback issue creation for project. See `site variables <../site_variables.html>`_ for supported variables."
+   "github_feedback_page_template <string>", "The template footer for Github feedback issue creation for a webpage. See `site variables <../site_variables.html>`_ for supported variables."
+   "page_rating_options <object>", "This object can be used to create a custom feedback element on a webpage. The following feeds are required for this options 
+   
+   .. code:: text 
+      
+        title: The title for the page rating section
+        positive_icon: The icon to use for the upvote button, value should be html element. Smiley smile is the deault.
+        negative_icon: The icon to use for the downvote button, value should be html element. Smiley sad is the deault.
+        positive_event: The raw javasccript code to execute when the upvote icon is clicked, you can use this to call a dynamic aapi to addredd the event.
+        negative_event: The raw javasccript code to execute when the downvote icon is clicked, you can use this to call a dynamic aapi to addredd the event.
+   
+   Sample value in the conf.py file:
+   
+   .. code:: python
+      
+        html_theme_options = {
+            'page_rating_options': {
+                'title': 'Did you find this documentation helpful?',
+                'positive_event': 'alert(`Positive`)',
+                'negative_event': 'alert(`Negative`)'
+            }
+        }
+        
+   In the example above, the upvote button will have the image value, and when click it will alert 'Positive', and for the downvote button when clicked the page will alert 'Negative'."
 
 
 CSS Options

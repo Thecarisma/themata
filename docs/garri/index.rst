@@ -156,7 +156,8 @@ Variable Options
    "syntax_highlighter_theme <string>", "Set the theme your selected syntax highlighter should use. Default value depends on the specified value of syntax_highlighter. 
    The value can be absolute http url to the highlighter theme css e.g. **syntax_highlighter_theme: 'https://atelierbram.github.io/syntax-highlighting/prism/demo/assets/css/prism-base16-3024.dark.css'**. 
    Visit each of the `syntax highlighter <https://thecarisma.github.io/themata/syntax_highlighter/index.html>`_ page to see their themes"
-   "syntax_highlighter_iframe_embed <boolean>", "Specify whether the code block should be render in an iframe element. This is most useful to enforce cutom theme for highlighers that use the last loaded stylesheet e.g. highligherjs. Default is false."
+   "syntax_highlighter_iframe_embed <boolean>", "Specify whether the code block should be render in an iframe element. This is most useful to enforce custom theme for highlighers that use the last loaded stylesheet e.g. highligherjs. Default is false."
+   "google_analytics_tracking_id <string>", "Google analytics tracking id. If set in the config the tracking script will be added to the webpage."
    
 
 CSS Options

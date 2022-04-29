@@ -13,9 +13,17 @@ const __syntaxHiglightLanguagesSyntaxhighlighterjs = [
     "Java", "JavaFX", "Perl", "Php", "Plain", "PowerShell", 
     "Python", "Ruby", "Sass", "Scala", "Sql", "Vb", "Xml"
 ]
-const themataSiteVariables = [ 
-    "__themata_base_url__", "__themata_page_url__"
-];
+const themataSiteVariables = {
+    "__themata_base_url__": "",
+    "__themata_page_url__": "",
+    "__themata_project__": "",
+    "__themata_project_github_location__": "",
+    "__themata_current_page_path__": "",
+    "__themata_current_page_location__": "",
+    "__themata_current_page_title__": "",
+};
+let __themata_github_feedback_type = "page";
+const themataCurrentPageLink = window.location.href;
 
 try {
     definedThen(typeof themataSyntaxHighlighter !== "undefined", () => {
@@ -50,18 +58,80 @@ try {
 }
 
 window.onload = function() {
+    resolveSiteVariables();
+    setSiteElementEvents();
     definedThen(typeof __themataOnloadCallbacks !== "undefined", () => __themataOnloadCallbacks.forEach(cb => cb()));
     let highlighted = themataFindGetParameter("highlight");
     if (highlighted && highlighted != "") {
         highlighted = highlighted.replace(/\W+/g, '-').toLowerCase();
         let highlightedSection = document.getElementById(highlighted);
         if (highlightedSection) {
-            console.log(highlighted, highlightedSection);
+            //console.log(highlighted, highlightedSection);
             highlightedSection.scrollIntoView();
         }
     };
-    resolveSiteVariables();
 };
+
+function setSiteElementEvents() {
+    let pageFeedbackButton = get("__themata__feedback_this_page");
+    let productFeedbackButton = get("__themata__feedback_this_product");
+    
+    if (!pageFeedbackButton) return;
+    pageFeedbackButton.onclick = (e) => renderFeedbackBox("project");
+    productFeedbackButton.onclick = (e) => renderFeedbackBox("page");
+
+}
+
+function renderFeedbackBox(type) {
+    __themata_github_feedback_type = type;
+    document.getElementById("__themata__feedback_buttons_panel").style.display = "none";
+    document.getElementById("__themata__feedback_input_panel").style.display = "flex";
+    document.getElementById("__themata__feedback_textarea").focus();
+}
+
+function themataSubmitGithubFeedback() {
+    let text = document.getElementById("__themata__feedback_textarea").value;
+    if (__themata_github_feedback_type == "project") {
+        if (!(!themataGithubFeedbackProjectTemplate || themataGithubFeedbackProjectTemplate == "")) { // lol
+            text = expandAllThemataVaraibles(`${text}
+            
+            ${themataGithubFeedbackProjectTemplate}`);
+        } else {
+            text = `${text}
+            
+---
+### Feedback Details
+
+⚠ *Do not edit this section.
+
+* Project Source: [${themataCurrentProject}](${themataCurrentProjectGithubLocation})
+* Project: **${themataCurrentProject}**
+* Bringer: [themata](https://github.com/Thecarisma/themata)`;
+        }
+    } else {
+        if (!(!themataGithubFeedbackPageTemplate || themataGithubFeedbackPageTemplate == "")) { // lol
+            text = expandAllThemataVaraibles(`${text}
+            
+            ${themataGithubFeedbackPageTemplate}`);
+        } else {
+            text = `${text}
+        
+---
+### Feedback Details
+
+⚠ *Do not edit this section.
+
+* Page Title: [${themataCurrentPageTitle}](${themataCurrentPageLink})
+* Page Source: [${themataCurrentPagePath}](${themataCurrentPageLocation})
+* Project: **${themataCurrentProject}**
+* Bringer: [themata](https://github.com/Thecarisma/themata)`;
+        }
+    }
+    openInNewTab(`${themataCurrentProjectGithubLocation}/issues/new?title=&body=${encodeURIComponent(text)}`);
+    document.getElementById("__themata__feedback_input_panel").style.display = "none";
+    document.getElementById("__themata__feedback_label").innerText = "Your feedback has been submited";
+    document.getElementById("__themata__feedback_textarea").value = "";
+}
 
 function resolveSyntaxHighlightBlocks() {
     selfSyntaxHighlightBlocks.forEach((selfSyntaxHighlightBlock, index) => {
@@ -374,10 +444,18 @@ function __themata__internal__resolveCodeBlockSyntaxHighlighterNonEmbeded(elandi
     
 }
 
+// resolve for text too
 function resolveSiteVariables() {
-    themataSiteVariables.forEach(themataSiteVariable => {
+    themataSiteVariables["__themata_base_url__"] = window.location.origin;
+    themataSiteVariables["__themata_page_url__"] = window.location.href;
+    themataSiteVariables["__themata_project__"] = themataCurrentProject;
+    themataSiteVariables["__themata_project_github_location__"] = themataCurrentProjectGithubLocation;
+    themataSiteVariables["__themata_current_page_path__"] = themataCurrentPagePath;
+    themataSiteVariables["__themata_current_page_location__"] = themataCurrentPageLocation;
+    themataSiteVariables["__themata_current_page_title__"] = themataCurrentPageTitle;
+    Object.keys(themataSiteVariables).forEach(themataSiteVariable => {
         let nodes = qs(`[href*='${themataSiteVariable}']`);
-        nodes.forEach(node => node.href = node.href.replace(themataSiteVariable, window.location.origin));
+        nodes.forEach(node => node.href = node.href.replace(themataSiteVariable, themataSiteVariables[themataSiteVariable]));
     });
 }
 
@@ -395,6 +473,17 @@ function setThemataCodeEditorTheme(theme) {
 
 function setThemataCodeEditorOptions(options) {
     themataCodeEditors.forEach(themataCodeEditor => themataCodeEditor.setOptions(options));
+}
+
+function expandAllThemataVaraibles(text) {
+    Object.keys(themataSiteVariables).forEach(themataSiteVariable => { 
+        text = text.replace(new RegExp(themataSiteVariable, 'g'), themataSiteVariables[themataSiteVariable]);
+    });
+    return text;
+}
+
+function openInNewTab(url) {
+    window.open(url, '_blank').focus();
 }
 
 function definedThen(expr, cb) {

@@ -450,13 +450,19 @@ I’d advise against interviewing at your dream job without having a few mock or
                             <!-- TOE -->
                         </div>
                         <div style="flex: 1; display: flex; flex-direction: column; border-top: 1px solid #e6e6e6; margin-top: 20px; padding-top: 20px;">
-                            <span>Submit and view feedback for</span> <!-- theme_option=page_github_feedback -->
-                            <div style="margin-top: 20px; display: flex; justify-content: space-between;">
-                                <div>
-                                    <a class="reference navigator" href="#"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Project</a>
-                                    <a class="reference navigator" href="#"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Page</a>
+                            <span id="__themata__feedback_label">Submit and view feedback for</span> <!-- theme_option=page_github_feedback -->
+                            <div style="margin-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div id="__themata__feedback_buttons_panel" style="display: flex; justify-content: space-between;">
+                                    <div>
+                                        <span id="__themata__feedback_this_product" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Project</span>
+                                        <span id="__themata__feedback_this_page" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Page</span>
+                                    </div>
+                                    <a href="#">View all page feedback</a>
                                 </div>
-                                <a href="#">View all page feedback</a>
+                                <div id="__themata__feedback_input_panel" style="display: none; flex-direction: column; align-items: flex-end; padding-left: 7px;">
+                                    <textarea id="__themata__feedback_textarea" style="border: 1px solid #e6e6e6; height: 120px; width: 100%;"></textarea>
+                                    <span class="navigator" style="margin-top: 15px; max-width: 100px; margin-right: 0px; text-align: center; cursor: pointer;" onclick="themataSubmitGithubFeedback()">Submit</span>
+                                </div>
                             </div>
                         </div>
                     </div>

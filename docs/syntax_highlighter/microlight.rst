@@ -24,7 +24,7 @@ The following are the supported themes:
     </div>
     <script>
         themataRegisterJsLoadedCallback(() => {
-            resolveCodeBlockSyntaxHighlighter(`editorx-microlight`, "python", "microlight", "", false, true);
+            resolveCodeBlockSyntaxHighlighter(`editorx-microlight`, "python", "microlight", "", false, false);
         });
     </script>
 
