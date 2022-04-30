@@ -3,7 +3,8 @@
 cd ..\
 SET OUTPUT_FOLDER=%CD%\dist\gendoc\
 cd docs/
-SET THEMES=hackish milkish fandango clear fluid garri water sugar
+@REM SET THEMES=clear
+SET THEMES=clear fandango fluid garri hackish milkish sugar water
 if exist "%OUTPUT_FOLDER%" (
     @RD /S /Q "%OUTPUT_FOLDER%"
 )

@@ -7,9 +7,9 @@ setup(
     zip_safe=False,
     install_requires=["sphinx>=1.1"],
     name="themata",
-    version=1.13,
+    version=1.14,
     author="Adewale Azeez",
-    author_email="azeezadewale98@gmail.com",
+    author_email="iamthecarisma@gmail.com",
     description="Set of Highly customizable sphinx themes. hackish, milkish, fandango, clear, fluid, garri, water and sugar.",
     long_description=long_description,
     license="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
@@ -42,6 +42,14 @@ setup(
     entry_points = {
         'sphinx.html_themes': [
             'themata = themata',
+            'hackish = themata.hackish',
+            'milkish = themata.milkish',
+            'fandango = themata.fandango',
+            'clear = themata.clear',
+            'fluid = themata.fluid',
+            'garri = themata.garri',
+            'water = themata.water',
+            'sugar = themata.sugar',
         ]
     },
 )

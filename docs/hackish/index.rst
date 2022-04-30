@@ -53,7 +53,6 @@ Below is a minimal sample **conf.py** file to use the hackish theme.
     author = 'Adewale Azeez'
 
     html_favicon = 'favicon.png'
-    html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'hackish'
 
     html_theme_optionss = {
@@ -167,7 +166,7 @@ Variable Options
       
         html_theme_options = {
             'metadata': {
-                'enable': True,
+                'dynamic': True,
                 'url': 'https://thecarisma.github.io/themata',
                 'type': 'website',
                 'title': 'Set of Highly customizable sphinx themes.',
@@ -191,14 +190,15 @@ Variable Options
       <meta property='og:description' content='Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.' />
       <meta property='og:image' content='https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png' />
 
-   If the value of enable is False or not specified the metadata will not be generated."
+   If the value of **dynamic** is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values 
+   example for author, and keywords meta values."
    "twitter_metadata <object>", "Set the twitter metadata values of the generated website. The object should contain any, more or all of the keys, enable, card, site, creator, title, description, image. E.g. 
    
    .. code:: python 
       
         html_theme_options = {
             'twitter_metadata': {
-                'enable': True,
+                'dynamic': True,
                 'card': 'summary',
                 'site': '@iamthecarisma',
                 'creator': '@iamthecarisma',
@@ -219,7 +219,52 @@ Variable Options
       <meta name='twitter:description' content='Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.' />
       <meta name='twitter:image' content='https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png' />
 
-   If the value of enable is False or not specified the metadata will not be generated."
+   If the value of **dynamic** is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values 
+   example for twitter:site, and twitter:creator meta values."
+   "syntax_highlighter <string>", "The syntax higlighting provider to use for the generated documentation, the following syntax highlighters are supported `ace <https://thecarisma.github.io/themata/syntax_highlighter/ace.html>`_
+   `highlightjs <https://thecarisma.github.io/themata/syntax_highlighter/highlightjs.html>`_ `rainbow <https://thecarisma.github.io/themata/syntax_highlighter/rainbow.html>`_
+   `prism <https://thecarisma.github.io/themata/syntax_highlighter/prism.html>`_ `Google Prettify <https://thecarisma.github.io/themata/syntax_highlighter/google_prettify.html>`_
+   `syntaxhighlighterjs <https://thecarisma.github.io/themata/syntax_highlighter/syntaxhighlighterjs.html>`_ `microlight <https://thecarisma.github.io/themata/syntax_highlighter/microlight.html>`_
+   `syntaxyjs <https://thecarisma.github.io/themata/syntax_highlighter/syntaxyjs.html>`_. If syntax_highlighter is not specified the default sphinx highlighter is used."
+   "code_block_editable <boolean>", "Specify whether the code block is editable. This only apply to syntax highlighter that support editing the source code e.g. ace. Default is false."
+   "syntax_highlighter_theme <string>", "Set the theme your selected syntax highlighter should use. Default value depends on the specified value of syntax_highlighter. 
+   The value can be absolute http url to the highlighter theme css e.g. **syntax_highlighter_theme: 'https://atelierbram.github.io/syntax-highlighting/prism/demo/assets/css/prism-base16-3024.dark.css'**. 
+   Visit each of the `syntax highlighter <https://thecarisma.github.io/themata/syntax_highlighter/index.html>`_ page to see their themes"
+   "syntax_highlighter_iframe_embed <boolean>", "Specify whether the code block should be render in an iframe element. This is most useful to enforce custom theme for highlighers that use the last loaded stylesheet e.g. highligherjs. Default is false."
+   "google_analytics_tracking_id <string>", "Google analytics tracking id. If set in the config the tracking script will be added to the webpage."
+   "github_repo <string>", "The project github repository if it hosted on github, used for feedback and like."
+   "social_share_label <string>", "Title for the social icon share button section. Default is 'Share on'"
+   "github_page_feedback_title <string>", "Title for github project and page feedback submission section. Default is 'Submit and view feedback for'"
+   "github_page_view_feedbacks_label <string>", "Link text to view all issues related to a webpage on github. Default is 'View all page feedback'"
+   "source_root <string>", "Github link to the source folder of the documentation, used to build page source preview and edit links."
+   "source_root_edit_text <string>", "Label for the button that link to the page to edit the page source on Github. Default is 'Edit this page'"
+   "enable_page_social_share <boolean>", "If set to true the social network share buttons will be added to the webpage. Default is False."
+   "enable_github_page_feedback <boolean>", "If set to true the github page and project issue feedback will be generated for the webpages. Default is False."
+   "github_feedback_project_template <string>", "The template footer for Github feedback issue creation for project. See `site variables <../site_variables.html>`_ for supported variables."
+   "github_feedback_page_template <string>", "The template footer for Github feedback issue creation for a webpage. See `site variables <../site_variables.html>`_ for supported variables."
+   "page_rating_options <object>", "This object can be used to create a custom feedback element on a webpage. The following feeds are required for this options 
+   
+   .. code:: text 
+      
+        title: The title for the page rating section
+        positive_icon: The icon to use for the upvote button, value should be html element. Smiley smile is the deault.
+        negative_icon: The icon to use for the downvote button, value should be html element. Smiley sad is the deault.
+        positive_event: The raw javasccript code to execute when the upvote icon is clicked, you can use this to call a dynamic aapi to addredd the event.
+        negative_event: The raw javasccript code to execute when the downvote icon is clicked, you can use this to call a dynamic aapi to addredd the event.
+   
+   Sample value in the conf.py file:
+   
+   .. code:: python
+      
+        html_theme_options = {
+            'page_rating_options': {
+                'title': 'Did you find this documentation helpful?',
+                'positive_event': 'alert(`Positive`)',
+                'negative_event': 'alert(`Negative`)'
+            }
+        }
+        
+   In the example above, the upvote button will have the image value, and when click it will alert 'Positive', and for the downvote button when clicked the page will alert 'Negative'."
 
 
 CSS Options
@@ -256,5 +301,7 @@ background color to gray:
    "topic_background_color", "rgb(187, 221, 255)", "the topic div background color"
    "warning_background_color", "#ffe4e4", "the warning div background color"
    "warning_border_color", "#f66", "the warning div border color"
+   "footer_link_color", "default", "the footer link color"
+   "footer_highlight_color", "default", "the footer link highlight color"
 
 

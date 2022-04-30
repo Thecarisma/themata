@@ -13,7 +13,6 @@ The **conf.py** file that generates this documentation.
     copyright = '2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License'
     author = 'Adewale Azeez'
 
-    html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'clear'
     html_favicon = '../images/themata.png'
 
@@ -24,6 +23,10 @@ The **conf.py** file that generates this documentation.
         'has_right_sidebar': True,
         'collapsible_sidebar': True,
         'collapsible_sidebar_display': 'block',
+        'syntax_highlighter': 'syntaxy',
+        'code_block_editable': False,
+        'syntax_highlighter_theme': 'light',
+        'syntax_highlighter_iframe_embed': False,
         'show_navigators': True,
         'social_icons': [
             ('fab fa-twitter', 'https://twitter.com/iamthecarisma'),
@@ -41,7 +44,7 @@ The **conf.py** file that generates this documentation.
         'source_root': 'https://github.com/Thecarisma/themata/edit/test/docs/clear/',
         'source_root_edit_text': 'Edit on Github',
         'metadata': {
-            "enable": True,
+            "dynamic": True,
             "url": "https://thecarisma.github.io/themata",
             "type": "website",
             "title": "Set of Highly customizable sphinx themes.",
@@ -51,7 +54,7 @@ The **conf.py** file that generates this documentation.
             "author": "Adewale Azeez"
         },
         'twitter_metadata': {
-            "enable": True,
+            "dynamic": True,
             "card": "summary",
             "site": "@iamthecarisma",
             "creator": "@iamthecarisma",

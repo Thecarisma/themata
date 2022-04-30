@@ -5,8 +5,6 @@ project = 'First Doc'
 copyright = '2020, Adewale Azeez'
 author = 'Adewale Azeez'
 
-html_theme_path = [themata.get_html_theme_path()]
-
 extensions = ['recommonmark']
 source_suffix = {
     '.rst': 'restructuredtext',
@@ -106,7 +104,7 @@ html_theme_options = {
     ],
     "source_root": "https://github.com/Thecarisma/themata/tree/test/test/test_rst",
     "metadata": {
-        "enable": True,
+        "dynamic": True,
         "url": "https://thecarisma.github.io/themata",
         "type": "website",
         "title": "Set of Highly customizable sphinx themes.",
@@ -116,7 +114,7 @@ html_theme_options = {
         "author": "Adewale Azeez"
     },
     "twitter_metadata": {
-        "enable": True,
+        "dynamic": True,
         "card": "summary",
         "site": "@iamthecarisma",
         "creator": "@iamthecarisma",

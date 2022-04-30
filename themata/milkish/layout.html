@@ -21,6 +21,7 @@
     <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
   {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    {{ themata_fetch_syntax_highlighter_css(pathto('_static/' ~ theme_touch_icon, 1), theme_syntax_highlighter, theme_syntax_highlighter_theme, theme_syntax_highlighter_iframe_embed) }}
   {% if theme_metadata %}
     {% if theme_metadata.enable %}
     <meta name="description" content="{{ theme_metadata.description }}">
@@ -43,6 +44,33 @@
     <meta name="twitter:image" content="{{ theme_twitter_metadata.image }}" />
     {% endif %}
   {% endif %}
+  {% if theme_google_analytics_tracking_id %}
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ theme_google_analytics_tracking_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ theme_google_analytics_tracking_id }}');
+    </script>
+  {% endif %}
+  <script>
+        const __themataOnloadCallbacks = [];
+        const __themataJsLoadedCallbacks = [];
+        const themataCurrentPageTitle = "{{ title }}";
+        const themataCurrentProject = "{{ project }}";
+        const themataCurrentProjectGithubLocation = "{{ theme_github_repo }}";
+        const themataCurrentPagePath = "{{ pagename }}{{ page_source_suffix }}";
+        const themataCurrentPageLocation = "{{ theme_source_root }}/{{ pagename }}{{ page_source_suffix }}".replace("/edit/", "/blob/");
+        const themataGithubFeedbackProjectTemplate = `{{ theme_github_feedback_project_template }}`;
+        const themataGithubFeedbackPageTemplate = `{{ theme_github_feedback_page_template }}`;
+        function themataRegisterOnloadCallback(cb) {
+            __themataJsLoadedCallbacks.push(cb);
+        }
+        function themataRegisterJsLoadedCallback(cb) {
+            __themataOnloadCallbacks.push(cb);
+        }
+    </script>
 {% endblock %}
 
 {%- block document %}
@@ -88,7 +116,9 @@
                             {% if theme_source_root != '' %}
                                 <a class="reference navigator" style="float:left;" href="{{ theme_source_root }}/{{ pagename }}{{ page_source_suffix }}"><i class="fa fa-pen"></i>{{ theme_source_root_edit_text }}</a>    
                             {% endif %}
-                            <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>
+                            {% if theme_show_index_button == True %}
+                                <a class="reference navigator" style="float:left;" href="{{ pathto('genindex') }}"><i class="fa fa-book"></i>Index</a>
+                            {% endif %}
                             
                             {% if next %}
                                 <a class="reference navigator" style="float:right;" href="{{ next.link|e }}">{{ next.title | replace("&lt;no title&gt;", "Next Page") }}<i class="fa fa-arrow-right"></i></a> 
@@ -98,6 +128,75 @@
                             {% endif %}
                         </div>
                     {% endif %}
+                {% endif %}
+                {% if ((theme_enable_page_social_share == True) or (theme_page_rating_options != '') or theme_enable_github_page_feedback) == True %}
+                    <br/><br/><br/>
+                    <div class="navigator" style="width: 100%; display: flex; flex-direction: column; padding: 15px; margin-bottom: 30px;">
+                        <div style="display: flex; flex-direction: row;">
+                            {% if theme_enable_page_social_share == True %}
+                                <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                                    <span>{{ theme_social_share_label }}:</span>
+                                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=__themata_page_url__" target="_blank">
+                                            <i class="fab fa-facebook" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://twitter.com/intent/tweet?text=Check this page {{ shorttitle }}: __themata_page_url__" target="_blank">
+                                            <i class="fab fa-twitter" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://api.whatsapp.com//send?text=Check this page {{ shorttitle }}: __themata_page_url__" target="_blank">
+                                            <i class="fab fa-whatsapp" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=__themata_page_url__" target="_blank">
+                                            <i class="fab fa-linkedin" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <!--<a href="#" target="_blank">
+                                            <i class="fab fa-discord" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>-->
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if theme_page_rating_options != '' %}
+                                <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-{{ 'end' if theme_enable_page_social_share == True else 'start' }};">
+                                    <span>{{ theme_page_rating_options.title if theme_page_rating_options.title else "Did you find this page helpful?" }}</span> <!-- theme_option=page_rating_options.title -->
+                                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                        <div style="overflow: hidden; border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer; width: 75px; height: 45px;" onclick='{{ theme_page_rating_options.positive_event }}'>
+                                            {% if theme_page_rating_options.positive_icon %}
+                                                {{ theme_page_rating_options.positive_icon }}
+                                            {% else %}
+                                                <i class="fa fa-smile" style="font-size: 40px; color: #FFCC4D;"></i>
+                                            {% endif %}
+                                        </div>
+                                        <div style="overflow: hidden; border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer; width: 75px; height: 45px;" onclick='{{ theme_page_rating_options.negative_event }}'>
+                                            {% if theme_page_rating_options.negative_icon %}
+                                                {{ theme_page_rating_options.negative_icon }}
+                                            {% else %}
+                                                <i class="fa fa-frown" style="font-size: 40px; color: #FFCC4D;"></i>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <!-- TOE -->
+                        </div>
+                        {% if theme_enable_github_page_feedback == True and theme_github_repo != '' %}
+                            <div style="flex: 1; display: flex; flex-direction: column; {{ 'border-top: 1px solid #e6e6e6; margin-top: 20px; padding-top: 20px;' if ((theme_enable_page_social_share == True) or (theme_page_rating_options != '')) else '' }}">
+                                <span id="__themata__feedback_label">{{ theme_github_page_feedback_title }}</span> <!-- theme_option=page_github_feedback -->
+                                <div style="margin-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div id="__themata__feedback_buttons_panel" style="display: flex; justify-content: space-between;">
+                                        <div>
+                                            <span id="__themata__feedback_this_product" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Project</span>
+                                            <span id="__themata__feedback_this_page" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Page</span>
+                                        </div>
+                                        <a href='{{ theme_github_repo }}/issues?q="{{ title }}"&in=body' target="_blank">{{ theme_github_page_view_feedbacks_label }}</a>
+                                    </div>
+                                    <div id="__themata__feedback_input_panel" style="display: none; flex-direction: column; align-items: flex-end; padding-left: 7px;">
+                                        <textarea id="__themata__feedback_textarea" style="border: 1px solid #e6e6e6; height: 120px; width: 100%;"></textarea>
+                                        <span class="navigator" style="margin-top: 15px; max-width: 100px; margin-right: 0px; text-align: center; cursor: pointer;" onclick="themataSubmitGithubFeedback()">Submit</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
                 {% endif %}
         </div>
         {% if theme_has_right_sidebar and not pagename.endswith(('.single')) and not pagename.endswith(('.left')) %}
@@ -186,6 +285,8 @@
             }
             </script>
     {% endif %}
+    {{ themata_fetch_syntax_highlighter_js(pathto('_static/' ~ theme_touch_icon, 1), theme_syntax_highlighter, theme_code_block_editable, theme_syntax_highlighter_theme, theme_syntax_highlighter_iframe_embed) }}
+    <script src="{{ pathto('_static/' ~ theme_touch_icon, 1) }}themata.js"></script>
 {% endblock %}
 
 {# do not display relbars nor sidebars #}

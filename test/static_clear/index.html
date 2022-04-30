@@ -106,7 +106,7 @@ Also note the Use Exclude Settings and Ignore Files toggle button in the files t
                     <dd class="field-even"><p>MIT License Copyright (c) 2018 simple</p>
                     </dd>
                     <dt class="field-odd">author</dt>
-                    <dd class="field-odd"><p>Azeez Adewale &lt;<a class="reference external" href="mailto:azeezadewale98&#37;&#52;&#48;gmail&#46;com">azeezadewale98<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
+                    <dd class="field-odd"><p>Azeez Adewale &lt;<a class="reference external" href="mailto:iamthecarisma&#37;&#52;&#48;gmail&#46;com">iamthecarisma<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
                     </dd>
                     <dt class="field-even">date</dt>
                     <dd class="field-even"><p>11 Febuary 2017</p>
@@ -412,7 +412,61 @@ I’d advise against interviewing at your dream job without having a few mock or
                         <a class="reference navigator" style="float:right;text-align:right;" href="#">Next<i class="fa fa-arrow-right"></i></a>         
                     </div>
                     <div style="clear:both"></div>
-                    <br/> <hr/> <br/>
+                    <br/> 
+                    <div class="navigator" style="width: 100%; display: flex; flex-direction: column; padding: 15px; margin-bottom: 30px;">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                                <span>Share on:</span>
+                                <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=__themata_page_url__" target="_blank">
+                                        <i class="fab fa-facebook" style="font-size: 35px; margin-right: 15px;"></i>
+                                    </a>
+                                    <a href="https://twitter.com/intent/tweet?text=Check this page {{ shorttitle }}: __themata_page_url__" target="_blank">
+                                        <i class="fab fa-twitter" style="font-size: 35px; margin-right: 15px;"></i>
+                                    </a>
+                                    <a href="https://api.whatsapp.com//send?text=Check this page {{ shorttitle }}: __themata_page_url__" target="_blank">
+                                        <i class="fab fa-whatsapp" style="font-size: 35px; margin-right: 15px;"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=__themata_page_url__" target="_blank">
+                                        <i class="fab fa-linkedin" style="font-size: 35px; margin-right: 15px;"></i>
+                                    </a>
+                                    <!--<a href="#" target="_blank">
+                                        <i class="fab fa-discord" style="font-size: 35px; margin-right: 15px;"></i>
+                                    </a>-->
+                                </div>
+                            </div>
+                            <!-- TOS: theme_option=theme_page_rating_options -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-end;">
+                                <span>Did you find this page helpful?</span> <!-- theme_option=page_rating_title -->
+                                <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                    <div style="border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer;">
+                                        <i class="fa fa-smile" style="font-size: 40px; color: #FFCC4D;"></i>
+                                    </div>
+                                    <div style="border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer;">
+                                        <i class="fa fa-frown" style="font-size: 40px; color: #FFCC4D;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- TOE -->
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; border-top: 1px solid #e6e6e6; margin-top: 20px; padding-top: 20px;">
+                            <span id="__themata__feedback_label">Submit and view feedback for</span> <!-- theme_option=page_github_feedback -->
+                            <div style="margin-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div id="__themata__feedback_buttons_panel" style="display: flex; justify-content: space-between;">
+                                    <div>
+                                        <span id="__themata__feedback_this_product" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Project</span>
+                                        <span id="__themata__feedback_this_page" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Page</span>
+                                    </div>
+                                    <a href="#">View all page feedback</a>
+                                </div>
+                                <div id="__themata__feedback_input_panel" style="display: none; flex-direction: column; align-items: flex-end; padding-left: 7px;">
+                                    <textarea id="__themata__feedback_textarea" style="border: 1px solid #e6e6e6; height: 120px; width: 100%;"></textarea>
+                                    <span class="navigator" style="margin-top: 15px; max-width: 100px; margin-right: 0px; text-align: center; cursor: pointer;" onclick="themataSubmitGithubFeedback()">Submit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/> <br/>
                     
                     <div class="footer">
                         <div class="social">

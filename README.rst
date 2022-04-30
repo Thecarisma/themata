@@ -59,7 +59,6 @@ To use the milkish theme, set the following option in your **conf.py** file.
     author = 'Adewale Azeez'
     html_favicon = 'favicon.png'
 
-    html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'milkish'
 
 Each of the themes has theme options to customize the look of the generated pages. The options for 
@@ -143,3 +142,8 @@ Change Log
 - Add optional 'edit this page' button to webpages e.g. edit on github `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
 - Add source_root option for the edit on link and source_root_edit_text for the text to display to theme option `df0987c <https://github.com/Thecarisma/themata/commit/df0987cbbd355c179df3d886a037f567edaf3d6b>`_
 - Document the source_root and source_root_edit_text theme options `e9ea268 <https://github.com/Thecarisma/themata/commit/e9ea268929293f4eb2b620f0d2e9cd25c4c28476>`_
+
+
+# TODO
+
+Use a script to generate pymodule from the test folder
