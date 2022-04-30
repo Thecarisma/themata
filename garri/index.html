@@ -22,28 +22,24 @@
   
   
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-  
     
-    <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.">
-    <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes">
-    <meta name="author" content="Adewale Azeez">
-    <meta property="og:url" content="https://thecarisma.github.io/themata/garri/index.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Garri Theme - Set of Highly customizable sphinx themes." />
-    <meta property="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+  
     
   
   
     
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@iamthecarisma" />
-    <meta name="twitter:creator" content="@iamthecarisma" />
-    <meta name="twitter:title" content="Garri Theme - Set of Highly customizable sphinx themes." />
-    <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
-    
   
+  
+  <script>
+      const __themataOnloadCallbacks = [];
+      const __themataJsLoadedCallbacks = [];
+      function themataRegisterOnloadCallback(cb) {
+        __themataJsLoadedCallbacks.push(cb);
+      }
+      function themataRegisterJsLoadedCallback(cb) {
+        __themataOnloadCallbacks.push(cb);
+      }
+  </script>
 
   </head><body>
 
@@ -172,7 +168,6 @@
 <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
 
 <span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
-<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
 <span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;garri&#39;</span>
 
 <span class="n">html_theme_optionss</span> <span class="o">=</span> <span class="p">{</span>
@@ -234,7 +229,7 @@
 <td><p class="first">Set the metadata values of the generated website. The object should contain any, more or all of the keys, enable, url, type, title, description, image, keywords, author. E.g.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;enable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;dynamic&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://thecarisma.github.io/themata&#39;</span><span class="p">,</span>
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;website&#39;</span><span class="p">,</span>
         <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Set of Highly customizable sphinx themes.&#39;</span><span class="p">,</span>
@@ -257,14 +252,15 @@
 <span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s1">&#39;og:image&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span> <span class="o">/&gt;</span>
 </pre></div>
 </div>
-<p class="last">If the value of enable is False or not specified the metadata will not be generated.</p>
+<p class="last">If the value of <strong>dynamic</strong> is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values
+example for author, and keywords meta values.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>twitter_metadata &lt;object&gt;</td>
 <td><p class="first">Set the twitter metadata values of the generated website. The object should contain any, more or all of the keys, enable, card, site, creator, title, description, image. E.g.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;twitter_metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;enable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;dynamic&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s1">&#39;card&#39;</span><span class="p">:</span> <span class="s1">&#39;summary&#39;</span><span class="p">,</span>
         <span class="s1">&#39;site&#39;</span><span class="p">:</span> <span class="s1">&#39;@iamthecarisma&#39;</span><span class="p">,</span>
         <span class="s1">&#39;creator&#39;</span><span class="p">:</span> <span class="s1">&#39;@iamthecarisma&#39;</span><span class="p">,</span>
@@ -284,8 +280,30 @@
 <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;twitter:image&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span> <span class="o">/&gt;</span>
 </pre></div>
 </div>
-<p class="last">If the value of enable is False or not specified the metadata will not be generated.</p>
+<p class="last">If the value of <strong>dynamic</strong> is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values
+example for twitter:site, and twitter:creator meta values.</p>
 </td>
+</tr>
+<tr class="row-even"><td>syntax_highlighter &lt;string&gt;</td>
+<td>The syntax higlighting provider to use for the generated documentation, the following syntax highlighters are supported <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/ace.html">ace</a>
+<a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/highlightjs.html">highlightjs</a> <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/rainbow.html">rainbow</a>
+<a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/prism.html">prism</a> <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/google_prettify.html">Google Prettify</a>
+<a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/syntaxhighlighterjs.html">syntaxhighlighterjs</a> <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/microlight.html">microlight</a>
+<a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/syntaxyjs.html">syntaxyjs</a>. If syntax_highlighter is not specified the default sphinx highlighter is used.</td>
+</tr>
+<tr class="row-odd"><td>code_block_editable &lt;boolean&gt;</td>
+<td>Specify whether the code block is editable. This only apply to syntax highlighter that support editing the source code e.g. ace. Default is false.</td>
+</tr>
+<tr class="row-even"><td>syntax_highlighter_theme &lt;string&gt;</td>
+<td>Set the theme your selected syntax highlighter should use. Default value depends on the specified value of syntax_highlighter.
+The value can be absolute http url to the highlighter theme css e.g. <strong>syntax_highlighter_theme: ‘https://atelierbram.github.io/syntax-highlighting/prism/demo/assets/css/prism-base16-3024.dark.css’</strong>.
+Visit each of the <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/index.html">syntax highlighter</a> page to see their themes</td>
+</tr>
+<tr class="row-odd"><td>syntax_highlighter_iframe_embed &lt;boolean&gt;</td>
+<td>Specify whether the code block should be render in an iframe element. This is most useful to enforce custom theme for highlighers that use the last loaded stylesheet e.g. highligherjs. Default is false.</td>
+</tr>
+<tr class="row-even"><td>google_analytics_tracking_id &lt;string&gt;</td>
+<td>Google analytics tracking id. If set in the config the tracking script will be added to the webpage.</td>
 </tr>
 </tbody>
 </table>
@@ -359,6 +377,15 @@ background color to gray:</p>
             Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5
             with <a href="https://thecarisma.github.io/themata/garri/index.html">garri</a> theme.
     </div>
+    <script>
+                const themataSyntaxHighlighter = "google_prettify";
+                const themataCodeBlockIsEditable = false;
+                const themataSyntaxHighlighterTheme = "default";
+                const themataStaticAssetsDir = "_static/";
+                const themataSyntaxHighlighterIframeEmbed = false;
+                $("pre").parent().css("display", "none");
+            </script>
+    <script src="_static/themata.js"></script>
 
   </body>
 </html>

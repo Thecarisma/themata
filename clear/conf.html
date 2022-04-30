@@ -23,28 +23,62 @@
   
   
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-  
-    
-    <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.">
-    <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes">
-    <meta name="author" content="Adewale Azeez">
-    <meta property="og:url" content="https://thecarisma.github.io/themata/clear/conf.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Clear Theme - Set of Highly customizable sphinx themes." />
-    <meta property="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
     
   
-  
+        <meta property="og:url" content="https://thecarisma.github.io/themata/clear/conf.html" />
     
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@iamthecarisma" />
-    <meta name="twitter:creator" content="@iamthecarisma" />
-    <meta name="twitter:title" content="Clear Theme - Set of Highly customizable sphinx themes." />
-    <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+        <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
+        <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes" />
+        <meta name="author" content="Adewale Azeez" />
+        <meta name="og:type" content="website" />
+        <meta name="og:title" content="Clear Theme - Set of Highly customizable sphinx themes." />
+        <meta name="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
+        <meta name="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
     
   
+  
+        <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="@iamthecarisma" />
+        <meta name="twitter:creator" content="@iamthecarisma" />
+        <meta name="twitter:title" content="Clear Theme - Set of Highly customizable sphinx themes." />
+        <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+    
+  
+  
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-0000000-00"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-0000000-00');
+    </script>
+  
+  <script>
+      const __themataOnloadCallbacks = [];
+      const __themataJsLoadedCallbacks = [];
+      const themataCurrentPageTitle = "Sample Configuration";
+      const themataCurrentProject = "Clear";
+      const themataCurrentProjectGithubLocation = "https://github.com/Thecarisma/themata";
+      const themataCurrentPagePath = "conf.rst";
+      const themataCurrentPageLocation = "https://github.com/Thecarisma/themata/edit/test/docs/clear//conf.rst".replace("/edit/", "/blob/");
+      const themataGithubFeedbackProjectTemplate = `
+---
+
+Project: **__themata_project__**
+Project Location: [__themata_project__](__themata_project_github_location__)
+Username: Thecarisma
+    `;
+      const themataGithubFeedbackPageTemplate = ``;
+      function themataRegisterOnloadCallback(cb) {
+        __themataJsLoadedCallbacks.push(cb);
+      }
+      function themataRegisterJsLoadedCallback(cb) {
+        __themataOnloadCallbacks.push(cb);
+      }
+  </script>
 
   </head><body>
 
@@ -102,7 +136,6 @@
 <span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License&#39;</span>
 <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
 
-<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
 <span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;clear&#39;</span>
 <span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;../images/themata.png&#39;</span>
 
@@ -113,6 +146,10 @@
     <span class="s1">&#39;has_right_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="s1">&#39;collapsible_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="s1">&#39;collapsible_sidebar_display&#39;</span><span class="p">:</span> <span class="s1">&#39;block&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;syntax_highlighter&#39;</span><span class="p">:</span> <span class="s1">&#39;syntaxy&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;code_block_editable&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;syntax_highlighter_theme&#39;</span><span class="p">:</span> <span class="s1">&#39;light&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;syntax_highlighter_iframe_embed&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="s1">&#39;show_navigators&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="s1">&#39;social_icons&#39;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">(</span><span class="s1">&#39;fab fa-twitter&#39;</span><span class="p">,</span> <span class="s1">&#39;https://twitter.com/iamthecarisma&#39;</span><span class="p">),</span>
@@ -130,7 +167,7 @@
     <span class="s1">&#39;source_root&#39;</span><span class="p">:</span> <span class="s1">&#39;https://github.com/Thecarisma/themata/edit/test/docs/clear/&#39;</span><span class="p">,</span>
     <span class="s1">&#39;source_root_edit_text&#39;</span><span class="p">:</span> <span class="s1">&#39;Edit on Github&#39;</span><span class="p">,</span>
     <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;dynamic&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://thecarisma.github.io/themata&quot;</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;website&quot;</span><span class="p">,</span>
         <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Set of Highly customizable sphinx themes.&quot;</span><span class="p">,</span>
@@ -140,7 +177,7 @@
         <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Adewale Azeez&quot;</span>
     <span class="p">},</span>
     <span class="s1">&#39;twitter_metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;dynamic&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;card&quot;</span><span class="p">:</span> <span class="s2">&quot;summary&quot;</span><span class="p">,</span>
         <span class="s2">&quot;site&quot;</span><span class="p">:</span> <span class="s2">&quot;@iamthecarisma&quot;</span><span class="p">,</span>
         <span class="s2">&quot;creator&quot;</span><span class="p">:</span> <span class="s2">&quot;@iamthecarisma&quot;</span><span class="p">,</span>
@@ -169,7 +206,72 @@
                     
                 
                 <div style="clear:both"></div>
-                <br/> <hr/> <br/>
+                <br/>
+                
+                    <div class="navigator" style="width: 100%; display: flex; flex-direction: column; padding: 15px; margin-bottom: 30px;">
+                        <div style="display: flex; flex-direction: row;">
+                            
+                                <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                                    <span>Throw this page at people faces:</span>
+                                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=__themata_page_url__" target="_blank">
+                                            <i class="fab fa-facebook" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://twitter.com/intent/tweet?text=Check this page Clear  documentation: __themata_page_url__" target="_blank">
+                                            <i class="fab fa-twitter" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://api.whatsapp.com//send?text=Check this page Clear  documentation: __themata_page_url__" target="_blank">
+                                            <i class="fab fa-whatsapp" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=__themata_page_url__" target="_blank">
+                                            <i class="fab fa-linkedin" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <!--<a href="#" target="_blank">
+                                            <i class="fab fa-discord" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>-->
+                                    </div>
+                                </div>
+                            
+                            
+                                <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-end;">
+                                    <span>Did you find this documentation helpful?</span> <!-- theme_option=page_rating_options.title -->
+                                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                        <div style="overflow: hidden; border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer; width: 75px; height: 45px;" onclick='alert("Positive")'>
+                                            
+                                                <img style="height: 100%; width: 100%; object-fit: contain" src="https://avatars.githubusercontent.com/u/14879387?v=4"/>
+                                            
+                                        </div>
+                                        <div style="overflow: hidden; border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer; width: 75px; height: 45px;" onclick='alert("Negative")'>
+                                            
+                                                <img style="height: 100%; width: 100%; object-fit: contain" src="https://avatars.githubusercontent.com/u/14879387?v=4"/>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            <!-- TOE -->
+                        </div>
+                        
+                            <div style="flex: 1; display: flex; flex-direction: column; border-top: 1px solid #e6e6e6; margin-top: 20px; padding-top: 20px;">
+                                <span id="__themata__feedback_label">Throw tantrum about this page to the developers</span> <!-- theme_option=page_github_feedback -->
+                                <div style="margin-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div id="__themata__feedback_buttons_panel" style="display: flex; justify-content: space-between;">
+                                        <div>
+                                            <span id="__themata__feedback_this_product" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Project</span>
+                                            <span id="__themata__feedback_this_page" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Page</span>
+                                        </div>
+                                        <a href='https://github.com/Thecarisma/themata/issues?q="Sample Configuration"&in=body' target="_blank">Look at your like tantrums on github</a>
+                                    </div>
+                                    <div id="__themata__feedback_input_panel" style="display: none; flex-direction: column; align-items: flex-end; padding-left: 7px;">
+                                        <textarea id="__themata__feedback_textarea" style="border: 1px solid #e6e6e6; height: 120px; width: 100%;"></textarea>
+                                        <span class="navigator" style="margin-top: 15px; max-width: 100px; margin-right: 0px; text-align: center; cursor: pointer;" onclick="themataSubmitGithubFeedback()">Submit</span>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                
+                <hr/> <br/>
                 
                 <div class="footer">
                     <div class="social">
@@ -236,6 +338,15 @@
             }
             </script>
     
+    <script>
+                const themataSyntaxHighlighter = "syntaxy";
+                const themataCodeBlockIsEditable = false;
+                const themataSyntaxHighlighterTheme = "light";
+                const themataStaticAssetsDir = "_static/";
+                const themataSyntaxHighlighterIframeEmbed = false;
+                $("pre").parent().css("display", "none");
+            </script>
+    <script src="_static/themata.js"></script>
       <div class="clearer"></div>
     </div>
   </body>

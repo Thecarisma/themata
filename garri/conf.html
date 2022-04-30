@@ -23,28 +23,24 @@
   
   
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-  
     
-    <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.">
-    <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes">
-    <meta name="author" content="Adewale Azeez">
-    <meta property="og:url" content="https://thecarisma.github.io/themata/garri/conf.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Garri Theme - Set of Highly customizable sphinx themes." />
-    <meta property="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+  
     
   
   
     
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@iamthecarisma" />
-    <meta name="twitter:creator" content="@iamthecarisma" />
-    <meta name="twitter:title" content="Garri Theme - Set of Highly customizable sphinx themes." />
-    <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
-    
   
+  
+  <script>
+      const __themataOnloadCallbacks = [];
+      const __themataJsLoadedCallbacks = [];
+      function themataRegisterOnloadCallback(cb) {
+        __themataJsLoadedCallbacks.push(cb);
+      }
+      function themataRegisterJsLoadedCallback(cb) {
+        __themataOnloadCallbacks.push(cb);
+      }
+  </script>
 
   </head><body>
 
@@ -154,7 +150,6 @@
 <span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License&#39;</span>
 <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
 
-<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
 <span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;garri&#39;</span>
 <span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;../images/themata.png&#39;</span>
 
@@ -162,6 +157,9 @@
     <span class="s1">&#39;index_is_single&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="s1">&#39;sidebar_position&#39;</span><span class="p">:</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span>
     <span class="s1">&#39;has_sidebar&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;syntax_highlighter&#39;</span><span class="p">:</span> <span class="s1">&#39;google_prettify&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;code_block_editable&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;syntax_highlighter_iframe_embed&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="s1">&#39;no_sidebar&#39;</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">&quot;singlepage&quot;</span>
     <span class="p">],</span>
@@ -169,7 +167,7 @@
     <span class="s1">&#39;source_root&#39;</span><span class="p">:</span> <span class="s1">&#39;https://github.com/Thecarisma/themata/edit/test/docs/garri/&#39;</span><span class="p">,</span>
     <span class="s1">&#39;source_root_edit_text&#39;</span><span class="p">:</span> <span class="s1">&#39;Edit on Github&#39;</span><span class="p">,</span>
     <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;dynamic&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://thecarisma.github.io/themata&quot;</span><span class="p">,</span>
         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;website&quot;</span><span class="p">,</span>
         <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Set of Highly customizable sphinx themes.&quot;</span><span class="p">,</span>
@@ -179,7 +177,7 @@
         <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Adewale Azeez&quot;</span>
     <span class="p">},</span>
     <span class="s1">&#39;twitter_metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;dynamic&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s2">&quot;card&quot;</span><span class="p">:</span> <span class="s2">&quot;summary&quot;</span><span class="p">,</span>
         <span class="s2">&quot;site&quot;</span><span class="p">:</span> <span class="s2">&quot;@iamthecarisma&quot;</span><span class="p">,</span>
         <span class="s2">&quot;creator&quot;</span><span class="p">:</span> <span class="s2">&quot;@iamthecarisma&quot;</span><span class="p">,</span>
@@ -201,6 +199,15 @@
             Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5
             with <a href="https://thecarisma.github.io/themata/garri/index.html">garri</a> theme.
     </div>
+    <script>
+                const themataSyntaxHighlighter = "google_prettify";
+                const themataCodeBlockIsEditable = false;
+                const themataSyntaxHighlighterTheme = "default";
+                const themataStaticAssetsDir = "_static/";
+                const themataSyntaxHighlighterIframeEmbed = false;
+                $("pre").parent().css("display", "none");
+            </script>
+    <script src="_static/themata.js"></script>
 
   </body>
 </html>

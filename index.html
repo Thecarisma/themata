@@ -17,32 +17,36 @@
     <link rel="shortcut icon" href="_static/themata.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Site Variables" href="site_variables.html" />
    
   
   
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-  
     
-    <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.">
-    <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes">
-    <meta name="author" content="Adewale Azeez">
-    <meta property="og:url" content="https://thecarisma.github.io/themata/index.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Set of Highly customizable sphinx themes." />
-    <meta property="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+  
     
   
   
     
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@iamthecarisma" />
-    <meta name="twitter:creator" content="@iamthecarisma" />
-    <meta name="twitter:title" content="Set of Highly customizable sphinx themes." />
-    <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
-    
   
+  
+  <script>
+        const __themataOnloadCallbacks = [];
+        const __themataJsLoadedCallbacks = [];
+        const themataCurrentPageTitle = "Overview";
+        const themataCurrentProject = "themata";
+        const themataCurrentProjectGithubLocation = "";
+        const themataCurrentPagePath = "index.rst";
+        const themataCurrentPageLocation = "/index.rst".replace("/edit/", "/blob/");
+        const themataGithubFeedbackProjectTemplate = ``;
+        const themataGithubFeedbackPageTemplate = ``;
+        function themataRegisterOnloadCallback(cb) {
+            __themataJsLoadedCallbacks.push(cb);
+        }
+        function themataRegisterJsLoadedCallback(cb) {
+            __themataOnloadCallbacks.push(cb);
+        }
+    </script>
 
   </head><body>
 
@@ -72,35 +76,11 @@
         <div class="topnavbar-sec">
             
                 
-                    <a href="hackish/index.html">hackish</a>
+                    <a href="site_variables.html">Site Variables</a>
                 
             
                 
-                    <a href="milkish/index.html">milkish</a>
-                
-            
-                
-                    <a href="fandango/index.html">fandango</a>
-                
-            
-                
-                    <a href="clear/index.html">clear</a>
-                
-            
-                
-                    <a href="fluid/index.html">fluid</a>
-                
-            
-                
-                    <a href="garri/index.html">garri</a>
-                
-            
-                
-                    <a href="water/index.html">water</a>
-                
-            
-                
-                    <a href="sugar/index.html">sugar</a>
+                    <a href="syntax_highlighter/index.html">Syntax Highlighters</a>
                 
             
             <div class="search-container">
@@ -125,7 +105,11 @@
         
         <div class="bodywrapper">
                 
-  <p>Set of Highly customizable sphinx themes.</p>
+  <div class="toctree-wrapper compound" id="main-nav">
+</div>
+<div class="toctree-wrapper compound" id="syntax-highlighter-nav">
+</div>
+<p>Set of Highly customizable sphinx themes.</p>
 <div class="section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <p>This package contains different sphinx theme that can be easily customized to look like
@@ -160,7 +144,6 @@ file.</p>
 <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
 <span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
 
-<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
 <span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;milkish&#39;</span>
 </pre></div>
 </div>
@@ -210,6 +193,7 @@ into the main project.</p>
                  
                     
                 
+                
         </div>
         
             
@@ -228,7 +212,7 @@ into the main project.</p>
         
         
         <div class="doc-sphinx-info">
-                    &copy; Copyright 2020, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
+                    &copy; Copyright 2022, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
                 Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5
                 with <a href="https://thecarisma.github.io/themata/sugar/index.html">sugar</a> theme.
         </div>
@@ -251,6 +235,15 @@ into the main project.</p>
             }
             </script>
     
+    <script>
+                const themataSyntaxHighlighter = "syntaxy";
+                const themataCodeBlockIsEditable = false;
+                const themataSyntaxHighlighterTheme = "dark";
+                const themataStaticAssetsDir = "_static/";
+                const themataSyntaxHighlighterIframeEmbed = false;
+                $("pre").parent().css("display", "none");
+            </script>
+    <script src="_static/themata.js"></script>
 
   </body>
 </html>

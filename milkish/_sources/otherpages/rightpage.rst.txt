@@ -17,7 +17,6 @@ Example
     author = 'Adewale Azeez'
 
     html_favicon = 'favicon.png'
-    html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'milkish'
 
     html_theme_options = {

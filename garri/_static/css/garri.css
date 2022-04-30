@@ -192,7 +192,7 @@ a.footnote-reference {
 }
 
 code {
-    background-color: #EFEFE1; /** theme_code_background_color **/
+    
     white-space: pre-wrap;
     word-break: break-word;
 }
@@ -207,6 +207,7 @@ code.descclassname {
 }
 
 pre {
+    
     margin: 0.5em;
     margin: 0px;
     margin-top: 1.5em;

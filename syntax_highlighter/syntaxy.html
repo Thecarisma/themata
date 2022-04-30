@@ -1,0 +1,248 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Syntax Higlighter - syntaxy &#8212; themata  documentation</title>
+    <link rel="stylesheet" href="../_static/css/sugar.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/themata.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Syntax Higlighter - microlight" href="microlight.html" />
+   
+  
+  
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    
+  
+    
+  
+  
+    
+  
+  
+  <script>
+        const __themataOnloadCallbacks = [];
+        const __themataJsLoadedCallbacks = [];
+        const themataCurrentPageTitle = "Syntax Higlighter - syntaxy";
+        const themataCurrentProject = "themata";
+        const themataCurrentProjectGithubLocation = "";
+        const themataCurrentPagePath = "syntax_highlighter/syntaxy.rst";
+        const themataCurrentPageLocation = "/syntax_highlighter/syntaxy.rst".replace("/edit/", "/blob/");
+        const themataGithubFeedbackProjectTemplate = ``;
+        const themataGithubFeedbackPageTemplate = ``;
+        function themataRegisterOnloadCallback(cb) {
+            __themataJsLoadedCallbacks.push(cb);
+        }
+        function themataRegisterJsLoadedCallback(cb) {
+            __themataOnloadCallbacks.push(cb);
+        }
+    </script>
+
+  </head><body>
+
+    <div class="document">
+    <header>        
+        <div class="topnavbar">
+            
+                <img class="icon" src="../_static/themata.png"></img>
+            
+            <a href="../index.html" class="title">themata</a>
+            <div style="float:right;">
+                
+                    
+                        <a href="https://pypi.org/project/themata/">Download</a> 
+                    
+                
+                    
+                        <a href="https://github.com/Thecarisma/themata">Github</a> 
+                    
+                
+                    
+                        <a href="https://twitter.com/iamthecarisma">Follow me on twitter</a> 
+                    
+                
+            </div>
+        </div>
+        <div class="topnavbar-sec">
+            
+                
+                    <a href="../site_variables.html">Site Variables</a>
+                
+            
+                
+                    <a href="index.html">Syntax Highlighters</a>
+                
+            
+            <div class="search-container">
+                <form class="search" action="../search.html" method="get">
+                    <input type="text" placeholder="" name="q">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="documentwrapper">
+        
+        
+            
+                
+                
+                <div class="sidebar-left">
+                    </br>
+                    <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../site_variables.html">Site Variables</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Syntax Highlighter</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ace.html">Syntax Higlighter - ace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="highlightjs.html">Syntax Higlighter - highlightjs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rainbow.html">Syntax Higlighter - rainbow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prism.html">Syntax Higlighter - prism</a></li>
+<li class="toctree-l1"><a class="reference internal" href="google_prettify.html">Syntax Higlighter - Google Prettify</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syntaxhighlighterjs.html">Syntax Higlighter - syntaxhighlighterjs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="microlight.html">Syntax Higlighter - microlight</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Syntax Higlighter - syntaxy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Syntax Higlighters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#javascript-apis">Javascript APIs</a></li>
+</ul>
+
+                </div>
+                
+            
+        
+        
+        <div class="bodywrapper">
+                
+  <div class="section" id="syntax-higlighter-syntaxy">
+<h1>Syntax Higlighter - syntaxy<a class="headerlink" href="#syntax-higlighter-syntaxy" title="Permalink to this headline">¶</a></h1>
+<p>The ace syntax highlighter uses the <a class="reference external" href="#">syntaxy</a> library to render the source code block.</p>
+<div class="section" id="themes">
+<h2>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h2>
+<p>The following are the supported themes:</p>
+<div id="themes-panel" style="display: flex; flex-wrap: wrap;"></div>
+<script>
+    themataRegisterJsLoadedCallback(() => {
+        let themes = [ "light", "dark", "purple" ];
+        let themesPanel = get("themes-panel");
+        for (let index = 0; index < themes.length; index++) {
+            let theme = themes[index];
+            themesPanel.innerHTML += `<div style="min-width: 300px; flex: 1; margin: 10px;"><span style="font-weight: bold;">${theme}</span>
+            <div id="editorx-${theme}"><pre><code>html_theme_options = {
+    'syntax_highlighter': 'syntaxy',
+    'code_block_editable': False,
+    'syntax_highlighter_theme': '${theme}',
+}
+</pre></code>
+            </div><div>`;
+        }
+        for (let theme of themes) {
+            resolveCodeBlockSyntaxHighlighter(`editorx-${theme}`, "python", "syntaxy", theme, false, true);
+        }
+    });
+</script></div>
+</div>
+
+
+                
+                </br>
+                 
+                    
+                        <div class="navigation">
+                            
+                            
+                            
+                            
+                            
+                                <a class="reference navigator" style="float:right;" href="microlight.html"><i class="fa fa-arrow-left"></i>Syntax Higlighter - microlight</a>
+                            
+                        </div>
+                    
+                
+                
+        </div>
+        
+            
+                
+                <div class="sidebar-right">
+                    
+                        <h2>Page Contents</h2>
+                        <ul>
+<li><a class="reference internal" href="#">Syntax Higlighter - syntaxy</a><ul>
+<li><a class="reference internal" href="#themes">Themes</a></li>
+</ul>
+</li>
+</ul>
+
+                        
+                            <h2>Previous topic</h2>
+                            <a href="microlight.html">Syntax Higlighter - microlight</a>
+                        
+                        
+                        <h2>This Page</h2>
+                        <a href="../_sources/syntax_highlighter/syntaxy.rst.txt">Show source</a>
+                        
+                    
+                </div>
+                
+            
+        
+        <div style="clear:both"></div>
+    </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        <div class="social">
+            
+        </div>
+        <div class="footer-col1">
+            
+        </div>
+        
+        
+        <div class="doc-sphinx-info">
+                    &copy; Copyright 2022, Adewale Azeez, Creative Commons Zero v1.0 Universal License.
+                Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5
+                with <a href="https://thecarisma.github.io/themata/sugar/index.html">sugar</a> theme.
+        </div>
+    </div>
+    
+        <script>
+            var coll = document.getElementsByClassName("caption");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
+    
+    <script>
+                const themataSyntaxHighlighter = "syntaxy";
+                const themataCodeBlockIsEditable = false;
+                const themataSyntaxHighlighterTheme = "dark";
+                const themataStaticAssetsDir = "../_static/";
+                const themataSyntaxHighlighterIframeEmbed = false;
+                $("pre").parent().css("display", "none");
+            </script>
+    <script src="../_static/themata.js"></script>
+
+  </body>
+</html>

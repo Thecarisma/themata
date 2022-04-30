@@ -22,28 +22,24 @@
   
   
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-  
     
-    <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.">
-    <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes">
-    <meta name="author" content="Adewale Azeez">
-    <meta property="og:url" content="https://thecarisma.github.io/themata/garri/otherpages/sidebar.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Garri Theme - Set of Highly customizable sphinx themes." />
-    <meta property="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+  
     
   
   
     
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@iamthecarisma" />
-    <meta name="twitter:creator" content="@iamthecarisma" />
-    <meta name="twitter:title" content="Garri Theme - Set of Highly customizable sphinx themes." />
-    <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
-    
   
+  
+  <script>
+      const __themataOnloadCallbacks = [];
+      const __themataJsLoadedCallbacks = [];
+      function themataRegisterOnloadCallback(cb) {
+        __themataJsLoadedCallbacks.push(cb);
+      }
+      function themataRegisterJsLoadedCallback(cb) {
+        __themataOnloadCallbacks.push(cb);
+      }
+  </script>
 
   </head><body>
 
@@ -154,7 +150,6 @@
 <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
 
 <span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
-<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
 <span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;fadango&#39;</span>
 
 <span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
@@ -175,6 +170,15 @@
             Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5
             with <a href="https://thecarisma.github.io/themata/garri/index.html">garri</a> theme.
     </div>
+    <script>
+                const themataSyntaxHighlighter = "google_prettify";
+                const themataCodeBlockIsEditable = false;
+                const themataSyntaxHighlighterTheme = "default";
+                const themataStaticAssetsDir = "../_static/";
+                const themataSyntaxHighlighterIframeEmbed = false;
+                $("pre").parent().css("display", "none");
+            </script>
+    <script src="../_static/themata.js"></script>
 
   </body>
 </html>

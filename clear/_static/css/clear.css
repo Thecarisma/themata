@@ -83,7 +83,7 @@ table tr:nth-child(even) {
 code,
 .highlight {
     border: none;
-    background-color: rgb(236, 240, 244) !important; /* theme_code_background_color */
+    
     border-radius: 6px;
     padding: 0px 0px 0px 0px;
     line-height: 1.7;
@@ -92,14 +92,16 @@ code,
 }
 
 code {
-    padding: 2px 10px 4px 10px;
+    padding: 2px 10px 4px 0px;
     white-space: pre-wrap;
     word-break: break-word;
 }
 
 pre {
+    
     padding: 16px;
     margin: 0px;
+    overflow: auto;
 }
 
 .icon {
@@ -319,8 +321,6 @@ pre {
 .bodywrapper h4,
 .bodywrapper h5,
 .bodywrapper h6 {
-    font-size: 150%;
-    font-weight: 500;
     margin: 15px 0px 5px 0px;
     padding: 1px 0 0px 0px;
     text-shadow: 0px 1px 0 white
@@ -383,6 +383,14 @@ pre {
 .bodywrapper .footer .doc-sphinx-info {
     margin-top: 10px;
     font-size: 75%;
+}
+
+.bodywrapper .footer .doc-sphinx-info > a {
+    
+}
+
+.bodywrapper .footer .doc-sphinx-info > a:hover {
+    
 }
 
 

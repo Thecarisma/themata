@@ -51,7 +51,6 @@ Below is a minimal sample **conf.py** file to use the garri theme.
     author = 'Adewale Azeez'
 
     html_favicon = 'favicon.png'
-    html_theme_path = [themata.get_html_theme_path()]
     html_theme = 'garri'
 
     html_theme_optionss = {
@@ -93,7 +92,7 @@ Variable Options
       
         html_theme_options = {
             'metadata': {
-                'enable': True,
+                'dynamic': True,
                 'url': 'https://thecarisma.github.io/themata',
                 'type': 'website',
                 'title': 'Set of Highly customizable sphinx themes.',
@@ -117,14 +116,15 @@ Variable Options
       <meta property='og:description' content='Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.' />
       <meta property='og:image' content='https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png' />
 
-   If the value of enable is False or not specified the metadata will not be generated."
+   If the value of **dynamic** is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values 
+   example for author, and keywords meta values."
    "twitter_metadata <object>", "Set the twitter metadata values of the generated website. The object should contain any, more or all of the keys, enable, card, site, creator, title, description, image. E.g. 
    
    .. code:: python 
       
         html_theme_options = {
             'twitter_metadata': {
-                'enable': True,
+                'dynamic': True,
                 'card': 'summary',
                 'site': '@iamthecarisma',
                 'creator': '@iamthecarisma',
@@ -145,7 +145,19 @@ Variable Options
       <meta name='twitter:description' content='Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.' />
       <meta name='twitter:image' content='https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png' />
 
-   If the value of enable is False or not specified the metadata will not be generated."
+   If the value of **dynamic** is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values 
+   example for twitter:site, and twitter:creator meta values."
+   "syntax_highlighter <string>", "The syntax higlighting provider to use for the generated documentation, the following syntax highlighters are supported `ace <https://thecarisma.github.io/themata/syntax_highlighter/ace.html>`_
+   `highlightjs <https://thecarisma.github.io/themata/syntax_highlighter/highlightjs.html>`_ `rainbow <https://thecarisma.github.io/themata/syntax_highlighter/rainbow.html>`_
+   `prism <https://thecarisma.github.io/themata/syntax_highlighter/prism.html>`_ `Google Prettify <https://thecarisma.github.io/themata/syntax_highlighter/google_prettify.html>`_
+   `syntaxhighlighterjs <https://thecarisma.github.io/themata/syntax_highlighter/syntaxhighlighterjs.html>`_ `microlight <https://thecarisma.github.io/themata/syntax_highlighter/microlight.html>`_
+   `syntaxyjs <https://thecarisma.github.io/themata/syntax_highlighter/syntaxyjs.html>`_. If syntax_highlighter is not specified the default sphinx highlighter is used."
+   "code_block_editable <boolean>", "Specify whether the code block is editable. This only apply to syntax highlighter that support editing the source code e.g. ace. Default is false."
+   "syntax_highlighter_theme <string>", "Set the theme your selected syntax highlighter should use. Default value depends on the specified value of syntax_highlighter. 
+   The value can be absolute http url to the highlighter theme css e.g. **syntax_highlighter_theme: 'https://atelierbram.github.io/syntax-highlighting/prism/demo/assets/css/prism-base16-3024.dark.css'**. 
+   Visit each of the `syntax highlighter <https://thecarisma.github.io/themata/syntax_highlighter/index.html>`_ page to see their themes"
+   "syntax_highlighter_iframe_embed <boolean>", "Specify whether the code block should be render in an iframe element. This is most useful to enforce custom theme for highlighers that use the last loaded stylesheet e.g. highligherjs. Default is false."
+   "google_analytics_tracking_id <string>", "Google analytics tracking id. If set in the config the tracking script will be added to the webpage."
    
 
 CSS Options

@@ -22,28 +22,31 @@
   
   
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-  
     
-    <meta name="description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage.">
-    <meta name="keywords" content="python, sphinx, thecarisma, themata, documentation, markdown, rst, themes">
-    <meta name="author" content="Adewale Azeez">
-    <meta property="og:url" content="https://thecarisma.github.io/themata/hackish/index.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hackish Theme - Set of Highly customizable sphinx themes." />
-    <meta property="og:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
+  
     
   
   
     
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@iamthecarisma" />
-    <meta name="twitter:creator" content="@iamthecarisma" />
-    <meta name="twitter:title" content="Hackish Theme - Set of Highly customizable sphinx themes." />
-    <meta name="twitter:description" content="Themata package contains different sphinx theme that can be easily customized to look like a complete website or just a documentation webpage." />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png" />
-    
   
+  
+    <script>
+        const __themataOnloadCallbacks = [];
+        const __themataJsLoadedCallbacks = [];
+        const themataCurrentPageTitle = "Hackish";
+        const themataCurrentProject = "Hackish";
+        const themataCurrentProjectGithubLocation = "https://github.com/Thecarisma/themata";
+        const themataCurrentPagePath = "index.rst";
+        const themataCurrentPageLocation = "https://github.com/Thecarisma/themata/edit/test/docs/hackish//index.rst".replace("/edit/", "/blob/");
+        const themataGithubFeedbackProjectTemplate = ``;
+        const themataGithubFeedbackPageTemplate = ``;
+        function themataRegisterOnloadCallback(cb) {
+            __themataJsLoadedCallbacks.push(cb);
+        }
+        function themataRegisterJsLoadedCallback(cb) {
+            __themataOnloadCallbacks.push(cb);
+        }
+  </script>
 
   </head><body>
 
@@ -153,7 +156,6 @@
 <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Adewale Azeez&#39;</span>
 
 <span class="n">html_favicon</span> <span class="o">=</span> <span class="s1">&#39;favicon.png&#39;</span>
-<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">themata</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
 <span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;hackish&#39;</span>
 
 <span class="n">html_theme_optionss</span> <span class="o">=</span> <span class="p">{</span>
@@ -290,7 +292,7 @@
 <td><p class="first">Set the metadata values of the generated website. The object should contain any, more or all of the keys, enable, url, type, title, description, image, keywords, author. E.g.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;enable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;dynamic&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;https://thecarisma.github.io/themata&#39;</span><span class="p">,</span>
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;website&#39;</span><span class="p">,</span>
         <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Set of Highly customizable sphinx themes.&#39;</span><span class="p">,</span>
@@ -313,14 +315,15 @@
 <span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s1">&#39;og:image&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span> <span class="o">/&gt;</span>
 </pre></div>
 </div>
-<p class="last">If the value of enable is False or not specified the metadata will not be generated.</p>
+<p class="last">If the value of <strong>dynamic</strong> is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values
+example for author, and keywords meta values.</p>
 </td>
 </tr>
 <tr class="row-even"><td>twitter_metadata &lt;object&gt;</td>
 <td><p class="first">Set the twitter metadata values of the generated website. The object should contain any, more or all of the keys, enable, card, site, creator, title, description, image. E.g.</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;twitter_metadata&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;enable&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;dynamic&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
         <span class="s1">&#39;card&#39;</span><span class="p">:</span> <span class="s1">&#39;summary&#39;</span><span class="p">,</span>
         <span class="s1">&#39;site&#39;</span><span class="p">:</span> <span class="s1">&#39;@iamthecarisma&#39;</span><span class="p">,</span>
         <span class="s1">&#39;creator&#39;</span><span class="p">:</span> <span class="s1">&#39;@iamthecarisma&#39;</span><span class="p">,</span>
@@ -340,7 +343,81 @@
 <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;twitter:image&#39;</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;https://raw.githubusercontent.com/Thecarisma/themata/main/docs/images/themata.small.png&#39;</span> <span class="o">/&gt;</span>
 </pre></div>
 </div>
-<p class="last">If the value of enable is False or not specified the metadata will not be generated.</p>
+<p class="last">If the value of <strong>dynamic</strong> is True the page content will be used to generate some of the metadata, but it still better to add the meta data in the conf.py file for fallback values
+example for twitter:site, and twitter:creator meta values.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>syntax_highlighter &lt;string&gt;</td>
+<td>The syntax higlighting provider to use for the generated documentation, the following syntax highlighters are supported <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/ace.html">ace</a>
+<a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/highlightjs.html">highlightjs</a> <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/rainbow.html">rainbow</a>
+<a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/prism.html">prism</a> <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/google_prettify.html">Google Prettify</a>
+<a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/syntaxhighlighterjs.html">syntaxhighlighterjs</a> <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/microlight.html">microlight</a>
+<a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/syntaxyjs.html">syntaxyjs</a>. If syntax_highlighter is not specified the default sphinx highlighter is used.</td>
+</tr>
+<tr class="row-even"><td>code_block_editable &lt;boolean&gt;</td>
+<td>Specify whether the code block is editable. This only apply to syntax highlighter that support editing the source code e.g. ace. Default is false.</td>
+</tr>
+<tr class="row-odd"><td>syntax_highlighter_theme &lt;string&gt;</td>
+<td>Set the theme your selected syntax highlighter should use. Default value depends on the specified value of syntax_highlighter.
+The value can be absolute http url to the highlighter theme css e.g. <strong>syntax_highlighter_theme: ‘https://atelierbram.github.io/syntax-highlighting/prism/demo/assets/css/prism-base16-3024.dark.css’</strong>.
+Visit each of the <a class="reference external" href="https://thecarisma.github.io/themata/syntax_highlighter/index.html">syntax highlighter</a> page to see their themes</td>
+</tr>
+<tr class="row-even"><td>syntax_highlighter_iframe_embed &lt;boolean&gt;</td>
+<td>Specify whether the code block should be render in an iframe element. This is most useful to enforce custom theme for highlighers that use the last loaded stylesheet e.g. highligherjs. Default is false.</td>
+</tr>
+<tr class="row-odd"><td>google_analytics_tracking_id &lt;string&gt;</td>
+<td>Google analytics tracking id. If set in the config the tracking script will be added to the webpage.</td>
+</tr>
+<tr class="row-even"><td>github_repo &lt;string&gt;</td>
+<td>The project github repository if it hosted on github, used for feedback and like.</td>
+</tr>
+<tr class="row-odd"><td>social_share_label &lt;string&gt;</td>
+<td>Title for the social icon share button section. Default is ‘Share on’</td>
+</tr>
+<tr class="row-even"><td>github_page_feedback_title &lt;string&gt;</td>
+<td>Title for github project and page feedback submission section. Default is ‘Submit and view feedback for’</td>
+</tr>
+<tr class="row-odd"><td>github_page_view_feedbacks_label &lt;string&gt;</td>
+<td>Link text to view all issues related to a webpage on github. Default is ‘View all page feedback’</td>
+</tr>
+<tr class="row-even"><td>source_root &lt;string&gt;</td>
+<td>Github link to the source folder of the documentation, used to build page source preview and edit links.</td>
+</tr>
+<tr class="row-odd"><td>source_root_edit_text &lt;string&gt;</td>
+<td>Label for the button that link to the page to edit the page source on Github. Default is ‘Edit this page’</td>
+</tr>
+<tr class="row-even"><td>enable_page_social_share &lt;boolean&gt;</td>
+<td>If set to true the social network share buttons will be added to the webpage. Default is False.</td>
+</tr>
+<tr class="row-odd"><td>enable_github_page_feedback &lt;boolean&gt;</td>
+<td>If set to true the github page and project issue feedback will be generated for the webpages. Default is False.</td>
+</tr>
+<tr class="row-even"><td>github_feedback_project_template &lt;string&gt;</td>
+<td>The template footer for Github feedback issue creation for project. See <a class="reference external" href="../site_variables.html">site variables</a> for supported variables.</td>
+</tr>
+<tr class="row-odd"><td>github_feedback_page_template &lt;string&gt;</td>
+<td>The template footer for Github feedback issue creation for a webpage. See <a class="reference external" href="../site_variables.html">site variables</a> for supported variables.</td>
+</tr>
+<tr class="row-even"><td>page_rating_options &lt;object&gt;</td>
+<td><p class="first">This object can be used to create a custom feedback element on a webpage. The following feeds are required for this options</p>
+<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">title</span><span class="p">:</span> <span class="n">The</span> <span class="n">title</span> <span class="k">for</span> <span class="n">the</span> <span class="n">page</span> <span class="n">rating</span> <span class="n">section</span>
+<span class="n">positive_icon</span><span class="p">:</span> <span class="n">The</span> <span class="n">icon</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="n">upvote</span> <span class="n">button</span><span class="p">,</span> <span class="n">value</span> <span class="n">should</span> <span class="n">be</span> <span class="n">html</span> <span class="n">element</span><span class="o">.</span> <span class="n">Smiley</span> <span class="n">smile</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">deault</span><span class="o">.</span>
+<span class="n">negative_icon</span><span class="p">:</span> <span class="n">The</span> <span class="n">icon</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="n">downvote</span> <span class="n">button</span><span class="p">,</span> <span class="n">value</span> <span class="n">should</span> <span class="n">be</span> <span class="n">html</span> <span class="n">element</span><span class="o">.</span> <span class="n">Smiley</span> <span class="n">sad</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">deault</span><span class="o">.</span>
+<span class="n">positive_event</span><span class="p">:</span> <span class="n">The</span> <span class="n">raw</span> <span class="n">javasccript</span> <span class="n">code</span> <span class="n">to</span> <span class="n">execute</span> <span class="n">when</span> <span class="n">the</span> <span class="n">upvote</span> <span class="n">icon</span> <span class="ow">is</span> <span class="n">clicked</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">use</span> <span class="n">this</span> <span class="n">to</span> <span class="n">call</span> <span class="n">a</span> <span class="n">dynamic</span> <span class="n">aapi</span> <span class="n">to</span> <span class="n">addredd</span> <span class="n">the</span> <span class="n">event</span><span class="o">.</span>
+<span class="n">negative_event</span><span class="p">:</span> <span class="n">The</span> <span class="n">raw</span> <span class="n">javasccript</span> <span class="n">code</span> <span class="n">to</span> <span class="n">execute</span> <span class="n">when</span> <span class="n">the</span> <span class="n">downvote</span> <span class="n">icon</span> <span class="ow">is</span> <span class="n">clicked</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">use</span> <span class="n">this</span> <span class="n">to</span> <span class="n">call</span> <span class="n">a</span> <span class="n">dynamic</span> <span class="n">aapi</span> <span class="n">to</span> <span class="n">addredd</span> <span class="n">the</span> <span class="n">event</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Sample value in the conf.py file:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;page_rating_options&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Did you find this documentation helpful?&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;positive_event&#39;</span><span class="p">:</span> <span class="s1">&#39;alert(`Positive`)&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;negative_event&#39;</span><span class="p">:</span> <span class="s1">&#39;alert(`Negative`)&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="last">In the example above, the upvote button will have the image value, and when click it will alert ‘Positive’, and for the downvote button when clicked the page will alert ‘Negative’.</p>
 </td>
 </tr>
 </tbody>
@@ -444,6 +521,14 @@ background color to gray:</p>
 <td>#f66</td>
 <td>the warning div border color</td>
 </tr>
+<tr class="row-odd"><td>footer_link_color</td>
+<td>default</td>
+<td>the footer link color</td>
+</tr>
+<tr class="row-even"><td>footer_highlight_color</td>
+<td>default</td>
+<td>the footer link highlight color</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -454,6 +539,71 @@ background color to gray:</p>
                 </br>
                  
                     
+                
+                
+                    <div class="navigator" style="display: flex; flex-direction: column; padding: 15px; margin-bottom: 30px;">
+                        <div style="display: flex; flex-direction: row;">
+                            
+                                <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                                    <span>Throw this page at people faces:</span>
+                                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=__themata_page_url__" target="_blank">
+                                            <i class="fab fa-facebook" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://twitter.com/intent/tweet?text=Check this page Hackish  documentation: __themata_page_url__" target="_blank">
+                                            <i class="fab fa-twitter" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://api.whatsapp.com//send?text=Check this page Hackish  documentation: __themata_page_url__" target="_blank">
+                                            <i class="fab fa-whatsapp" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=__themata_page_url__" target="_blank">
+                                            <i class="fab fa-linkedin" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>
+                                        <!--<a href="#" target="_blank">
+                                            <i class="fab fa-discord" style="font-size: 35px; margin-right: 15px;"></i>
+                                        </a>-->
+                                    </div>
+                                </div>
+                            
+                            
+                                <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-end;">
+                                    <span>Did you find this documentation helpful?</span> <!-- theme_option=page_rating_options.title -->
+                                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-top: 10px;">
+                                        <div style="overflow: hidden; border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer; width: 75px; height: 45px;" onclick='alert("Positive")'>
+                                            
+                                                <img style="height: 100%; width: 100%; object-fit: contain" src="https://avatars.githubusercontent.com/u/14879387?v=4"/>
+                                            
+                                        </div>
+                                        <div style="overflow: hidden; border: 1px solid grey; padding: 10px 10px 5px 10px; cursor: pointer; width: 75px; height: 45px;" onclick='alert("Negative")'>
+                                            
+                                                <img style="height: 100%; width: 100%; object-fit: contain" src="https://avatars.githubusercontent.com/u/14879387?v=4"/>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            <!-- TOE -->
+                        </div>
+                        
+                            <div style="flex: 1; display: flex; flex-direction: column; border-top: 1px solid #e6e6e6; margin-top: 20px; padding-top: 20px;">
+                                <span id="__themata__feedback_label">Throw tantrum about this page to the developers</span> <!-- theme_option=page_github_feedback -->
+                                <div style="margin-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div id="__themata__feedback_buttons_panel" style="display: flex; justify-content: space-between;">
+                                        <div>
+                                            <span id="__themata__feedback_this_product" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Project</span>
+                                            <span id="__themata__feedback_this_page" class="reference navigator" style="cursor: pointer;"><i class="fab fa-github" style="margin-right: 10px;"> </i>This Page</span>
+                                        </div>
+                                        <a href='https://github.com/Thecarisma/themata/issues?q="Hackish"&in=body' target="_blank">Look at your like tantrums on github</a>
+                                    </div>
+                                    <div id="__themata__feedback_input_panel" style="display: none; flex-direction: column; align-items: flex-end; padding-left: 7px;">
+                                        <textarea id="__themata__feedback_textarea" style="border: 1px solid #e6e6e6; height: 120px; width: 100%;"></textarea>
+                                        <span class="navigator" style="margin-top: 15px; max-width: 100px; margin-right: 0px; text-align: center; cursor: pointer;" onclick="themataSubmitGithubFeedback()">Submit</span>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <hr/>
                 
         </div>
         <div style="clear:both"></div>
@@ -501,6 +651,15 @@ background color to gray:</p>
                 with <a href="https://thecarisma.github.io/themata/hackish/index.html">hackish</a> theme.
         </div>
     </div>
+    <script>
+                const themataSyntaxHighlighter = "ace";
+                const themataCodeBlockIsEditable = true;
+                const themataSyntaxHighlighterTheme = "monokai";
+                const themataStaticAssetsDir = "_static/";
+                const themataSyntaxHighlighterIframeEmbed = false;
+                $("pre").parent().css("display", "none");
+            </script>
+    <script src="_static/themata.js"></script>
 
   </body>
 </html>
