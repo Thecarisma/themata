@@ -75,7 +75,7 @@ window.onload = function() {
 function setSiteElementEvents() {
     let pageFeedbackButton = get("__themata__feedback_this_page");
     let productFeedbackButton = get("__themata__feedback_this_product");
-    
+
     if (!pageFeedbackButton) return;
     pageFeedbackButton.onclick = (e) => renderFeedbackBox("project");
     productFeedbackButton.onclick = (e) => renderFeedbackBox("page");
@@ -454,7 +454,20 @@ function resolveSiteVariables() {
     themataSiteVariables["__themata_current_page_location__"] = themataCurrentPageLocation;
     themataSiteVariables["__themata_current_page_title__"] = themataCurrentPageTitle;
     Object.keys(themataSiteVariables).forEach(themataSiteVariable => {
-        let nodes = qs(`[href*='${themataSiteVariable}']`);
+        let variableValue = themataSiteVariables[themataSiteVariable];
+        let innerHTMLBaseElements = [ "strong", "em", "span", "p", "a", "div" ];
+        innerHTMLBaseElements.forEach(innerHTMLBaseElement => {
+            let nodes = xpathSelector(`//${innerHTMLBaseElement}[contains(., '${themataSiteVariable}')]`);
+            nodes.forEach(node => {
+                node.innerHTML = node.innerHTML.replace(new RegExp(themataSiteVariable+"E", 'g'), "__THEMATA_PENDING_REVERSE_PLACING__");
+                node.innerHTML = node.innerHTML.replace(new RegExp(themataSiteVariable, 'g'), variableValue);
+            });
+        });
+        innerHTMLBaseElements.forEach(innerHTMLBaseElement => {
+            let nodes = xpathSelector(`//${innerHTMLBaseElement}[contains(., '__THEMATA_PENDING_REVERSE_PLACING__')]`);
+            nodes.forEach(node => node.innerHTML = node.innerHTML.replace(new RegExp("__THEMATA_PENDING_REVERSE_PLACING__", 'g'), themataSiteVariable));
+        });
+        nodes = xpathSelector(`//a[contains(@href, '${themataSiteVariable}')]`);
         nodes.forEach(node => node.href = node.href.replace(themataSiteVariable, themataSiteVariables[themataSiteVariable]));
     });
 }
@@ -504,8 +517,15 @@ function gets(name) {
     return elements;
 }
 
-function qs(selector) {
-    return document.querySelectorAll(selector);
+function xpathSelector(selector) {
+    let result = [];
+    let evaluation = document.evaluate(selector, document, null, XPathResult.ANY_TYPE, null);
+    let value = evaluation.iterateNext();
+    while (value) {
+        result.push(value);
+        value = evaluation.iterateNext();
+    }
+    return result;
 }
 
 function escapeHtml(unsafe) {

@@ -3,8 +3,16 @@
 .. toctree::
    :hidden:
    :maxdepth: 2
-   :caption: Syntax Highlighter
+   :caption: Documentation
    :name: main-nav
+
+   site_variables
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   :caption: Syntax Highlighter
+   :name: syntax-highlighter-nav
 
    syntax_highlighter/index
 

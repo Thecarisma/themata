@@ -34,6 +34,7 @@ html_theme_options = {
         #("garri", "garri/index"),
         #("water", "water/index"),
         #("sugar", "sugar/index"),
+        ("Site Variables", "site_variables"),
         ("Syntax Highlighters", "syntax_highlighter/index"),
     ],
     'syntax_highlighter': 'syntaxy',
