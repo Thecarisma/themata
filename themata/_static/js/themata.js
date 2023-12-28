@@ -528,6 +528,15 @@ function xpathSelector(selector) {
     return result;
 }
 
+function qs(query) {
+    return document.querySelector(query);
+}
+
+function themataForEach(array, fn) {
+    if (Array.isArray(array) || array.forEach) array.forEach((entry, index) => fn(entry, index));
+    else fn(entry, index);
+}
+
 function escapeHtml(unsafe) {
     return unsafe.replaceAll('&', '&amp;')
         .replaceAll('<', '&lt;')

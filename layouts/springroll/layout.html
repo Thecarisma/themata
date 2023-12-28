@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <!--THEMATA_OPTION extends_default_head -->
+        <!--THEMATA_OPTION_START skip-->
+        <link rel="stylesheet" href="./static/springroll.css">
+        <!--THEMATA_OPTION_END-->
+    </head>
+    <body>
+        <header>
+            <!--THEMATA_OPTION_START raw:{% if theme_project_icon %}
+                src={{ theme_project_icon }}
+            -->
+                <img class="icon" src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg"></img> 
+            <!--THEMATA_OPTION_END {% endif %}-->
+            <div class="menubar" id="__themata_element_menu_bar__">
+                <!--THEMATA_OPTION_START raw:{% for menu in theme_menus %}-->
+                    <div class="dropdown">
+                        <!--THEMATA_OPTION_START optional_tag:span if menu.location else a
+                            innerText={{ menu.label }}
+                            href={{ (menu.location if menu.location != "" else "" ) }}
+                        -->
+                            <a class="menu-dropdown">Menu 1</a><i class="fa fa-angle-down"></i>
+                        <!--THEMATA_OPTION_END {% endif %}-->
+                        <ul class="menu-dropdown-panel">
+                            <!--THEMATA_OPTION_START raw:{% for menu_item in theme_menu.items %}-->
+                                <!--THEMATA_OPTION_START optional_tag:span if menu.location else a
+                                    innerText={{ menu_item.text }}
+                                    href={{ (menu_item.location if menu_item.location != "" else "" ) }}
+                                -->
+                                    <li><a href="#">Option 1</a></li>
+                                <!--THEMATA_OPTION_END {% endif %}-->
+                            <!--THEMATA_OPTION_END {% endif %}-->
+                        </ul>
+                    </div>
+                <!--THEMATA_OPTION_END {% endfor %}-->
+                <!--<div class="dropdown">
+                    <a class="menu-dropdown">Menu 2 <i class="fa fa-angle-down"></i></a>
+                    <ul class="menu-dropdown-panel">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                        <li><a href="#">Option 4</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-dropdown">Menu 3 <i class="fa fa-angle-down"></i></a>
+                    <ul class="menu-dropdown-panel">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                        <li><a href="#">Option 4</a></li>
+                        <li><a href="#">Option 5</a></li>
+                        <li><a href="#">Option 6</a></li>
+                        <li><a href="#">Option 7</a></li>
+                        <li><a href="#">Option 8</a></li>
+                        <li><a href="#">Option 9</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="menu-dropdown">Menu 4</a>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="menu-dropdown">Menu 5</a>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-dropdown">Menu 6 <i class="fa fa-angle-down"></i></a>
+                    <ul class="menu-dropdown-panel">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                    </ul>
+                </div>-->
+            </div>
+            <div class="dropdown" id="__themata_element_menu_toggle__">
+                <i class="fa fa-bars menutoggle"></i>
+                <div class="menu-dropdown-panel fullscreen">
+                    <i class="fa fa-times close"></i>
+                    <div class="dropdown">
+                        <a class="menu-dropdown">Menu 2 <i class="fa fa-angle-down"></i></a>
+                        <ul class="menu-dropdown-panel">
+                            <li><a href="#">Option 1</a></li>
+                            <li><a href="#">Option 2</a></li>
+                            <li><a href="#">Option 3</a></li>
+                            <li><a href="#">Option 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script>
+//THEMATA_OPTION_START skip
+            function get(id) { return document.getElementById(id); }
+            function gets(name) { return document.getElementsByClassName(name); }
+            function qs(query) { return document.querySelector(query); }
+            function themataForEach(array, fn) {
+                if (Array.isArray(array) || array.forEach) array.forEach((entry, index) => fn(entry, index));
+                else fn(array, 0);
+            }
+//THEMATA_OPTION_END
+            createSiteEvents();
+
+            function createSiteEvents() {
+                
+                function onPageResize() {
+                    let menuBar = get('__themata_element_menu_bar__');
+                    let fullscreenMenuBar = get('__themata_element_menu_bar__');
+                    if (window.innerWidth < 1000) {
+                        let menuBarInnerHTML = menuBar.innerHTML;
+                        //menuBar.innerHTML = "";
+                        console.log("Less than 1000", menuBar.innerHTML);
+                    } else {
+                        console.log("More than 760");
+                    }
+                }
+
+                //get("__themata_element_menu_toggle__").;
+                if (window.attachEvent) {
+                    //window.attachEvent('onresize', onPageResize);
+                } else if (window.addEventListener) {
+                    //window.addEventListener('resize', onPageResize);
+                }
+                
+                themataForEach(qs(".menutoggle"), (entry, index) => entry.onclick = (event) => entry.parentNode.children[1].style.display = "flex");
+                themataForEach(qs(".menu-dropdown-panel.fullscreen > .close"), (entry, index) => entry.onclick = (event) => entry.parentNode.style.display = "none");
+            }
+        </script>
+    </body>
+</html>
